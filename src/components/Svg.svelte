@@ -1,51 +1,63 @@
 <script>
   import { onMount } from "svelte";
   import Circles from "./onePresidentUnit.svelte";
-
-  let width = window.innerWidth / 2;
+  import { svgWidth } from "../store.js";
 
   let height = window.innerHeight;
   let circles = [];
 
   const updateDimensions = () => {
-    width = window.innerWidth / 2;
-    console.log(width);
+    svgWidth.set(window.innerWidth / 2);
     height = window.innerHeight;
-    updateCircles();
+    updatePresidents();
   };
 
-  const updateCircles = () => {
+  const updatePresidents = () => {
     circles = [
       {
-        cx: width / 4,
+        cx: $svgWidth / 4,
         cy: 200,
+        parts: 6,
+        name: "name1",
       },
       {
-        cx: width / 2,
+        cx: $svgWidth / 2,
         cy: 200,
+        parts: 10,
+        name: "name2",
       },
       {
-        cx: (width * 3) / 4,
+        cx: ($svgWidth * 3) / 4,
         cy: 200,
+        parts: 12,
+        name: "name3",
       },
       {
-        cx: width / 4,
-        cy: 400,
+        cx: $svgWidth / 4,
+        cy: 500,
+        parts: 6,
+        name: "name4",
       },
     ];
   };
 
   onMount(() => {
-    updateCircles();
+    updatePresidents();
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   });
 </script>
 
-<svg {width} {height}>
-  <rect {width} {height} stroke="black" stroke-width="3px" fill="none"></rect>
+<svg width={$svgWidth} {height}>
+  <rect width={$svgWidth} {height} stroke="black" stroke-width="3px" fill="none"
+  ></rect>
 
   {#each circles as circle}
-    <Circles cx={circle.cx} cy={circle.cy} />
+    <Circles
+      cx={circle.cx}
+      cy={circle.cy}
+      parts={circle.parts}
+      name={circle.name}
+    />
   {/each}
 </svg>

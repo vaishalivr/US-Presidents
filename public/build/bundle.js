@@ -27,12 +27,21 @@ var app = (function () {
     function is_empty(obj) {
         return Object.keys(obj).length === 0;
     }
-
-    const globals = (typeof window !== 'undefined'
-        ? window
-        : typeof globalThis !== 'undefined'
-            ? globalThis
-            : global);
+    function validate_store(store, name) {
+        if (store != null && typeof store.subscribe !== 'function') {
+            throw new Error(`'${name}' is not a store with a 'subscribe' method`);
+        }
+    }
+    function subscribe(store, ...callbacks) {
+        if (store == null) {
+            return noop;
+        }
+        const unsub = store.subscribe(...callbacks);
+        return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+    }
+    function component_subscribe(component, store, callback) {
+        component.$$.on_destroy.push(subscribe(store, callback));
+    }
     function append(target, node) {
         target.appendChild(node);
     }
@@ -61,6 +70,10 @@ var app = (function () {
     }
     function space() {
         return text(' ');
+    }
+    function listen(node, event, handler, options) {
+        node.addEventListener(event, handler, options);
+        return () => node.removeEventListener(event, handler, options);
     }
     function attr(node, attribute, value) {
         if (value == null)
@@ -395,12 +408,34 @@ var app = (function () {
         dispatch_dev('SvelteDOMRemove', { node });
         detach(node);
     }
+    function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation, has_stop_immediate_propagation) {
+        const modifiers = options === true ? ['capture'] : options ? Array.from(Object.keys(options)) : [];
+        if (has_prevent_default)
+            modifiers.push('preventDefault');
+        if (has_stop_propagation)
+            modifiers.push('stopPropagation');
+        if (has_stop_immediate_propagation)
+            modifiers.push('stopImmediatePropagation');
+        dispatch_dev('SvelteDOMAddEventListener', { node, event, handler, modifiers });
+        const dispose = listen(node, event, handler, options);
+        return () => {
+            dispatch_dev('SvelteDOMRemoveEventListener', { node, event, handler, modifiers });
+            dispose();
+        };
+    }
     function attr_dev(node, attribute, value) {
         attr(node, attribute, value);
         if (value == null)
             dispatch_dev('SvelteDOMRemoveAttribute', { node, attribute });
         else
             dispatch_dev('SvelteDOMSetAttribute', { node, attribute, value });
+    }
+    function set_data_dev(text, data) {
+        data = '' + data;
+        if (text.data === data)
+            return;
+        dispatch_dev('SvelteDOMSetData', { node: text, data });
+        text.data = data;
     }
     function validate_each_argument(arg) {
         if (typeof arg !== 'string' && !(arg && typeof arg === 'object' && 'length' in arg)) {
@@ -442,53 +477,208 @@ var app = (function () {
 
     const file$2 = "src/components/onePresidentUnit.svelte";
 
-    function create_fragment$2(ctx) {
-    	let circle0;
-    	let t0;
-    	let circle1;
-    	let t1;
-    	let line;
+    function get_each_context$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[19] = list[i];
+    	child_ctx[21] = i;
+    	return child_ctx;
+    }
+
+    // (43:0) {#each arcs as arc, i}
+    function create_each_block$1(ctx) {
+    	let path;
+    	let path_d_value;
+    	let path_fill_value;
+    	let path_stroke_width_value;
+    	let mounted;
+    	let dispose;
+
+    	function mouseover_handler() {
+    		return /*mouseover_handler*/ ctx[13](/*i*/ ctx[21]);
+    	}
+
+    	function mouseout_handler() {
+    		return /*mouseout_handler*/ ctx[14](/*i*/ ctx[21]);
+    	}
+
+    	function focus_handler() {
+    		return /*focus_handler*/ ctx[15](/*i*/ ctx[21]);
+    	}
+
+    	function blur_handler() {
+    		return /*blur_handler*/ ctx[16](/*i*/ ctx[21]);
+    	}
 
     	const block = {
     		c: function create() {
-    			circle0 = svg_element("circle");
+    			path = svg_element("path");
+    			attr_dev(path, "d", path_d_value = /*arc*/ ctx[19].d);
+    			attr_dev(path, "fill", path_fill_value = /*arc*/ ctx[19].fill);
+    			attr_dev(path, "stroke", "black");
+    			attr_dev(path, "stroke-width", path_stroke_width_value = /*arc*/ ctx[19].strokeWidth);
+    			attr_dev(path, "tabindex", "0");
+    			attr_dev(path, "role", "button");
+    			add_location(path, file$2, 43, 2, 1132);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, path, anchor);
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(path, "mouseover", mouseover_handler, false, false, false, false),
+    					listen_dev(path, "mouseout", mouseout_handler, false, false, false, false),
+    					listen_dev(path, "focus", focus_handler, false, false, false, false),
+    					listen_dev(path, "blur", blur_handler, false, false, false, false)
+    				];
+
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+
+    			if (dirty & /*arcs*/ 8 && path_d_value !== (path_d_value = /*arc*/ ctx[19].d)) {
+    				attr_dev(path, "d", path_d_value);
+    			}
+
+    			if (dirty & /*arcs*/ 8 && path_fill_value !== (path_fill_value = /*arc*/ ctx[19].fill)) {
+    				attr_dev(path, "fill", path_fill_value);
+    			}
+
+    			if (dirty & /*arcs*/ 8 && path_stroke_width_value !== (path_stroke_width_value = /*arc*/ ctx[19].strokeWidth)) {
+    				attr_dev(path, "stroke-width", path_stroke_width_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(path);
+    			mounted = false;
+    			run_all(dispose);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$1.name,
+    		type: "each",
+    		source: "(43:0) {#each arcs as arc, i}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    function create_fragment$2(ctx) {
+    	let t0;
+    	let circle0;
+    	let t1;
+    	let line;
+    	let line_x__value;
+    	let line_y__value;
+    	let line_x__value_1;
+    	let line_y__value_1;
+    	let t2;
+    	let circle1;
+    	let circle1_cx_value;
+    	let circle1_cy_value;
+    	let t3;
+    	let text_1;
+    	let t4;
+    	let text_1_x_value;
+    	let text_1_y_value;
+    	let each_value = /*arcs*/ ctx[3];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
     			t0 = space();
-    			circle1 = svg_element("circle");
+    			circle0 = svg_element("circle");
     			t1 = space();
     			line = svg_element("line");
+    			t2 = space();
+    			circle1 = svg_element("circle");
+    			t3 = space();
+    			text_1 = svg_element("text");
+    			t4 = text(/*name*/ ctx[2]);
     			attr_dev(circle0, "cx", /*cx*/ ctx[0]);
     			attr_dev(circle0, "cy", /*cy*/ ctx[1]);
-    			attr_dev(circle0, "r", /*concentricRadius*/ ctx[6]);
-    			attr_dev(circle0, "fill", "#d3d3d3");
-    			attr_dev(circle0, "stroke", /*stroke*/ ctx[4]);
-    			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[5]);
-    			add_location(circle0, file$2, 14, 0, 332);
-    			attr_dev(circle1, "cx", /*cx*/ ctx[0]);
-    			attr_dev(circle1, "cy", /*cy*/ ctx[1]);
-    			attr_dev(circle1, "r", /*r*/ ctx[2]);
-    			attr_dev(circle1, "fill", /*fill*/ ctx[3]);
-    			attr_dev(circle1, "stroke", /*stroke*/ ctx[4]);
-    			attr_dev(circle1, "stroke-width", /*strokeWidth*/ ctx[5]);
-    			add_location(circle1, file$2, 22, 0, 437);
-    			attr_dev(line, "x1", /*linex1*/ ctx[7]);
-    			attr_dev(line, "y1", /*liney1*/ ctx[9]);
-    			attr_dev(line, "x2", /*linex2*/ ctx[8]);
-    			attr_dev(line, "y2", /*liney2*/ ctx[10]);
-    			attr_dev(line, "stroke", /*stroke*/ ctx[4]);
-    			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[5]);
-    			add_location(line, file$2, 24, 0, 506);
+    			attr_dev(circle0, "r", /*innerRadius*/ ctx[5]);
+    			attr_dev(circle0, "fill", /*fill*/ ctx[6]);
+    			attr_dev(circle0, "stroke", /*stroke*/ ctx[7]);
+    			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[8]);
+    			add_location(circle0, file$2, 57, 0, 1489);
+    			attr_dev(line, "x1", line_x__value = /*lineCoords*/ ctx[4].x1);
+    			attr_dev(line, "y1", line_y__value = /*lineCoords*/ ctx[4].y1);
+    			attr_dev(line, "x2", line_x__value_1 = /*lineCoords*/ ctx[4].x2);
+    			attr_dev(line, "y2", line_y__value_1 = /*lineCoords*/ ctx[4].y2);
+    			attr_dev(line, "stroke", /*stroke*/ ctx[7]);
+    			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[8]);
+    			add_location(line, file$2, 59, 0, 1570);
+    			attr_dev(circle1, "cx", circle1_cx_value = /*lineCoords*/ ctx[4].x1);
+    			attr_dev(circle1, "cy", circle1_cy_value = /*lineCoords*/ ctx[4].y1);
+    			attr_dev(circle1, "r", "3");
+    			attr_dev(circle1, "fill", "black");
+    			add_location(circle1, file$2, 68, 0, 1704);
+    			attr_dev(text_1, "x", text_1_x_value = (/*lineCoords*/ ctx[4].x1 + /*lineCoords*/ ctx[4].x2) / 2);
+    			attr_dev(text_1, "y", text_1_y_value = /*lineCoords*/ ctx[4].y1 - 5);
+    			attr_dev(text_1, "text-anchor", "middle");
+    			attr_dev(text_1, "font-size", "12px");
+    			attr_dev(text_1, "fill", "black");
+    			add_location(text_1, file$2, 70, 0, 1773);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, circle0, anchor);
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				if (each_blocks[i]) {
+    					each_blocks[i].m(target, anchor);
+    				}
+    			}
+
     			insert_dev(target, t0, anchor);
-    			insert_dev(target, circle1, anchor);
+    			insert_dev(target, circle0, anchor);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, line, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, circle1, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, text_1, anchor);
+    			append_dev(text_1, t4);
     		},
     		p: function update(ctx, [dirty]) {
+    			if (dirty & /*arcs, updateFillColor, hoverFill, defaultFill*/ 3592) {
+    				each_value = /*arcs*/ ctx[3];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$1(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(t0.parentNode, t0);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
     			if (dirty & /*cx*/ 1) {
     				attr_dev(circle0, "cx", /*cx*/ ctx[0]);
     			}
@@ -497,22 +687,52 @@ var app = (function () {
     				attr_dev(circle0, "cy", /*cy*/ ctx[1]);
     			}
 
-    			if (dirty & /*cx*/ 1) {
-    				attr_dev(circle1, "cx", /*cx*/ ctx[0]);
+    			if (dirty & /*lineCoords*/ 16 && line_x__value !== (line_x__value = /*lineCoords*/ ctx[4].x1)) {
+    				attr_dev(line, "x1", line_x__value);
     			}
 
-    			if (dirty & /*cy*/ 2) {
-    				attr_dev(circle1, "cy", /*cy*/ ctx[1]);
+    			if (dirty & /*lineCoords*/ 16 && line_y__value !== (line_y__value = /*lineCoords*/ ctx[4].y1)) {
+    				attr_dev(line, "y1", line_y__value);
+    			}
+
+    			if (dirty & /*lineCoords*/ 16 && line_x__value_1 !== (line_x__value_1 = /*lineCoords*/ ctx[4].x2)) {
+    				attr_dev(line, "x2", line_x__value_1);
+    			}
+
+    			if (dirty & /*lineCoords*/ 16 && line_y__value_1 !== (line_y__value_1 = /*lineCoords*/ ctx[4].y2)) {
+    				attr_dev(line, "y2", line_y__value_1);
+    			}
+
+    			if (dirty & /*lineCoords*/ 16 && circle1_cx_value !== (circle1_cx_value = /*lineCoords*/ ctx[4].x1)) {
+    				attr_dev(circle1, "cx", circle1_cx_value);
+    			}
+
+    			if (dirty & /*lineCoords*/ 16 && circle1_cy_value !== (circle1_cy_value = /*lineCoords*/ ctx[4].y1)) {
+    				attr_dev(circle1, "cy", circle1_cy_value);
+    			}
+
+    			if (dirty & /*name*/ 4) set_data_dev(t4, /*name*/ ctx[2]);
+
+    			if (dirty & /*lineCoords*/ 16 && text_1_x_value !== (text_1_x_value = (/*lineCoords*/ ctx[4].x1 + /*lineCoords*/ ctx[4].x2) / 2)) {
+    				attr_dev(text_1, "x", text_1_x_value);
+    			}
+
+    			if (dirty & /*lineCoords*/ 16 && text_1_y_value !== (text_1_y_value = /*lineCoords*/ ctx[4].y1 - 5)) {
+    				attr_dev(text_1, "y", text_1_y_value);
     			}
     		},
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(circle0);
+    			destroy_each(each_blocks, detaching);
     			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(circle1);
+    			if (detaching) detach_dev(circle0);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(line);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(circle1);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(text_1);
     		}
     	};
 
@@ -528,19 +748,26 @@ var app = (function () {
     }
 
     function instance$2($$self, $$props, $$invalidate) {
+    	let lineCoords;
+    	let arcs;
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('OnePresidentUnit', slots, []);
     	let { cx } = $$props;
     	let { cy } = $$props;
-    	let r = 50;
+    	let { parts } = $$props;
+    	let { name } = $$props;
+    	let innerRadius = 40;
+    	let outerRadius = 60;
     	let fill = "white";
     	let stroke = "black";
-    	let strokeWidth = 3;
-    	let concentricRadius = r + 30;
-    	let linex1 = cx - concentricRadius;
-    	let linex2 = cx + concentricRadius;
-    	let liney1 = cy + concentricRadius + 12;
-    	let liney2 = cy + concentricRadius + 12;
+    	let strokeWidth = 1;
+    	let defaultStrokeWidth = 3;
+    	let defaultFill = "white";
+    	let hoverFill = "#d3d3d3";
+
+    	const updateFillColor = (index, color) => {
+    		$$invalidate(3, arcs = arcs.map((arc, i) => i === index ? { ...arc, fill: color } : arc));
+    	};
 
     	$$self.$$.on_mount.push(function () {
     		if (cx === undefined && !('cx' in $$props || $$self.$$.bound[$$self.$$.props['cx']])) {
@@ -550,70 +777,125 @@ var app = (function () {
     		if (cy === undefined && !('cy' in $$props || $$self.$$.bound[$$self.$$.props['cy']])) {
     			console.warn("<OnePresidentUnit> was created without expected prop 'cy'");
     		}
+
+    		if (parts === undefined && !('parts' in $$props || $$self.$$.bound[$$self.$$.props['parts']])) {
+    			console.warn("<OnePresidentUnit> was created without expected prop 'parts'");
+    		}
+
+    		if (name === undefined && !('name' in $$props || $$self.$$.bound[$$self.$$.props['name']])) {
+    			console.warn("<OnePresidentUnit> was created without expected prop 'name'");
+    		}
     	});
 
-    	const writable_props = ['cx', 'cy'];
+    	const writable_props = ['cx', 'cy', 'parts', 'name'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<OnePresidentUnit> was created with unknown prop '${key}'`);
     	});
 
+    	const mouseover_handler = i => updateFillColor(i, hoverFill);
+    	const mouseout_handler = i => updateFillColor(i, defaultFill);
+    	const focus_handler = i => updateFillColor(i, hoverFill);
+    	const blur_handler = i => updateFillColor(i, defaultFill);
+
     	$$self.$$set = $$props => {
     		if ('cx' in $$props) $$invalidate(0, cx = $$props.cx);
     		if ('cy' in $$props) $$invalidate(1, cy = $$props.cy);
+    		if ('parts' in $$props) $$invalidate(12, parts = $$props.parts);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     	};
 
     	$$self.$capture_state = () => ({
     		cx,
     		cy,
-    		r,
+    		parts,
+    		name,
+    		innerRadius,
+    		outerRadius,
     		fill,
     		stroke,
     		strokeWidth,
-    		concentricRadius,
-    		linex1,
-    		linex2,
-    		liney1,
-    		liney2
+    		defaultStrokeWidth,
+    		defaultFill,
+    		hoverFill,
+    		updateFillColor,
+    		arcs,
+    		lineCoords
     	});
 
     	$$self.$inject_state = $$props => {
     		if ('cx' in $$props) $$invalidate(0, cx = $$props.cx);
     		if ('cy' in $$props) $$invalidate(1, cy = $$props.cy);
-    		if ('r' in $$props) $$invalidate(2, r = $$props.r);
-    		if ('fill' in $$props) $$invalidate(3, fill = $$props.fill);
-    		if ('stroke' in $$props) $$invalidate(4, stroke = $$props.stroke);
-    		if ('strokeWidth' in $$props) $$invalidate(5, strokeWidth = $$props.strokeWidth);
-    		if ('concentricRadius' in $$props) $$invalidate(6, concentricRadius = $$props.concentricRadius);
-    		if ('linex1' in $$props) $$invalidate(7, linex1 = $$props.linex1);
-    		if ('linex2' in $$props) $$invalidate(8, linex2 = $$props.linex2);
-    		if ('liney1' in $$props) $$invalidate(9, liney1 = $$props.liney1);
-    		if ('liney2' in $$props) $$invalidate(10, liney2 = $$props.liney2);
+    		if ('parts' in $$props) $$invalidate(12, parts = $$props.parts);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('innerRadius' in $$props) $$invalidate(5, innerRadius = $$props.innerRadius);
+    		if ('outerRadius' in $$props) $$invalidate(17, outerRadius = $$props.outerRadius);
+    		if ('fill' in $$props) $$invalidate(6, fill = $$props.fill);
+    		if ('stroke' in $$props) $$invalidate(7, stroke = $$props.stroke);
+    		if ('strokeWidth' in $$props) $$invalidate(8, strokeWidth = $$props.strokeWidth);
+    		if ('defaultStrokeWidth' in $$props) $$invalidate(18, defaultStrokeWidth = $$props.defaultStrokeWidth);
+    		if ('defaultFill' in $$props) $$invalidate(9, defaultFill = $$props.defaultFill);
+    		if ('hoverFill' in $$props) $$invalidate(10, hoverFill = $$props.hoverFill);
+    		if ('arcs' in $$props) $$invalidate(3, arcs = $$props.arcs);
+    		if ('lineCoords' in $$props) $$invalidate(4, lineCoords = $$props.lineCoords);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty & /*cx, cy*/ 3) {
+    			$$invalidate(4, lineCoords = {
+    				x1: cx - outerRadius,
+    				x2: cx + outerRadius,
+    				y1: cy + outerRadius + 30,
+    				y2: cy + outerRadius + 30
+    			});
+    		}
+
+    		if ($$self.$$.dirty & /*parts, cx, cy*/ 4099) {
+    			$$invalidate(3, arcs = Array.from({ length: parts }, (_, i) => {
+    				const angle = 2 * Math.PI / parts;
+    				const startX = cx + outerRadius * Math.cos(i * angle);
+    				const startY = cy + outerRadius * Math.sin(i * angle);
+    				const endX = cx + outerRadius * Math.cos((i + 1) * angle);
+    				const endY = cy + outerRadius * Math.sin((i + 1) * angle);
+
+    				return {
+    					d: `M ${cx} ${cy} L ${startX} ${startY} A ${outerRadius} ${outerRadius} 0 0 1 ${endX} ${endY} Z`,
+    					strokeWidth: defaultStrokeWidth,
+    					fill: defaultFill
+    				};
+    			}));
+    		}
+    	};
+
     	return [
     		cx,
     		cy,
-    		r,
+    		name,
+    		arcs,
+    		lineCoords,
+    		innerRadius,
     		fill,
     		stroke,
     		strokeWidth,
-    		concentricRadius,
-    		linex1,
-    		linex2,
-    		liney1,
-    		liney2
+    		defaultFill,
+    		hoverFill,
+    		updateFillColor,
+    		parts,
+    		mouseover_handler,
+    		mouseout_handler,
+    		focus_handler,
+    		blur_handler
     	];
     }
 
     class OnePresidentUnit extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { cx: 0, cy: 1 });
+    		init(this, options, instance$2, create_fragment$2, safe_not_equal, { cx: 0, cy: 1, parts: 12, name: 2 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -638,11 +920,75 @@ var app = (function () {
     	set cy(value) {
     		throw new Error("<OnePresidentUnit>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get parts() {
+    		throw new Error("<OnePresidentUnit>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set parts(value) {
+    		throw new Error("<OnePresidentUnit>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get name() {
+    		throw new Error("<OnePresidentUnit>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set name(value) {
+    		throw new Error("<OnePresidentUnit>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
-    /* src/components/Svg.svelte generated by Svelte v3.59.2 */
+    const subscriber_queue = [];
+    /**
+     * Create a `Writable` store that allows both updating and reading by subscription.
+     * @param {*=}value initial value
+     * @param {StartStopNotifier=} start
+     */
+    function writable(value, start = noop) {
+        let stop;
+        const subscribers = new Set();
+        function set(new_value) {
+            if (safe_not_equal(value, new_value)) {
+                value = new_value;
+                if (stop) { // store is ready
+                    const run_queue = !subscriber_queue.length;
+                    for (const subscriber of subscribers) {
+                        subscriber[1]();
+                        subscriber_queue.push(subscriber, value);
+                    }
+                    if (run_queue) {
+                        for (let i = 0; i < subscriber_queue.length; i += 2) {
+                            subscriber_queue[i][0](subscriber_queue[i + 1]);
+                        }
+                        subscriber_queue.length = 0;
+                    }
+                }
+            }
+        }
+        function update(fn) {
+            set(fn(value));
+        }
+        function subscribe(run, invalidate = noop) {
+            const subscriber = [run, invalidate];
+            subscribers.add(subscriber);
+            if (subscribers.size === 1) {
+                stop = start(set) || noop;
+            }
+            run(value);
+            return () => {
+                subscribers.delete(subscriber);
+                if (subscribers.size === 0 && stop) {
+                    stop();
+                    stop = null;
+                }
+            };
+        }
+        return { set, update, subscribe };
+    }
 
-    const { console: console_1 } = globals;
+    let svgWidth = writable(window.innerWidth / 2);
+
+    /* src/components/Svg.svelte generated by Svelte v3.59.2 */
     const file$1 = "src/components/Svg.svelte";
 
     function get_each_context(ctx, list, i) {
@@ -651,7 +997,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (48:2) {#each circles as circle}
+    // (55:2) {#each circles as circle}
     function create_each_block(ctx) {
     	let circles_1;
     	let current;
@@ -659,7 +1005,9 @@ var app = (function () {
     	circles_1 = new OnePresidentUnit({
     			props: {
     				cx: /*circle*/ ctx[5].cx,
-    				cy: /*circle*/ ctx[5].cy
+    				cy: /*circle*/ ctx[5].cy,
+    				parts: /*circle*/ ctx[5].parts,
+    				name: /*circle*/ ctx[5].name
     			},
     			$$inline: true
     		});
@@ -674,8 +1022,10 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const circles_1_changes = {};
-    			if (dirty & /*circles*/ 4) circles_1_changes.cx = /*circle*/ ctx[5].cx;
-    			if (dirty & /*circles*/ 4) circles_1_changes.cy = /*circle*/ ctx[5].cy;
+    			if (dirty & /*circles*/ 2) circles_1_changes.cx = /*circle*/ ctx[5].cx;
+    			if (dirty & /*circles*/ 2) circles_1_changes.cy = /*circle*/ ctx[5].cy;
+    			if (dirty & /*circles*/ 2) circles_1_changes.parts = /*circle*/ ctx[5].parts;
+    			if (dirty & /*circles*/ 2) circles_1_changes.name = /*circle*/ ctx[5].name;
     			circles_1.$set(circles_1_changes);
     		},
     		i: function intro(local) {
@@ -696,7 +1046,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(48:2) {#each circles as circle}",
+    		source: "(55:2) {#each circles as circle}",
     		ctx
     	});
 
@@ -707,7 +1057,7 @@ var app = (function () {
     	let svg;
     	let rect;
     	let current;
-    	let each_value = /*circles*/ ctx[2];
+    	let each_value = /*circles*/ ctx[1];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -728,15 +1078,15 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(rect, "width", /*width*/ ctx[0]);
-    			attr_dev(rect, "height", /*height*/ ctx[1]);
+    			attr_dev(rect, "width", /*$svgWidth*/ ctx[2]);
+    			attr_dev(rect, "height", /*height*/ ctx[0]);
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "3px");
     			attr_dev(rect, "fill", "none");
-    			add_location(rect, file$1, 45, 2, 851);
-    			attr_dev(svg, "width", /*width*/ ctx[0]);
-    			attr_dev(svg, "height", /*height*/ ctx[1]);
-    			add_location(svg, file$1, 44, 0, 826);
+    			add_location(rect, file$1, 51, 2, 1038);
+    			attr_dev(svg, "width", /*$svgWidth*/ ctx[2]);
+    			attr_dev(svg, "height", /*height*/ ctx[0]);
+    			add_location(svg, file$1, 50, 0, 1003);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -754,16 +1104,16 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (!current || dirty & /*width*/ 1) {
-    				attr_dev(rect, "width", /*width*/ ctx[0]);
+    			if (!current || dirty & /*$svgWidth*/ 4) {
+    				attr_dev(rect, "width", /*$svgWidth*/ ctx[2]);
     			}
 
-    			if (!current || dirty & /*height*/ 2) {
-    				attr_dev(rect, "height", /*height*/ ctx[1]);
+    			if (!current || dirty & /*height*/ 1) {
+    				attr_dev(rect, "height", /*height*/ ctx[0]);
     			}
 
-    			if (dirty & /*circles*/ 4) {
-    				each_value = /*circles*/ ctx[2];
+    			if (dirty & /*circles*/ 2) {
+    				each_value = /*circles*/ ctx[1];
     				validate_each_argument(each_value);
     				let i;
 
@@ -790,12 +1140,12 @@ var app = (function () {
     				check_outros();
     			}
 
-    			if (!current || dirty & /*width*/ 1) {
-    				attr_dev(svg, "width", /*width*/ ctx[0]);
+    			if (!current || dirty & /*$svgWidth*/ 4) {
+    				attr_dev(svg, "width", /*$svgWidth*/ ctx[2]);
     			}
 
-    			if (!current || dirty & /*height*/ 2) {
-    				attr_dev(svg, "height", /*height*/ ctx[1]);
+    			if (!current || dirty & /*height*/ 1) {
+    				attr_dev(svg, "height", /*height*/ ctx[0]);
     			}
     		},
     		i: function intro(local) {
@@ -834,30 +1184,51 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
+    	let $svgWidth;
+    	validate_store(svgWidth, 'svgWidth');
+    	component_subscribe($$self, svgWidth, $$value => $$invalidate(2, $svgWidth = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Svg', slots, []);
-    	let width = window.innerWidth / 2;
     	let height = window.innerHeight;
     	let circles = [];
 
     	const updateDimensions = () => {
-    		$$invalidate(0, width = window.innerWidth / 2);
-    		console.log(width);
-    		$$invalidate(1, height = window.innerHeight);
-    		updateCircles();
+    		svgWidth.set(window.innerWidth / 2);
+    		$$invalidate(0, height = window.innerHeight);
+    		updatePresidents();
     	};
 
-    	const updateCircles = () => {
-    		$$invalidate(2, circles = [
-    			{ cx: width / 4, cy: 200 },
-    			{ cx: width / 2, cy: 200 },
-    			{ cx: width * 3 / 4, cy: 200 },
-    			{ cx: width / 4, cy: 400 }
+    	const updatePresidents = () => {
+    		$$invalidate(1, circles = [
+    			{
+    				cx: $svgWidth / 4,
+    				cy: 200,
+    				parts: 6,
+    				name: "name1"
+    			},
+    			{
+    				cx: $svgWidth / 2,
+    				cy: 200,
+    				parts: 10,
+    				name: "name2"
+    			},
+    			{
+    				cx: $svgWidth * 3 / 4,
+    				cy: 200,
+    				parts: 12,
+    				name: "name3"
+    			},
+    			{
+    				cx: $svgWidth / 4,
+    				cy: 500,
+    				parts: 6,
+    				name: "name4"
+    			}
     		]);
     	};
 
     	onMount(() => {
-    		updateCircles();
+    		updatePresidents();
     		window.addEventListener("resize", updateDimensions);
     		return () => window.removeEventListener("resize", updateDimensions);
     	});
@@ -865,30 +1236,30 @@ var app = (function () {
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Svg> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Svg> was created with unknown prop '${key}'`);
     	});
 
     	$$self.$capture_state = () => ({
     		onMount,
     		Circles: OnePresidentUnit,
-    		width,
+    		svgWidth,
     		height,
     		circles,
     		updateDimensions,
-    		updateCircles
+    		updatePresidents,
+    		$svgWidth
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('width' in $$props) $$invalidate(0, width = $$props.width);
-    		if ('height' in $$props) $$invalidate(1, height = $$props.height);
-    		if ('circles' in $$props) $$invalidate(2, circles = $$props.circles);
+    		if ('height' in $$props) $$invalidate(0, height = $$props.height);
+    		if ('circles' in $$props) $$invalidate(1, circles = $$props.circles);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [width, height, circles];
+    	return [height, circles, $svgWidth];
     }
 
     class Svg extends SvelteComponentDev {
