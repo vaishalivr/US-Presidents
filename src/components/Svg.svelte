@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import Circles from "./onePresidentUnit.svelte";
+  import OnePresident from "./onePresidentUnit.svelte";
   import { svgWidth } from "../store.js";
   import { presidents, updatePresidents } from "../data/presidentsCircleData";
 
@@ -23,12 +23,17 @@
   <rect width={$svgWidth} {height} stroke="black" stroke-width="3px" fill="none"
   ></rect>
 
-  {#each $presidents as circle}
-    <Circles
-      cx={circle.cx}
-      cy={circle.cy}
-      parts={circle.parts}
-      name={circle.name}
+  {#each $presidents as president}
+    <OnePresident
+      cx={president.cx}
+      cy={president.cy}
+      parts={president.parts}
+      name={president.name}
+      status={president.status}
+      birthYear={president.birthYear}
+      deathYear={president.deathYear}
+      presidencyStart={president.presidencyStart}
+      presidencyEnd={president.presidencyEnd}
     />
   {/each}
 </svg>
