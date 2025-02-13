@@ -73,12 +73,8 @@
     presidencyEndMarkerStroke = "none";
   };
 
-  const birthMarkerMouseover = (event) => {
+  const birthMarkerMouseover = () => {
     console.log("birth marker mouseover");
-    showTooltip = true;
-    tooltipX = event.clientX + 10;
-    tooltipY = event.clientY + 10;
-    tooltipText = "Hello Baby";
   };
 
   const birthMarkerMouseout = () => {
@@ -127,9 +123,31 @@
   on:blur={birthMarkerMouseout}
 />
 
+<!-- Birth Year Label -->
+<text
+  x={lineCoords.x1 - 5}
+  y={lineCoords.y1 + 4}
+  font-size="10"
+  text-anchor="end"
+  fill="black"
+>
+  {birthYear}
+</text>
+
 <!-- Death Marker -->
 {#if status === "dead"}
   <circle cx={lineCoords.x2} cy={lineCoords.y2} r="3" fill="black" />
+
+  <!-- Death Year Label -->
+  <text
+    x={lineCoords.x2 + 5}
+    y={lineCoords.y2 + 4}
+    font-size="10"
+    text-anchor="start"
+    fill="black"
+  >
+    {deathYear}
+  </text>
 {:else}
   <line
     x1={lineCoords.x2}
@@ -149,7 +167,7 @@
   font-size="1rem"
   fill="black"
 >
-  {name}
+  {name} ({presidencyStart}-{presidencyEnd})
 </text>
 
 <!-- Presidency Start Marker -->
