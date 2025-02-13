@@ -496,7 +496,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (89:0) {#each arcs as arc, i}
+    // (85:0) {#each arcs as arc, i}
     function create_each_block$1(ctx) {
     	let path;
     	let path_d_value;
@@ -530,7 +530,7 @@ var app = (function () {
     			attr_dev(path, "stroke-width", path_stroke_width_value = /*arc*/ ctx[43].strokeWidth);
     			attr_dev(path, "tabindex", "0");
     			attr_dev(path, "role", "button");
-    			add_location(path, file$2, 89, 2, 2430);
+    			add_location(path, file$2, 85, 2, 2299);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -549,15 +549,15 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*arcs*/ 128 && path_d_value !== (path_d_value = /*arc*/ ctx[43].d)) {
+    			if (dirty[0] & /*arcs*/ 2048 && path_d_value !== (path_d_value = /*arc*/ ctx[43].d)) {
     				attr_dev(path, "d", path_d_value);
     			}
 
-    			if (dirty[0] & /*arcs*/ 128 && path_fill_value !== (path_fill_value = /*arc*/ ctx[43].fill)) {
+    			if (dirty[0] & /*arcs*/ 2048 && path_fill_value !== (path_fill_value = /*arc*/ ctx[43].fill)) {
     				attr_dev(path, "fill", path_fill_value);
     			}
 
-    			if (dirty[0] & /*arcs*/ 128 && path_stroke_width_value !== (path_stroke_width_value = /*arc*/ ctx[43].strokeWidth)) {
+    			if (dirty[0] & /*arcs*/ 2048 && path_stroke_width_value !== (path_stroke_width_value = /*arc*/ ctx[43].strokeWidth)) {
     				attr_dev(path, "stroke-width", path_stroke_width_value);
     			}
     		},
@@ -572,14 +572,14 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(89:0) {#each arcs as arc, i}",
+    		source: "(85:0) {#each arcs as arc, i}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (133:0) {:else}
+    // (151:0) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -590,31 +590,31 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			line = svg_element("line");
-    			attr_dev(line, "x1", line_x__value = /*lineCoords*/ ctx[4].x2);
-    			attr_dev(line, "y1", line_y__value = /*lineCoords*/ ctx[4].y2 - 5);
-    			attr_dev(line, "x2", line_x__value_1 = /*lineCoords*/ ctx[4].x2);
-    			attr_dev(line, "y2", line_y__value_1 = /*lineCoords*/ ctx[4].y2 + 5);
+    			attr_dev(line, "x1", line_x__value = /*lineCoords*/ ctx[8].x2);
+    			attr_dev(line, "y1", line_y__value = /*lineCoords*/ ctx[8].y2 - 5);
+    			attr_dev(line, "x2", line_x__value_1 = /*lineCoords*/ ctx[8].x2);
+    			attr_dev(line, "y2", line_y__value_1 = /*lineCoords*/ ctx[8].y2 + 5);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "2");
-    			add_location(line, file$2, 133, 2, 3422);
+    			add_location(line, file$2, 151, 2, 3627);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*lineCoords*/ 16 && line_x__value !== (line_x__value = /*lineCoords*/ ctx[4].x2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_x__value !== (line_x__value = /*lineCoords*/ ctx[8].x2)) {
     				attr_dev(line, "x1", line_x__value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_y__value !== (line_y__value = /*lineCoords*/ ctx[4].y2 - 5)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_y__value !== (line_y__value = /*lineCoords*/ ctx[8].y2 - 5)) {
     				attr_dev(line, "y1", line_y__value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_x__value_1 !== (line_x__value_1 = /*lineCoords*/ ctx[4].x2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_x__value_1 !== (line_x__value_1 = /*lineCoords*/ ctx[8].x2)) {
     				attr_dev(line, "x2", line_x__value_1);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_y__value_1 !== (line_y__value_1 = /*lineCoords*/ ctx[4].y2 + 5)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_y__value_1 !== (line_y__value_1 = /*lineCoords*/ ctx[8].y2 + 5)) {
     				attr_dev(line, "y2", line_y__value_1);
     			}
     		},
@@ -627,42 +627,71 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(133:0) {:else}",
+    		source: "(151:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (131:0) {#if status === "dead"}
+    // (138:0) {#if status === "dead"}
     function create_if_block(ctx) {
     	let circle;
     	let circle_cx_value;
     	let circle_cy_value;
+    	let t0;
+    	let text_1;
+    	let t1;
+    	let text_1_x_value;
+    	let text_1_y_value;
 
     	const block = {
     		c: function create() {
     			circle = svg_element("circle");
-    			attr_dev(circle, "cx", circle_cx_value = /*lineCoords*/ ctx[4].x2);
-    			attr_dev(circle, "cy", circle_cy_value = /*lineCoords*/ ctx[4].y2);
+    			t0 = space();
+    			text_1 = svg_element("text");
+    			t1 = text(/*deathYear*/ ctx[5]);
+    			attr_dev(circle, "cx", circle_cx_value = /*lineCoords*/ ctx[8].x2);
+    			attr_dev(circle, "cy", circle_cy_value = /*lineCoords*/ ctx[8].y2);
     			attr_dev(circle, "r", "3");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$2, 131, 2, 3344);
+    			add_location(circle, file$2, 138, 2, 3370);
+    			attr_dev(text_1, "x", text_1_x_value = /*lineCoords*/ ctx[8].x2 + 5);
+    			attr_dev(text_1, "y", text_1_y_value = /*lineCoords*/ ctx[8].y2 + 4);
+    			attr_dev(text_1, "font-size", "10");
+    			attr_dev(text_1, "text-anchor", "start");
+    			attr_dev(text_1, "fill", "black");
+    			add_location(text_1, file$2, 141, 2, 3469);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
+    			insert_dev(target, t0, anchor);
+    			insert_dev(target, text_1, anchor);
+    			append_dev(text_1, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*lineCoords*/ 16 && circle_cx_value !== (circle_cx_value = /*lineCoords*/ ctx[4].x2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle_cx_value !== (circle_cx_value = /*lineCoords*/ ctx[8].x2)) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && circle_cy_value !== (circle_cy_value = /*lineCoords*/ ctx[4].y2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle_cy_value !== (circle_cy_value = /*lineCoords*/ ctx[8].y2)) {
     				attr_dev(circle, "cy", circle_cy_value);
+    			}
+
+    			if (dirty[0] & /*deathYear*/ 32) set_data_dev(t1, /*deathYear*/ ctx[5]);
+
+    			if (dirty[0] & /*lineCoords*/ 256 && text_1_x_value !== (text_1_x_value = /*lineCoords*/ ctx[8].x2 + 5)) {
+    				attr_dev(text_1, "x", text_1_x_value);
+    			}
+
+    			if (dirty[0] & /*lineCoords*/ 256 && text_1_y_value !== (text_1_y_value = /*lineCoords*/ ctx[8].y2 + 4)) {
+    				attr_dev(text_1, "y", text_1_y_value);
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(circle);
+    			if (detaching) detach_dev(t0);
+    			if (detaching) detach_dev(text_1);
     		}
     	};
 
@@ -670,7 +699,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(131:0) {#if status === \\\"dead\\\"}",
+    		source: "(138:0) {#if status === \\\"dead\\\"}",
     		ctx
     	});
 
@@ -691,20 +720,30 @@ var app = (function () {
     	let circle1_cx_value;
     	let circle1_cy_value;
     	let t3;
+    	let text0;
     	let t4;
-    	let text_1;
+    	let text0_x_value;
+    	let text0_y_value;
     	let t5;
-    	let text_1_x_value;
-    	let text_1_y_value;
     	let t6;
+    	let text1;
+    	let t7;
+    	let t8;
+    	let t9;
+    	let t10;
+    	let t11;
+    	let t12;
+    	let text1_x_value;
+    	let text1_y_value;
+    	let t13;
     	let circle2;
     	let circle2_cy_value;
-    	let t7;
+    	let t14;
     	let circle3;
     	let circle3_cy_value;
     	let mounted;
     	let dispose;
-    	let each_value = /*arcs*/ ctx[7];
+    	let each_value = /*arcs*/ ctx[11];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -733,57 +772,71 @@ var app = (function () {
     			t2 = space();
     			circle1 = svg_element("circle");
     			t3 = space();
+    			text0 = svg_element("text");
+    			t4 = text(/*birthYear*/ ctx[4]);
+    			t5 = space();
     			if_block.c();
-    			t4 = space();
-    			text_1 = svg_element("text");
-    			t5 = text(/*name*/ ctx[2]);
     			t6 = space();
+    			text1 = svg_element("text");
+    			t7 = text(/*name*/ ctx[2]);
+    			t8 = text(" (");
+    			t9 = text(/*presidencyStart*/ ctx[6]);
+    			t10 = text("-");
+    			t11 = text(/*presidencyEnd*/ ctx[7]);
+    			t12 = text(")");
+    			t13 = space();
     			circle2 = svg_element("circle");
-    			t7 = space();
+    			t14 = space();
     			circle3 = svg_element("circle");
     			attr_dev(circle0, "cx", /*cx*/ ctx[0]);
     			attr_dev(circle0, "cy", /*cy*/ ctx[1]);
-    			attr_dev(circle0, "r", /*innerRadius*/ ctx[10]);
-    			attr_dev(circle0, "fill", /*fill*/ ctx[11]);
-    			attr_dev(circle0, "stroke", /*stroke*/ ctx[12]);
-    			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[13]);
-    			add_location(circle0, file$2, 103, 0, 2787);
-    			attr_dev(line, "x1", line_x__value = /*lineCoords*/ ctx[4].x1);
-    			attr_dev(line, "y1", line_y__value = /*lineCoords*/ ctx[4].y1);
-    			attr_dev(line, "x2", line_x__value_1 = /*lineCoords*/ ctx[4].x2);
-    			attr_dev(line, "y2", line_y__value_1 = /*lineCoords*/ ctx[4].y2);
-    			attr_dev(line, "stroke", /*stroke*/ ctx[12]);
-    			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[13]);
-    			add_location(line, file$2, 106, 0, 2892);
-    			attr_dev(circle1, "cx", circle1_cx_value = /*lineCoords*/ ctx[4].x1);
-    			attr_dev(circle1, "cy", circle1_cy_value = /*lineCoords*/ ctx[4].y1);
+    			attr_dev(circle0, "r", /*innerRadius*/ ctx[14]);
+    			attr_dev(circle0, "fill", /*fill*/ ctx[15]);
+    			attr_dev(circle0, "stroke", /*stroke*/ ctx[16]);
+    			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[17]);
+    			add_location(circle0, file$2, 99, 0, 2656);
+    			attr_dev(line, "x1", line_x__value = /*lineCoords*/ ctx[8].x1);
+    			attr_dev(line, "y1", line_y__value = /*lineCoords*/ ctx[8].y1);
+    			attr_dev(line, "x2", line_x__value_1 = /*lineCoords*/ ctx[8].x2);
+    			attr_dev(line, "y2", line_y__value_1 = /*lineCoords*/ ctx[8].y2);
+    			attr_dev(line, "stroke", /*stroke*/ ctx[16]);
+    			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[17]);
+    			add_location(line, file$2, 102, 0, 2761);
+    			attr_dev(circle1, "cx", circle1_cx_value = /*lineCoords*/ ctx[8].x1);
+    			attr_dev(circle1, "cy", circle1_cy_value = /*lineCoords*/ ctx[8].y1);
     			attr_dev(circle1, "r", "3");
     			attr_dev(circle1, "fill", "black");
     			attr_dev(circle1, "tabindex", "0");
     			attr_dev(circle1, "role", "button");
-    			add_location(circle1, file$2, 116, 0, 3048);
-    			attr_dev(text_1, "x", text_1_x_value = (/*lineCoords*/ ctx[4].x1 + /*lineCoords*/ ctx[4].x2) / 2);
-    			attr_dev(text_1, "y", text_1_y_value = /*lineCoords*/ ctx[4].y1 - 5);
-    			attr_dev(text_1, "text-anchor", "middle");
-    			attr_dev(text_1, "font-size", "1rem");
-    			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$2, 144, 0, 3605);
-    			attr_dev(circle2, "cx", /*xPresidencyStart*/ ctx[9]);
-    			attr_dev(circle2, "cy", circle2_cy_value = /*lineCoords*/ ctx[4].y1);
-    			attr_dev(circle2, "stroke", /*presidencyStartMarkerStroke*/ ctx[5]);
+    			add_location(circle1, file$2, 112, 0, 2917);
+    			attr_dev(text0, "x", text0_x_value = /*lineCoords*/ ctx[8].x1 - 5);
+    			attr_dev(text0, "y", text0_y_value = /*lineCoords*/ ctx[8].y1 + 4);
+    			attr_dev(text0, "font-size", "10");
+    			attr_dev(text0, "text-anchor", "end");
+    			attr_dev(text0, "fill", "black");
+    			add_location(text0, file$2, 126, 0, 3191);
+    			attr_dev(text1, "x", text1_x_value = (/*lineCoords*/ ctx[8].x1 + /*lineCoords*/ ctx[8].x2) / 2);
+    			attr_dev(text1, "y", text1_y_value = /*lineCoords*/ ctx[8].y1 - 5);
+    			attr_dev(text1, "text-anchor", "middle");
+    			attr_dev(text1, "font-size", "1rem");
+    			attr_dev(text1, "fill", "black");
+    			add_location(text1, file$2, 162, 0, 3810);
+    			attr_dev(circle2, "cx", /*xPresidencyStart*/ ctx[13]);
+    			attr_dev(circle2, "cy", circle2_cy_value = /*lineCoords*/ ctx[8].y1);
+    			attr_dev(circle2, "stroke", /*presidencyStartMarkerStroke*/ ctx[9]);
     			attr_dev(circle2, "r", "5");
     			attr_dev(circle2, "fill", "red");
     			attr_dev(circle2, "tabindex", "0");
     			attr_dev(circle2, "role", "button");
-    			add_location(circle2, file$2, 156, 0, 3831);
-    			attr_dev(circle3, "cx", /*xPresidencyEnd*/ ctx[8]);
-    			attr_dev(circle3, "cy", circle3_cy_value = /*lineCoords*/ ctx[4].y1);
-    			attr_dev(circle3, "stroke", /*presidencyEndMarkerStroke*/ ctx[6]);
+    			add_location(circle2, file$2, 174, 0, 4072);
+    			attr_dev(circle3, "cx", /*xPresidencyEnd*/ ctx[12]);
+    			attr_dev(circle3, "cy", circle3_cy_value = /*lineCoords*/ ctx[8].y1);
+    			attr_dev(circle3, "stroke", /*presidencyEndMarkerStroke*/ ctx[10]);
     			attr_dev(circle3, "r", "5");
     			attr_dev(circle3, "fill", "red");
     			attr_dev(circle3, "tabindex", "0");
     			attr_dev(circle3, "role", "button");
-    			add_location(circle3, file$2, 171, 0, 4222);
+    			add_location(circle3, file$2, 189, 0, 4463);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -802,21 +855,29 @@ var app = (function () {
     			insert_dev(target, t2, anchor);
     			insert_dev(target, circle1, anchor);
     			insert_dev(target, t3, anchor);
+    			insert_dev(target, text0, anchor);
+    			append_dev(text0, t4);
+    			insert_dev(target, t5, anchor);
     			if_block.m(target, anchor);
-    			insert_dev(target, t4, anchor);
-    			insert_dev(target, text_1, anchor);
-    			append_dev(text_1, t5);
     			insert_dev(target, t6, anchor);
+    			insert_dev(target, text1, anchor);
+    			append_dev(text1, t7);
+    			append_dev(text1, t8);
+    			append_dev(text1, t9);
+    			append_dev(text1, t10);
+    			append_dev(text1, t11);
+    			append_dev(text1, t12);
+    			insert_dev(target, t13, anchor);
     			insert_dev(target, circle2, anchor);
-    			insert_dev(target, t7, anchor);
+    			insert_dev(target, t14, anchor);
     			insert_dev(target, circle3, anchor);
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(circle1, "mouseover", /*birthMarkerMouseover*/ ctx[21], false, false, false, false),
-    					listen_dev(circle1, "mouseout", /*birthMarkerMouseout*/ ctx[22], false, false, false, false),
-    					listen_dev(circle1, "focus", /*birthMarkerMouseover*/ ctx[21], false, false, false, false),
-    					listen_dev(circle1, "blur", /*birthMarkerMouseout*/ ctx[22], false, false, false, false),
+    					listen_dev(circle1, "mouseover", /*birthMarkerMouseover*/ ctx[25], false, false, false, false),
+    					listen_dev(circle1, "mouseout", /*birthMarkerMouseout*/ ctx[26], false, false, false, false),
+    					listen_dev(circle1, "focus", /*birthMarkerMouseover*/ ctx[25], false, false, false, false),
+    					listen_dev(circle1, "blur", /*birthMarkerMouseout*/ ctx[26], false, false, false, false),
     					listen_dev(circle2, "mouseover", /*mouseover_handler_1*/ ctx[32], false, false, false, false),
     					listen_dev(circle2, "mouseout", /*mouseout_handler_1*/ ctx[33], false, false, false, false),
     					listen_dev(circle2, "focus", /*focus_handler_1*/ ctx[34], false, false, false, false),
@@ -831,8 +892,8 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty[0] & /*arcs, updateFillColor, hoverFill, defaultFill*/ 114816) {
-    				each_value = /*arcs*/ ctx[7];
+    			if (dirty[0] & /*arcs, updateFillColor, hoverFill, defaultFill*/ 1837056) {
+    				each_value = /*arcs*/ ctx[11];
     				validate_each_argument(each_value);
     				let i;
 
@@ -863,28 +924,38 @@ var app = (function () {
     				attr_dev(circle0, "cy", /*cy*/ ctx[1]);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_x__value !== (line_x__value = /*lineCoords*/ ctx[4].x1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_x__value !== (line_x__value = /*lineCoords*/ ctx[8].x1)) {
     				attr_dev(line, "x1", line_x__value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_y__value !== (line_y__value = /*lineCoords*/ ctx[4].y1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_y__value !== (line_y__value = /*lineCoords*/ ctx[8].y1)) {
     				attr_dev(line, "y1", line_y__value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_x__value_1 !== (line_x__value_1 = /*lineCoords*/ ctx[4].x2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_x__value_1 !== (line_x__value_1 = /*lineCoords*/ ctx[8].x2)) {
     				attr_dev(line, "x2", line_x__value_1);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && line_y__value_1 !== (line_y__value_1 = /*lineCoords*/ ctx[4].y2)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && line_y__value_1 !== (line_y__value_1 = /*lineCoords*/ ctx[8].y2)) {
     				attr_dev(line, "y2", line_y__value_1);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && circle1_cx_value !== (circle1_cx_value = /*lineCoords*/ ctx[4].x1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle1_cx_value !== (circle1_cx_value = /*lineCoords*/ ctx[8].x1)) {
     				attr_dev(circle1, "cx", circle1_cx_value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && circle1_cy_value !== (circle1_cy_value = /*lineCoords*/ ctx[4].y1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle1_cy_value !== (circle1_cy_value = /*lineCoords*/ ctx[8].y1)) {
     				attr_dev(circle1, "cy", circle1_cy_value);
+    			}
+
+    			if (dirty[0] & /*birthYear*/ 16) set_data_dev(t4, /*birthYear*/ ctx[4]);
+
+    			if (dirty[0] & /*lineCoords*/ 256 && text0_x_value !== (text0_x_value = /*lineCoords*/ ctx[8].x1 - 5)) {
+    				attr_dev(text0, "x", text0_x_value);
+    			}
+
+    			if (dirty[0] & /*lineCoords*/ 256 && text0_y_value !== (text0_y_value = /*lineCoords*/ ctx[8].y1 + 4)) {
+    				attr_dev(text0, "y", text0_y_value);
     			}
 
     			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
@@ -895,42 +966,44 @@ var app = (function () {
 
     				if (if_block) {
     					if_block.c();
-    					if_block.m(t4.parentNode, t4);
+    					if_block.m(t6.parentNode, t6);
     				}
     			}
 
-    			if (dirty[0] & /*name*/ 4) set_data_dev(t5, /*name*/ ctx[2]);
+    			if (dirty[0] & /*name*/ 4) set_data_dev(t7, /*name*/ ctx[2]);
+    			if (dirty[0] & /*presidencyStart*/ 64) set_data_dev(t9, /*presidencyStart*/ ctx[6]);
+    			if (dirty[0] & /*presidencyEnd*/ 128) set_data_dev(t11, /*presidencyEnd*/ ctx[7]);
 
-    			if (dirty[0] & /*lineCoords*/ 16 && text_1_x_value !== (text_1_x_value = (/*lineCoords*/ ctx[4].x1 + /*lineCoords*/ ctx[4].x2) / 2)) {
-    				attr_dev(text_1, "x", text_1_x_value);
+    			if (dirty[0] & /*lineCoords*/ 256 && text1_x_value !== (text1_x_value = (/*lineCoords*/ ctx[8].x1 + /*lineCoords*/ ctx[8].x2) / 2)) {
+    				attr_dev(text1, "x", text1_x_value);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && text_1_y_value !== (text_1_y_value = /*lineCoords*/ ctx[4].y1 - 5)) {
-    				attr_dev(text_1, "y", text_1_y_value);
+    			if (dirty[0] & /*lineCoords*/ 256 && text1_y_value !== (text1_y_value = /*lineCoords*/ ctx[8].y1 - 5)) {
+    				attr_dev(text1, "y", text1_y_value);
     			}
 
-    			if (dirty[0] & /*xPresidencyStart*/ 512) {
-    				attr_dev(circle2, "cx", /*xPresidencyStart*/ ctx[9]);
+    			if (dirty[0] & /*xPresidencyStart*/ 8192) {
+    				attr_dev(circle2, "cx", /*xPresidencyStart*/ ctx[13]);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && circle2_cy_value !== (circle2_cy_value = /*lineCoords*/ ctx[4].y1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle2_cy_value !== (circle2_cy_value = /*lineCoords*/ ctx[8].y1)) {
     				attr_dev(circle2, "cy", circle2_cy_value);
     			}
 
-    			if (dirty[0] & /*presidencyStartMarkerStroke*/ 32) {
-    				attr_dev(circle2, "stroke", /*presidencyStartMarkerStroke*/ ctx[5]);
+    			if (dirty[0] & /*presidencyStartMarkerStroke*/ 512) {
+    				attr_dev(circle2, "stroke", /*presidencyStartMarkerStroke*/ ctx[9]);
     			}
 
-    			if (dirty[0] & /*xPresidencyEnd*/ 256) {
-    				attr_dev(circle3, "cx", /*xPresidencyEnd*/ ctx[8]);
+    			if (dirty[0] & /*xPresidencyEnd*/ 4096) {
+    				attr_dev(circle3, "cx", /*xPresidencyEnd*/ ctx[12]);
     			}
 
-    			if (dirty[0] & /*lineCoords*/ 16 && circle3_cy_value !== (circle3_cy_value = /*lineCoords*/ ctx[4].y1)) {
+    			if (dirty[0] & /*lineCoords*/ 256 && circle3_cy_value !== (circle3_cy_value = /*lineCoords*/ ctx[8].y1)) {
     				attr_dev(circle3, "cy", circle3_cy_value);
     			}
 
-    			if (dirty[0] & /*presidencyEndMarkerStroke*/ 64) {
-    				attr_dev(circle3, "stroke", /*presidencyEndMarkerStroke*/ ctx[6]);
+    			if (dirty[0] & /*presidencyEndMarkerStroke*/ 1024) {
+    				attr_dev(circle3, "stroke", /*presidencyEndMarkerStroke*/ ctx[10]);
     			}
     		},
     		i: noop,
@@ -944,12 +1017,14 @@ var app = (function () {
     			if (detaching) detach_dev(t2);
     			if (detaching) detach_dev(circle1);
     			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(text0);
+    			if (detaching) detach_dev(t5);
     			if_block.d(detaching);
-    			if (detaching) detach_dev(t4);
-    			if (detaching) detach_dev(text_1);
     			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(text1);
+    			if (detaching) detach_dev(t13);
     			if (detaching) detach_dev(circle2);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t14);
     			if (detaching) detach_dev(circle3);
     			mounted = false;
     			run_all(dispose);
@@ -996,31 +1071,27 @@ var app = (function () {
     	let hoverFill = "#d3d3d3";
 
     	const updateFillColor = (index, color) => {
-    		$$invalidate(7, arcs = arcs.map((arc, i) => i === index ? { ...arc, fill: color } : arc));
+    		$$invalidate(11, arcs = arcs.map((arc, i) => i === index ? { ...arc, fill: color } : arc));
     	};
 
     	const presidencyStartMarkerMouseover = () => {
-    		$$invalidate(5, presidencyStartMarkerStroke = "black");
+    		$$invalidate(9, presidencyStartMarkerStroke = "black");
     	};
 
     	const presidencyStartMarkerMouseout = () => {
-    		$$invalidate(5, presidencyStartMarkerStroke = "none");
+    		$$invalidate(9, presidencyStartMarkerStroke = "none");
     	};
 
     	const presidencyEndMarkerMouseover = () => {
-    		$$invalidate(6, presidencyEndMarkerStroke = "black");
+    		$$invalidate(10, presidencyEndMarkerStroke = "black");
     	};
 
     	const presidencyEndMarkerMouseout = () => {
-    		$$invalidate(6, presidencyEndMarkerStroke = "none");
+    		$$invalidate(10, presidencyEndMarkerStroke = "none");
     	};
 
-    	const birthMarkerMouseover = event => {
+    	const birthMarkerMouseover = () => {
     		console.log("birth marker mouseover");
-    		showTooltip = true;
-    		tooltipX = event.clientX + 10;
-    		tooltipY = event.clientY + 10;
-    		tooltipText = "Hello Baby";
     	};
 
     	const birthMarkerMouseout = () => {
@@ -1097,13 +1168,13 @@ var app = (function () {
     	$$self.$$set = $$props => {
     		if ('cx' in $$props) $$invalidate(0, cx = $$props.cx);
     		if ('cy' in $$props) $$invalidate(1, cy = $$props.cy);
-    		if ('parts' in $$props) $$invalidate(23, parts = $$props.parts);
+    		if ('parts' in $$props) $$invalidate(27, parts = $$props.parts);
     		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     		if ('status' in $$props) $$invalidate(3, status = $$props.status);
-    		if ('birthYear' in $$props) $$invalidate(24, birthYear = $$props.birthYear);
-    		if ('deathYear' in $$props) $$invalidate(25, deathYear = $$props.deathYear);
-    		if ('presidencyStart' in $$props) $$invalidate(26, presidencyStart = $$props.presidencyStart);
-    		if ('presidencyEnd' in $$props) $$invalidate(27, presidencyEnd = $$props.presidencyEnd);
+    		if ('birthYear' in $$props) $$invalidate(4, birthYear = $$props.birthYear);
+    		if ('deathYear' in $$props) $$invalidate(5, deathYear = $$props.deathYear);
+    		if ('presidencyStart' in $$props) $$invalidate(6, presidencyStart = $$props.presidencyStart);
+    		if ('presidencyEnd' in $$props) $$invalidate(7, presidencyEnd = $$props.presidencyEnd);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1143,28 +1214,28 @@ var app = (function () {
     	$$self.$inject_state = $$props => {
     		if ('cx' in $$props) $$invalidate(0, cx = $$props.cx);
     		if ('cy' in $$props) $$invalidate(1, cy = $$props.cy);
-    		if ('parts' in $$props) $$invalidate(23, parts = $$props.parts);
+    		if ('parts' in $$props) $$invalidate(27, parts = $$props.parts);
     		if ('name' in $$props) $$invalidate(2, name = $$props.name);
     		if ('status' in $$props) $$invalidate(3, status = $$props.status);
-    		if ('birthYear' in $$props) $$invalidate(24, birthYear = $$props.birthYear);
-    		if ('deathYear' in $$props) $$invalidate(25, deathYear = $$props.deathYear);
-    		if ('presidencyStart' in $$props) $$invalidate(26, presidencyStart = $$props.presidencyStart);
-    		if ('presidencyEnd' in $$props) $$invalidate(27, presidencyEnd = $$props.presidencyEnd);
-    		if ('innerRadius' in $$props) $$invalidate(10, innerRadius = $$props.innerRadius);
+    		if ('birthYear' in $$props) $$invalidate(4, birthYear = $$props.birthYear);
+    		if ('deathYear' in $$props) $$invalidate(5, deathYear = $$props.deathYear);
+    		if ('presidencyStart' in $$props) $$invalidate(6, presidencyStart = $$props.presidencyStart);
+    		if ('presidencyEnd' in $$props) $$invalidate(7, presidencyEnd = $$props.presidencyEnd);
+    		if ('innerRadius' in $$props) $$invalidate(14, innerRadius = $$props.innerRadius);
     		if ('outerRadius' in $$props) $$invalidate(40, outerRadius = $$props.outerRadius);
-    		if ('fill' in $$props) $$invalidate(11, fill = $$props.fill);
-    		if ('stroke' in $$props) $$invalidate(12, stroke = $$props.stroke);
-    		if ('strokeWidth' in $$props) $$invalidate(13, strokeWidth = $$props.strokeWidth);
-    		if ('presidencyStartMarkerStroke' in $$props) $$invalidate(5, presidencyStartMarkerStroke = $$props.presidencyStartMarkerStroke);
-    		if ('presidencyEndMarkerStroke' in $$props) $$invalidate(6, presidencyEndMarkerStroke = $$props.presidencyEndMarkerStroke);
+    		if ('fill' in $$props) $$invalidate(15, fill = $$props.fill);
+    		if ('stroke' in $$props) $$invalidate(16, stroke = $$props.stroke);
+    		if ('strokeWidth' in $$props) $$invalidate(17, strokeWidth = $$props.strokeWidth);
+    		if ('presidencyStartMarkerStroke' in $$props) $$invalidate(9, presidencyStartMarkerStroke = $$props.presidencyStartMarkerStroke);
+    		if ('presidencyEndMarkerStroke' in $$props) $$invalidate(10, presidencyEndMarkerStroke = $$props.presidencyEndMarkerStroke);
     		if ('extraGap' in $$props) $$invalidate(41, extraGap = $$props.extraGap);
     		if ('defaultStrokeWidth' in $$props) $$invalidate(42, defaultStrokeWidth = $$props.defaultStrokeWidth);
-    		if ('defaultFill' in $$props) $$invalidate(14, defaultFill = $$props.defaultFill);
-    		if ('hoverFill' in $$props) $$invalidate(15, hoverFill = $$props.hoverFill);
-    		if ('arcs' in $$props) $$invalidate(7, arcs = $$props.arcs);
-    		if ('lineCoords' in $$props) $$invalidate(4, lineCoords = $$props.lineCoords);
-    		if ('xPresidencyEnd' in $$props) $$invalidate(8, xPresidencyEnd = $$props.xPresidencyEnd);
-    		if ('xPresidencyStart' in $$props) $$invalidate(9, xPresidencyStart = $$props.xPresidencyStart);
+    		if ('defaultFill' in $$props) $$invalidate(18, defaultFill = $$props.defaultFill);
+    		if ('hoverFill' in $$props) $$invalidate(19, hoverFill = $$props.hoverFill);
+    		if ('arcs' in $$props) $$invalidate(11, arcs = $$props.arcs);
+    		if ('lineCoords' in $$props) $$invalidate(8, lineCoords = $$props.lineCoords);
+    		if ('xPresidencyEnd' in $$props) $$invalidate(12, xPresidencyEnd = $$props.xPresidencyEnd);
+    		if ('xPresidencyStart' in $$props) $$invalidate(13, xPresidencyStart = $$props.xPresidencyStart);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -1173,7 +1244,7 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty[0] & /*cx, cy*/ 3) {
-    			$$invalidate(4, lineCoords = {
+    			$$invalidate(8, lineCoords = {
     				x1: cx - outerRadius - extraGap, //adding 30 on either side
     				x2: cx + outerRadius + extraGap, // adding 30 on either side
     				y1: cy + outerRadius + 30,
@@ -1181,8 +1252,8 @@ var app = (function () {
     			});
     		}
 
-    		if ($$self.$$.dirty[0] & /*parts, cx, cy*/ 8388611) {
-    			$$invalidate(7, arcs = Array.from({ length: parts }, (_, i) => {
+    		if ($$self.$$.dirty[0] & /*parts, cx, cy*/ 134217731) {
+    			$$invalidate(11, arcs = Array.from({ length: parts }, (_, i) => {
     				const angle = 2 * Math.PI / parts;
     				const startX = cx + outerRadius * Math.cos(i * angle);
     				const startY = cy + outerRadius * Math.sin(i * angle);
@@ -1197,12 +1268,12 @@ var app = (function () {
     			}));
     		}
 
-    		if ($$self.$$.dirty[0] & /*lineCoords, presidencyStart, birthYear, deathYear*/ 117440528) {
-    			$$invalidate(9, xPresidencyStart = lineCoords.x1 + (presidencyStart - birthYear) / (deathYear - birthYear) * (lineCoords.x2 - lineCoords.x1));
+    		if ($$self.$$.dirty[0] & /*lineCoords, presidencyStart, birthYear, deathYear*/ 368) {
+    			$$invalidate(13, xPresidencyStart = lineCoords.x1 + (presidencyStart - birthYear) / (deathYear - birthYear) * (lineCoords.x2 - lineCoords.x1));
     		}
 
-    		if ($$self.$$.dirty[0] & /*lineCoords, presidencyEnd, birthYear, deathYear*/ 184549392) {
-    			$$invalidate(8, xPresidencyEnd = lineCoords.x1 + (presidencyEnd - birthYear) / (deathYear - birthYear) * (lineCoords.x2 - lineCoords.x1));
+    		if ($$self.$$.dirty[0] & /*lineCoords, presidencyEnd, birthYear, deathYear*/ 432) {
+    			$$invalidate(12, xPresidencyEnd = lineCoords.x1 + (presidencyEnd - birthYear) / (deathYear - birthYear) * (lineCoords.x2 - lineCoords.x1));
     		}
     	};
 
@@ -1211,6 +1282,10 @@ var app = (function () {
     		cy,
     		name,
     		status,
+    		birthYear,
+    		deathYear,
+    		presidencyStart,
+    		presidencyEnd,
     		lineCoords,
     		presidencyStartMarkerStroke,
     		presidencyEndMarkerStroke,
@@ -1231,10 +1306,6 @@ var app = (function () {
     		birthMarkerMouseover,
     		birthMarkerMouseout,
     		parts,
-    		birthYear,
-    		deathYear,
-    		presidencyStart,
-    		presidencyEnd,
     		mouseover_handler,
     		mouseout_handler,
     		focus_handler,
@@ -1263,13 +1334,13 @@ var app = (function () {
     			{
     				cx: 0,
     				cy: 1,
-    				parts: 23,
+    				parts: 27,
     				name: 2,
     				status: 3,
-    				birthYear: 24,
-    				deathYear: 25,
-    				presidencyStart: 26,
-    				presidencyEnd: 27
+    				birthYear: 4,
+    				deathYear: 5,
+    				presidencyStart: 6,
+    				presidencyEnd: 7
     			},
     			null,
     			[-1, -1]
