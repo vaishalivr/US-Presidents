@@ -1,39 +1,33 @@
 <script>
   import { onMount } from "svelte";
   import OnePresident from "./onePresidentUnit.svelte";
-  import { svgWidth } from "../store.js";
-  import { presidents, updatePresidents } from "../data/presidentsCircleData";
+  import { svgWidth, svgHeight } from "../store.js";
+  import { presidents } from "../data/presidentsData";
 
-  let height = window.innerHeight;
+  $: console.log("svg height", $svgHeight);
+  $: console.log("svg width", $svgWidth);
 
-  const updateDimensions = () => {
-    svgWidth.set(window.innerWidth / 2);
-    height = window.innerHeight;
-    updatePresidents();
-  };
+  // const updateDimensions = () => {
+  //   svgWidth.set(window.innerWidth / 2);
+  // };
 
-  onMount(() => {
-    updatePresidents();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  });
+  // onMount(() => {
+  //   //updatePresidents();
+  //   window.addEventListener("resize", updateDimensions);
+  //   return () => window.removeEventListener("resize", updateDimensions);
+  // });
 </script>
 
-<svg width={$svgWidth} {height}>
-  <rect width={$svgWidth} {height} stroke="black" stroke-width="3px" fill="none"
+<svg width={$svgWidth} height={$svgHeight}>
+  <rect
+    width={$svgWidth}
+    height={$svgHeight}
+    stroke="black"
+    stroke-width="3px"
+    fill="none"
   ></rect>
 
   {#each $presidents as president}
-    <OnePresident
-      cx={president.cx}
-      cy={president.cy}
-      parts={president.parts}
-      name={president.name}
-      status={president.status}
-      birthYear={president.birthYear}
-      deathYear={president.deathYear}
-      presidencyStart={president.presidencyStart}
-      presidencyEnd={president.presidencyEnd}
-    />
+    <OnePresident />
   {/each}
 </svg>
