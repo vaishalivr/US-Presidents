@@ -1,202 +1,88 @@
 <script>
-  export let cx;
-  export let cy;
-  export let parts;
-  export let name;
-  export let status;
-  export let birthYear;
-  export let deathYear;
-  export let presidencyStart;
-  export let presidencyEnd;
+  import { presidents } from "../data/presidentsData";
+  import {
+    svgWidth,
+    svgHeight,
+    maxCirclesPerRow,
+    totalRows,
+  } from "../store.js";
+  import { onMount } from "svelte";
+  import { get } from "svelte/store";
 
-  let innerRadius = 50; //40
-  let outerRadius = 70; //60
-  let fill = "white";
-  let stroke = "black";
-  let strokeWidth = 3;
-  let presidencyStartMarkerStroke = "none";
-  let presidencyEndMarkerStroke = "none";
-  let extraGap = 30;
+  let outerRadius = 100;
+  let spacing = 60;
+  let rowSpacing = 100;
+  let titleSpace = 200;
 
-  let defaultStrokeWidth = 3;
-  let defaultFill = "white";
-  let hoverFill = "#d3d3d3";
+  function updateSvgWidth() {
+    let screenWidth = window.innerWidth;
 
-  $: lineCoords = {
-    x1: cx - outerRadius - extraGap, //adding 30 on either side
-    x2: cx + outerRadius + extraGap, // adding 30 on either side
-    y1: cy + outerRadius + 30,
-    y2: cy + outerRadius + 30,
-  };
+    if (screenWidth > 1024) {
+      maxCirclesPerRow.set(3);
+    } else if (screenWidth > 768) {
+      maxCirclesPerRow.set(2);
+    } else {
+      maxCirclesPerRow.set(1);
+    }
+    maxCirclesPerRow.subscribe((value) => {
+      let totalCirclesWidth = value * (2 * outerRadius);
+      let totalSpacing = (value + 1) * spacing;
 
-  $: arcs = Array.from({ length: parts }, (_, i) => {
-    const angle = (2 * Math.PI) / parts;
-    const startX = cx + outerRadius * Math.cos(i * angle);
-    const startY = cy + outerRadius * Math.sin(i * angle);
-    const endX = cx + outerRadius * Math.cos((i + 1) * angle);
-    const endY = cy + outerRadius * Math.sin((i + 1) * angle);
+      svgWidth.set(totalCirclesWidth + totalSpacing);
+    });
+  }
 
-    return {
-      d: `M ${cx} ${cy} L ${startX} ${startY} A ${outerRadius} ${outerRadius} 0 0 1 ${endX} ${endY} Z`,
-      strokeWidth: defaultStrokeWidth,
-      fill: defaultFill,
-    };
+  function updateSvgHeight() {
+    let totalPresidents = get(presidents).length;
+
+    let rows = Math.ceil(totalPresidents / get(maxCirclesPerRow));
+    totalRows.set(rows);
+
+    let totalCirclesHeight = rows * (2 * outerRadius);
+    let totalSpacing = rows * rowSpacing;
+
+    svgHeight.set(titleSpace + totalCirclesHeight + totalSpacing);
+  }
+
+  onMount(() => {
+    updateSvgWidth();
+    updateSvgHeight();
   });
 
-  $: xPresidencyStart =
-    lineCoords.x1 +
-    ((presidencyStart - birthYear) / (deathYear - birthYear)) *
-      (lineCoords.x2 - lineCoords.x1);
+  window.addEventListener("resize", () => {
+    updateSvgWidth();
+    updateSvgHeight();
+  });
 
-  $: xPresidencyEnd =
-    lineCoords.x1 +
-    ((presidencyEnd - birthYear) / (deathYear - birthYear)) *
-      (lineCoords.x2 - lineCoords.x1);
+  $: positions = $presidents.map((_, index) => {
+    let row = Math.floor(index / $maxCirclesPerRow);
+    let col = index % $maxCirclesPerRow;
 
-  const updateFillColor = (index, color) => {
-    arcs = arcs.map((arc, i) => (i === index ? { ...arc, fill: color } : arc));
-  };
+    let rowWidth = $maxCirclesPerRow * (outerRadius * 2 + spacing) - spacing;
+    let colOffset = ($svgWidth - rowWidth) / 2;
 
-  const presidencyStartMarkerMouseover = () => {
-    presidencyStartMarkerStroke = "black";
-  };
-
-  const presidencyStartMarkerMouseout = () => {
-    presidencyStartMarkerStroke = "none";
-  };
-
-  const presidencyEndMarkerMouseover = () => {
-    presidencyEndMarkerStroke = "black";
-  };
-
-  const presidencyEndMarkerMouseout = () => {
-    presidencyEndMarkerStroke = "none";
-  };
-
-  const birthMarkerMouseover = () => {
-    console.log("birth marker mouseover");
-  };
-
-  const birthMarkerMouseout = () => {
-    console.log("birth marker mouseout");
-  };
+    return {
+      cx: col * (outerRadius * 2 + spacing) + outerRadius + colOffset,
+      cy: row * (outerRadius * 2 + rowSpacing) + outerRadius + titleSpace,
+    };
+  });
 </script>
 
-{#each arcs as arc, i}
-  <path
-    d={arc.d}
-    fill={arc.fill}
+{#each positions as position}
+  <circle
+    cx={position.cx}
+    cy={position.cy}
+    r={outerRadius}
     stroke="black"
-    stroke-width={arc.strokeWidth}
-    tabindex="0"
-    role="button"
-    on:mouseover={() => updateFillColor(i, hoverFill)}
-    on:mouseout={() => updateFillColor(i, defaultFill)}
-    on:focus={() => updateFillColor(i, hoverFill)}
-    on:blur={() => updateFillColor(i, defaultFill)}
+    stroke-width="3px"
+    fill="none"
   />
-{/each}
-
-<circle {cx} {cy} r={innerRadius} {fill} {stroke} stroke-width={strokeWidth} />
-
-<!-- Main Life Span -->
-<line
-  x1={lineCoords.x1}
-  y1={lineCoords.y1}
-  x2={lineCoords.x2}
-  y2={lineCoords.y2}
-  {stroke}
-  stroke-width={strokeWidth}
-/>
-
-<!-- Birth Marker -->
-<circle
-  cx={lineCoords.x1}
-  cy={lineCoords.y1}
-  r="3"
-  fill="black"
-  tabindex="0"
-  role="button"
-  on:mouseover={birthMarkerMouseover}
-  on:mouseout={birthMarkerMouseout}
-  on:focus={birthMarkerMouseover}
-  on:blur={birthMarkerMouseout}
-/>
-
-<!-- Birth Year Label -->
-<text
-  x={lineCoords.x1 - 5}
-  y={lineCoords.y1 + 4}
-  font-size="10"
-  text-anchor="end"
-  fill="black"
->
-  {birthYear}
-</text>
-
-<!-- Death Marker -->
-{#if status === "dead"}
-  <circle cx={lineCoords.x2} cy={lineCoords.y2} r="3" fill="black" />
-
-  <!-- Death Year Label -->
-  <text
-    x={lineCoords.x2 + 5}
-    y={lineCoords.y2 + 4}
-    font-size="10"
-    text-anchor="start"
-    fill="black"
-  >
-    {deathYear}
-  </text>
-{:else}
   <line
-    x1={lineCoords.x2}
-    y1={lineCoords.y2 - 5}
-    x2={lineCoords.x2}
-    y2={lineCoords.y2 + 5}
+    x1={position.cx - outerRadius}
+    y1={position.cy + outerRadius}
+    x2={position.cx + outerRadius}
+    y2={position.cy + outerRadius}
     stroke="black"
-    stroke-width="2"
-  />
-{/if}
-
-<!-- Presidents Name -->
-<text
-  x={(lineCoords.x1 + lineCoords.x2) / 2}
-  y={lineCoords.y1 - 5}
-  text-anchor="middle"
-  font-size="1rem"
-  fill="black"
->
-  {name} ({presidencyStart}-{presidencyEnd})
-</text>
-
-<!-- Presidency Start Marker -->
-<!-- to add stroke width to this stroke -->
-<circle
-  cx={xPresidencyStart}
-  cy={lineCoords.y1}
-  stroke={presidencyStartMarkerStroke}
-  r="5"
-  fill="red"
-  tabindex="0"
-  role="button"
-  on:mouseover={() => presidencyStartMarkerMouseover()}
-  on:mouseout={() => presidencyStartMarkerMouseout()}
-  on:focus={() => presidencyStartMarkerMouseover()}
-  on:blur={() => presidencyStartMarkerMouseout()}
-/>
-
-<!-- Presidency End Marker -->
-<circle
-  cx={xPresidencyEnd}
-  cy={lineCoords.y1}
-  stroke={presidencyEndMarkerStroke}
-  r="5"
-  fill="red"
-  tabindex="0"
-  role="button"
-  on:mouseover={() => presidencyEndMarkerMouseover()}
-  on:mouseout={() => presidencyEndMarkerMouseout()}
-  on:focus={() => presidencyEndMarkerMouseover()}
-  on:blur={() => presidencyEndMarkerMouseout()}
-/>
+    stroke-width="3px"
+  ></line>
+{/each}
