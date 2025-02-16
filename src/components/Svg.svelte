@@ -1,21 +1,8 @@
 <script>
   import { onMount } from "svelte";
-  import OnePresident from "./onePresidentUnit.svelte";
+  import SetSvgWidthAndHeight from "./setSvgWidthAndHeight.svelte";
   import { svgWidth, svgHeight } from "../store.js";
-  import { presidents } from "../data/presidentsData";
-
-  $: console.log("svg height", $svgHeight);
-  $: console.log("svg width", $svgWidth);
-
-  // const updateDimensions = () => {
-  //   svgWidth.set(window.innerWidth / 2);
-  // };
-
-  // onMount(() => {
-  //   //updatePresidents();
-  //   window.addEventListener("resize", updateDimensions);
-  //   return () => window.removeEventListener("resize", updateDimensions);
-  // });
+  import GetCirclePositions from "./getCirclePositions.svelte";
 </script>
 
 <svg width={$svgWidth} height={$svgHeight}>
@@ -27,7 +14,8 @@
     fill="none"
   ></rect>
 
-  {#each $presidents as president}
-    <OnePresident />
-  {/each}
+  <SetSvgWidthAndHeight />
+  <GetCirclePositions />
 </svg>
+<!-- 
+calculate cx and cy for all circles and then make OnePresidentUnit -->
