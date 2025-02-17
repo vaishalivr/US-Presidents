@@ -9,6 +9,8 @@
   } from "../store.js";
   import { presidents } from "../data/presidentsData.js";
 
+  export let positions = [];
+
   $: positions = $presidents.map((_, index) => {
     let row = Math.floor(index / $maxCirclesPerRow);
     let col = index % $maxCirclesPerRow;
@@ -27,7 +29,4 @@
       cy: row * ($outerRadius * 2 + $rowSpacing) + $outerRadius + $titleSpace,
     };
   });
-
-  $: console.log("Positions:", positions);
-  $: console.log("presidents:", $presidents);
 </script>
