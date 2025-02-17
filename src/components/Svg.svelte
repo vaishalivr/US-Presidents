@@ -1,13 +1,29 @@
 <script>
-  import { onMount } from "svelte";
   import SetSvgWidthAndHeight from "./setSvgWidthAndHeight.svelte";
-  import { svgWidth, svgHeight, outerRadius } from "../store.js";
+  import { svgWidth, svgHeight, outerRadius, innerRadius } from "../store.js";
   import GetCirclePositions from "./getCirclePositions.svelte";
   import { presidents } from "../data/presidentsData";
   let positions = [];
+  let hoveredArc = null;
+  let hoveredBirthIndex = null;
+  let hoveredDeathIndex = null;
+
+  function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
+    const anglePerArc = (2 * Math.PI) / totalArcs;
+    const startAngle = arcIndex * anglePerArc;
+    const endAngle = (arcIndex + 1) * anglePerArc;
+
+    const x1 = cx + radius * Math.cos(startAngle);
+    const y1 = cy + radius * Math.sin(startAngle);
+    const x2 = cx + radius * Math.cos(endAngle);
+    const y2 = cy + radius * Math.sin(endAngle);
+
+    return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
+  }
 </script>
 
 <SetSvgWidthAndHeight />
+
 <svg width={$svgWidth} height={$svgHeight}>
   <rect
     width={$svgWidth}
@@ -16,41 +32,186 @@
     stroke-width="3px"
     fill="none"
   ></rect>
+
   <GetCirclePositions bind:positions />
 
   {#each positions as position, index}
-    <circle
-      cx={position.cx}
-      cy={position.cy}
-      r={$outerRadius}
-      stroke="black"
-      stroke-width="3px"
-      fill="none"
-    />
-    <line
-      x1={position.cx - $outerRadius}
-      y1={position.cy + $outerRadius * 1.5}
-      x2={position.cx + $outerRadius}
-      y2={position.cy + $outerRadius * 1.5}
-      stroke="black"
-      stroke-width="3px"
-    />
+    <g>
+      {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}
+        <path
+          d={calculateArcPath(
+            position.cx,
+            position.cy,
+            $outerRadius,
+            arcIndex,
+            $presidents[index].keyPolicies
+          )}
+          fill={hoveredArc === `${index}-${arcIndex}`
+            ? "lightblue"
+            : "transparent"}
+          stroke="black"
+          stroke-width="2px"
+          on:mouseover={() => (hoveredArc = `${index}-${arcIndex}`)}
+          on:mouseout={() => (hoveredArc = null)}
+          on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
+          on:blur={() => (hoveredArc = null)}
+        />
+      {/each}
 
-    <circle
-      cx={position.cx - $outerRadius}
-      cy={position.cy + $outerRadius * 1.5}
-      r="4"
-      fill="black"
-    />
+      <circle
+        cx={position.cx}
+        cy={position.cy}
+        r={$innerRadius}
+        stroke="black"
+        stroke-width="3px"
+        fill="white"
+      />
 
-    <text
-      x={position.cx}
-      y={position.cy + $outerRadius * 1.5 - 8}
-      text-anchor="middle"
-      font-size="16px"
-      fill="black"
-    >
-      {$presidents[index].name}
-    </text>
+      <line
+        x1={position.cx - $outerRadius}
+        y1={position.cy + $outerRadius * 1.5}
+        x2={position.cx + $outerRadius}
+        y2={position.cy + $outerRadius * 1.5}
+        stroke="black"
+        stroke-width="3px"
+      />
+
+      <!-- president's birth circle -->
+      <circle
+        cx={position.cx - $outerRadius}
+        cy={position.cy + $outerRadius * 1.5}
+        r="4"
+        fill="black"
+        on:mouseover={() => (hoveredBirthIndex = index)}
+        on:mouseout={() => (hoveredBirthIndex = null)}
+        on:focus={() => (hoveredBirthIndex = index)}
+        on:blur={() => (hoveredBirthIndex = null)}
+      />
+
+      <!-- tooltip to show only when the birth circle is hovered (use -10 for x position) -->
+      {#if hoveredBirthIndex === index}
+        <text
+          x={position.cx - $outerRadius}
+          y={position.cy + $outerRadius * 1.5 + 25}
+          text-anchor="middle"
+          font-size="12px"
+          fill="black"
+        >
+          <tspan x={position.cx - $outerRadius} dy="0">
+            Born to {$presidents[index].parents}
+          </tspan>
+          <tspan x={position.cx - $outerRadius} dy="15">
+            at {$presidents[index].birthPlace}
+          </tspan>
+        </text>
+      {/if}
+
+      <!-- president's death circle or continue line -->
+      {#if $presidents[index].status === "dead"}
+        <circle
+          cx={position.cx + $outerRadius}
+          cy={position.cy + $outerRadius * 1.5}
+          r="4"
+          fill="black"
+          on:mouseover={() => (hoveredDeathIndex = index)}
+          on:mouseout={() => (hoveredDeathIndex = null)}
+          on:focus={() => (hoveredDeathIndex = index)}
+          on:blur={() => (hoveredDeathIndex = null)}
+        />
+
+        <!-- tooltip to show only when the death circle is hovered  -->
+        {#if hoveredDeathIndex === index}
+          <text
+            x={position.cx - $outerRadius}
+            y={position.cy + $outerRadius * 1.5 + 25}
+            text-anchor="middle"
+            font-size="12px"
+            fill="black"
+          >
+            <tspan x={position.cx + $outerRadius} dy="0">
+              Died at {$presidents[index].deathPlace}
+            </tspan>
+            <tspan x={position.cx + $outerRadius} dy="15">
+              for {$presidents[index].deathReason}
+            </tspan>
+          </text>
+        {/if}
+
+        <text
+          x={position.cx + $outerRadius + 10}
+          y={position.cy + $outerRadius * 1.5 + 5}
+          text-anchor="start"
+          font-size="0.9rem"
+          fill="black"
+        >
+          {$presidents[index].deathYear}
+        </text>
+      {:else}
+        <line
+          x1={position.cx + $outerRadius}
+          y1={position.cy + $outerRadius * 1.45}
+          x2={position.cx + $outerRadius}
+          y2={position.cy + $outerRadius * 1.55}
+          stroke="black"
+          stroke-width="3px"
+        />
+      {/if}
+
+      <text
+        x={position.cx}
+        y={position.cy + $outerRadius * 1.5 - 20}
+        text-anchor="middle"
+        font-size="16px"
+        fill="black"
+      >
+        {$presidents[index].name}
+      </text>
+
+      <text
+        x={position.cx}
+        y={position.cy + $outerRadius * 1.5 - 5}
+        text-anchor="middle"
+        font-size="14px"
+        fill="black"
+      >
+        {$presidents[index].presidencyStart} - {$presidents[index]
+          .presidencyEnd}
+      </text>
+
+      <!-- presidents birth year -->
+      <text
+        x={position.cx - $outerRadius - 10}
+        y={position.cy + $outerRadius * 1.5 + 5}
+        text-anchor="end"
+        font-size="0.9rem"
+        fill="black"
+      >
+        {$presidents[index].birthYear}
+      </text>
+
+      <!-- presidency start circle -->
+      <circle
+        cx={position.cx -
+          $outerRadius +
+          (($presidents[index].presidencyStart - $presidents[index].birthYear) /
+            ($presidents[index].deathYear - $presidents[index].birthYear)) *
+            (2 * $outerRadius)}
+        cy={position.cy + $outerRadius * 1.5}
+        r="4"
+        fill="teal"
+      />
+
+      <!-- presidency end circle -->
+      <circle
+        cx={position.cx -
+          $outerRadius +
+          (($presidents[index].presidencyEnd - $presidents[index].birthYear) /
+            ($presidents[index].deathYear - $presidents[index].birthYear)) *
+            (2 * $outerRadius)}
+        cy={position.cy + $outerRadius * 1.5}
+        r="4"
+        fill="teal"
+      />
+    </g>
   {/each}
 </svg>
