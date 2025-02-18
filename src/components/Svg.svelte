@@ -10,7 +10,7 @@
     titleSpace,
     totalRows,
   } from "../store.js";
-  import GetCirclePositions from "./getCirclePositions.svelte";
+
   import OnePresidentUnit from "./onePresidentUnit.svelte";
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
@@ -53,6 +53,25 @@
     updateSvgWidth();
     updateSvgHeight();
   });
+
+  $: positions = $presidents.map((_, index) => {
+    let row = Math.floor(index / $maxCirclesPerRow);
+    let col = index % $maxCirclesPerRow;
+
+    let totalCirclesInRow = Math.min(
+      $maxCirclesPerRow,
+      $presidents.length - row * $maxCirclesPerRow
+    );
+    let rowWidth =
+      totalCirclesInRow * ($outerRadius * 2 + $circleSpacing) - $circleSpacing;
+
+    let colOffset = ($svgWidth - rowWidth) / 2;
+
+    return {
+      cx: col * ($outerRadius * 2 + $circleSpacing) + $outerRadius + colOffset,
+      cy: row * ($outerRadius * 2 + $rowSpacing) + $outerRadius + $titleSpace,
+    };
+  });
 </script>
 
 <svg width={$svgWidth} height={$svgHeight}>
@@ -63,8 +82,6 @@
     stroke-width="3px"
     fill="none"
   ></rect>
-
-  <GetCirclePositions bind:positions />
 
   {#each positions as position, index}
     <OnePresidentUnit
