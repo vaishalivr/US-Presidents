@@ -1,8 +1,19 @@
 <script>
-  import SetSvgWidthAndHeight from "./setSvgWidthAndHeight.svelte";
-  import { svgWidth, svgHeight, outerRadius, innerRadius } from "../store.js";
+  import {
+    svgWidth,
+    svgHeight,
+    outerRadius,
+    innerRadius,
+    maxCirclesPerRow,
+    circleSpacing,
+    rowSpacing,
+    titleSpace,
+    totalRows,
+  } from "../store.js";
   import GetCirclePositions from "./getCirclePositions.svelte";
   import { presidents } from "../data/presidentsData";
+  import { onMount } from "svelte";
+  import { get } from "svelte/store";
   let positions = [];
   let hoveredArc = null;
   let hoveredBirthIndex = null;
@@ -20,9 +31,44 @@
 
     return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
   }
-</script>
 
-<SetSvgWidthAndHeight />
+  function updateSvgWidth() {
+    let screenWidth = window.innerWidth;
+
+    if (screenWidth > 1024) {
+      maxCirclesPerRow.set(3);
+    } else if (screenWidth > 768) {
+      maxCirclesPerRow.set(2);
+    } else {
+      maxCirclesPerRow.set(1);
+    }
+    let totalCirclesWidth = $maxCirclesPerRow * (2 * $outerRadius);
+    let totalSpacing = ($maxCirclesPerRow + 1) * $circleSpacing;
+    svgWidth.set(totalCirclesWidth + totalSpacing);
+  }
+
+  function updateSvgHeight() {
+    let totalPresidents = get(presidents).length;
+
+    let rows = Math.ceil(totalPresidents / get(maxCirclesPerRow));
+    totalRows.set(rows);
+
+    let totalCirclesHeight = rows * (2 * $outerRadius);
+    let totalSpacing = rows * $rowSpacing;
+
+    svgHeight.set($titleSpace + totalCirclesHeight + totalSpacing);
+  }
+
+  onMount(() => {
+    updateSvgWidth();
+    updateSvgHeight();
+  });
+
+  window.addEventListener("resize", () => {
+    updateSvgWidth();
+    updateSvgHeight();
+  });
+</script>
 
 <svg width={$svgWidth} height={$svgHeight}>
   <rect

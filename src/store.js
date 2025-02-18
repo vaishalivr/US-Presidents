@@ -1,7 +1,4 @@
 import { writable } from "svelte/store";
-import { onMount } from "svelte";
-import { get } from "svelte/store";
-import { presidents } from "./data/presidentsData";
 
 export const svgWidth = writable(30);
 export const svgHeight = writable(30);
