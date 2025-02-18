@@ -11,6 +11,7 @@
     totalRows,
   } from "../store.js";
   import GetCirclePositions from "./getCirclePositions.svelte";
+  import OnePresidentUnit from "./onePresidentUnit.svelte";
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
   import { get } from "svelte/store";
@@ -104,22 +105,11 @@
         />
       {/each}
 
-      <circle
+      <OnePresidentUnit
         cx={position.cx}
         cy={position.cy}
-        r={$innerRadius}
-        stroke="black"
-        stroke-width="3px"
-        fill="white"
-      />
-
-      <line
-        x1={position.cx - $outerRadius}
-        y1={position.cy + $outerRadius * 1.5}
-        x2={position.cx + $outerRadius}
-        y2={position.cy + $outerRadius * 1.5}
-        stroke="black"
-        stroke-width="3px"
+        innerRadius={$innerRadius}
+        outerRadius={$outerRadius}
       />
 
       <!-- president's birth circle -->
