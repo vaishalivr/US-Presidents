@@ -184,10 +184,7 @@
     cx={cx -
       outerRadius +
       (($presidents[index].presidencyStart - $presidents[index].birthYear) /
-        (($presidents[index].deathYear === ""
-          ? 2025
-          : $presidents[index].deathYear) -
-          $presidents[index].birthYear)) *
+        ($presidents[index].deathYear - $presidents[index].birthYear)) *
         (2 * outerRadius)}
     cy={cy + outerRadius * 1.5}
     r="4"
@@ -199,10 +196,7 @@
     cx={cx -
       outerRadius +
       (($presidents[index].presidencyEnd - $presidents[index].birthYear) /
-        (($presidents[index].deathYear === ""
-          ? 2025
-          : $presidents[index].deathYear) -
-          $presidents[index].birthYear)) *
+        ($presidents[index].deathYear - $presidents[index].birthYear)) *
         (2 * outerRadius)}
     cy={cy + outerRadius * 1.5}
     r="4"
