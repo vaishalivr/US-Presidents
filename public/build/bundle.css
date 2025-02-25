@@ -1,1 +1,2 @@
+div.svelte-1j26jnk{font-size:18px;background-color:lightblue;position:sticky;bottom:0;z-index:10;border:1px solid black;width:100vw;height:45px}.mobile-line.svelte-1j26jnk{display:none}.desktop-line.svelte-1j26jnk{display:block}@media(max-width: 768px){div.svelte-1j26jnk{position:fixed;top:0;right:0;width:auto;height:100vh;padding:20px;width:45px}.desktop-line.svelte-1j26jnk{display:none}.mobile-line.svelte-1j26jnk{display:block}}
 main.svelte-177t831{text-align:center;padding:1em;max-width:240px;margin:0 auto}@media(min-width: 640px){main.svelte-177t831{max-width:none}}

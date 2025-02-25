@@ -1,9 +1,11 @@
 <script>
   import Svg from "./components/Svg.svelte";
+  import StickyYearsDiv from "./components/stickyYearsDiv.svelte";
 </script>
 
 <main>
   <Svg />
+  <StickyYearsDiv />
 </main>
 
 <style>
