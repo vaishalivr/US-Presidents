@@ -1,67 +1,110 @@
 <script>
   import { presidents } from "../data/presidentsData";
+  import { onMount } from "svelte";
   const currentYear = new Date().getFullYear();
   let totalDots = currentYear - $presidents[0].birthYear;
+  //let totalDots = 150;
   console.log(totalDots);
+  let svgWidth = 0;
+  let svgHeight = 0;
+  const radius = 2;
+
+  const updateDimensions = () => {
+    svgWidth = window.innerWidth;
+    svgHeight = window.innerHeight;
+  };
+
+  onMount(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+  });
+
+  const handleCircleClick = (event) => {
+    console.log(event.target.id);
+  };
 </script>
 
-<div>
+<div class="desktop-div">
   <svg width="100%" height="100%">
-    <line
-      x1="50%"
-      y1="0%"
-      x2="50%"
-      y2="100%"
+    <rect
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      fill="none"
       stroke="black"
       stroke-width="2"
-      class="mobile-line"
     />
-    <line
-      x1="0%"
-      y1="50%"
-      x2="100%"
-      y2="50%"
+
+    {#each Array(totalDots) as _, index}
+      <circle
+        cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
+        cy="10"
+        r={radius}
+        fill="red"
+        id={`circle-${1732 + index}`}
+        on:click={handleCircleClick}
+        on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+      />
+    {/each}
+  </svg>
+</div>
+
+<div class="mobile-div">
+  <svg width="100%" height="100%">
+    <rect
+      x="0"
+      y="0"
+      width="100%"
+      height="100%"
+      fill="none"
       stroke="black"
       stroke-width="2"
-      class="desktop-line"
     />
+
+    {#each Array(totalDots) as _, index}
+      <circle
+        cx="10"
+        cy={(index / (totalDots - 1)) * (svgHeight - 2 * radius) + radius}
+        r={radius}
+        fill="red"
+        id={`circle-${1732 + index}`}
+        on:click={handleCircleClick}
+        on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+      />
+    {/each}
   </svg>
 </div>
 
 <style>
-  div {
-    font-size: 18px;
-    background-color: lightblue;
+  .desktop-div {
     position: sticky;
     bottom: 0;
     z-index: 10;
     border: 1px solid black;
+    height: 2rem;
     width: 100vw;
-    height: 45px;
+    margin: 0;
+    padding: 0;
   }
-  .mobile-line {
+
+  .mobile-div {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    border: 1px solid black;
+    z-index: 10;
+    width: 2rem;
     display: none;
   }
 
-  .desktop-line {
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-    div {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: auto;
-      height: 100vh;
-      padding: 20px;
-      width: 45px;
-    }
-    .desktop-line {
+  @media (max-width: 1000px) {
+    .desktop-div {
       display: none;
     }
 
-    .mobile-line {
+    .mobile-div {
       display: block;
     }
   }
