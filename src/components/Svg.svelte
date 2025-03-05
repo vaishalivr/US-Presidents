@@ -89,10 +89,10 @@
           president.deathYear === "" || president.deathYear == null
             ? currentYear
             : president.deathYear;
-        console.log(`Checking President: ${president.name}`);
-        console.log(
-          `Birth Year: ${president.birthYear}, Death Year: ${deathYear}`
-        );
+        // console.log(`Checking President: ${president.name}`);
+        // console.log(
+        //   `Birth Year: ${president.birthYear}, Death Year: ${deathYear}`
+        // );
         return (
           president.birthYear <= circleYear &&
           (deathYear >= circleYear ||
@@ -101,7 +101,7 @@
         );
       });
       filteredPresidents.set(filteredPresidentsArray);
-      console.log("Filtered Presidents:", filteredPresidentsArray);
+      //console.log("Filtered Presidents:", filteredPresidentsArray);
     }
   }
 </script>
