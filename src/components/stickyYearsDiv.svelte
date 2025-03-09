@@ -6,9 +6,12 @@
   const currentYear = new Date().getFullYear();
   //let totalDots = currentYear - $presidents[0].birthYear;
   let totalDots = 47;
+
+  console.log(totalDots);
   let svgWidth = 0;
   let svgHeight = 0;
-  const radius = 12;
+  const radius = 6;
+
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
