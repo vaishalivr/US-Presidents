@@ -7,7 +7,8 @@
 
   let svgWidth = 0;
   let svgHeight = 0;
-  const radius = 6;
+  const desktopRadius = 6;
+  const mobileRadius = 4;
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -39,9 +40,10 @@
     <!-- code for all circles in a row -->
     {#each Array(totalDots) as _, index}
       <circle
-        cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
+        cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
+          desktopRadius}
         cy="18"
-        r={radius}
+        r={desktopRadius}
         fill="white"
         stroke="black"
         id={`circle-${index}`}
@@ -67,8 +69,9 @@
     {#each Array(totalDots) as _, index}
       <circle
         cx="10"
-        cy={(index / (totalDots - 1)) * (svgHeight - 2 * radius) + radius}
-        r={radius}
+        cy={(index / (totalDots - 1)) * (svgHeight - 2 * mobileRadius) +
+          mobileRadius}
+        r={mobileRadius}
         fill="red"
         id={`circle-${1732 + index}`}
         on:click={handleCircleClick}

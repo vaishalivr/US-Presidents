@@ -2803,7 +2803,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (40:4) {#each Array(totalDots) as _, index}
+    // (41:4) {#each Array(totalDots) as _, index}
     function create_each_block_1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2813,13 +2813,13 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			circle = svg_element("circle");
-    			attr_dev(circle, "cx", circle_cx_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius);
+    			attr_dev(circle, "cx", circle_cx_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * desktopRadius) + desktopRadius);
     			attr_dev(circle, "cy", "18");
-    			attr_dev(circle, "r", radius);
+    			attr_dev(circle, "r", desktopRadius);
     			attr_dev(circle, "fill", "white");
     			attr_dev(circle, "stroke", "black");
     			attr_dev(circle, "id", `circle-${/*index*/ ctx[9]}`);
-    			add_location(circle, file$1, 40, 6, 848);
+    			add_location(circle, file$1, 41, 6, 881);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2834,7 +2834,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*svgWidth*/ 1 && circle_cx_value !== (circle_cx_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius)) {
+    			if (dirty & /*svgWidth*/ 1 && circle_cx_value !== (circle_cx_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * desktopRadius) + desktopRadius)) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
     		},
@@ -2849,14 +2849,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(40:4) {#each Array(totalDots) as _, index}",
+    		source: "(41:4) {#each Array(totalDots) as _, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:4) {#each Array(totalDots) as _, index}
+    // (69:4) {#each Array(totalDots) as _, index}
     function create_each_block(ctx) {
     	let circle;
     	let circle_cy_value;
@@ -2867,11 +2867,11 @@ var app = (function () {
     		c: function create() {
     			circle = svg_element("circle");
     			attr_dev(circle, "cx", "10");
-    			attr_dev(circle, "cy", circle_cy_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius);
-    			attr_dev(circle, "r", radius);
+    			attr_dev(circle, "cy", circle_cy_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * mobileRadius) + mobileRadius);
+    			attr_dev(circle, "r", mobileRadius);
     			attr_dev(circle, "fill", "red");
     			attr_dev(circle, "id", `circle-${1732 + /*index*/ ctx[9]}`);
-    			add_location(circle, file$1, 67, 6, 1435);
+    			add_location(circle, file$1, 69, 6, 1499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2886,7 +2886,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*svgHeight*/ 2 && circle_cy_value !== (circle_cy_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius)) {
+    			if (dirty & /*svgHeight*/ 2 && circle_cy_value !== (circle_cy_value = /*index*/ ctx[9] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * mobileRadius) + mobileRadius)) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
     		},
@@ -2901,7 +2901,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(67:4) {#each Array(totalDots) as _, index}",
+    		source: "(69:4) {#each Array(totalDots) as _, index}",
     		ctx
     	});
 
@@ -2958,12 +2958,12 @@ var app = (function () {
     			attr_dev(rect0, "fill", "white");
     			attr_dev(rect0, "stroke", "black");
     			attr_dev(rect0, "stroke-width", "2");
-    			add_location(rect0, file$1, 28, 4, 618);
+    			add_location(rect0, file$1, 29, 4, 651);
     			attr_dev(svg0, "width", "100%");
     			attr_dev(svg0, "height", "100%");
-    			add_location(svg0, file$1, 27, 2, 581);
+    			add_location(svg0, file$1, 28, 2, 614);
     			attr_dev(div0, "class", "desktop-div svelte-ax0bjq");
-    			add_location(div0, file$1, 26, 0, 553);
+    			add_location(div0, file$1, 27, 0, 586);
     			attr_dev(rect1, "x", "0");
     			attr_dev(rect1, "y", "0");
     			attr_dev(rect1, "width", "100%");
@@ -2971,12 +2971,12 @@ var app = (function () {
     			attr_dev(rect1, "fill", "none");
     			attr_dev(rect1, "stroke", "black");
     			attr_dev(rect1, "stroke-width", "2");
-    			add_location(rect1, file$1, 56, 4, 1249);
+    			add_location(rect1, file$1, 58, 4, 1313);
     			attr_dev(svg1, "width", "100%");
     			attr_dev(svg1, "height", "100%");
-    			add_location(svg1, file$1, 55, 2, 1212);
+    			add_location(svg1, file$1, 57, 2, 1276);
     			attr_dev(div1, "class", "mobile-div svelte-ax0bjq");
-    			add_location(div1, file$1, 54, 0, 1185);
+    			add_location(div1, file$1, 56, 0, 1249);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3004,7 +3004,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*totalDots, svgWidth, radius, handleCircleClick*/ 13) {
+    			if (dirty & /*totalDots, svgWidth, desktopRadius, handleCircleClick*/ 13) {
     				each_value_1 = Array(/*totalDots*/ ctx[2]);
     				validate_each_argument(each_value_1);
     				let i;
@@ -3028,7 +3028,7 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*totalDots, svgHeight, radius, handleCircleClick*/ 14) {
+    			if (dirty & /*totalDots, svgHeight, mobileRadius, handleCircleClick*/ 14) {
     				each_value = Array(/*totalDots*/ ctx[2]);
     				validate_each_argument(each_value);
     				let i;
@@ -3074,7 +3074,8 @@ var app = (function () {
     	return block;
     }
 
-    const radius = 6;
+    const desktopRadius = 6;
+    const mobileRadius = 4;
 
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -3113,7 +3114,8 @@ var app = (function () {
     		totalDots,
     		svgWidth,
     		svgHeight,
-    		radius,
+    		desktopRadius,
+    		mobileRadius,
     		updateDimensions,
     		handleCircleClick
     	});
