@@ -3,15 +3,11 @@
   import { onMount } from "svelte";
   import { selectedCircleId } from "../store.js";
 
-  const currentYear = new Date().getFullYear();
-  //let totalDots = currentYear - $presidents[0].birthYear;
   let totalDots = 47;
 
-  console.log(totalDots);
   let svgWidth = 0;
   let svgHeight = 0;
   const radius = 6;
-
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -24,7 +20,6 @@
   });
 
   const handleCircleClick = (event) => {
-    console.log(event.target.id);
     selectedCircleId.set(event.target.id);
   };
 </script>
@@ -47,9 +42,9 @@
         cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
         cy="18"
         r={radius}
-        fill="none"
+        fill="white"
         stroke="black"
-        id={`circle-${1732 + index}`}
+        id={`circle-${index}`}
         on:click={handleCircleClick}
         on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
       />
