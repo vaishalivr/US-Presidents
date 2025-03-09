@@ -3,15 +3,12 @@
   import { onMount } from "svelte";
   import { selectedCircleId } from "../store.js";
 
-  const currentYear = new Date().getFullYear();
-  //let totalDots = currentYear - $presidents[0].birthYear;
   let totalDots = 47;
 
-  console.log(totalDots);
   let svgWidth = 0;
   let svgHeight = 0;
-  const radius = 6;
-
+  const desktopRadius = 6;
+  const mobieRadius = 4;
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -24,7 +21,6 @@
   });
 
   const handleCircleClick = (event) => {
-    console.log(event.target.id);
     selectedCircleId.set(event.target.id);
   };
 </script>
@@ -44,12 +40,13 @@
     <!-- code for all circles in a row -->
     {#each Array(totalDots) as _, index}
       <circle
-        cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
+        cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
+          desktopRadius}
         cy="18"
-        r={radius}
-        fill="none"
+        r={desktopRadius}
+        fill="white"
         stroke="black"
-        id={`circle-${1732 + index}`}
+        id={`circle-${index}`}
         on:click={handleCircleClick}
         on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
       />
@@ -72,10 +69,12 @@
     {#each Array(totalDots) as _, index}
       <circle
         cx="10"
-        cy={(index / (totalDots - 1)) * (svgHeight - 2 * radius) + radius}
-        r={radius}
-        fill="red"
-        id={`circle-${1732 + index}`}
+        cy={(index / (totalDots - 1)) * (svgHeight - 2 * mobieRadius) +
+          mobieRadius}
+        r={mobieRadius}
+        fill="white"
+        stroke="black"
+        id={`circle-${index}`}
         on:click={handleCircleClick}
         on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
       />
