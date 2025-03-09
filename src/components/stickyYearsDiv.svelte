@@ -2,12 +2,12 @@
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
   const currentYear = new Date().getFullYear();
-  let totalDots = currentYear - $presidents[0].birthYear;
-  //let totalDots = 150;
+  //let totalDots = currentYear - $presidents[0].birthYear;
+  let totalDots = 47;
   console.log(totalDots);
   let svgWidth = 0;
   let svgHeight = 0;
-  const radius = 2;
+  const radius = 6;
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -41,7 +41,8 @@
         cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
         cy="10"
         r={radius}
-        fill="red"
+        fill="none"
+        stroke="black"
         id={`circle-${1732 + index}`}
         on:click={handleCircleClick}
         on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}

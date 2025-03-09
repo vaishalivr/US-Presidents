@@ -2768,15 +2768,15 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
-    	child_ctx[11] = i;
+    	child_ctx[8] = list[i];
+    	child_ctx[10] = i;
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
-    	child_ctx[11] = i;
+    	child_ctx[8] = list[i];
+    	child_ctx[10] = i;
     	return child_ctx;
     }
 
@@ -2790,12 +2790,13 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			circle = svg_element("circle");
-    			attr_dev(circle, "cx", circle_cx_value = /*index*/ ctx[11] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius);
+    			attr_dev(circle, "cx", circle_cx_value = /*index*/ ctx[10] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius);
     			attr_dev(circle, "cy", "10");
     			attr_dev(circle, "r", radius);
-    			attr_dev(circle, "fill", "red");
-    			attr_dev(circle, "id", `circle-${1732 + /*index*/ ctx[11]}`);
-    			add_location(circle, file$1, 39, 6, 878);
+    			attr_dev(circle, "fill", "none");
+    			attr_dev(circle, "stroke", "black");
+    			attr_dev(circle, "id", `circle-${1732 + /*index*/ ctx[10]}`);
+    			add_location(circle, file$1, 39, 6, 877);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2810,7 +2811,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*svgWidth*/ 1 && circle_cx_value !== (circle_cx_value = /*index*/ ctx[11] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius)) {
+    			if (dirty & /*svgWidth*/ 1 && circle_cx_value !== (circle_cx_value = /*index*/ ctx[10] / (/*totalDots*/ ctx[2] - 1) * (/*svgWidth*/ ctx[0] - 2 * radius) + radius)) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
     		},
@@ -2832,7 +2833,7 @@ var app = (function () {
     	return block;
     }
 
-    // (65:4) {#each Array(totalDots) as _, index}
+    // (66:4) {#each Array(totalDots) as _, index}
     function create_each_block(ctx) {
     	let circle;
     	let circle_cy_value;
@@ -2843,11 +2844,11 @@ var app = (function () {
     		c: function create() {
     			circle = svg_element("circle");
     			attr_dev(circle, "cx", "10");
-    			attr_dev(circle, "cy", circle_cy_value = /*index*/ ctx[11] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius);
+    			attr_dev(circle, "cy", circle_cy_value = /*index*/ ctx[10] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius);
     			attr_dev(circle, "r", radius);
     			attr_dev(circle, "fill", "red");
-    			attr_dev(circle, "id", `circle-${1732 + /*index*/ ctx[11]}`);
-    			add_location(circle, file$1, 65, 6, 1447);
+    			attr_dev(circle, "id", `circle-${1732 + /*index*/ ctx[10]}`);
+    			add_location(circle, file$1, 66, 6, 1470);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2862,7 +2863,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*svgHeight*/ 2 && circle_cy_value !== (circle_cy_value = /*index*/ ctx[11] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius)) {
+    			if (dirty & /*svgHeight*/ 2 && circle_cy_value !== (circle_cy_value = /*index*/ ctx[10] / (/*totalDots*/ ctx[2] - 1) * (/*svgHeight*/ ctx[1] - 2 * radius) + radius)) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
     		},
@@ -2877,7 +2878,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(65:4) {#each Array(totalDots) as _, index}",
+    		source: "(66:4) {#each Array(totalDots) as _, index}",
     		ctx
     	});
 
@@ -2934,12 +2935,12 @@ var app = (function () {
     			attr_dev(rect0, "fill", "none");
     			attr_dev(rect0, "stroke", "black");
     			attr_dev(rect0, "stroke-width", "2");
-    			add_location(rect0, file$1, 28, 4, 692);
+    			add_location(rect0, file$1, 28, 4, 691);
     			attr_dev(svg0, "width", "100%");
     			attr_dev(svg0, "height", "100%");
-    			add_location(svg0, file$1, 27, 2, 655);
+    			add_location(svg0, file$1, 27, 2, 654);
     			attr_dev(div0, "class", "desktop-div svelte-k8dzq2");
-    			add_location(div0, file$1, 26, 0, 627);
+    			add_location(div0, file$1, 26, 0, 626);
     			attr_dev(rect1, "x", "0");
     			attr_dev(rect1, "y", "0");
     			attr_dev(rect1, "width", "100%");
@@ -2947,12 +2948,12 @@ var app = (function () {
     			attr_dev(rect1, "fill", "none");
     			attr_dev(rect1, "stroke", "black");
     			attr_dev(rect1, "stroke-width", "2");
-    			add_location(rect1, file$1, 54, 4, 1261);
+    			add_location(rect1, file$1, 55, 4, 1284);
     			attr_dev(svg1, "width", "100%");
     			attr_dev(svg1, "height", "100%");
-    			add_location(svg1, file$1, 53, 2, 1224);
+    			add_location(svg1, file$1, 54, 2, 1247);
     			attr_dev(div1, "class", "mobile-div svelte-k8dzq2");
-    			add_location(div1, file$1, 52, 0, 1197);
+    			add_location(div1, file$1, 53, 0, 1220);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3050,20 +3051,17 @@ var app = (function () {
     	return block;
     }
 
-    const radius = 2;
+    const radius = 6;
 
     function instance$1($$self, $$props, $$invalidate) {
-    	let $presidents;
-    	validate_store(presidents, 'presidents');
-    	component_subscribe($$self, presidents, $$value => $$invalidate(6, $presidents = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('StickyYearsDiv', slots, []);
     	const currentYear = new Date().getFullYear();
-    	let totalDots = currentYear - $presidents[0].birthYear;
 
-    	//let totalDots = 150;
+    	//let totalDots = currentYear - $presidents[0].birthYear;
+    	let totalDots = 47;
+
     	console.log(totalDots);
-
     	let svgWidth = 0;
     	let svgHeight = 0;
 
@@ -3099,8 +3097,7 @@ var app = (function () {
     		svgHeight,
     		radius,
     		updateDimensions,
-    		handleCircleClick,
-    		$presidents
+    		handleCircleClick
     	});
 
     	$$self.$inject_state = $$props => {
