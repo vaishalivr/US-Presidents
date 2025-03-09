@@ -7,7 +7,7 @@
 
   let svgWidth = 0;
   let svgHeight = 0;
-  const desktopRadius = 6;
+  const desktopRadius = 8;
   const mobileRadius = 4;
 
   const updateDimensions = () => {
@@ -22,6 +22,18 @@
 
   const handleCircleClick = (event) => {
     selectedCircleId.set(event.target.id);
+  };
+
+  console.log($presidents);
+
+  const getInitials = (name) => {
+    const parts = name.split(" ");
+    if (parts.length === 1) {
+      return parts[0][0].toUpperCase();
+    }
+    const firstInitial = parts[0][0].toUpperCase();
+    const lastInitial = parts[parts.length - 1][0].toUpperCase();
+    return firstInitial + lastInitial;
   };
 </script>
 
@@ -38,13 +50,25 @@
     />
 
     <!-- code for all circles in a row -->
-    {#each Array(totalDots) as _, index}
+    {#each $presidents as president, index}
+      <text
+        x={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
+          desktopRadius}
+        y="18"
+        text-anchor="middle"
+        font-size="9px"
+        fill="black"
+        dy="4"
+      >
+        {getInitials(president.name)}
+      </text>
       <circle
         cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
           desktopRadius}
         cy="18"
         r={desktopRadius}
         fill="white"
+        opacity="0.3"
         stroke="black"
         id={`circle-${index}`}
         on:click={handleCircleClick}
@@ -66,14 +90,28 @@
       stroke-width="2"
     />
 
-    {#each Array(totalDots) as _, index}
+    {#each $presidents as president, index}
+      <text
+        x="10"
+        y={(index / (totalDots - 1)) * (svgHeight - 2 * mobileRadius) +
+          mobileRadius +
+          4}
+        text-anchor="middle"
+        font-size="6px"
+        fill="black"
+      >
+        {getInitials(president.name)}
+      </text>
+
       <circle
         cx="10"
         cy={(index / (totalDots - 1)) * (svgHeight - 2 * mobileRadius) +
           mobileRadius}
         r={mobileRadius}
-        fill="red"
-        id={`circle-${1732 + index}`}
+        fill="white"
+        opacity="0.3"
+        stroke="black"
+        id={`circle-${index}`}
         on:click={handleCircleClick}
         on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
       />
