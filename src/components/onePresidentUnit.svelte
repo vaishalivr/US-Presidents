@@ -1,7 +1,6 @@
 <script>
   import { presidents } from "../data/presidentsData";
-  import { selectedCircleId } from "../store.js";
-
+  import { filteredPresidents, isPageLoaded } from "../store";
   export let cx;
   export let cy;
   export let innerRadius;
@@ -13,6 +12,9 @@
   export let hoveredBirthIndex = null;
   export let hoveredDeathIndex = null;
   let hoveredArc = null;
+  let isFiltered = false;
+  let opacity = 1;
+  let pageLoaded;
 
   function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     const anglePerArc = (2 * Math.PI) / totalArcs;
@@ -26,14 +28,25 @@
 
     return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
   }
+  $: {
+    pageLoaded = $isPageLoaded;
+    console.log(pageLoaded);
+    opacity = pageLoaded
+      ? $filteredPresidents.length > 0
+        ? isFiltered
+          ? 1
+          : 0.3
+        : 1
+      : 1;
+  }
+  $: {
+    isFiltered = $filteredPresidents.some(
+      (president) => president.name === $presidents[index].name
+    );
+  }
 </script>
 
-<g
-  id={"circle-" + index}
-  opacity={$selectedCircleId === null || $selectedCircleId === "circle-" + index
-    ? 1
-    : 0.3}
->
+<g style="opacity: {opacity}">
   {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}
     <!-- make arcs based on policies -->
     <path

@@ -9,6 +9,9 @@
     rowSpacing,
     titleSpace,
     totalRows,
+    selectedCircleId,
+    filteredPresidents,
+    isPageLoaded,
   } from "../store.js";
 
   import OnePresidentUnit from "./onePresidentUnit.svelte";
@@ -16,6 +19,7 @@
   import { onMount } from "svelte";
   import { get } from "svelte/store";
   let positions = [];
+  let filteredPresidentsArray = [];
 
   function updateSvgWidth() {
     let screenWidth = window.innerWidth;
@@ -47,6 +51,7 @@
   onMount(() => {
     updateSvgWidth();
     updateSvgHeight();
+    isPageLoaded.set(true);
   });
 
   window.addEventListener("resize", () => {
@@ -72,6 +77,33 @@
       cy: row * ($outerRadius * 2 + $rowSpacing) + $outerRadius + $titleSpace,
     };
   });
+
+  $: {
+    const selectedCircleIdValue = $selectedCircleId;
+    const currentYear = new Date().getFullYear();
+    if (selectedCircleIdValue) {
+      const circleYear = parseInt(selectedCircleIdValue.replace("circle-", ""));
+      console.log(circleYear);
+      filteredPresidentsArray = get(presidents).filter((president) => {
+        const deathYear =
+          president.deathYear === "" || president.deathYear == null
+            ? currentYear
+            : president.deathYear;
+        // console.log(`Checking President: ${president.name}`);
+        // console.log(
+        //   `Birth Year: ${president.birthYear}, Death Year: ${deathYear}`
+        // );
+        return (
+          president.birthYear <= circleYear &&
+          (deathYear >= circleYear ||
+            deathYear === currentYear ||
+            president.deathYear === "")
+        );
+      });
+      filteredPresidents.set(filteredPresidentsArray);
+      //console.log("Filtered Presidents:", filteredPresidentsArray);
+    }
+  }
 </script>
 
 <svg width={$svgWidth} height={$svgHeight}>
