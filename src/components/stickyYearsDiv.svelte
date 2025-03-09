@@ -1,5 +1,4 @@
 <script>
-  import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
   import { selectedCircleId } from "../store.js";
 
