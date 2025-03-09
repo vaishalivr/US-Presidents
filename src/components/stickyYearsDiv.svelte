@@ -1,13 +1,17 @@
 <script>
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
+  import { selectedCircleId } from "../store.js";
+
   const currentYear = new Date().getFullYear();
   //let totalDots = currentYear - $presidents[0].birthYear;
   let totalDots = 47;
+
   console.log(totalDots);
   let svgWidth = 0;
   let svgHeight = 0;
   const radius = 6;
+
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -21,6 +25,7 @@
 
   const handleCircleClick = (event) => {
     console.log(event.target.id);
+    selectedCircleId.set(event.target.id);
   };
 </script>
 
@@ -31,15 +36,16 @@
       y="0"
       width="100%"
       height="100%"
-      fill="none"
+      fill="white"
       stroke="black"
       stroke-width="2"
     />
 
+    <!-- code for all circles in a row -->
     {#each Array(totalDots) as _, index}
       <circle
         cx={(index / (totalDots - 1)) * (svgWidth - 2 * radius) + radius}
-        cy="10"
+        cy="18"
         r={radius}
         fill="none"
         stroke="black"
@@ -83,7 +89,7 @@
     bottom: 0;
     z-index: 10;
     border: 1px solid black;
-    height: 2rem;
+    height: 6rem;
     width: 100vw;
     margin: 0;
     padding: 0;
