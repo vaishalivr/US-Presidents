@@ -417,6 +417,7 @@ export const presidents = writable([
   },
   {
     name: "Theodore Roosevelt",
+    terms: 2,
     status: "dead",
     birthYear: 1858,
     birthPlace: "New York City, New York",

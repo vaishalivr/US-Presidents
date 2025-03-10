@@ -12,8 +12,6 @@
   export let hoveredBirthIndex = null;
   export let hoveredDeathIndex = null;
   let hoveredArc = null;
-  //let isFiltered = false;
-  let opacity = 1;
 
   function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     const anglePerArc = (2 * Math.PI) / totalArcs;
@@ -27,11 +25,14 @@
 
     return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
   }
+  $: console.log($selectedCircleId);
+  $: console.log(`circle-${$selectedCircleId}`);
 </script>
 
 <g
-  id={"circle-" + index}
-  opacity={$selectedCircleId === null || $selectedCircleId === "circle-" + index
+  class={"circle-" + index}
+  opacity={`circle-${$selectedCircleId}` === null ||
+  `circle-${$selectedCircleId}` === "circle-" + index
     ? 1
     : 0.3}
 >
