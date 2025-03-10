@@ -3,6 +3,7 @@ import { writable } from "svelte/store";
 export const presidents = writable([
   {
     name: "George Washington",
+    terms: 2,
     status: "dead",
     birthYear: 1732,
     birthPlace: "Westmoreland County, Virginia",
@@ -20,6 +21,7 @@ export const presidents = writable([
   },
   {
     name: "John Adams",
+    terms: 2,
     status: "dead",
     birthYear: 1735,
     birthPlace: "Braintree, Massachusetts",
@@ -54,6 +56,7 @@ export const presidents = writable([
   },
   {
     name: "James Madison",
+    terms: 2,
     status: "dead",
     birthYear: 1751,
     birthPlace: "Port Conway, Virginia",
@@ -71,6 +74,7 @@ export const presidents = writable([
   },
   {
     name: "James Monroe",
+    terms: 2,
     status: "dead",
     birthYear: 1758,
     birthPlace: "Westmoreland County, Virginia",
@@ -105,6 +109,7 @@ export const presidents = writable([
   },
   {
     name: "Andrew Jackson",
+    terms: 2,
     status: "dead",
     birthYear: 1767,
     birthPlace: "Waxhaws region, South Carolina/North Carolina",
@@ -292,6 +297,7 @@ export const presidents = writable([
   },
   {
     name: "Ulysses S. Grant",
+    terms: 2,
     status: "dead",
     birthYear: 1822,
     birthPlace: "Point Pleasant, Ohio",
@@ -445,6 +451,7 @@ export const presidents = writable([
   },
   {
     name: "Woodrow Wilson",
+    terms: 2,
     status: "dead",
     birthYear: 1856,
     birthPlace: "Staunton, Virginia",
@@ -513,6 +520,7 @@ export const presidents = writable([
   },
   {
     name: "Franklin D. Roosevelt",
+    terms: 2,
     status: "dead",
     birthYear: 1882,
     birthPlace: "Hyde Park, New York",
@@ -547,6 +555,7 @@ export const presidents = writable([
   },
   {
     name: "Dwight D. Eisenhower",
+    terms: 2,
     status: "dead",
     birthYear: 1890,
     birthPlace: "Denison, Texas",
@@ -649,6 +658,7 @@ export const presidents = writable([
   },
   {
     name: "Ronald Reagan",
+    terms: 2,
     status: "dead",
     birthYear: 1911,
     birthPlace: "Tampico, Illinois",
@@ -683,6 +693,7 @@ export const presidents = writable([
   },
   {
     name: "Bill Clinton",
+    terms: 2,
     status: "alive",
     birthYear: 1946,
     birthPlace: "Hope, Arkansas",
@@ -700,6 +711,7 @@ export const presidents = writable([
   },
   {
     name: "George W. Bush",
+    terms: 2,
     status: "alive",
     birthYear: 1946,
     birthPlace: "New Haven, Connecticut",
@@ -717,6 +729,7 @@ export const presidents = writable([
   },
   {
     name: "Barack Obama",
+    terms: 2,
     status: "alive",
     birthYear: 1961,
     birthPlace: "Honolulu, Hawaii",
