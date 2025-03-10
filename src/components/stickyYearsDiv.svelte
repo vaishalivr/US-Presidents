@@ -5,12 +5,12 @@
   import { selectedCircleId } from "../store.js";
 
   let totalDots = 47;
-
   let svgWidth = 0;
   let svgHeight = 0;
   const desktopRadius = 8;
   const desktopConcentricRadius = 10;
-  const mobileRadius = 4;
+  const mobileRadius = 5;
+  const mobileConcentricRadius = 8;
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -23,12 +23,9 @@
   });
 
   const handleCircleClick = (event) => {
-    selectedCircleId.set(event.target.id);
-    // console.log(selectedCircleId);
-
-    d3.select(`#${selectedCircleId}`)
-      .attr("stroke", "black")
-      .attr("stroke-width", "3");
+    let id = event.target.dataset.index;
+    selectedCircleId.set(id);
+    //console.log(`circle-${id}`);
   };
 
   const getInitials = (name) => {
@@ -77,8 +74,10 @@
           fill="white"
           opacity="0.3"
           stroke="black"
-          id={`circle-${index}`}
-          on:click={handleCircleClick}
+          stroke-width={$selectedCircleId == index ? "3" : "1"}
+          class={`circle-${index}`}
+          data-index={index}
+          on:click={(event) => handleCircleClick(event)}
           on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
         />
 
@@ -91,8 +90,10 @@
             fill="white"
             opacity="0.3"
             stroke="black"
-            id={`circle-${index}`}
-            on:click={handleCircleClick}
+            stroke-width={$selectedCircleId == index ? "3" : "1"}
+            class={`circle-${index}`}
+            data-index={index}
+            on:click={(event) => handleCircleClick(event)}
             on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
           />
         {/if}
@@ -126,18 +127,39 @@
         {getInitials(president.name)}
       </text>
 
-      <circle
-        cx="10"
-        cy={(index / (totalDots - 1)) * (svgHeight - 2 * mobileRadius) +
-          mobileRadius}
-        r={mobileRadius}
-        fill="white"
-        opacity="0.3"
-        stroke="black"
-        id={`circle-${index}`}
-        on:click={handleCircleClick}
-        on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
-      />
+      <g>
+        <circle
+          cx="10"
+          cy={(index / (totalDots - 1)) * (svgHeight - 2 * mobileRadius) +
+            mobileRadius}
+          r={mobileRadius}
+          fill="white"
+          opacity="0.3"
+          stroke="black"
+          class={`circle-${index}`}
+          data-index={index}
+          on:click={(event) => handleCircleClick(event)}
+          on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+        />
+
+        {#if president["terms"] === 2}
+          <circle
+            cx="10"
+            cy={(index / (totalDots - 1)) *
+              (svgHeight - 2 * mobileConcentricRadius) +
+              mobileConcentricRadius}
+            r={mobileConcentricRadius}
+            fill="white"
+            opacity="0.3"
+            stroke="black"
+            stroke-width={$selectedCircleId == index ? "3" : "1"}
+            class={`circle-${index}`}
+            data-index={index}
+            on:click={(event) => handleCircleClick(event)}
+            on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+          />
+        {/if}
+      </g>
     {/each}
   </svg>
 </div>
