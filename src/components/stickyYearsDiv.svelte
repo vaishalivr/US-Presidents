@@ -1,4 +1,5 @@
 <script>
+  import * as d3 from "d3";
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
   import { selectedCircleId } from "../store.js";
@@ -8,6 +9,7 @@
   let svgWidth = 0;
   let svgHeight = 0;
   const desktopRadius = 8;
+  const desktopConcentricRadius = 10;
   const mobileRadius = 4;
 
   const updateDimensions = () => {
@@ -22,9 +24,12 @@
 
   const handleCircleClick = (event) => {
     selectedCircleId.set(event.target.id);
-  };
+    // console.log(selectedCircleId);
 
-  console.log($presidents);
+    d3.select(`#${selectedCircleId}`)
+      .attr("stroke", "black")
+      .attr("stroke-width", "3");
+  };
 
   const getInitials = (name) => {
     const parts = name.split(" ");
@@ -62,18 +67,36 @@
       >
         {getInitials(president.name)}
       </text>
-      <circle
-        cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
-          desktopRadius}
-        cy="18"
-        r={desktopRadius}
-        fill="white"
-        opacity="0.3"
-        stroke="black"
-        id={`circle-${index}`}
-        on:click={handleCircleClick}
-        on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
-      />
+
+      <g>
+        <circle
+          cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
+            desktopRadius}
+          cy="18"
+          r={desktopRadius}
+          fill="white"
+          opacity="0.3"
+          stroke="black"
+          id={`circle-${index}`}
+          on:click={handleCircleClick}
+          on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+        />
+
+        {#if president["terms"] === 2}
+          <circle
+            cx={(index / (totalDots - 1)) * (svgWidth - 2 * desktopRadius) +
+              desktopRadius}
+            cy="18"
+            r={desktopConcentricRadius}
+            fill="white"
+            opacity="0.3"
+            stroke="black"
+            id={`circle-${index}`}
+            on:click={handleCircleClick}
+            on:keydown={(e) => e.key === "Enter" && handleCircleClick(e)}
+          />
+        {/if}
+      </g>
     {/each}
   </svg>
 </div>
