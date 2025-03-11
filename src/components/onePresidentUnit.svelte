@@ -31,7 +31,7 @@
 
 <g
   class={"circle-" + index}
-  opacity={`circle-${$selectedCircleId}` === null ||
+  opacity={`circle-${$selectedCircleId}` === "circle-null" ||
   `circle-${$selectedCircleId}` === "circle-" + index
     ? 1
     : 0.3}
@@ -219,4 +219,36 @@
       fill="teal"
     />
   {/if}
+
+  <!-- rect to fit quote -->
+  <rect
+    x={cx - outerRadius}
+    y={cy + outerRadius * 1.6}
+    width={outerRadius * 2}
+    height="48"
+    fill="none"
+    stroke="black"
+    opacity="0.3"
+  />
+  <foreignObject
+    x={cx - outerRadius}
+    y={cy + outerRadius * 1.6}
+    width={outerRadius * 2}
+    height="60"
+  >
+    <div style="text-align:center; font-size: 0.75rem">
+      {$presidents[index].quote}
+    </div>
+  </foreignObject>
+
+  <!-- famous president quote -->
+  <!-- <text
+    x={cx}
+    y={cy + outerRadius * 1.5 + 30}
+    text-anchor="middle"
+    font-size="12px"
+    fill="black"
+  >
+    {$presidents[index].quote}
+  </text> -->
 </g>

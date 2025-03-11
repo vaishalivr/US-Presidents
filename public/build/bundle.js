@@ -101,6 +101,14 @@ var app = (function () {
     function children$1(element) {
         return Array.from(element.childNodes);
     }
+    function set_style(node, key, value, important) {
+        if (value == null) {
+            node.style.removeProperty(key);
+        }
+        else {
+            node.style.setProperty(key, value, important ? 'important' : '');
+        }
+    }
     function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
         const e = document.createEvent('CustomEvent');
         e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -567,6 +575,8 @@ var app = (function () {
         spouse: "Martha Custis",
         children: "None",
         occupationBeforePresidency: "Farmer and Soldier",
+        quote:
+          "To be prepared for war is one of the most effective means of preserving peace.",
       },
       {
         name: "John Adams",
@@ -585,6 +595,8 @@ var app = (function () {
         spouse: "Abigail Adams",
         children: "None",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
       },
       {
         name: "Thomas Jefferson",
@@ -1387,7 +1399,7 @@ var app = (function () {
 
     			attr_dev(path, "stroke", "black");
     			attr_dev(path, "stroke-width", "2px");
-    			add_location(path, file$3, 40, 4, 1296);
+    			add_location(path, file$3, 40, 4, 1305);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -1465,16 +1477,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 97, 6, 2688);
+    			add_location(tspan0, file$3, 97, 6, 2697);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 100, 6, 2790);
+    			add_location(tspan1, file$3, 100, 6, 2799);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 90, 4, 2536);
+    			add_location(text_1, file$3, 90, 4, 2545);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1541,7 +1553,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 147, 4, 4061);
+    			add_location(line, file$3, 147, 4, 4070);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -1603,13 +1615,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 108, 4, 3011);
+    			add_location(circle, file$3, 108, 4, 3020);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 137, 4, 3847);
+    			add_location(text_1, file$3, 137, 4, 3856);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1711,16 +1723,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 128, 8, 3606);
+    			add_location(tspan0, file$3, 128, 8, 3615);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 131, 8, 3717);
+    			add_location(tspan1, file$3, 131, 8, 3726);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 121, 6, 3440);
+    			add_location(text_1, file$3, 121, 6, 3449);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1787,7 +1799,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 207, 4, 5408);
+    			add_location(circle, file$3, 207, 4, 5417);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1850,6 +1862,17 @@ var app = (function () {
     	let circle2;
     	let circle2_cx_value;
     	let circle2_cy_value;
+    	let rect;
+    	let rect_x_value;
+    	let rect_y_value;
+    	let rect_width_value;
+    	let foreignObject;
+    	let div;
+    	let t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "";
+    	let t5;
+    	let foreignObject_x_value;
+    	let foreignObject_y_value;
+    	let foreignObject_width_value;
     	let g_class_value;
     	let g_opacity_value;
     	let mounted;
@@ -1897,43 +1920,47 @@ var app = (function () {
     			t4 = text$1(t4_value);
     			circle2 = svg_element("circle");
     			if (if_block2) if_block2.c();
+    			rect = svg_element("rect");
+    			foreignObject = svg_element("foreignObject");
+    			div = element("div");
+    			t5 = text$1(t5_value);
     			attr_dev(circle0, "cx", /*cx*/ ctx[2]);
     			attr_dev(circle0, "cy", /*cy*/ ctx[3]);
     			attr_dev(circle0, "r", /*innerRadius*/ ctx[4]);
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 58, 2, 1835);
+    			add_location(circle0, file$3, 58, 2, 1844);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 67, 2, 1944);
+    			add_location(line, file$3, 67, 2, 1953);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 77, 2, 2154);
+    			add_location(circle1, file$3, 77, 2, 2163);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 158, 2, 4284);
+    			add_location(text0, file$3, 158, 2, 4293);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 169, 2, 4484);
+    			add_location(text1, file$3, 169, 2, 4493);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 180, 2, 4727);
+    			add_location(text2, file$3, 180, 2, 4736);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -1942,10 +1969,26 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 191, 2, 4947);
+    			add_location(circle2, file$3, 191, 2, 4956);
+    			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
+    			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
+    			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
+    			attr_dev(rect, "height", "48");
+    			attr_dev(rect, "fill", "none");
+    			attr_dev(rect, "stroke", "black");
+    			attr_dev(rect, "opacity", "0.3");
+    			add_location(rect, file$3, 223, 2, 5837);
+    			set_style(div, "text-align", "center");
+    			set_style(div, "font-size", "0.75rem");
+    			add_location(div, file$3, 238, 4, 6126);
+    			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
+    			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
+    			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
+    			attr_dev(foreignObject, "height", "60");
+    			add_location(foreignObject, file$3, 232, 2, 6003);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
-    			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === null || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[9]
+    			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[9]
     			? 1
     			: 0.3);
 
@@ -1979,6 +2022,10 @@ var app = (function () {
     			append_dev(text2, t4);
     			append_dev(g, circle2);
     			if (if_block2) if_block2.m(g, null);
+    			append_dev(g, rect);
+    			append_dev(g, foreignObject);
+    			append_dev(foreignObject, div);
+    			append_dev(div, t5);
 
     			if (!mounted) {
     				dispose = [
@@ -2144,18 +2191,44 @@ var app = (function () {
     				} else {
     					if_block2 = create_if_block$1(ctx);
     					if_block2.c();
-    					if_block2.m(g, null);
+    					if_block2.m(g, rect);
     				}
     			} else if (if_block2) {
     				if_block2.d(1);
     				if_block2 = null;
     			}
 
+    			if (dirty & /*cx, outerRadius*/ 36 && rect_x_value !== (rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    				attr_dev(rect, "x", rect_x_value);
+    			}
+
+    			if (dirty & /*cy, outerRadius*/ 40 && rect_y_value !== (rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
+    				attr_dev(rect, "y", rect_y_value);
+    			}
+
+    			if (dirty & /*outerRadius*/ 32 && rect_width_value !== (rect_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    				attr_dev(rect, "width", rect_width_value);
+    			}
+
+    			if (dirty & /*$presidents, index*/ 4608 && t5_value !== (t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "")) set_data_dev(t5, t5_value);
+
+    			if (dirty & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    				attr_dev(foreignObject, "x", foreignObject_x_value);
+    			}
+
+    			if (dirty & /*cy, outerRadius*/ 40 && foreignObject_y_value !== (foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
+    				attr_dev(foreignObject, "y", foreignObject_y_value);
+    			}
+
+    			if (dirty & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    				attr_dev(foreignObject, "width", foreignObject_width_value);
+    			}
+
     			if (dirty & /*index*/ 512 && g_class_value !== (g_class_value = "circle-" + /*index*/ ctx[9])) {
     				attr_dev(g, "class", g_class_value);
     			}
 
-    			if (dirty & /*$selectedCircleId, index*/ 1536 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === null || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[9]
+    			if (dirty & /*$selectedCircleId, index*/ 1536 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[9]
     			? 1
     			: 0.3)) {
     				attr_dev(g, "opacity", g_opacity_value);
