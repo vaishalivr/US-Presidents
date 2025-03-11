@@ -18,6 +18,8 @@ export const presidents = writable([
     spouse: "Martha Custis",
     children: "None",
     occupationBeforePresidency: "Farmer and Soldier",
+    quote:
+      "To be prepared for war is one of the most effective means of preserving peace.",
   },
   {
     name: "John Adams",
@@ -36,6 +38,8 @@ export const presidents = writable([
     spouse: "Abigail Adams",
     children: "None",
     occupationBeforePresidency: "Lawyer",
+    quote:
+      "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
   },
   {
     name: "Thomas Jefferson",
