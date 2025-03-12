@@ -72,7 +72,7 @@
     y={cy - innerRadius}
     width={innerRadius * 2}
     height={innerRadius * 2}
-    href="/images/GeorgeWashington.png"
+    href={$presidents[index].image}
     clip-path="circle(50%)"
   />
 
