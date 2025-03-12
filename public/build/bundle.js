@@ -608,6 +608,8 @@ var app = (function () {
         spouse: "Martha Wayles Skelton Jefferson",
         children: "None",
         occupationBeforePresidency: "Planter and Lawyer",
+        quote:
+          "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
       },
       {
         name: "James Madison",
@@ -626,6 +628,8 @@ var app = (function () {
         spouse: "Dolley Payne Todd Madison",
         children: "None",
         occupationBeforePresidency: "Farmer and Politician",
+        quote:
+          "The means of defense against foreign danger have always been the instruments of tyranny at home.",
       },
       {
         name: "James Monroe",
@@ -644,6 +648,7 @@ var app = (function () {
         spouse: "Elizabeth Kortright Monroe",
         children: "3",
         occupationBeforePresidency: "Lawyer and Soldier",
+        quote: "National honor is the national property of the highest value.",
       },
       {
         name: "John Quincy Adams",
@@ -661,6 +666,8 @@ var app = (function () {
         spouse: "Louisa Catherine Johnson Adams",
         children: "4",
         occupationBeforePresidency: "Diplomat and Lawyer",
+        quote:
+          "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
       },
       {
         name: "Andrew Jackson",
@@ -679,6 +686,7 @@ var app = (function () {
         spouse: "Rachel Donelson Robards Jackson",
         children: "None",
         occupationBeforePresidency: "Lawyer and Military Leader",
+        quote: "One man with courage makes a majority.",
       },
       {
         name: "Martin Van Buren",
@@ -696,6 +704,7 @@ var app = (function () {
         spouse: "Hannah Hoes Van Buren",
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "It is easier to do a job right than to explain why you didn’t.",
       },
       {
         name: "William Henry Harrison",
@@ -713,6 +722,8 @@ var app = (function () {
         spouse: "Anna Tuthill Symmes Harrison",
         children: "10",
         occupationBeforePresidency: "Military Officer and Politician",
+        quote:
+          "The liberties of a people depend on their own constant attention to its preservation.",
       },
       {
         name: "John Tyler",
@@ -730,6 +741,8 @@ var app = (function () {
         spouse: "Letitia Christian Tyler",
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
       },
       {
         name: "James K. Polk",
@@ -747,6 +760,8 @@ var app = (function () {
         spouse: "Sarah Childress Polk",
         children: "None",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "No president who performs his duties faithfully and conscientiously can have any leisure.",
       },
       {
         name: "Zachary Taylor",
@@ -764,6 +779,8 @@ var app = (function () {
         spouse: "Margaret Mackall Smith Taylor",
         children: "6",
         occupationBeforePresidency: "Military Officer",
+        quote:
+          "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
       },
       {
         name: "Millard Fillmore",
@@ -781,6 +798,8 @@ var app = (function () {
         spouse: "Abigail Powers Fillmore",
         children: "2",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "The nourishment of a nation depends on the health of its democracy.",
       },
       {
         name: "Franklin Pierce",
@@ -798,6 +817,8 @@ var app = (function () {
         spouse: "Jane Means Appleton Pierce",
         children: "3",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
       },
       {
         name: "James Buchanan",
@@ -815,6 +836,7 @@ var app = (function () {
         spouse: "None",
         children: "None",
         occupationBeforePresidency: "Diplomat and Lawyer",
+        quote: "The ballot box is the surest arbiter of disputes among free men.",
       },
       {
         name: "Abraham Lincoln",
@@ -832,6 +854,8 @@ var app = (function () {
         spouse: "Mary Todd Lincoln",
         children: "4",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "Government of the people, by the people, for the people, shall not perish from the Earth.",
       },
       {
         name: "Andrew Johnson",
@@ -849,6 +873,7 @@ var app = (function () {
         spouse: "Eliza McCardle Johnson",
         children: "5",
         occupationBeforePresidency: "Tailor and Politician",
+        quote: "Honest conviction is my courage; the Constitution is my guide.",
       },
       {
         name: "Ulysses S. Grant",
@@ -867,6 +892,7 @@ var app = (function () {
         spouse: "Julia Dent Grant",
         children: "4",
         occupationBeforePresidency: "Military Leader",
+        quote: "The friend in my adversity I shall always cherish most.",
       },
       {
         name: "Rutherford B. Hayes",
@@ -884,6 +910,7 @@ var app = (function () {
         spouse: "Lucy Webb Hayes",
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "He serves his party best who serves the country best.",
       },
       {
         name: "James A. Garfield",
@@ -901,6 +928,7 @@ var app = (function () {
         spouse: "Lucretia Rudolph Garfield",
         children: "7",
         occupationBeforePresidency: "Military Leader and Politician",
+        quote: "Ideas control the world.",
       },
       {
         name: "Chester A. Arthur",
@@ -918,6 +946,8 @@ var app = (function () {
         spouse: "Ellen Lewis Herndon Arthur",
         children: "3",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "Men may die, but the fabric of our free institutions remains unshaken.",
       },
       {
         name: "Grover Cleveland",
@@ -935,6 +965,8 @@ var app = (function () {
         spouse: "Frances Folsom Cleveland",
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
       },
       {
         name: "Benjamin Harrison",
@@ -952,6 +984,7 @@ var app = (function () {
         spouse: "Caroline Lavinia Scott Harrison",
         children: "1",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "Great lives never go out; they go on.",
       },
       {
         name: "William McKinley",
@@ -969,6 +1002,8 @@ var app = (function () {
         spouse: "Ida Saxton McKinley",
         children: "2",
         occupationBeforePresidency: "Military Officer and Politician",
+        quote:
+          "The mission of the United States is one of benevolent assimilation.",
       },
       {
         name: "Theodore Roosevelt",
@@ -987,6 +1022,7 @@ var app = (function () {
         spouse: "Edith Kermit Carow Roosevelt",
         children: "6",
         occupationBeforePresidency: "Military Leader and Politician",
+        quote: "Do what you can, with what you have, where you are.",
       },
       {
         name: "William Howard Taft",
@@ -1004,6 +1040,7 @@ var app = (function () {
         spouse: "Helen Herron Taft",
         children: "3",
         occupationBeforePresidency: "Judge and Politician",
+        quote: "Presidents come and go, but the Supreme Court goes on forever.",
       },
       {
         name: "Woodrow Wilson",
@@ -1022,6 +1059,7 @@ var app = (function () {
         spouse: "Ellen Louise Axson Wilson",
         children: "3",
         occupationBeforePresidency: "Politician and Academic",
+        quote: "The history of liberty is a history of resistance.",
       },
       {
         name: "Warren G. Harding",
@@ -1039,6 +1077,7 @@ var app = (function () {
         spouse: "Florence Kling Harding",
         children: "1",
         occupationBeforePresidency: "Newspaper Publisher",
+        quote: "America’s present need is not heroics but healing.",
       },
       {
         name: "Calvin Coolidge",
@@ -1056,6 +1095,7 @@ var app = (function () {
         spouse: "Grace Anna Goodhue Coolidge",
         children: "2",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "The business of America is business.",
       },
       {
         name: "Herbert Hoover",
@@ -1073,6 +1113,7 @@ var app = (function () {
         spouse: "Lou Henry Hoover",
         children: "2",
         occupationBeforePresidency: "Engineer and Politician",
+        quote: "Blessed are the young, for they shall inherit the national debt.",
       },
       {
         name: "Franklin D. Roosevelt",
@@ -1091,6 +1132,7 @@ var app = (function () {
         spouse: "Eleanor Roosevelt",
         children: "6",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "The only thing we have to fear is fear itself.",
       },
       {
         name: "Harry S. Truman",
@@ -1108,6 +1150,7 @@ var app = (function () {
         spouse: "Bess Wallace Truman",
         children: "1",
         occupationBeforePresidency: "Politician and Farmer",
+        quote: "The buck stops here.",
       },
       {
         name: "Dwight D. Eisenhower",
@@ -1126,6 +1169,7 @@ var app = (function () {
         spouse: "Mamie Geneva Doud Eisenhower",
         children: "2",
         occupationBeforePresidency: "Military Leader",
+        quote: "Plans are worthless, but planning is everything.",
       },
       {
         name: "John F. Kennedy",
@@ -1143,6 +1187,8 @@ var app = (function () {
         spouse: "Jacqueline Bouvier Kennedy",
         children: "4",
         occupationBeforePresidency: "Politician and Author",
+        quote:
+          "Ask not what your country can do for you—ask what you can do for your country.",
       },
       {
         name: "Lyndon B. Johnson",
@@ -1160,6 +1206,8 @@ var app = (function () {
         spouse: "Lady Bird Johnson",
         children: "2",
         occupationBeforePresidency: "Politician and Teacher",
+        quote:
+          "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
       },
       {
         name: "Richard Nixon",
@@ -1177,6 +1225,7 @@ var app = (function () {
         spouse: "Pat Nixon",
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "The greatest honor history can bestow is the title of peacemaker.",
       },
       {
         name: "Gerald Ford",
@@ -1194,6 +1243,8 @@ var app = (function () {
         spouse: "Betty Ford",
         children: "4",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote:
+          "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
       },
       {
         name: "Jimmy Carter",
@@ -1211,6 +1262,8 @@ var app = (function () {
         spouse: "Rosalynn Carter",
         children: "4",
         occupationBeforePresidency: "Farmer and Politician",
+        quote:
+          "We must adjust to changing times and still hold to unchanging principles.",
       },
       {
         name: "Ronald Reagan",
@@ -1229,6 +1282,7 @@ var app = (function () {
         spouse: "Nancy Davis Reagan",
         children: "2",
         occupationBeforePresidency: "Actor and Politician",
+        quote: "Freedom is never more than one generation away from extinction.",
       },
       {
         name: "George H. W. Bush",
@@ -1246,6 +1300,7 @@ var app = (function () {
         spouse: "Barbara Pierce Bush",
         children: "6",
         occupationBeforePresidency: "Politician and Businessman",
+        quote: "We are not the sum of our possessions.",
       },
       {
         name: "Bill Clinton",
@@ -1264,6 +1319,8 @@ var app = (function () {
         spouse: "Hillary Clinton",
         children: "1",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote:
+          "There is nothing wrong with America that cannot be cured by what is right with America.",
       },
       {
         name: "George W. Bush",
@@ -1282,6 +1339,7 @@ var app = (function () {
         spouse: "Laura Welch Bush",
         children: "2",
         occupationBeforePresidency: "Governor",
+        quote: "We will not tire, we will not falter, and we will not fail.",
       },
       {
         name: "Barack Obama",
@@ -1300,6 +1358,7 @@ var app = (function () {
         spouse: "Michelle Obama",
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "Yes we can.",
       },
       {
         name: "Donald Trump",
@@ -1317,6 +1376,7 @@ var app = (function () {
         spouse: "Melania Trump",
         children: "5",
         occupationBeforePresidency: "Businessman and TV Personality",
+        quote: "The more you dream, the farther you get.",
       },
       {
         name: "Joe Biden",
@@ -1334,6 +1394,7 @@ var app = (function () {
         spouse: "Jill Biden",
         children: "4",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "Our best days still lie ahead.",
       },
       {
         name: "Donald Trump",
@@ -1351,6 +1412,7 @@ var app = (function () {
         spouse: "Melania Trump",
         children: "5",
         occupationBeforePresidency: "Businessman and TV Personality",
+        quote: "The more you dream, the farther you get.",
       },
     ]);
 
@@ -1438,7 +1500,7 @@ var app = (function () {
     	return block;
     }
 
-    // (110:2) {#if hoveredBirthIndex === index}
+    // (101:2) {#if hoveredBirthIndex === index}
     function create_if_block_3(ctx) {
     	let text_1;
     	let tspan0;
@@ -1469,16 +1531,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 117, 6, 3111);
+    			add_location(tspan0, file$3, 108, 6, 2920);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 120, 6, 3213);
+    			add_location(tspan1, file$3, 111, 6, 3022);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 110, 4, 2959);
+    			add_location(text_1, file$3, 101, 4, 2768);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1521,14 +1583,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(110:2) {#if hoveredBirthIndex === index}",
+    		source: "(101:2) {#if hoveredBirthIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (167:2) {:else}
+    // (158:2) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -1545,7 +1607,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 167, 4, 4484);
+    			add_location(line, file$3, 158, 4, 4293);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -1576,14 +1638,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(167:2) {:else}",
+    		source: "(158:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (128:2) {#if $presidents[index].status === "dead"}
+    // (119:2) {#if $presidents[index].status === "dead"}
     function create_if_block_1$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -1607,13 +1669,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 128, 4, 3434);
+    			add_location(circle, file$3, 119, 4, 3243);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 157, 4, 4270);
+    			add_location(text_1, file$3, 148, 4, 4079);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1677,14 +1739,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(128:2) {#if $presidents[index].status === \\\"dead\\\"}",
+    		source: "(119:2) {#if $presidents[index].status === \\\"dead\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (141:4) {#if hoveredDeathIndex === index}
+    // (132:4) {#if hoveredDeathIndex === index}
     function create_if_block_2(ctx) {
     	let text_1;
     	let tspan0;
@@ -1715,16 +1777,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 148, 8, 4029);
+    			add_location(tspan0, file$3, 139, 8, 3838);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 151, 8, 4140);
+    			add_location(tspan1, file$3, 142, 8, 3949);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 141, 6, 3863);
+    			add_location(text_1, file$3, 132, 6, 3672);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1767,14 +1829,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(141:4) {#if hoveredDeathIndex === index}",
+    		source: "(132:4) {#if hoveredDeathIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (227:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    // (218:2) {#if $presidents[index].presidencyEnd !== "Current President"}
     function create_if_block$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -1791,7 +1853,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 227, 4, 5831);
+    			add_location(circle, file$3, 218, 4, 5640);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1816,7 +1878,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(227:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(218:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
     		ctx
     	});
 
@@ -1935,37 +1997,37 @@ var app = (function () {
     			attr_dev(image, "height", image_height_value = /*innerRadius*/ ctx[4] * 2);
     			attr_dev(image, "href", "/images/GeorgeWashington.png");
     			attr_dev(image, "clip-path", "circle(50%)");
-    			add_location(image, file$3, 78, 2, 2177);
+    			add_location(image, file$3, 69, 2, 1986);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 87, 2, 2367);
+    			add_location(line, file$3, 78, 2, 2176);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 97, 2, 2577);
+    			add_location(circle1, file$3, 88, 2, 2386);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 178, 2, 4707);
+    			add_location(text0, file$3, 169, 2, 4516);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 189, 2, 4907);
+    			add_location(text1, file$3, 180, 2, 4716);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 200, 2, 5150);
+    			add_location(text2, file$3, 191, 2, 4959);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -1974,7 +2036,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 211, 2, 5370);
+    			add_location(circle2, file$3, 202, 2, 5179);
     			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
@@ -1982,15 +2044,15 @@ var app = (function () {
     			attr_dev(rect, "fill", "none");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 243, 2, 6251);
+    			add_location(rect, file$3, 234, 2, 6060);
     			set_style(div, "text-align", "center");
     			set_style(div, "font-size", "0.75rem");
-    			add_location(div, file$3, 258, 4, 6540);
+    			add_location(div, file$3, 249, 4, 6349);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
     			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 252, 2, 6417);
+    			add_location(foreignObject, file$3, 243, 2, 6226);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
