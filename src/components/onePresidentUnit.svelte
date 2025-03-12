@@ -1,6 +1,7 @@
 <script>
   import { presidents } from "../data/presidentsData";
   import { selectedCircleId } from "../store.js";
+
   export let cx;
   export let cy;
   export let innerRadius;
@@ -25,8 +26,8 @@
 
     return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
   }
-  $: console.log($selectedCircleId);
-  $: console.log(`circle-${$selectedCircleId}`);
+  //$: console.log($selectedCircleId);
+  //$: console.log(`circle-${$selectedCircleId}`);
 </script>
 
 <g
@@ -63,6 +64,16 @@
     {stroke}
     stroke-width={strokeWidth}
     {fill}
+  />
+
+  <!-- presidents image -->
+  <image
+    x={cx - innerRadius}
+    y={cy - innerRadius}
+    width={innerRadius * 2}
+    height={innerRadius * 2}
+    href="/images/GeorgeWashington.png"
+    clip-path="circle(50%)"
   />
 
   <line
