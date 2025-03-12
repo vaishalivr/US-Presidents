@@ -608,6 +608,8 @@ var app = (function () {
         spouse: "Martha Wayles Skelton Jefferson",
         children: "None",
         occupationBeforePresidency: "Planter and Lawyer",
+        quote:
+          "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
       },
       {
         name: "James Madison",
@@ -626,6 +628,8 @@ var app = (function () {
         spouse: "Dolley Payne Todd Madison",
         children: "None",
         occupationBeforePresidency: "Farmer and Politician",
+        quote:
+          "The means of defense against foreign danger have always been the instruments of tyranny at home.",
       },
       {
         name: "James Monroe",
@@ -644,6 +648,7 @@ var app = (function () {
         spouse: "Elizabeth Kortright Monroe",
         children: "3",
         occupationBeforePresidency: "Lawyer and Soldier",
+        quote: "National honor is the national property of the highest value.",
       },
       {
         name: "John Quincy Adams",
@@ -661,6 +666,8 @@ var app = (function () {
         spouse: "Louisa Catherine Johnson Adams",
         children: "4",
         occupationBeforePresidency: "Diplomat and Lawyer",
+        quote:
+          "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
       },
       {
         name: "Andrew Jackson",
@@ -679,6 +686,7 @@ var app = (function () {
         spouse: "Rachel Donelson Robards Jackson",
         children: "None",
         occupationBeforePresidency: "Lawyer and Military Leader",
+        quote: "One man with courage makes a majority.",
       },
       {
         name: "Martin Van Buren",
@@ -696,6 +704,7 @@ var app = (function () {
         spouse: "Hannah Hoes Van Buren",
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "It is easier to do a job right than to explain why you didn’t.",
       },
       {
         name: "William Henry Harrison",
@@ -713,6 +722,8 @@ var app = (function () {
         spouse: "Anna Tuthill Symmes Harrison",
         children: "10",
         occupationBeforePresidency: "Military Officer and Politician",
+        quote:
+          "The liberties of a people depend on their own constant attention to its preservation.",
       },
       {
         name: "John Tyler",
@@ -730,6 +741,8 @@ var app = (function () {
         spouse: "Letitia Christian Tyler",
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
       },
       {
         name: "James K. Polk",
@@ -747,6 +760,8 @@ var app = (function () {
         spouse: "Sarah Childress Polk",
         children: "None",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "No president who performs his duties faithfully and conscientiously can have any leisure.",
       },
       {
         name: "Zachary Taylor",
@@ -764,6 +779,8 @@ var app = (function () {
         spouse: "Margaret Mackall Smith Taylor",
         children: "6",
         occupationBeforePresidency: "Military Officer",
+        quote:
+          "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
       },
       {
         name: "Millard Fillmore",
@@ -781,6 +798,8 @@ var app = (function () {
         spouse: "Abigail Powers Fillmore",
         children: "2",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "The nourishment of a nation depends on the health of its democracy.",
       },
       {
         name: "Franklin Pierce",
@@ -798,6 +817,8 @@ var app = (function () {
         spouse: "Jane Means Appleton Pierce",
         children: "3",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
       },
       {
         name: "James Buchanan",
@@ -815,6 +836,7 @@ var app = (function () {
         spouse: "None",
         children: "None",
         occupationBeforePresidency: "Diplomat and Lawyer",
+        quote: "The ballot box is the surest arbiter of disputes among free men.",
       },
       {
         name: "Abraham Lincoln",
@@ -832,6 +854,8 @@ var app = (function () {
         spouse: "Mary Todd Lincoln",
         children: "4",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "Government of the people, by the people, for the people, shall not perish from the Earth.",
       },
       {
         name: "Andrew Johnson",
@@ -849,6 +873,7 @@ var app = (function () {
         spouse: "Eliza McCardle Johnson",
         children: "5",
         occupationBeforePresidency: "Tailor and Politician",
+        quote: "Honest conviction is my courage; the Constitution is my guide.",
       },
       {
         name: "Ulysses S. Grant",
@@ -867,6 +892,7 @@ var app = (function () {
         spouse: "Julia Dent Grant",
         children: "4",
         occupationBeforePresidency: "Military Leader",
+        quote: "The friend in my adversity I shall always cherish most.",
       },
       {
         name: "Rutherford B. Hayes",
@@ -884,6 +910,7 @@ var app = (function () {
         spouse: "Lucy Webb Hayes",
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "He serves his party best who serves the country best.",
       },
       {
         name: "James A. Garfield",
@@ -901,6 +928,7 @@ var app = (function () {
         spouse: "Lucretia Rudolph Garfield",
         children: "7",
         occupationBeforePresidency: "Military Leader and Politician",
+        quote: "Ideas control the world.",
       },
       {
         name: "Chester A. Arthur",
@@ -918,6 +946,8 @@ var app = (function () {
         spouse: "Ellen Lewis Herndon Arthur",
         children: "3",
         occupationBeforePresidency: "Lawyer",
+        quote:
+          "Men may die, but the fabric of our free institutions remains unshaken.",
       },
       {
         name: "Grover Cleveland",
@@ -935,6 +965,8 @@ var app = (function () {
         spouse: "Frances Folsom Cleveland",
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote:
+          "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
       },
       {
         name: "Benjamin Harrison",
@@ -952,6 +984,7 @@ var app = (function () {
         spouse: "Caroline Lavinia Scott Harrison",
         children: "1",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "Great lives never go out; they go on.",
       },
       {
         name: "William McKinley",
@@ -969,6 +1002,8 @@ var app = (function () {
         spouse: "Ida Saxton McKinley",
         children: "2",
         occupationBeforePresidency: "Military Officer and Politician",
+        quote:
+          "The mission of the United States is one of benevolent assimilation.",
       },
       {
         name: "Theodore Roosevelt",
@@ -987,6 +1022,7 @@ var app = (function () {
         spouse: "Edith Kermit Carow Roosevelt",
         children: "6",
         occupationBeforePresidency: "Military Leader and Politician",
+        quote: "Do what you can, with what you have, where you are.",
       },
       {
         name: "William Howard Taft",
@@ -1004,6 +1040,7 @@ var app = (function () {
         spouse: "Helen Herron Taft",
         children: "3",
         occupationBeforePresidency: "Judge and Politician",
+        quote: "Presidents come and go, but the Supreme Court goes on forever.",
       },
       {
         name: "Woodrow Wilson",
@@ -1022,6 +1059,7 @@ var app = (function () {
         spouse: "Ellen Louise Axson Wilson",
         children: "3",
         occupationBeforePresidency: "Politician and Academic",
+        quote: "The history of liberty is a history of resistance.",
       },
       {
         name: "Warren G. Harding",
@@ -1039,6 +1077,7 @@ var app = (function () {
         spouse: "Florence Kling Harding",
         children: "1",
         occupationBeforePresidency: "Newspaper Publisher",
+        quote: "America’s present need is not heroics but healing.",
       },
       {
         name: "Calvin Coolidge",
@@ -1056,6 +1095,7 @@ var app = (function () {
         spouse: "Grace Anna Goodhue Coolidge",
         children: "2",
         occupationBeforePresidency: "Lawyer and Politician",
+        quote: "The business of America is business.",
       },
       {
         name: "Herbert Hoover",
@@ -1073,6 +1113,7 @@ var app = (function () {
         spouse: "Lou Henry Hoover",
         children: "2",
         occupationBeforePresidency: "Engineer and Politician",
+        quote: "Blessed are the young, for they shall inherit the national debt.",
       },
       {
         name: "Franklin D. Roosevelt",
@@ -1091,6 +1132,7 @@ var app = (function () {
         spouse: "Eleanor Roosevelt",
         children: "6",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "The only thing we have to fear is fear itself.",
       },
       {
         name: "Harry S. Truman",
@@ -1108,6 +1150,7 @@ var app = (function () {
         spouse: "Bess Wallace Truman",
         children: "1",
         occupationBeforePresidency: "Politician and Farmer",
+        quote: "The buck stops here.",
       },
       {
         name: "Dwight D. Eisenhower",
@@ -1126,6 +1169,7 @@ var app = (function () {
         spouse: "Mamie Geneva Doud Eisenhower",
         children: "2",
         occupationBeforePresidency: "Military Leader",
+        quote: "Plans are worthless, but planning is everything.",
       },
       {
         name: "John F. Kennedy",
@@ -1143,6 +1187,8 @@ var app = (function () {
         spouse: "Jacqueline Bouvier Kennedy",
         children: "4",
         occupationBeforePresidency: "Politician and Author",
+        quote:
+          "Ask not what your country can do for you—ask what you can do for your country.",
       },
       {
         name: "Lyndon B. Johnson",
@@ -1160,6 +1206,8 @@ var app = (function () {
         spouse: "Lady Bird Johnson",
         children: "2",
         occupationBeforePresidency: "Politician and Teacher",
+        quote:
+          "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
       },
       {
         name: "Richard Nixon",
@@ -1177,6 +1225,7 @@ var app = (function () {
         spouse: "Pat Nixon",
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "The greatest honor history can bestow is the title of peacemaker.",
       },
       {
         name: "Gerald Ford",
@@ -1194,6 +1243,8 @@ var app = (function () {
         spouse: "Betty Ford",
         children: "4",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote:
+          "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
       },
       {
         name: "Jimmy Carter",
@@ -1211,6 +1262,8 @@ var app = (function () {
         spouse: "Rosalynn Carter",
         children: "4",
         occupationBeforePresidency: "Farmer and Politician",
+        quote:
+          "We must adjust to changing times and still hold to unchanging principles.",
       },
       {
         name: "Ronald Reagan",
@@ -1229,6 +1282,7 @@ var app = (function () {
         spouse: "Nancy Davis Reagan",
         children: "2",
         occupationBeforePresidency: "Actor and Politician",
+        quote: "Freedom is never more than one generation away from extinction.",
       },
       {
         name: "George H. W. Bush",
@@ -1246,6 +1300,7 @@ var app = (function () {
         spouse: "Barbara Pierce Bush",
         children: "6",
         occupationBeforePresidency: "Politician and Businessman",
+        quote: "We are not the sum of our possessions.",
       },
       {
         name: "Bill Clinton",
@@ -1264,6 +1319,8 @@ var app = (function () {
         spouse: "Hillary Clinton",
         children: "1",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote:
+          "There is nothing wrong with America that cannot be cured by what is right with America.",
       },
       {
         name: "George W. Bush",
@@ -1282,6 +1339,7 @@ var app = (function () {
         spouse: "Laura Welch Bush",
         children: "2",
         occupationBeforePresidency: "Governor",
+        quote: "We will not tire, we will not falter, and we will not fail.",
       },
       {
         name: "Barack Obama",
@@ -1300,6 +1358,7 @@ var app = (function () {
         spouse: "Michelle Obama",
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "Yes we can.",
       },
       {
         name: "Donald Trump",
@@ -1317,6 +1376,7 @@ var app = (function () {
         spouse: "Melania Trump",
         children: "5",
         occupationBeforePresidency: "Businessman and TV Personality",
+        quote: "The more you dream, the farther you get.",
       },
       {
         name: "Joe Biden",
@@ -1334,6 +1394,7 @@ var app = (function () {
         spouse: "Jill Biden",
         children: "4",
         occupationBeforePresidency: "Politician and Lawyer",
+        quote: "Our best days still lie ahead.",
       },
       {
         name: "Donald Trump",
@@ -1351,6 +1412,7 @@ var app = (function () {
         spouse: "Melania Trump",
         children: "5",
         occupationBeforePresidency: "Businessman and TV Personality",
+        quote: "The more you dream, the farther you get.",
       },
     ]);
 

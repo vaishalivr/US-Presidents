@@ -57,6 +57,8 @@ export const presidents = writable([
     spouse: "Martha Wayles Skelton Jefferson",
     children: "None",
     occupationBeforePresidency: "Planter and Lawyer",
+    quote:
+      "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
   },
   {
     name: "James Madison",
@@ -75,6 +77,8 @@ export const presidents = writable([
     spouse: "Dolley Payne Todd Madison",
     children: "None",
     occupationBeforePresidency: "Farmer and Politician",
+    quote:
+      "The means of defense against foreign danger have always been the instruments of tyranny at home.",
   },
   {
     name: "James Monroe",
@@ -93,6 +97,7 @@ export const presidents = writable([
     spouse: "Elizabeth Kortright Monroe",
     children: "3",
     occupationBeforePresidency: "Lawyer and Soldier",
+    quote: "National honor is the national property of the highest value.",
   },
   {
     name: "John Quincy Adams",
@@ -110,6 +115,8 @@ export const presidents = writable([
     spouse: "Louisa Catherine Johnson Adams",
     children: "4",
     occupationBeforePresidency: "Diplomat and Lawyer",
+    quote:
+      "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
   },
   {
     name: "Andrew Jackson",
@@ -128,6 +135,7 @@ export const presidents = writable([
     spouse: "Rachel Donelson Robards Jackson",
     children: "None",
     occupationBeforePresidency: "Lawyer and Military Leader",
+    quote: "One man with courage makes a majority.",
   },
   {
     name: "Martin Van Buren",
@@ -145,6 +153,7 @@ export const presidents = writable([
     spouse: "Hannah Hoes Van Buren",
     children: "5",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote: "It is easier to do a job right than to explain why you didn’t.",
   },
   {
     name: "William Henry Harrison",
@@ -162,6 +171,8 @@ export const presidents = writable([
     spouse: "Anna Tuthill Symmes Harrison",
     children: "10",
     occupationBeforePresidency: "Military Officer and Politician",
+    quote:
+      "The liberties of a people depend on their own constant attention to its preservation.",
   },
   {
     name: "John Tyler",
@@ -179,6 +190,8 @@ export const presidents = writable([
     spouse: "Letitia Christian Tyler",
     children: "8",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote:
+      "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
   },
   {
     name: "James K. Polk",
@@ -196,6 +209,8 @@ export const presidents = writable([
     spouse: "Sarah Childress Polk",
     children: "None",
     occupationBeforePresidency: "Lawyer",
+    quote:
+      "No president who performs his duties faithfully and conscientiously can have any leisure.",
   },
   {
     name: "Zachary Taylor",
@@ -213,6 +228,8 @@ export const presidents = writable([
     spouse: "Margaret Mackall Smith Taylor",
     children: "6",
     occupationBeforePresidency: "Military Officer",
+    quote:
+      "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
   },
   {
     name: "Millard Fillmore",
@@ -230,6 +247,8 @@ export const presidents = writable([
     spouse: "Abigail Powers Fillmore",
     children: "2",
     occupationBeforePresidency: "Lawyer",
+    quote:
+      "The nourishment of a nation depends on the health of its democracy.",
   },
   {
     name: "Franklin Pierce",
@@ -247,6 +266,8 @@ export const presidents = writable([
     spouse: "Jane Means Appleton Pierce",
     children: "3",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote:
+      "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
   },
   {
     name: "James Buchanan",
@@ -264,6 +285,7 @@ export const presidents = writable([
     spouse: "None",
     children: "None",
     occupationBeforePresidency: "Diplomat and Lawyer",
+    quote: "The ballot box is the surest arbiter of disputes among free men.",
   },
   {
     name: "Abraham Lincoln",
@@ -281,6 +303,8 @@ export const presidents = writable([
     spouse: "Mary Todd Lincoln",
     children: "4",
     occupationBeforePresidency: "Lawyer",
+    quote:
+      "Government of the people, by the people, for the people, shall not perish from the Earth.",
   },
   {
     name: "Andrew Johnson",
@@ -298,6 +322,7 @@ export const presidents = writable([
     spouse: "Eliza McCardle Johnson",
     children: "5",
     occupationBeforePresidency: "Tailor and Politician",
+    quote: "Honest conviction is my courage; the Constitution is my guide.",
   },
   {
     name: "Ulysses S. Grant",
@@ -316,6 +341,7 @@ export const presidents = writable([
     spouse: "Julia Dent Grant",
     children: "4",
     occupationBeforePresidency: "Military Leader",
+    quote: "The friend in my adversity I shall always cherish most.",
   },
   {
     name: "Rutherford B. Hayes",
@@ -333,6 +359,7 @@ export const presidents = writable([
     spouse: "Lucy Webb Hayes",
     children: "8",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote: "He serves his party best who serves the country best.",
   },
   {
     name: "James A. Garfield",
@@ -350,6 +377,7 @@ export const presidents = writable([
     spouse: "Lucretia Rudolph Garfield",
     children: "7",
     occupationBeforePresidency: "Military Leader and Politician",
+    quote: "Ideas control the world.",
   },
   {
     name: "Chester A. Arthur",
@@ -367,6 +395,8 @@ export const presidents = writable([
     spouse: "Ellen Lewis Herndon Arthur",
     children: "3",
     occupationBeforePresidency: "Lawyer",
+    quote:
+      "Men may die, but the fabric of our free institutions remains unshaken.",
   },
   {
     name: "Grover Cleveland",
@@ -384,6 +414,8 @@ export const presidents = writable([
     spouse: "Frances Folsom Cleveland",
     children: "5",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote:
+      "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
   },
   {
     name: "Benjamin Harrison",
@@ -401,6 +433,7 @@ export const presidents = writable([
     spouse: "Caroline Lavinia Scott Harrison",
     children: "1",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote: "Great lives never go out; they go on.",
   },
   {
     name: "William McKinley",
@@ -418,6 +451,8 @@ export const presidents = writable([
     spouse: "Ida Saxton McKinley",
     children: "2",
     occupationBeforePresidency: "Military Officer and Politician",
+    quote:
+      "The mission of the United States is one of benevolent assimilation.",
   },
   {
     name: "Theodore Roosevelt",
@@ -436,6 +471,7 @@ export const presidents = writable([
     spouse: "Edith Kermit Carow Roosevelt",
     children: "6",
     occupationBeforePresidency: "Military Leader and Politician",
+    quote: "Do what you can, with what you have, where you are.",
   },
   {
     name: "William Howard Taft",
@@ -453,6 +489,7 @@ export const presidents = writable([
     spouse: "Helen Herron Taft",
     children: "3",
     occupationBeforePresidency: "Judge and Politician",
+    quote: "Presidents come and go, but the Supreme Court goes on forever.",
   },
   {
     name: "Woodrow Wilson",
@@ -471,6 +508,7 @@ export const presidents = writable([
     spouse: "Ellen Louise Axson Wilson",
     children: "3",
     occupationBeforePresidency: "Politician and Academic",
+    quote: "The history of liberty is a history of resistance.",
   },
   {
     name: "Warren G. Harding",
@@ -488,6 +526,7 @@ export const presidents = writable([
     spouse: "Florence Kling Harding",
     children: "1",
     occupationBeforePresidency: "Newspaper Publisher",
+    quote: "America’s present need is not heroics but healing.",
   },
   {
     name: "Calvin Coolidge",
@@ -505,6 +544,7 @@ export const presidents = writable([
     spouse: "Grace Anna Goodhue Coolidge",
     children: "2",
     occupationBeforePresidency: "Lawyer and Politician",
+    quote: "The business of America is business.",
   },
   {
     name: "Herbert Hoover",
@@ -522,6 +562,7 @@ export const presidents = writable([
     spouse: "Lou Henry Hoover",
     children: "2",
     occupationBeforePresidency: "Engineer and Politician",
+    quote: "Blessed are the young, for they shall inherit the national debt.",
   },
   {
     name: "Franklin D. Roosevelt",
@@ -540,6 +581,7 @@ export const presidents = writable([
     spouse: "Eleanor Roosevelt",
     children: "6",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote: "The only thing we have to fear is fear itself.",
   },
   {
     name: "Harry S. Truman",
@@ -557,6 +599,7 @@ export const presidents = writable([
     spouse: "Bess Wallace Truman",
     children: "1",
     occupationBeforePresidency: "Politician and Farmer",
+    quote: "The buck stops here.",
   },
   {
     name: "Dwight D. Eisenhower",
@@ -575,6 +618,7 @@ export const presidents = writable([
     spouse: "Mamie Geneva Doud Eisenhower",
     children: "2",
     occupationBeforePresidency: "Military Leader",
+    quote: "Plans are worthless, but planning is everything.",
   },
   {
     name: "John F. Kennedy",
@@ -592,6 +636,8 @@ export const presidents = writable([
     spouse: "Jacqueline Bouvier Kennedy",
     children: "4",
     occupationBeforePresidency: "Politician and Author",
+    quote:
+      "Ask not what your country can do for you—ask what you can do for your country.",
   },
   {
     name: "Lyndon B. Johnson",
@@ -609,6 +655,8 @@ export const presidents = writable([
     spouse: "Lady Bird Johnson",
     children: "2",
     occupationBeforePresidency: "Politician and Teacher",
+    quote:
+      "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
   },
   {
     name: "Richard Nixon",
@@ -626,6 +674,7 @@ export const presidents = writable([
     spouse: "Pat Nixon",
     children: "2",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote: "The greatest honor history can bestow is the title of peacemaker.",
   },
   {
     name: "Gerald Ford",
@@ -643,6 +692,8 @@ export const presidents = writable([
     spouse: "Betty Ford",
     children: "4",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote:
+      "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
   },
   {
     name: "Jimmy Carter",
@@ -660,6 +711,8 @@ export const presidents = writable([
     spouse: "Rosalynn Carter",
     children: "4",
     occupationBeforePresidency: "Farmer and Politician",
+    quote:
+      "We must adjust to changing times and still hold to unchanging principles.",
   },
   {
     name: "Ronald Reagan",
@@ -678,6 +731,7 @@ export const presidents = writable([
     spouse: "Nancy Davis Reagan",
     children: "2",
     occupationBeforePresidency: "Actor and Politician",
+    quote: "Freedom is never more than one generation away from extinction.",
   },
   {
     name: "George H. W. Bush",
@@ -695,6 +749,7 @@ export const presidents = writable([
     spouse: "Barbara Pierce Bush",
     children: "6",
     occupationBeforePresidency: "Politician and Businessman",
+    quote: "We are not the sum of our possessions.",
   },
   {
     name: "Bill Clinton",
@@ -713,6 +768,8 @@ export const presidents = writable([
     spouse: "Hillary Clinton",
     children: "1",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote:
+      "There is nothing wrong with America that cannot be cured by what is right with America.",
   },
   {
     name: "George W. Bush",
@@ -731,6 +788,7 @@ export const presidents = writable([
     spouse: "Laura Welch Bush",
     children: "2",
     occupationBeforePresidency: "Governor",
+    quote: "We will not tire, we will not falter, and we will not fail.",
   },
   {
     name: "Barack Obama",
@@ -749,6 +807,7 @@ export const presidents = writable([
     spouse: "Michelle Obama",
     children: "2",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote: "Yes we can.",
   },
   {
     name: "Donald Trump",
@@ -766,6 +825,7 @@ export const presidents = writable([
     spouse: "Melania Trump",
     children: "5",
     occupationBeforePresidency: "Businessman and TV Personality",
+    quote: "The more you dream, the farther you get.",
   },
   {
     name: "Joe Biden",
@@ -783,6 +843,7 @@ export const presidents = writable([
     spouse: "Jill Biden",
     children: "4",
     occupationBeforePresidency: "Politician and Lawyer",
+    quote: "Our best days still lie ahead.",
   },
   {
     name: "Donald Trump",
@@ -800,5 +861,6 @@ export const presidents = writable([
     spouse: "Melania Trump",
     children: "5",
     occupationBeforePresidency: "Businessman and TV Personality",
+    quote: "The more you dream, the farther you get.",
   },
 ]);
