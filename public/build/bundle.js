@@ -571,6 +571,7 @@ var app = (function () {
         occupationBeforePresidency: "Farmer and Soldier",
         quote:
           "To be prepared for war is one of the most effective means of preserving peace.",
+        image: "images/GeorgeWashington.png",
       },
       {
         name: "John Adams",
@@ -591,6 +592,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
+        image: "images/JohnAdams.png",
       },
       {
         name: "Thomas Jefferson",
@@ -610,6 +612,7 @@ var app = (function () {
         occupationBeforePresidency: "Planter and Lawyer",
         quote:
           "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
+        image: "images/ThomasJefferson.png",
       },
       {
         name: "James Madison",
@@ -630,6 +633,7 @@ var app = (function () {
         occupationBeforePresidency: "Farmer and Politician",
         quote:
           "The means of defense against foreign danger have always been the instruments of tyranny at home.",
+        image: "images/JamesMadison.png",
       },
       {
         name: "James Monroe",
@@ -649,6 +653,7 @@ var app = (function () {
         children: "3",
         occupationBeforePresidency: "Lawyer and Soldier",
         quote: "National honor is the national property of the highest value.",
+        image: "images/JamesMonroe.png",
       },
       {
         name: "John Quincy Adams",
@@ -668,6 +673,7 @@ var app = (function () {
         occupationBeforePresidency: "Diplomat and Lawyer",
         quote:
           "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
+        image: "images/JohnQuincyAdams.png",
       },
       {
         name: "Andrew Jackson",
@@ -1264,6 +1270,7 @@ var app = (function () {
         occupationBeforePresidency: "Farmer and Politician",
         quote:
           "We must adjust to changing times and still hold to unchanging principles.",
+        image: "images/JimmyCarter.png",
       },
       {
         name: "Ronald Reagan",
@@ -1531,16 +1538,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 108, 6, 2920);
+    			add_location(tspan0, file$3, 108, 6, 2916);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 111, 6, 3022);
+    			add_location(tspan1, file$3, 111, 6, 3018);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 101, 4, 2768);
+    			add_location(text_1, file$3, 101, 4, 2764);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1607,7 +1614,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 158, 4, 4293);
+    			add_location(line, file$3, 158, 4, 4289);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -1669,13 +1676,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 119, 4, 3243);
+    			add_location(circle, file$3, 119, 4, 3239);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 148, 4, 4079);
+    			add_location(text_1, file$3, 148, 4, 4075);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1777,16 +1784,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 139, 8, 3838);
+    			add_location(tspan0, file$3, 139, 8, 3834);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 142, 8, 3949);
+    			add_location(tspan1, file$3, 142, 8, 3945);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 132, 6, 3672);
+    			add_location(text_1, file$3, 132, 6, 3668);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -1853,7 +1860,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 218, 4, 5640);
+    			add_location(circle, file$3, 218, 4, 5636);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -1893,6 +1900,7 @@ var app = (function () {
     	let image_y_value;
     	let image_width_value;
     	let image_height_value;
+    	let image_href_value;
     	let line;
     	let line_x__value;
     	let line_y__value;
@@ -1995,7 +2003,7 @@ var app = (function () {
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
     			attr_dev(image, "height", image_height_value = /*innerRadius*/ ctx[4] * 2);
-    			attr_dev(image, "href", "/images/GeorgeWashington.png");
+    			attr_dev(image, "href", image_href_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].image);
     			attr_dev(image, "clip-path", "circle(50%)");
     			add_location(image, file$3, 69, 2, 1986);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
@@ -2004,30 +2012,30 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 78, 2, 2176);
+    			add_location(line, file$3, 78, 2, 2172);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 88, 2, 2386);
+    			add_location(circle1, file$3, 88, 2, 2382);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 169, 2, 4516);
+    			add_location(text0, file$3, 169, 2, 4512);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 180, 2, 4716);
+    			add_location(text1, file$3, 180, 2, 4712);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 191, 2, 4959);
+    			add_location(text2, file$3, 191, 2, 4955);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2036,7 +2044,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 202, 2, 5179);
+    			add_location(circle2, file$3, 202, 2, 5175);
     			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
@@ -2044,15 +2052,15 @@ var app = (function () {
     			attr_dev(rect, "fill", "none");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 234, 2, 6060);
+    			add_location(rect, file$3, 234, 2, 6056);
     			set_style(div, "text-align", "center");
     			set_style(div, "font-size", "0.75rem");
-    			add_location(div, file$3, 249, 4, 6349);
+    			add_location(div, file$3, 249, 4, 6345);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
     			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 243, 2, 6226);
+    			add_location(foreignObject, file$3, 243, 2, 6222);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
@@ -2169,6 +2177,10 @@ var app = (function () {
 
     			if (dirty & /*innerRadius*/ 16 && image_height_value !== (image_height_value = /*innerRadius*/ ctx[4] * 2)) {
     				attr_dev(image, "height", image_height_value);
+    			}
+
+    			if (dirty & /*$presidents, index*/ 4608 && image_href_value !== (image_href_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].image)) {
+    				attr_dev(image, "href", image_href_value);
     			}
 
     			if (dirty & /*cx, outerRadius*/ 36 && line_x__value !== (line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
