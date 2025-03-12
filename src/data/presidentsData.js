@@ -20,6 +20,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Farmer and Soldier",
     quote:
       "To be prepared for war is one of the most effective means of preserving peace.",
+    image: "images/GeorgeWashington.png",
   },
   {
     name: "John Adams",
@@ -40,6 +41,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer",
     quote:
       "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
+    image: "images/JohnAdams.png",
   },
   {
     name: "Thomas Jefferson",
@@ -59,6 +61,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Planter and Lawyer",
     quote:
       "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
+    image: "images/ThomasJefferson.png",
   },
   {
     name: "James Madison",
@@ -79,6 +82,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Farmer and Politician",
     quote:
       "The means of defense against foreign danger have always been the instruments of tyranny at home.",
+    image: "images/JamesMadison.png",
   },
   {
     name: "James Monroe",
@@ -98,6 +102,7 @@ export const presidents = writable([
     children: "3",
     occupationBeforePresidency: "Lawyer and Soldier",
     quote: "National honor is the national property of the highest value.",
+    image: "images/JamesMonroe.png",
   },
   {
     name: "John Quincy Adams",
@@ -117,6 +122,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Diplomat and Lawyer",
     quote:
       "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
+    image: "images/JohnQuincyAdams.png",
   },
   {
     name: "Andrew Jackson",
@@ -713,6 +719,7 @@ export const presidents = writable([
     occupationBeforePresidency: "Farmer and Politician",
     quote:
       "We must adjust to changing times and still hold to unchanging principles.",
+    image: "images/JimmyCarter.png",
   },
   {
     name: "Ronald Reagan",
