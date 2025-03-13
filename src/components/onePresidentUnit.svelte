@@ -28,6 +28,17 @@
   }
   //$: console.log($selectedCircleId);
   //$: console.log(`circle-${$selectedCircleId}`);
+
+  function handleImageClick(event) {
+    event.target.blur();
+    const id = event.target.dataset.index;
+    selectedCircleId.set(id);
+    event.stopPropagation();
+  }
+
+  function handleImageKeydown(event) {
+    console.log("key down on image");
+  }
 </script>
 
 <g
@@ -35,7 +46,7 @@
   opacity={`circle-${$selectedCircleId}` === "circle-null" ||
   `circle-${$selectedCircleId}` === "circle-" + index
     ? 1
-    : 0.3}
+    : 0.4}
 >
   {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}
     <!-- make arcs based on policies -->
@@ -72,8 +83,13 @@
     y={cy - innerRadius}
     width={innerRadius * 2}
     height={innerRadius * 2}
+    data-index={index}
     href={$presidents[index].image}
     clip-path="circle(50%)"
+    on:click={(event) => handleImageClick(event)}
+    on:keydown={(event) => handleImageKeydown(event)}
+    tabindex="0"
+    role="button"
   />
 
   <line
@@ -263,3 +279,10 @@
     {$presidents[index].quote}
   </text> -->
 </g>
+
+<style>
+  image:focus,
+  image:active {
+    outline: none;
+  }
+</style>

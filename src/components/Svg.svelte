@@ -73,9 +73,18 @@
       cy: row * ($outerRadius * 2 + $rowSpacing) + $outerRadius + $titleSpace,
     };
   });
+
+  function handleSvgClick() {
+    selectedCircleId.set(null);
+  }
 </script>
 
-<svg width={$svgWidth} height={$svgHeight}>
+<svg
+  width={$svgWidth}
+  height={$svgHeight}
+  on:click={handleSvgClick}
+  on:keydown={handleSvgClick}
+>
   <rect
     width={$svgWidth}
     height={$svgHeight}
