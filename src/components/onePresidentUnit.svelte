@@ -13,6 +13,7 @@
   export let hoveredBirthIndex = null;
   export let hoveredDeathIndex = null;
   let hoveredArc = null;
+  let quoteRefs = [];
 
   function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     const anglePerArc = (2 * Math.PI) / totalArcs;
@@ -48,7 +49,7 @@
     ? 1
     : 0.4}
 >
-  {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}
+  {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
     <!-- make arcs based on policies -->
     <path
       d={calculateArcPath(
@@ -56,16 +57,26 @@
         cy,
         outerRadius,
         arcIndex,
-        $presidents[index].keyPolicies
+        $presidents[index].policies.length
       )}
       fill={hoveredArc === `${index}-${arcIndex}` ? "lightblue" : "white"}
       stroke="black"
       stroke-width="2px"
-      on:mouseover={() => (hoveredArc = `${index}-${arcIndex}`)}
+      on:mouseover={() => {
+        //TO DO: how to avoid getElementById
+        hoveredArc = `${index}-${arcIndex}`;
+        const div = document.getElementById(`president-${index}-Quote`);
+        div.innerHTML = $presidents[index].policies[arcIndex];
+      }}
       on:mouseout={() => (hoveredArc = null)}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:blur={() => (hoveredArc = null)}
-      on:click={() => (hoveredArc = `${index}-${arcIndex}`)}
+      on:click={() => {
+        //TO DO : how to avoid getElementById
+        hoveredArc = `${index}-${arcIndex}`;
+        const div = document.getElementById(`president-${index}-Quote`);
+        div.innerHTML = $presidents[index].policies[arcIndex];
+      }}
       on:keydown={() => (hoveredArc = `${index}-${arcIndex}`)}
     />
   {/each}
@@ -265,21 +276,13 @@
     width={outerRadius * 2}
     height="60"
   >
-    <div style="text-align:center; font-size: 0.75rem">
+    <div
+      id={"president-" + index + "-Quote"}
+      style="text-align:center; font-size: 0.75rem"
+    >
       {$presidents[index].quote}
     </div>
   </foreignObject>
-
-  <!-- famous president quote -->
-  <!-- <text
-    x={cx}
-    y={cy + outerRadius * 1.5 + 30}
-    text-anchor="middle"
-    font-size="12px"
-    fill="black"
-  >
-    {$presidents[index].quote}
-  </text> -->
 </g>
 
 <style>

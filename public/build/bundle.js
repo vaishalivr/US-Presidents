@@ -2032,12 +2032,12 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[30] = list[i];
-    	child_ctx[32] = i;
+    	child_ctx[31] = list[i];
+    	child_ctx[33] = i;
     	return child_ctx;
     }
 
-    // (51:2) {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}
+    // (52:2) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
     function create_each_block$2(ctx) {
     	let path;
     	let path_d_value;
@@ -2046,34 +2046,34 @@ var app = (function () {
     	let dispose;
 
     	function mouseover_handler() {
-    		return /*mouseover_handler*/ ctx[14](/*arcIndex*/ ctx[32]);
+    		return /*mouseover_handler*/ ctx[14](/*arcIndex*/ ctx[33]);
     	}
 
     	function focus_handler() {
-    		return /*focus_handler*/ ctx[16](/*arcIndex*/ ctx[32]);
+    		return /*focus_handler*/ ctx[16](/*arcIndex*/ ctx[33]);
     	}
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[18](/*arcIndex*/ ctx[32]);
+    		return /*click_handler*/ ctx[18](/*arcIndex*/ ctx[33]);
     	}
 
     	function keydown_handler() {
-    		return /*keydown_handler*/ ctx[19](/*arcIndex*/ ctx[32]);
+    		return /*keydown_handler*/ ctx[19](/*arcIndex*/ ctx[33]);
     	}
 
     	const block = {
     		c: function create() {
     			path = svg_element("path");
-    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[32], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies));
+    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[33], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length));
 
-    			attr_dev(path, "fill", path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[32]}`
+    			attr_dev(path, "fill", path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[33]}`
     			? "lightblue"
     			: "white");
 
     			attr_dev(path, "stroke", "black");
     			attr_dev(path, "stroke-width", "2px");
     			attr_dev(path, "class", "svelte-2dlf6z");
-    			add_location(path, file$3, 52, 4, 1561);
+    			add_location(path, file$3, 53, 4, 1587);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -2094,11 +2094,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[32], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies))) {
+    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[33], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length))) {
     				attr_dev(path, "d", path_d_value);
     			}
 
-    			if (dirty[0] & /*hoveredArc, index*/ 1536 && path_fill_value !== (path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[32]}`
+    			if (dirty[0] & /*hoveredArc, index*/ 1536 && path_fill_value !== (path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[33]}`
     			? "lightblue"
     			: "white")) {
     				attr_dev(path, "fill", path_fill_value);
@@ -2115,14 +2115,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(51:2) {#each Array($presidents[index].keyPolicies).fill(0) as _, arcIndex}",
+    		source: "(52:2) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (119:2) {#if hoveredBirthIndex === index}
+    // (130:2) {#if hoveredBirthIndex === index}
     function create_if_block_3(ctx) {
     	let text_1;
     	let tspan0;
@@ -2153,16 +2153,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 126, 6, 3447);
+    			add_location(tspan0, file$3, 137, 6, 3874);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 129, 6, 3549);
+    			add_location(tspan1, file$3, 140, 6, 3976);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 119, 4, 3295);
+    			add_location(text_1, file$3, 130, 4, 3722);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2205,14 +2205,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(119:2) {#if hoveredBirthIndex === index}",
+    		source: "(130:2) {#if hoveredBirthIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:2) {:else}
+    // (187:2) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -2229,7 +2229,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 176, 4, 4820);
+    			add_location(line, file$3, 187, 4, 5247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -2260,14 +2260,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(176:2) {:else}",
+    		source: "(187:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (137:2) {#if $presidents[index].status === "dead"}
+    // (148:2) {#if $presidents[index].status === "dead"}
     function create_if_block_1$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2291,13 +2291,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 137, 4, 3770);
+    			add_location(circle, file$3, 148, 4, 4197);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 166, 4, 4606);
+    			add_location(text_1, file$3, 177, 4, 5033);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2361,14 +2361,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(137:2) {#if $presidents[index].status === \\\"dead\\\"}",
+    		source: "(148:2) {#if $presidents[index].status === \\\"dead\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:4) {#if hoveredDeathIndex === index}
+    // (161:4) {#if hoveredDeathIndex === index}
     function create_if_block_2(ctx) {
     	let text_1;
     	let tspan0;
@@ -2399,16 +2399,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 157, 8, 4365);
+    			add_location(tspan0, file$3, 168, 8, 4792);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 160, 8, 4476);
+    			add_location(tspan1, file$3, 171, 8, 4903);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 150, 6, 4199);
+    			add_location(text_1, file$3, 161, 6, 4626);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2451,14 +2451,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(150:4) {#if hoveredDeathIndex === index}",
+    		source: "(161:4) {#if hoveredDeathIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (236:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    // (247:2) {#if $presidents[index].presidencyEnd !== "Current President"}
     function create_if_block$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2475,7 +2475,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 236, 4, 6167);
+    			add_location(circle, file$3, 247, 4, 6594);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2500,7 +2500,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(236:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(247:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
     		ctx
     	});
 
@@ -2549,9 +2549,10 @@ var app = (function () {
     	let rect_y_value;
     	let rect_width_value;
     	let foreignObject;
-    	let div;
+    	let div_1;
     	let t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "";
     	let t5;
+    	let div_1_id_value;
     	let foreignObject_x_value;
     	let foreignObject_y_value;
     	let foreignObject_width_value;
@@ -2559,7 +2560,7 @@ var app = (function () {
     	let g_opacity_value;
     	let mounted;
     	let dispose;
-    	let each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies).fill(0);
+    	let each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -2605,7 +2606,7 @@ var app = (function () {
     			if (if_block2) if_block2.c();
     			rect = svg_element("rect");
     			foreignObject = svg_element("foreignObject");
-    			div = element("div");
+    			div_1 = element("div");
     			t5 = text$1(t5_value);
     			attr_dev(circle0, "cx", /*cx*/ ctx[2]);
     			attr_dev(circle0, "cy", /*cy*/ ctx[3]);
@@ -2613,7 +2614,7 @@ var app = (function () {
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 72, 2, 2218);
+    			add_location(circle0, file$3, 83, 2, 2645);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
@@ -2624,37 +2625,37 @@ var app = (function () {
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
     			attr_dev(image, "class", "svelte-2dlf6z");
-    			add_location(image, file$3, 82, 2, 2355);
+    			add_location(image, file$3, 93, 2, 2782);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 96, 2, 2703);
+    			add_location(line, file$3, 107, 2, 3130);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 106, 2, 2913);
+    			add_location(circle1, file$3, 117, 2, 3340);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 187, 2, 5043);
+    			add_location(text0, file$3, 198, 2, 5470);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 198, 2, 5243);
+    			add_location(text1, file$3, 209, 2, 5670);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 209, 2, 5486);
+    			add_location(text2, file$3, 220, 2, 5913);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2663,7 +2664,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 220, 2, 5706);
+    			add_location(circle2, file$3, 231, 2, 6133);
     			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
@@ -2671,22 +2672,23 @@ var app = (function () {
     			attr_dev(rect, "fill", "none");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 252, 2, 6587);
-    			set_style(div, "text-align", "center");
-    			set_style(div, "font-size", "0.75rem");
-    			add_location(div, file$3, 267, 4, 6876);
+    			add_location(rect, file$3, 263, 2, 7014);
+    			attr_dev(div_1, "id", div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote");
+    			set_style(div_1, "text-align", "center");
+    			set_style(div_1, "font-size", "0.75rem");
+    			add_location(div_1, file$3, 278, 4, 7303);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
     			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 261, 2, 6753);
+    			add_location(foreignObject, file$3, 272, 2, 7180);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
     			? 1
     			: 0.4);
 
-    			add_location(g, file$3, 43, 0, 1277);
+    			add_location(g, file$3, 44, 0, 1299);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2719,8 +2721,8 @@ var app = (function () {
     			if (if_block2) if_block2.m(g, null);
     			append_dev(g, rect);
     			append_dev(g, foreignObject);
-    			append_dev(foreignObject, div);
-    			append_dev(div, t5);
+    			append_dev(foreignObject, div_1);
+    			append_dev(div_1, t5);
 
     			if (!mounted) {
     				dispose = [
@@ -2737,7 +2739,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index, hoveredArc*/ 5676) {
-    				each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies).fill(0);
+    				each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
     				validate_each_argument(each_value);
     				let i;
 
@@ -2933,6 +2935,10 @@ var app = (function () {
 
     			if (dirty[0] & /*$presidents, index*/ 4608 && t5_value !== (t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "")) set_data_dev(t5, t5_value);
 
+    			if (dirty[0] & /*index*/ 512 && div_1_id_value !== (div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote")) {
+    				attr_dev(div_1, "id", div_1_id_value);
+    			}
+
     			if (dirty[0] & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(foreignObject, "x", foreignObject_x_value);
     			}
@@ -3014,6 +3020,7 @@ var app = (function () {
     	let { hoveredBirthIndex = null } = $$props;
     	let { hoveredDeathIndex = null } = $$props;
     	let hoveredArc = null;
+    	let quoteRefs = [];
 
     	//$: console.log($selectedCircleId);
     	//$: console.log(`circle-${$selectedCircleId}`);
@@ -3063,11 +3070,26 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<OnePresidentUnit> was created with unknown prop '${key}'`);
     	});
 
-    	const mouseover_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+    	const mouseover_handler = arcIndex => {
+    		//TO DO: how to avoid getElementById
+    		$$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+
+    		const div = document.getElementById(`president-${index}-Quote`);
+    		div.innerHTML = $presidents[index].policies[arcIndex];
+    	};
+
     	const mouseout_handler = () => $$invalidate(10, hoveredArc = null);
     	const focus_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
     	const blur_handler = () => $$invalidate(10, hoveredArc = null);
-    	const click_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+
+    	const click_handler = arcIndex => {
+    		//TO DO : how to avoid getElementById
+    		$$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+
+    		const div = document.getElementById(`president-${index}-Quote`);
+    		div.innerHTML = $presidents[index].policies[arcIndex];
+    	};
+
     	const keydown_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
     	const click_handler_1 = event => handleImageClick(event);
     	const keydown_handler_1 = event => handleImageKeydown();
@@ -3107,6 +3129,7 @@ var app = (function () {
     		hoveredBirthIndex,
     		hoveredDeathIndex,
     		hoveredArc,
+    		quoteRefs,
     		calculateArcPath,
     		handleImageClick,
     		handleImageKeydown,
@@ -3126,6 +3149,7 @@ var app = (function () {
     		if ('hoveredBirthIndex' in $$props) $$invalidate(0, hoveredBirthIndex = $$props.hoveredBirthIndex);
     		if ('hoveredDeathIndex' in $$props) $$invalidate(1, hoveredDeathIndex = $$props.hoveredDeathIndex);
     		if ('hoveredArc' in $$props) $$invalidate(10, hoveredArc = $$props.hoveredArc);
+    		if ('quoteRefs' in $$props) quoteRefs = $$props.quoteRefs;
     	};
 
     	if ($$props && "$$inject" in $$props) {
