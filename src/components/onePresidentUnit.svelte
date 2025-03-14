@@ -58,13 +58,15 @@
         arcIndex,
         $presidents[index].keyPolicies
       )}
-      fill={hoveredArc === `${index}-${arcIndex}` ? "lightblue" : "transparent"}
+      fill={hoveredArc === `${index}-${arcIndex}` ? "lightblue" : "white"}
       stroke="black"
       stroke-width="2px"
       on:mouseover={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:mouseout={() => (hoveredArc = null)}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:blur={() => (hoveredArc = null)}
+      on:click={() => (hoveredArc = `${index}-${arcIndex}`)}
+      on:keydown={() => (hoveredArc = `${index}-${arcIndex}`)}
     />
   {/each}
   <!-- president's main circle -->
@@ -284,5 +286,13 @@
   image:focus,
   image:active {
     outline: none;
+  }
+
+  path:focus {
+    outline: none;
+  }
+
+  path:focus-visible {
+    outline: 2px solid black; /* focus visible for keyboard users */
   }
 </style>

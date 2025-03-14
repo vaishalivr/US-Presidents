@@ -2032,8 +2032,8 @@ var app = (function () {
 
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[28] = list[i];
-    	child_ctx[30] = i;
+    	child_ctx[30] = list[i];
+    	child_ctx[32] = i;
     	return child_ctx;
     }
 
@@ -2046,24 +2046,33 @@ var app = (function () {
     	let dispose;
 
     	function mouseover_handler() {
-    		return /*mouseover_handler*/ ctx[14](/*arcIndex*/ ctx[30]);
+    		return /*mouseover_handler*/ ctx[14](/*arcIndex*/ ctx[32]);
     	}
 
     	function focus_handler() {
-    		return /*focus_handler*/ ctx[16](/*arcIndex*/ ctx[30]);
+    		return /*focus_handler*/ ctx[16](/*arcIndex*/ ctx[32]);
+    	}
+
+    	function click_handler() {
+    		return /*click_handler*/ ctx[18](/*arcIndex*/ ctx[32]);
+    	}
+
+    	function keydown_handler() {
+    		return /*keydown_handler*/ ctx[19](/*arcIndex*/ ctx[32]);
     	}
 
     	const block = {
     		c: function create() {
     			path = svg_element("path");
-    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[30], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies));
+    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[32], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies));
 
-    			attr_dev(path, "fill", path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[30]}`
+    			attr_dev(path, "fill", path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[32]}`
     			? "lightblue"
-    			: "transparent");
+    			: "white");
 
     			attr_dev(path, "stroke", "black");
     			attr_dev(path, "stroke-width", "2px");
+    			attr_dev(path, "class", "svelte-2dlf6z");
     			add_location(path, file$3, 52, 4, 1561);
     		},
     		m: function mount(target, anchor) {
@@ -2074,7 +2083,9 @@ var app = (function () {
     					listen_dev(path, "mouseover", mouseover_handler, false, false, false, false),
     					listen_dev(path, "mouseout", /*mouseout_handler*/ ctx[15], false, false, false, false),
     					listen_dev(path, "focus", focus_handler, false, false, false, false),
-    					listen_dev(path, "blur", /*blur_handler*/ ctx[17], false, false, false, false)
+    					listen_dev(path, "blur", /*blur_handler*/ ctx[17], false, false, false, false),
+    					listen_dev(path, "click", click_handler, false, false, false, false),
+    					listen_dev(path, "keydown", keydown_handler, false, false, false, false)
     				];
 
     				mounted = true;
@@ -2083,13 +2094,13 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[30], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies))) {
+    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[32], /*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies))) {
     				attr_dev(path, "d", path_d_value);
     			}
 
-    			if (dirty & /*hoveredArc, index*/ 1536 && path_fill_value !== (path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[30]}`
+    			if (dirty[0] & /*hoveredArc, index*/ 1536 && path_fill_value !== (path_fill_value = /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[32]}`
     			? "lightblue"
-    			: "transparent")) {
+    			: "white")) {
     				attr_dev(path, "fill", path_fill_value);
     			}
     		},
@@ -2111,7 +2122,7 @@ var app = (function () {
     	return block;
     }
 
-    // (117:2) {#if hoveredBirthIndex === index}
+    // (119:2) {#if hoveredBirthIndex === index}
     function create_if_block_3(ctx) {
     	let text_1;
     	let tspan0;
@@ -2142,16 +2153,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 124, 6, 3329);
+    			add_location(tspan0, file$3, 126, 6, 3447);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 127, 6, 3431);
+    			add_location(tspan1, file$3, 129, 6, 3549);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 117, 4, 3177);
+    			add_location(text_1, file$3, 119, 4, 3295);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2165,23 +2176,23 @@ var app = (function () {
     			append_dev(text_1, t5);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].parents + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].parents + "")) set_data_dev(t1, t1_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && tspan0_x_value !== (tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && tspan0_x_value !== (tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(tspan0, "x", tspan0_x_value);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthPlace + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthPlace + "")) set_data_dev(t4, t4_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && tspan1_x_value !== (tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && tspan1_x_value !== (tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(tspan1, "x", tspan1_x_value);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25)) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
     		},
@@ -2194,14 +2205,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(117:2) {#if hoveredBirthIndex === index}",
+    		source: "(119:2) {#if hoveredBirthIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:2) {:else}
+    // (176:2) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -2218,25 +2229,25 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 174, 4, 4702);
+    			add_location(line, file$3, 176, 4, 4820);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*cx, outerRadius*/ 36 && line_x__value !== (line_x__value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && line_x__value !== (line_x__value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(line, "x1", line_x__value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && line_y__value !== (line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.45)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && line_y__value !== (line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.45)) {
     				attr_dev(line, "y1", line_y__value);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && line_x__value_1 !== (line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && line_x__value_1 !== (line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(line, "x2", line_x__value_1);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && line_y__value_1 !== (line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && line_y__value_1 !== (line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55)) {
     				attr_dev(line, "y2", line_y__value_1);
     			}
     		},
@@ -2249,14 +2260,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(174:2) {:else}",
+    		source: "(176:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:2) {#if $presidents[index].status === "dead"}
+    // (137:2) {#if $presidents[index].status === "dead"}
     function create_if_block_1$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2280,13 +2291,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 135, 4, 3652);
+    			add_location(circle, file$3, 137, 4, 3770);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 164, 4, 4488);
+    			add_location(text_1, file$3, 166, 4, 4606);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2296,21 +2307,21 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(circle, "mouseover", /*mouseover_handler_2*/ ctx[24], false, false, false, false),
-    					listen_dev(circle, "mouseout", /*mouseout_handler_2*/ ctx[25], false, false, false, false),
-    					listen_dev(circle, "focus", /*focus_handler_2*/ ctx[26], false, false, false, false),
-    					listen_dev(circle, "blur", /*blur_handler_2*/ ctx[27], false, false, false, false)
+    					listen_dev(circle, "mouseover", /*mouseover_handler_2*/ ctx[26], false, false, false, false),
+    					listen_dev(circle, "mouseout", /*mouseout_handler_2*/ ctx[27], false, false, false, false),
+    					listen_dev(circle, "focus", /*focus_handler_2*/ ctx[28], false, false, false, false),
+    					listen_dev(circle, "blur", /*blur_handler_2*/ ctx[29], false, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*cx, outerRadius*/ 36 && circle_cx_value !== (circle_cx_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && circle_cx_value !== (circle_cx_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && circle_cy_value !== (circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && circle_cy_value !== (circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
 
@@ -2327,13 +2338,13 @@ var app = (function () {
     				if_block = null;
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t_value !== (t_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear + "")) set_data_dev(t, t_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t_value !== (t_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear + "")) set_data_dev(t, t_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10)) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10)) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
     		},
@@ -2350,14 +2361,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(135:2) {#if $presidents[index].status === \\\"dead\\\"}",
+    		source: "(137:2) {#if $presidents[index].status === \\\"dead\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (148:4) {#if hoveredDeathIndex === index}
+    // (150:4) {#if hoveredDeathIndex === index}
     function create_if_block_2(ctx) {
     	let text_1;
     	let tspan0;
@@ -2388,16 +2399,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 155, 8, 4247);
+    			add_location(tspan0, file$3, 157, 8, 4365);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 158, 8, 4358);
+    			add_location(tspan1, file$3, 160, 8, 4476);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 148, 6, 4081);
+    			add_location(text_1, file$3, 150, 6, 4199);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2411,23 +2422,23 @@ var app = (function () {
     			append_dev(text_1, t5);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathPlace + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathPlace + "")) set_data_dev(t1, t1_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && tspan0_x_value !== (tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && tspan0_x_value !== (tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(tspan0, "x", tspan0_x_value);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathReason + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathReason + "")) set_data_dev(t4, t4_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && tspan1_x_value !== (tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && tspan1_x_value !== (tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(tspan1, "x", tspan1_x_value);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25)) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
     		},
@@ -2440,14 +2451,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(148:4) {#if hoveredDeathIndex === index}",
+    		source: "(150:4) {#if hoveredDeathIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (234:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    // (236:2) {#if $presidents[index].presidencyEnd !== "Current President"}
     function create_if_block$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2464,19 +2475,19 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 234, 4, 6049);
+    			add_location(circle, file$3, 236, 4, 6167);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*cx, outerRadius, $presidents, index*/ 4644 && circle_cx_value !== (circle_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && circle_cx_value !== (circle_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
     			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]))) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && circle_cy_value !== (circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && circle_cy_value !== (circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
     		},
@@ -2489,7 +2500,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(234:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(236:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
     		ctx
     	});
 
@@ -2602,7 +2613,7 @@ var app = (function () {
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 70, 2, 2100);
+    			add_location(circle0, file$3, 72, 2, 2218);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
@@ -2612,38 +2623,38 @@ var app = (function () {
     			attr_dev(image, "clip-path", "circle(50%)");
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
-    			attr_dev(image, "class", "svelte-1783f1u");
-    			add_location(image, file$3, 80, 2, 2237);
+    			attr_dev(image, "class", "svelte-2dlf6z");
+    			add_location(image, file$3, 82, 2, 2355);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 94, 2, 2585);
+    			add_location(line, file$3, 96, 2, 2703);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 104, 2, 2795);
+    			add_location(circle1, file$3, 106, 2, 2913);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 185, 2, 4925);
+    			add_location(text0, file$3, 187, 2, 5043);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 196, 2, 5125);
+    			add_location(text1, file$3, 198, 2, 5243);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 207, 2, 5368);
+    			add_location(text2, file$3, 209, 2, 5486);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2652,7 +2663,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 218, 2, 5588);
+    			add_location(circle2, file$3, 220, 2, 5706);
     			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
@@ -2660,15 +2671,15 @@ var app = (function () {
     			attr_dev(rect, "fill", "none");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 250, 2, 6469);
+    			add_location(rect, file$3, 252, 2, 6587);
     			set_style(div, "text-align", "center");
     			set_style(div, "font-size", "0.75rem");
-    			add_location(div, file$3, 265, 4, 6758);
+    			add_location(div, file$3, 267, 4, 6876);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
     			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 259, 2, 6635);
+    			add_location(foreignObject, file$3, 261, 2, 6753);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
@@ -2713,19 +2724,19 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(image, "click", /*click_handler*/ ctx[18], false, false, false, false),
-    					listen_dev(image, "keydown", /*keydown_handler*/ ctx[19], false, false, false, false),
-    					listen_dev(circle1, "mouseover", /*mouseover_handler_1*/ ctx[20], false, false, false, false),
-    					listen_dev(circle1, "mouseout", /*mouseout_handler_1*/ ctx[21], false, false, false, false),
-    					listen_dev(circle1, "focus", /*focus_handler_1*/ ctx[22], false, false, false, false),
-    					listen_dev(circle1, "blur", /*blur_handler_1*/ ctx[23], false, false, false, false)
+    					listen_dev(image, "click", /*click_handler_1*/ ctx[20], false, false, false, false),
+    					listen_dev(image, "keydown", /*keydown_handler_1*/ ctx[21], false, false, false, false),
+    					listen_dev(circle1, "mouseover", /*mouseover_handler_1*/ ctx[22], false, false, false, false),
+    					listen_dev(circle1, "mouseout", /*mouseout_handler_1*/ ctx[23], false, false, false, false),
+    					listen_dev(circle1, "focus", /*focus_handler_1*/ ctx[24], false, false, false, false),
+    					listen_dev(circle1, "blur", /*blur_handler_1*/ ctx[25], false, false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
-    		p: function update(ctx, [dirty]) {
-    			if (dirty & /*calculateArcPath, cx, cy, outerRadius, $presidents, index, hoveredArc*/ 5676) {
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index, hoveredArc*/ 5676) {
     				each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].keyPolicies).fill(0);
     				validate_each_argument(each_value);
     				let i;
@@ -2749,83 +2760,83 @@ var app = (function () {
     				each_blocks.length = each_value.length;
     			}
 
-    			if (dirty & /*cx*/ 4) {
+    			if (dirty[0] & /*cx*/ 4) {
     				attr_dev(circle0, "cx", /*cx*/ ctx[2]);
     			}
 
-    			if (dirty & /*cy*/ 8) {
+    			if (dirty[0] & /*cy*/ 8) {
     				attr_dev(circle0, "cy", /*cy*/ ctx[3]);
     			}
 
-    			if (dirty & /*innerRadius*/ 16) {
+    			if (dirty[0] & /*innerRadius*/ 16) {
     				attr_dev(circle0, "r", /*innerRadius*/ ctx[4]);
     			}
 
-    			if (dirty & /*stroke*/ 64) {
+    			if (dirty[0] & /*stroke*/ 64) {
     				attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			}
 
-    			if (dirty & /*strokeWidth*/ 128) {
+    			if (dirty[0] & /*strokeWidth*/ 128) {
     				attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			}
 
-    			if (dirty & /*fill*/ 256) {
+    			if (dirty[0] & /*fill*/ 256) {
     				attr_dev(circle0, "fill", /*fill*/ ctx[8]);
     			}
 
-    			if (dirty & /*cx, innerRadius*/ 20 && image_x_value !== (image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4])) {
+    			if (dirty[0] & /*cx, innerRadius*/ 20 && image_x_value !== (image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4])) {
     				attr_dev(image, "x", image_x_value);
     			}
 
-    			if (dirty & /*cy, innerRadius*/ 24 && image_y_value !== (image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4])) {
+    			if (dirty[0] & /*cy, innerRadius*/ 24 && image_y_value !== (image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4])) {
     				attr_dev(image, "y", image_y_value);
     			}
 
-    			if (dirty & /*innerRadius*/ 16 && image_width_value !== (image_width_value = /*innerRadius*/ ctx[4] * 2)) {
+    			if (dirty[0] & /*innerRadius*/ 16 && image_width_value !== (image_width_value = /*innerRadius*/ ctx[4] * 2)) {
     				attr_dev(image, "width", image_width_value);
     			}
 
-    			if (dirty & /*innerRadius*/ 16 && image_height_value !== (image_height_value = /*innerRadius*/ ctx[4] * 2)) {
+    			if (dirty[0] & /*innerRadius*/ 16 && image_height_value !== (image_height_value = /*innerRadius*/ ctx[4] * 2)) {
     				attr_dev(image, "height", image_height_value);
     			}
 
-    			if (dirty & /*index*/ 512) {
+    			if (dirty[0] & /*index*/ 512) {
     				attr_dev(image, "data-index", /*index*/ ctx[9]);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && image_href_value !== (image_href_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].image)) {
+    			if (dirty[0] & /*$presidents, index*/ 4608 && image_href_value !== (image_href_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].image)) {
     				attr_dev(image, "href", image_href_value);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && line_x__value !== (line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && line_x__value !== (line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(line, "x1", line_x__value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && line_y__value !== (line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && line_y__value !== (line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(line, "y1", line_y__value);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && line_x__value_1 !== (line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && line_x__value_1 !== (line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5])) {
     				attr_dev(line, "x2", line_x__value_1);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && line_y__value_1 !== (line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && line_y__value_1 !== (line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(line, "y2", line_y__value_1);
     			}
 
-    			if (dirty & /*stroke*/ 64) {
+    			if (dirty[0] & /*stroke*/ 64) {
     				attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			}
 
-    			if (dirty & /*strokeWidth*/ 128) {
+    			if (dirty[0] & /*strokeWidth*/ 128) {
     				attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && circle1_cx_value !== (circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && circle1_cx_value !== (circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(circle1, "cx", circle1_cx_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && circle1_cy_value !== (circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && circle1_cy_value !== (circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle1, "cy", circle1_cy_value);
     			}
 
@@ -2854,44 +2865,44 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t0_value !== (t0_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t0_value !== (t0_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].name + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*cx*/ 4) {
+    			if (dirty[0] & /*cx*/ 4) {
     				attr_dev(text0, "x", /*cx*/ ctx[2]);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text0_y_value !== (text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text0_y_value !== (text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20)) {
     				attr_dev(text0, "y", text0_y_value);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "")) set_data_dev(t1, t1_value);
-    			if (dirty & /*$presidents, index*/ 4608 && t3_value !== (t3_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "")) set_data_dev(t1, t1_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t3_value !== (t3_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "")) set_data_dev(t3, t3_value);
 
-    			if (dirty & /*cx*/ 4) {
+    			if (dirty[0] & /*cx*/ 4) {
     				attr_dev(text1, "x", /*cx*/ ctx[2]);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text1_y_value !== (text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text1_y_value !== (text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5)) {
     				attr_dev(text1, "y", text1_y_value);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "")) set_data_dev(t4, t4_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "")) set_data_dev(t4, t4_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && text2_x_value !== (text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10)) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && text2_x_value !== (text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10)) {
     				attr_dev(text2, "x", text2_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && text2_y_value !== (text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text2_y_value !== (text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
     				attr_dev(text2, "y", text2_y_value);
     			}
 
-    			if (dirty & /*cx, outerRadius, $presidents, index*/ 4644 && circle2_cx_value !== (circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && circle2_cx_value !== (circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
     			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]))) {
     				attr_dev(circle2, "cx", circle2_cx_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && circle2_cy_value !== (circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && circle2_cy_value !== (circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle2, "cy", circle2_cy_value);
     			}
 
@@ -2908,37 +2919,37 @@ var app = (function () {
     				if_block2 = null;
     			}
 
-    			if (dirty & /*cx, outerRadius*/ 36 && rect_x_value !== (rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && rect_x_value !== (rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(rect, "x", rect_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && rect_y_value !== (rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && rect_y_value !== (rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
     				attr_dev(rect, "y", rect_y_value);
     			}
 
-    			if (dirty & /*outerRadius*/ 32 && rect_width_value !== (rect_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    			if (dirty[0] & /*outerRadius*/ 32 && rect_width_value !== (rect_width_value = /*outerRadius*/ ctx[5] * 2)) {
     				attr_dev(rect, "width", rect_width_value);
     			}
 
-    			if (dirty & /*$presidents, index*/ 4608 && t5_value !== (t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "")) set_data_dev(t5, t5_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t5_value !== (t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "")) set_data_dev(t5, t5_value);
 
-    			if (dirty & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
     				attr_dev(foreignObject, "x", foreignObject_x_value);
     			}
 
-    			if (dirty & /*cy, outerRadius*/ 40 && foreignObject_y_value !== (foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && foreignObject_y_value !== (foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
     				attr_dev(foreignObject, "y", foreignObject_y_value);
     			}
 
-    			if (dirty & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    			if (dirty[0] & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
     				attr_dev(foreignObject, "width", foreignObject_width_value);
     			}
 
-    			if (dirty & /*index*/ 512 && g_class_value !== (g_class_value = "circle-" + /*index*/ ctx[9])) {
+    			if (dirty[0] & /*index*/ 512 && g_class_value !== (g_class_value = "circle-" + /*index*/ ctx[9])) {
     				attr_dev(g, "class", g_class_value);
     			}
 
-    			if (dirty & /*$selectedCircleId, index*/ 2560 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
+    			if (dirty[0] & /*$selectedCircleId, index*/ 2560 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
     			? 1
     			: 0.4)) {
     				attr_dev(g, "opacity", g_opacity_value);
@@ -3056,8 +3067,10 @@ var app = (function () {
     	const mouseout_handler = () => $$invalidate(10, hoveredArc = null);
     	const focus_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
     	const blur_handler = () => $$invalidate(10, hoveredArc = null);
-    	const click_handler = event => handleImageClick(event);
-    	const keydown_handler = event => handleImageKeydown();
+    	const click_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+    	const keydown_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+    	const click_handler_1 = event => handleImageClick(event);
+    	const keydown_handler_1 = event => handleImageKeydown();
     	const mouseover_handler_1 = () => $$invalidate(0, hoveredBirthIndex = index);
     	const mouseout_handler_1 = () => $$invalidate(0, hoveredBirthIndex = null);
     	const focus_handler_1 = () => $$invalidate(0, hoveredBirthIndex = index);
@@ -3140,6 +3153,8 @@ var app = (function () {
     		blur_handler,
     		click_handler,
     		keydown_handler,
+    		click_handler_1,
+    		keydown_handler_1,
     		mouseover_handler_1,
     		mouseout_handler_1,
     		focus_handler_1,
@@ -3155,18 +3170,27 @@ var app = (function () {
     	constructor(options) {
     		super(options);
 
-    		init$1(this, options, instance$3, create_fragment$3, safe_not_equal, {
-    			cx: 2,
-    			cy: 3,
-    			innerRadius: 4,
-    			outerRadius: 5,
-    			stroke: 6,
-    			strokeWidth: 7,
-    			fill: 8,
-    			index: 9,
-    			hoveredBirthIndex: 0,
-    			hoveredDeathIndex: 1
-    		});
+    		init$1(
+    			this,
+    			options,
+    			instance$3,
+    			create_fragment$3,
+    			safe_not_equal,
+    			{
+    				cx: 2,
+    				cy: 3,
+    				innerRadius: 4,
+    				outerRadius: 5,
+    				stroke: 6,
+    				strokeWidth: 7,
+    				fill: 8,
+    				index: 9,
+    				hoveredBirthIndex: 0,
+    				hoveredDeathIndex: 1
+    			},
+    			null,
+    			[-1, -1]
+    		);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
