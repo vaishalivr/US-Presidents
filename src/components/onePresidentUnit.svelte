@@ -68,7 +68,11 @@
         const div = document.getElementById(`president-${index}-Quote`);
         div.innerHTML = $presidents[index].policies[arcIndex];
       }}
-      on:mouseout={() => (hoveredArc = null)}
+      on:mouseout={() => {
+        hoveredArc = null;
+        const div = document.getElementById(`president-${index}-Quote`);
+        div.innerHTML = $presidents[index].quote;
+      }}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:blur={() => (hoveredArc = null)}
       on:click={() => {
