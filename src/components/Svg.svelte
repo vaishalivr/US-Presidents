@@ -75,6 +75,7 @@
   });
 
   function handleSvgClick() {
+    console.log("svg clicked");
     selectedCircleId.set(null);
   }
 </script>
