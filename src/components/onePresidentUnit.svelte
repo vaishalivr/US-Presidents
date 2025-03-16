@@ -31,7 +31,7 @@
   }
 
   function handleImageClick(event) {
-    event.target.blur();
+    //event.target.blur();
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
     event.stopPropagation();
@@ -39,6 +39,10 @@
 
   function handleImageKeydown(event) {
     console.log("key down on image");
+  }
+
+  function isActive(index) {
+    return index.toString() === $selectedCircleId;
   }
 </script>
 
@@ -59,10 +63,14 @@
         arcIndex,
         $presidents[index].policies.length
       )}
-      fill={hoveredArc === `${index}-${arcIndex}` ? "lightblue" : "white"}
+      fill={isActive(index) && hoveredArc === `${index}-${arcIndex}`
+        ? "lightblue"
+        : "white"}
       stroke="black"
       stroke-width="2px"
-      on:mouseover={() => {
+      on:mouseover={(event) => {
+        event.stopPropagation();
+        if (!isActive(index)) return;
         //TO DO: how to avoid getElementById
         hoveredArc = `${index}-${arcIndex}`;
         const div = document.getElementById(`president-${index}-Quote`);
@@ -75,11 +83,15 @@
       }}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:blur={() => (hoveredArc = null)}
-      on:click={() => {
-        //TO DO : how to avoid getElementById
-        hoveredArc = `${index}-${arcIndex}`;
-        const div = document.getElementById(`president-${index}-Quote`);
-        div.innerHTML = $presidents[index].policies[arcIndex];
+      on:click={(event) => {
+        event.stopPropagation();
+        if (!isActive(index)) return;
+        if (index.toString() == $selectedCircleId) {
+          //TO DO : how to avoid getElementById
+          hoveredArc = `${index}-${arcIndex}`;
+          const div = document.getElementById(`president-${index}-Quote`);
+          div.innerHTML = $presidents[index].policies[arcIndex];
+        }
       }}
       on:keydown={() => {
         hoveredArc = `${index}-${arcIndex}`;
