@@ -2073,7 +2073,7 @@ var app = (function () {
     			attr_dev(path, "stroke", "black");
     			attr_dev(path, "stroke-width", "2px");
     			attr_dev(path, "class", "svelte-2dlf6z");
-    			add_location(path, file$3, 53, 4, 1587);
+    			add_location(path, file$3, 53, 4, 1586);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -2122,7 +2122,7 @@ var app = (function () {
     	return block;
     }
 
-    // (134:2) {#if hoveredBirthIndex === index}
+    // (137:2) {#if hoveredBirthIndex === index}
     function create_if_block_3(ctx) {
     	let text_1;
     	let tspan0;
@@ -2153,16 +2153,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 141, 6, 4014);
+    			add_location(tspan0, file$3, 144, 6, 4031);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 144, 6, 4116);
+    			add_location(tspan1, file$3, 147, 6, 4133);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 134, 4, 3862);
+    			add_location(text_1, file$3, 137, 4, 3879);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2205,14 +2205,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(134:2) {#if hoveredBirthIndex === index}",
+    		source: "(137:2) {#if hoveredBirthIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (191:2) {:else}
+    // (194:2) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -2229,7 +2229,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 191, 4, 5387);
+    			add_location(line, file$3, 194, 4, 5404);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -2260,14 +2260,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(191:2) {:else}",
+    		source: "(194:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (152:2) {#if $presidents[index].status === "dead"}
+    // (155:2) {#if $presidents[index].status === "dead"}
     function create_if_block_1$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2291,13 +2291,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 152, 4, 4337);
+    			add_location(circle, file$3, 155, 4, 4354);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 181, 4, 5173);
+    			add_location(text_1, file$3, 184, 4, 5190);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2361,14 +2361,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(152:2) {#if $presidents[index].status === \\\"dead\\\"}",
+    		source: "(155:2) {#if $presidents[index].status === \\\"dead\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (165:4) {#if hoveredDeathIndex === index}
+    // (168:4) {#if hoveredDeathIndex === index}
     function create_if_block_2(ctx) {
     	let text_1;
     	let tspan0;
@@ -2399,16 +2399,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 172, 8, 4932);
+    			add_location(tspan0, file$3, 175, 8, 4949);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 175, 8, 5043);
+    			add_location(tspan1, file$3, 178, 8, 5060);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 165, 6, 4766);
+    			add_location(text_1, file$3, 168, 6, 4783);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2451,14 +2451,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(165:4) {#if hoveredDeathIndex === index}",
+    		source: "(168:4) {#if hoveredDeathIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    // (254:2) {#if $presidents[index].presidencyEnd !== "Current President"}
     function create_if_block$1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -2475,7 +2475,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 251, 4, 6734);
+    			add_location(circle, file$3, 254, 4, 6751);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2500,7 +2500,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(251:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(254:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
     		ctx
     	});
 
@@ -2614,7 +2614,7 @@ var app = (function () {
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 87, 2, 2785);
+    			add_location(circle0, file$3, 90, 2, 2802);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
@@ -2625,37 +2625,37 @@ var app = (function () {
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
     			attr_dev(image, "class", "svelte-2dlf6z");
-    			add_location(image, file$3, 97, 2, 2922);
+    			add_location(image, file$3, 100, 2, 2939);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 111, 2, 3270);
+    			add_location(line, file$3, 114, 2, 3287);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 121, 2, 3480);
+    			add_location(circle1, file$3, 124, 2, 3497);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 202, 2, 5610);
+    			add_location(text0, file$3, 205, 2, 5627);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 213, 2, 5810);
+    			add_location(text1, file$3, 216, 2, 5827);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 224, 2, 6053);
+    			add_location(text2, file$3, 227, 2, 6070);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2664,7 +2664,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 235, 2, 6273);
+    			add_location(circle2, file$3, 238, 2, 6290);
     			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
@@ -2672,23 +2672,23 @@ var app = (function () {
     			attr_dev(rect, "fill", "none");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 267, 2, 7154);
+    			add_location(rect, file$3, 270, 2, 7171);
     			attr_dev(div_1, "id", div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote");
     			set_style(div_1, "text-align", "center");
     			set_style(div_1, "font-size", "0.75rem");
-    			add_location(div_1, file$3, 282, 4, 7443);
+    			add_location(div_1, file$3, 285, 4, 7460);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
     			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
     			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 276, 2, 7320);
+    			add_location(foreignObject, file$3, 279, 2, 7337);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9]
     			? 1
     			: 0.4);
 
-    			add_location(g, file$3, 44, 0, 1299);
+    			add_location(g, file$3, 44, 0, 1298);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2987,8 +2987,11 @@ var app = (function () {
 
     function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     	const anglePerArc = 2 * Math.PI / totalArcs;
-    	const startAngle = arcIndex * anglePerArc;
-    	const endAngle = (arcIndex + 1) * anglePerArc;
+
+    	// Start from the top (12 o'clock) and move clockwise
+    	const startAngle = -Math.PI / 2 + arcIndex * anglePerArc;
+
+    	const endAngle = -Math.PI / 2 + (arcIndex + 1) * anglePerArc;
     	const x1 = cx + radius * Math.cos(startAngle);
     	const y1 = cy + radius * Math.sin(startAngle);
     	const x2 = cx + radius * Math.cos(endAngle);
@@ -3022,8 +3025,6 @@ var app = (function () {
     	let hoveredArc = null;
     	let quoteRefs = [];
 
-    	//$: console.log($selectedCircleId);
-    	//$: console.log(`circle-${$selectedCircleId}`);
     	function handleImageClick(event) {
     		event.target.blur();
     		const id = event.target.dataset.index;
@@ -3095,7 +3096,10 @@ var app = (function () {
     		div.innerHTML = $presidents[index].policies[arcIndex];
     	};
 
-    	const keydown_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+    	const keydown_handler = arcIndex => {
+    		$$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
+    	};
+
     	const click_handler_1 = event => handleImageClick(event);
     	const keydown_handler_1 = event => handleImageKeydown();
     	const mouseover_handler_1 = () => $$invalidate(0, hoveredBirthIndex = index);
