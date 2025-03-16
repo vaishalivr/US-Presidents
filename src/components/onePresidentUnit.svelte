@@ -17,8 +17,10 @@
 
   function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     const anglePerArc = (2 * Math.PI) / totalArcs;
-    const startAngle = arcIndex * anglePerArc;
-    const endAngle = (arcIndex + 1) * anglePerArc;
+
+    // Start from the top (12 o'clock) and move clockwise
+    const startAngle = -Math.PI / 2 + arcIndex * anglePerArc;
+    const endAngle = -Math.PI / 2 + (arcIndex + 1) * anglePerArc;
 
     const x1 = cx + radius * Math.cos(startAngle);
     const y1 = cy + radius * Math.sin(startAngle);
@@ -27,8 +29,6 @@
 
     return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
   }
-  //$: console.log($selectedCircleId);
-  //$: console.log(`circle-${$selectedCircleId}`);
 
   function handleImageClick(event) {
     event.target.blur();
@@ -81,9 +81,12 @@
         const div = document.getElementById(`president-${index}-Quote`);
         div.innerHTML = $presidents[index].policies[arcIndex];
       }}
-      on:keydown={() => (hoveredArc = `${index}-${arcIndex}`)}
+      on:keydown={() => {
+        hoveredArc = `${index}-${arcIndex}`;
+      }}
     />
   {/each}
+
   <!-- president's main circle -->
   <circle
     {cx}
