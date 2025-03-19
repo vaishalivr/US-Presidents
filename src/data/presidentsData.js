@@ -31,7 +31,8 @@ export const presidents = writable([
     quote:
       "To be prepared for war is one of the most effective means of preserving peace.",
     image: "images/GeorgeWashington.png",
-    otherPresidents: [
+    otherPresidents: ["John Adams", "Thomas Jefferson"],
+    otherPresidentThings: [
       { "john adams": "doing something" },
       { "thomas jefferson": "doingsomething else" },
     ],

@@ -10,7 +10,6 @@
     titleSpace,
     totalRows,
     selectedCircleId,
-    popupVisible,
   } from "../store.js";
 
   import OnePresidentUnit from "./onePresidentUnit.svelte";
