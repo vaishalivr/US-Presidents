@@ -1,6 +1,6 @@
 <script>
   import { presidents } from "../data/presidentsData";
-  import { selectedCircleId, popupVisible } from "../store.js";
+  import { selectedCircleId } from "../store.js";
 
   export let cx;
   export let cy;
@@ -33,9 +33,6 @@
 
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
-
-    popupVisible.set(true);
-    console.log($popupVisible);
   }
 
   function handleImageKeydown(event) {
@@ -50,7 +47,10 @@
 <g
   class={"circle-" + index}
   opacity={`circle-${$selectedCircleId}` === "circle-null" ||
-  `circle-${$selectedCircleId}` === "circle-" + index
+  `circle-${$selectedCircleId}` === "circle-" + index ||
+  $presidents[$selectedCircleId]?.otherPresidents.includes(
+    $presidents[index].name
+  )
     ? 1
     : 0.4}
 >
