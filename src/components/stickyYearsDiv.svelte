@@ -39,7 +39,7 @@
   };
 </script>
 
-<div class="desktop-div">
+<div class="desktop-sticky-div">
   <svg width="100%" height="100%">
     <rect
       x="0"
@@ -102,7 +102,7 @@
   </svg>
 </div>
 
-<div class="mobile-div">
+<div class="mobile-sticky-div">
   <svg width="100%" height="100%">
     <rect
       x="0"
@@ -165,7 +165,7 @@
 </div>
 
 <style>
-  .desktop-div {
+  .desktop-sticky-div {
     position: sticky;
     bottom: 0;
     z-index: 10;
@@ -176,7 +176,7 @@
     padding: 0;
   }
 
-  .mobile-div {
+  .mobile-sticky-div {
     position: fixed;
     top: 0;
     right: 0;

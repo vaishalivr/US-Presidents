@@ -10,6 +10,7 @@
     titleSpace,
     totalRows,
     selectedCircleId,
+    popupVisible,
   } from "../store.js";
 
   import OnePresidentUnit from "./onePresidentUnit.svelte";
@@ -78,6 +79,11 @@
     console.log("svg clicked");
     selectedCircleId.set(null);
   }
+
+  function handlePresidentClick(index) {
+    popupVisible.set(true);
+    console.log("hello");
+  }
 </script>
 
 <svg
@@ -101,6 +107,7 @@
       innerRadius={$innerRadius}
       outerRadius={$outerRadius}
       {index}
+      on:presidentClick={() => handlePresidentClick(index)}
     />
   {/each}
 </svg>
