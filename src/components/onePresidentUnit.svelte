@@ -33,7 +33,9 @@
 
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
+
     popupVisible.set(true);
+    console.log($popupVisible);
   }
 
   function handleImageKeydown(event) {

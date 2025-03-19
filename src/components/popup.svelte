@@ -1,26 +1,25 @@
 <script>
   import { selectedCircleId, popupVisible } from "../store.js";
-  let popupContent;
+  import { presidents } from "../data/presidentsData";
 
-  $: {
-    if ($popupVisible && $selectedCircleId) {
-      console.log("selected circle id:", $selectedCircleId);
-      popupContent.style.visibility = "visible";
-      popupContent.textContent = "Hello World";
-    }
-    if ($popupVisible && $selectedCircleId == null) {
-      popupVisible.set(false);
-      popupContent.style.visibility = "hidden";
-      console.log("selected circle id is null");
-    }
+  $: selectedPresident =
+    $selectedCircleId !== null ? $presidents[$selectedCircleId] : null;
+
+  function closePopup() {
+    popupVisible.set(false);
   }
 </script>
 
-<div class="pop-up" bind:this={popupContent}></div>
+{#if $popupVisible && $selectedCircleId}
+  <div class="pop-up" on:click={closePopup} on:keydown={closePopup}>
+    <p>{selectedPresident.name}</p>
+    <p>{selectedPresident.otherPresidents}</p>
+    <button class="close-btn">Close</button>
+  </div>
+{/if}
 
 <style>
   .pop-up {
-    visibility: hidden;
     border: 1px solid black;
     position: fixed;
     width: 200px;
