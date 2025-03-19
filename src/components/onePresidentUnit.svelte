@@ -1,6 +1,6 @@
 <script>
   import { presidents } from "../data/presidentsData";
-  import { selectedCircleId } from "../store.js";
+  import { selectedCircleId, popupVisible } from "../store.js";
 
   export let cx;
   export let cy;
@@ -13,12 +13,10 @@
   export let hoveredBirthIndex = null;
   export let hoveredDeathIndex = null;
   let hoveredArc = null;
-  let quoteRefs = [];
 
   function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
     const anglePerArc = (2 * Math.PI) / totalArcs;
 
-    // Start from the top (12 o'clock) and move clockwise
     const startAngle = -Math.PI / 2 + arcIndex * anglePerArc;
     const endAngle = -Math.PI / 2 + (arcIndex + 1) * anglePerArc;
 
@@ -31,10 +29,11 @@
   }
 
   function handleImageClick(event) {
-    //event.target.blur();
+    event.stopPropagation();
+
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
-    event.stopPropagation();
+    popupVisible.set(true);
   }
 
   function handleImageKeydown(event) {
