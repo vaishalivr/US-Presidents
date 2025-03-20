@@ -80,7 +80,8 @@
       }}
       on:mouseout={() => {
         hoveredArc = null;
-        //const div = document.getElementById(`president-${index}-Quote`);
+        const div = document.getElementById(`president-${index}-Quote`);
+        div.innerHTML = "";
         //div.innerHTML = $presidents[index].quote;
       }}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
@@ -297,7 +298,7 @@
       x={cx - outerRadius}
       y={cy + outerRadius * 1.6}
       width={outerRadius * 2}
-      height="60"
+      height="90"
     >
       <div
         id={"president-" + index + "-Quote"}

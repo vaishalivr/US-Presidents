@@ -31,13 +31,27 @@ export const presidents = writable([
     quote:
       "To be prepared for war is one of the most effective means of preserving peace.",
     image: "images/GeorgeWashington.png",
-    otherPresidents: ["John Adams", "Thomas Jefferson"],
-    otherPresidentThings: [
-      { "John Adams": "doing something" },
-      { "Thomas Jefferson": "doing something else" },
+    otherPresidents: [
+      "John Adams",
+      "Thomas Jefferson",
+      "James Madison",
+      "James Monroe",
+      "John Quincy Adams",
     ],
-
-    //otherPresidentThings: "other president things",
+    otherPresidentThings: [
+      { "John Adams": "Vice President of the US" },
+      {
+        "Thomas Jefferson":
+          "Served as Washington's first Secretary of State but resigned in 1793 due to conflicts with Washington and Alexander Hamilton",
+        "James Madison":
+          "Member of the U.S. House of Representatives (1789-1797) and helped form the Democratic-Republican Party with Jefferson",
+      },
+      { "James Monroe": "U.S. Minister to France (1794-1796), later recalled" },
+      {
+        "John Quincy Adams":
+          "Graduated from Harvard University in 1787 and began studying law. Admitted to the bar in 1790, he started practicing law in Boston",
+      },
+    ],
   },
   {
     name: "John Adams",
@@ -75,12 +89,44 @@ export const presidents = writable([
       "Thomas Jefferson",
       "James Madison",
       "James Monroe",
+      "John Quincy Adams",
+      "Andrew Jackson",
+      "Martin Van Buren",
+      "William Henry Harrison",
     ],
     otherPresidentThings: [
-      { "George Washington": "doing something George" },
-      { "Thomas Jefferson": "doing something else Thomas" },
-      { "James Madison": "doing something else James" },
-      { "James Monroe": "doing something else James Monroe" },
+      {
+        "George Washington":
+          "returned to his Mount Vernon estate in Virginia, focusing on managing his plantation. Reappointed Commander-in-Chief during Quasi-War with France",
+      },
+      {
+        "Thomas Jefferson":
+          "Jefferson lost the 1796 presidential election to John Adams. At the time, the candidate with the second-most votes became Vice President, so he served under Adams despite being from an opposing political party. This created serious tensions in the government. In 1800 Ran against Adams, won the election",
+      },
+      {
+        "James Madison":
+          "Democratic-Republican leader, opposed Adams, co-wrote Virginia Resolution (1798)",
+      },
+      {
+        "James Monroe":
+          "U.S. Senator (1799-1802), opposed Adams, supported Jefferson's 1800 election",
+      },
+      {
+        "John Quincy Adams":
+          "U.S. Minister to Prussia (1797-1801), worked on trade agreements",
+      },
+      {
+        "Andrew Jackson":
+          "U.S. Senator (1797-1798), Tennessee Supreme Court Judge (1798-1804)",
+      },
+      {
+        "Martin Van Buren":
+          "New York State Senator (1799-1803), emerging Democratic-Republican leader",
+      },
+      {
+        "William Henry Harrison":
+          "Served in the U.S. Army, fought in Indian Wars(1791-1798), Secretary of the Northwest Territory, appointed by Adams(1798-1799), 	Delegate to U.S. Congress for Northwest Territory(1799-1801)",
+      },
     ],
   },
   {
