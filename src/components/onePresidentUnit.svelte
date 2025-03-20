@@ -76,11 +76,12 @@
         hoveredArc = `${index}-${arcIndex}`;
         const div = document.getElementById(`president-${index}-Quote`);
         div.innerHTML = $presidents[index].policies[arcIndex];
+        console.log("here");
       }}
       on:mouseout={() => {
         hoveredArc = null;
-        const div = document.getElementById(`president-${index}-Quote`);
-        div.innerHTML = $presidents[index].quote;
+        //const div = document.getElementById(`president-${index}-Quote`);
+        //div.innerHTML = $presidents[index].quote;
       }}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
       on:blur={() => (hoveredArc = null)}
@@ -281,7 +282,7 @@
   {/if}
 
   <!-- rect to fit quote -->
-  <rect
+  <!-- <rect
     x={cx - outerRadius}
     y={cy + outerRadius * 1.6}
     width={outerRadius * 2}
@@ -289,20 +290,27 @@
     fill="none"
     stroke="black"
     opacity="0.3"
-  />
-  <foreignObject
-    x={cx - outerRadius}
-    y={cy + outerRadius * 1.6}
-    width={outerRadius * 2}
-    height="60"
-  >
-    <div
-      id={"president-" + index + "-Quote"}
-      style="text-align:center; font-size: 0.75rem"
+  /> -->
+
+  {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}
+    <foreignObject
+      x={cx - outerRadius}
+      y={cy + outerRadius * 1.6}
+      width={outerRadius * 2}
+      height="60"
     >
-      {$presidents[index].quote}
-    </div>
-  </foreignObject>
+      <div
+        id={"president-" + index + "-Quote"}
+        style="text-align:center; font-size: 0.75rem"
+      >
+        {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}
+          {#if obj[$presidents[index].name]}
+            {obj[$presidents[index].name]}
+          {/if}
+        {/each}
+      </div>
+    </foreignObject>
+  {/if}
 </g>
 
 <style>
