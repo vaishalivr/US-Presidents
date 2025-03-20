@@ -719,6 +719,50 @@ var app = (function () {
         quote:
           "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
         image: "images/ThomasJefferson.png",
+        otherPresidents: [
+          "John Adams",
+          "James Madison",
+          "James Monroe",
+          "John Quincy Adams",
+          "Andrew Jackson",
+          "Martin Van Buren",
+          "William Henry Harrison",
+          "John Tyler",
+        ],
+        otherPresidentThings: [
+          {
+            "John Adams":
+              "After losing election to Jefferson, Adams left DC and returned to his farm in Quincy MA largly avoiding public life. When Jefferson's presidency ended Adam and Jefferson started exchanging letters rekindling their friendship.",
+          },
+          {
+            "James Madison":
+              "	Secretary of State (1801-1809), helped oversee Louisiana Purchase,",
+          },
+          {
+            "James Monroe":
+              "	Negotiator of Louisiana Purchase (1803), Minister to Britain (1803-1806), Governor of Virginia (1807-1809)",
+          },
+          {
+            "John Quincy Adams":
+              "U.S. Senator (1803-1808), broke with Federalists, supported Louisiana Purchase, appointed Minister to Russia (1809)",
+          },
+          {
+            "Andrew Jackson":
+              "Judge in Tennessee (1804-1809), military leader, duel with Dickinson (1806)",
+          },
+          {
+            "Martin Van Buren":
+              "Practiced law (1801-1803), became Surrogate Judge (1803-1808), elected to New York Senate (1808)",
+          },
+          {
+            "William Henry Harrison":
+              "Governor of Indiana Territory (1801-1809), negotiated land treaties, expanded U.S. settlements",
+          },
+          {
+            "John Tyler":
+              "Law student (1801-1807), began law practice (1807), elected to Virginia House of Delegates (1809)",
+          },
+        ],
       },
       {
         name: "James Madison",
@@ -2224,16 +2268,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 159, 6, 4424);
+    			add_location(tspan0, file$3, 159, 6, 4428);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 162, 6, 4526);
+    			add_location(tspan1, file$3, 162, 6, 4530);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 152, 4, 4272);
+    			add_location(text_1, file$3, 152, 4, 4276);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2300,7 +2344,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 209, 4, 5797);
+    			add_location(line, file$3, 209, 4, 5801);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -2362,13 +2406,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 170, 4, 4747);
+    			add_location(circle, file$3, 170, 4, 4751);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 199, 4, 5583);
+    			add_location(text_1, file$3, 199, 4, 5587);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2470,16 +2514,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 190, 8, 5342);
+    			add_location(tspan0, file$3, 190, 8, 5346);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 193, 8, 5453);
+    			add_location(tspan1, file$3, 193, 8, 5457);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 183, 6, 5176);
+    			add_location(text_1, file$3, 183, 6, 5180);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2529,15 +2573,22 @@ var app = (function () {
     	return block;
     }
 
-    // (269:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    // (284:2) {#if $presidents[index].presidencyEnd !== "Current President"}
     function create_if_block_2(ctx) {
     	let circle;
     	let circle_cx_value;
     	let circle_cy_value;
+    	let text_1;
+    	let t_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "";
+    	let t;
+    	let text_1_x_value;
+    	let text_1_y_value;
 
     	const block = {
     		c: function create() {
     			circle = svg_element("circle");
+    			text_1 = svg_element("text");
+    			t = text(t_value);
 
     			attr_dev(circle, "cx", circle_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2546,10 +2597,21 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 269, 4, 7144);
+    			add_location(circle, file$3, 284, 4, 7613);
+
+    			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			? 2025
+    			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]));
+
+    			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.7);
+    			attr_dev(text_1, "text-anchor", "start");
+    			attr_dev(text_1, "font-size", "0.9rem");
+    			add_location(text_1, file$3, 297, 4, 7997);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
+    			insert_dev(target, text_1, anchor);
+    			append_dev(text_1, t);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && circle_cx_value !== (circle_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
@@ -2561,9 +2623,22 @@ var app = (function () {
     			if (dirty[0] & /*cy, outerRadius*/ 40 && circle_cy_value !== (circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
+
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t_value !== (t_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "")) set_data_dev(t, t_value);
+
+    			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && text_1_x_value !== (text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			? 2025
+    			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]))) {
+    				attr_dev(text_1, "x", text_1_x_value);
+    			}
+
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text_1_y_value !== (text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.7)) {
+    				attr_dev(text_1, "y", text_1_y_value);
+    			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(circle);
+    			if (detaching) detach_dev(text_1);
     		}
     	};
 
@@ -2571,14 +2646,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(269:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(284:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (296:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}
+    // (314:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}
     function create_if_block$1(ctx) {
     	let foreignObject;
     	let div_1;
@@ -2606,12 +2681,12 @@ var app = (function () {
     			attr_dev(div_1, "id", div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote");
     			set_style(div_1, "text-align", "center");
     			set_style(div_1, "font-size", "0.75rem");
-    			add_location(div_1, file$3, 302, 6, 8001);
+    			add_location(div_1, file$3, 320, 6, 8747);
     			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
-    			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
+    			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2.4);
     			attr_dev(foreignObject, "height", "90");
-    			add_location(foreignObject, file$3, 296, 4, 7866);
+    			add_location(foreignObject, file$3, 314, 4, 8610);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, foreignObject, anchor);
@@ -2660,7 +2735,7 @@ var app = (function () {
     				attr_dev(foreignObject, "y", foreignObject_y_value);
     			}
 
-    			if (dirty[0] & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    			if (dirty[0] & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2.4)) {
     				attr_dev(foreignObject, "width", foreignObject_width_value);
     			}
     		},
@@ -2674,14 +2749,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(296:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}",
+    		source: "(314:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (308:10) {#if obj[$presidents[index].name]}
+    // (326:10) {#if obj[$presidents[index].name]}
     function create_if_block_1$1(ctx) {
     	let t_value = /*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name] + "";
     	let t;
@@ -2705,14 +2780,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(308:10) {#if obj[$presidents[index].name]}",
+    		source: "(326:10) {#if obj[$presidents[index].name]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}
+    // (325:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}
     function create_each_block$2(ctx) {
     	let if_block_anchor;
     	let if_block = /*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name] && create_if_block_1$1(ctx);
@@ -2750,7 +2825,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(307:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}",
+    		source: "(325:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}",
     		ctx
     	});
 
@@ -2780,20 +2855,18 @@ var app = (function () {
     	let t0;
     	let text0_y_value;
     	let text1;
-    	let t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "";
+    	let t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "";
     	let t1;
-    	let t2;
-    	let t3_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "";
-    	let t3;
+    	let text1_x_value;
     	let text1_y_value;
-    	let text2;
-    	let t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "";
-    	let t4;
-    	let text2_x_value;
-    	let text2_y_value;
     	let circle2;
     	let circle2_cx_value;
     	let circle2_cy_value;
+    	let text2;
+    	let t2_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "";
+    	let t2;
+    	let text2_x_value;
+    	let text2_y_value;
     	let if_block2_anchor;
     	let show_if = /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]] || /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidents.includes(/*$presidents*/ ctx[12][/*index*/ ctx[9]].name);
     	let g_class_value;
@@ -2839,11 +2912,9 @@ var app = (function () {
     			t0 = text(t0_value);
     			text1 = svg_element("text");
     			t1 = text(t1_value);
-    			t2 = text(" - ");
-    			t3 = text(t3_value);
-    			text2 = svg_element("text");
-    			t4 = text(t4_value);
     			circle2 = svg_element("circle");
+    			text2 = svg_element("text");
+    			t2 = text(t2_value);
     			if (if_block2) if_block2.c();
     			if_block2_anchor = empty();
     			if (if_block3) if_block3.c();
@@ -2853,7 +2924,7 @@ var app = (function () {
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 105, 2, 3195);
+    			add_location(circle0, file$3, 105, 2, 3199);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
@@ -2864,37 +2935,31 @@ var app = (function () {
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
     			attr_dev(image, "class", "svelte-2dlf6z");
-    			add_location(image, file$3, 115, 2, 3332);
+    			add_location(image, file$3, 115, 2, 3336);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 129, 2, 3680);
+    			add_location(line, file$3, 129, 2, 3684);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 139, 2, 3890);
+    			add_location(circle1, file$3, 139, 2, 3894);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 220, 2, 6020);
-    			attr_dev(text1, "x", /*cx*/ ctx[2]);
-    			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
-    			attr_dev(text1, "text-anchor", "middle");
-    			attr_dev(text1, "font-size", "14px");
+    			add_location(text0, file$3, 220, 2, 6024);
+    			attr_dev(text1, "x", text1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
+    			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
+    			attr_dev(text1, "text-anchor", "end");
+    			attr_dev(text1, "font-size", "0.9rem");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 231, 2, 6220);
-    			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
-    			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
-    			attr_dev(text2, "text-anchor", "end");
-    			attr_dev(text2, "font-size", "0.9rem");
-    			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 242, 2, 6463);
+    			add_location(text1, file$3, 242, 2, 6476);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2903,7 +2968,16 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 253, 2, 6683);
+    			add_location(circle2, file$3, 253, 2, 6696);
+
+    			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			? 2025
+    			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]));
+
+    			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.7);
+    			attr_dev(text2, "text-anchor", "end");
+    			attr_dev(text2, "font-size", "0.9rem");
+    			add_location(text2, file$3, 268, 2, 7095);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9] || /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidents.includes(/*$presidents*/ ctx[12][/*index*/ ctx[9]].name)
@@ -2935,11 +3009,9 @@ var app = (function () {
     			append_dev(text0, t0);
     			append_dev(g, text1);
     			append_dev(text1, t1);
-    			append_dev(text1, t2);
-    			append_dev(text1, t3);
-    			append_dev(g, text2);
-    			append_dev(text2, t4);
     			append_dev(g, circle2);
+    			append_dev(g, text2);
+    			append_dev(text2, t2);
     			if (if_block2) if_block2.m(g, null);
     			append_dev(g, if_block2_anchor);
     			if (if_block3) if_block3.m(g, null);
@@ -3097,25 +3169,14 @@ var app = (function () {
     				attr_dev(text0, "y", text0_y_value);
     			}
 
-    			if (dirty[0] & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "")) set_data_dev(t1, t1_value);
-    			if (dirty[0] & /*$presidents, index*/ 4608 && t3_value !== (t3_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd + "")) set_data_dev(t3, t3_value);
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t1_value !== (t1_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "")) set_data_dev(t1, t1_value);
 
-    			if (dirty[0] & /*cx*/ 4) {
-    				attr_dev(text1, "x", /*cx*/ ctx[2]);
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && text1_x_value !== (text1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10)) {
+    				attr_dev(text1, "x", text1_x_value);
     			}
 
-    			if (dirty[0] & /*cy, outerRadius*/ 40 && text1_y_value !== (text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5)) {
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text1_y_value !== (text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
     				attr_dev(text1, "y", text1_y_value);
-    			}
-
-    			if (dirty[0] & /*$presidents, index*/ 4608 && t4_value !== (t4_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear + "")) set_data_dev(t4, t4_value);
-
-    			if (dirty[0] & /*cx, outerRadius*/ 36 && text2_x_value !== (text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10)) {
-    				attr_dev(text2, "x", text2_x_value);
-    			}
-
-    			if (dirty[0] & /*cy, outerRadius*/ 40 && text2_y_value !== (text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5)) {
-    				attr_dev(text2, "y", text2_y_value);
     			}
 
     			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && circle2_cx_value !== (circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
@@ -3126,6 +3187,18 @@ var app = (function () {
 
     			if (dirty[0] & /*cy, outerRadius*/ 40 && circle2_cy_value !== (circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5)) {
     				attr_dev(circle2, "cy", circle2_cy_value);
+    			}
+
+    			if (dirty[0] & /*$presidents, index*/ 4608 && t2_value !== (t2_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart + "")) set_data_dev(t2, t2_value);
+
+    			if (dirty[0] & /*cx, outerRadius, $presidents, index*/ 4644 && text2_x_value !== (text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
+    			? 2025
+    			: /*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear) - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) * (2 * /*outerRadius*/ ctx[5]))) {
+    				attr_dev(text2, "x", text2_x_value);
+    			}
+
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && text2_y_value !== (text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.7)) {
+    				attr_dev(text2, "y", text2_y_value);
     			}
 
     			if (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd !== "Current President") {
@@ -3290,9 +3363,8 @@ var app = (function () {
 
     	const mouseout_handler = () => {
     		$$invalidate(10, hoveredArc = null);
-    		const div = document.getElementById(`president-${index}-Quote`);
-    		div.innerHTML = "";
-    	}; //div.innerHTML = $presidents[index].quote;
+    	}; //const div = document.getElementById(`president-${index}-Quote`);
+    	//div.innerHTML = "";
 
     	const focus_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
     	const blur_handler = () => $$invalidate(10, hoveredArc = null);

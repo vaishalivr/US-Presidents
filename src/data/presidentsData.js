@@ -162,6 +162,50 @@ export const presidents = writable([
     quote:
       "The man who reads nothing at all is better educated than the man who reads nothing but newspapers.",
     image: "images/ThomasJefferson.png",
+    otherPresidents: [
+      "John Adams",
+      "James Madison",
+      "James Monroe",
+      "John Quincy Adams",
+      "Andrew Jackson",
+      "Martin Van Buren",
+      "William Henry Harrison",
+      "John Tyler",
+    ],
+    otherPresidentThings: [
+      {
+        "John Adams":
+          "After losing election to Jefferson, Adams left DC and returned to his farm in Quincy MA largly avoiding public life. When Jefferson's presidency ended Adam and Jefferson started exchanging letters rekindling their friendship.",
+      },
+      {
+        "James Madison":
+          "	Secretary of State (1801-1809), helped oversee Louisiana Purchase,",
+      },
+      {
+        "James Monroe":
+          "	Negotiator of Louisiana Purchase (1803), Minister to Britain (1803-1806), Governor of Virginia (1807-1809)",
+      },
+      {
+        "John Quincy Adams":
+          "U.S. Senator (1803-1808), broke with Federalists, supported Louisiana Purchase, appointed Minister to Russia (1809)",
+      },
+      {
+        "Andrew Jackson":
+          "Judge in Tennessee (1804-1809), military leader, duel with Dickinson (1806)",
+      },
+      {
+        "Martin Van Buren":
+          "Practiced law (1801-1803), became Surrogate Judge (1803-1808), elected to New York Senate (1808)",
+      },
+      {
+        "William Henry Harrison":
+          "Governor of Indiana Territory (1801-1809), negotiated land treaties, expanded U.S. settlements",
+      },
+      {
+        "John Tyler":
+          "Law student (1801-1807), began law practice (1807), elected to Virginia House of Delegates (1809)",
+      },
+    ],
   },
   {
     name: "James Madison",

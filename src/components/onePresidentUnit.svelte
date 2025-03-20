@@ -80,8 +80,8 @@
       }}
       on:mouseout={() => {
         hoveredArc = null;
-        const div = document.getElementById(`president-${index}-Quote`);
-        div.innerHTML = "";
+        //const div = document.getElementById(`president-${index}-Quote`);
+        //div.innerHTML = "";
         //div.innerHTML = $presidents[index].quote;
       }}
       on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
@@ -229,7 +229,7 @@
   </text>
 
   <!-- presidents years in power -->
-  <text
+  <!-- <text
     x={cx}
     y={cy + outerRadius * 1.5 - 5}
     text-anchor="middle"
@@ -237,7 +237,7 @@
     fill="black"
   >
     {$presidents[index].presidencyStart} - {$presidents[index].presidencyEnd}
-  </text>
+  </text> -->
 
   <!-- presidents birth year -->
   <text
@@ -265,6 +265,21 @@
     fill="teal"
   />
 
+  <!-- presidency start year text -->
+  <text
+    x={cx -
+      outerRadius +
+      (($presidents[index].presidencyStart - $presidents[index].birthYear) /
+        (($presidents[index].deathYear === ""
+          ? 2025
+          : $presidents[index].deathYear) -
+          $presidents[index].birthYear)) *
+        (2 * outerRadius)}
+    y={cy + outerRadius * 1.7}
+    text-anchor="end"
+    font-size="0.9rem">{$presidents[index].presidencyStart}</text
+  >
+
   <!-- presidency end circle -->
   {#if $presidents[index].presidencyEnd !== "Current President"}
     <circle
@@ -280,24 +295,27 @@
       r="4"
       fill="teal"
     />
+    <text
+      x={cx -
+        outerRadius +
+        (($presidents[index].presidencyEnd - $presidents[index].birthYear) /
+          (($presidents[index].deathYear === ""
+            ? 2025
+            : $presidents[index].deathYear) -
+            $presidents[index].birthYear)) *
+          (2 * outerRadius)}
+      y={cy + outerRadius * 1.7}
+      text-anchor="start"
+      font-size="0.9rem">{$presidents[index].presidencyEnd}</text
+    >
   {/if}
 
-  <!-- rect to fit quote -->
-  <!-- <rect
-    x={cx - outerRadius}
-    y={cy + outerRadius * 1.6}
-    width={outerRadius * 2}
-    height="48"
-    fill="none"
-    stroke="black"
-    opacity="0.3"
-  /> -->
-
+  <!-- foreign object to fit quote -->
   {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}
     <foreignObject
       x={cx - outerRadius}
       y={cy + outerRadius * 1.6}
-      width={outerRadius * 2}
+      width={outerRadius * 2.4}
       height="90"
     >
       <div
