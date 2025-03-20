@@ -590,9 +590,11 @@ var app = (function () {
         image: "images/GeorgeWashington.png",
         otherPresidents: ["John Adams", "Thomas Jefferson"],
         otherPresidentThings: [
-          { "john adams": "doing something" },
-          { "thomas jefferson": "doingsomething else" },
+          { "John Adams": "doing something" },
+          { "Thomas Jefferson": "doing something else" },
         ],
+
+        //otherPresidentThings: "other president things",
       },
       {
         name: "John Adams",
@@ -625,6 +627,18 @@ var app = (function () {
         quote:
           "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
         image: "images/JohnAdams.png",
+        otherPresidents: [
+          "George Washington",
+          "Thomas Jefferson",
+          "James Madison",
+          "James Monroe",
+        ],
+        otherPresidentThings: [
+          { "George Washington": "doing something George" },
+          { "Thomas Jefferson": "doing something else Thomas" },
+          { "James Madison": "doing something else James" },
+          { "James Monroe": "doing something else James Monroe" },
+        ],
       },
       {
         name: "Thomas Jefferson",
@@ -2038,12 +2052,18 @@ var app = (function () {
     function get_each_context$2(ctx, list, i) {
     	const child_ctx = ctx.slice();
     	child_ctx[31] = list[i];
-    	child_ctx[33] = i;
+    	return child_ctx;
+    }
+
+    function get_each_context_1$1(ctx, list, i) {
+    	const child_ctx = ctx.slice();
+    	child_ctx[34] = list[i];
+    	child_ctx[36] = i;
     	return child_ctx;
     }
 
     // (57:2) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
-    function create_each_block$2(ctx) {
+    function create_each_block_1$1(ctx) {
     	let path;
     	let path_d_value;
     	let path_fill_value;
@@ -2051,27 +2071,27 @@ var app = (function () {
     	let dispose;
 
     	function mouseover_handler(...args) {
-    		return /*mouseover_handler*/ ctx[15](/*arcIndex*/ ctx[33], ...args);
+    		return /*mouseover_handler*/ ctx[15](/*arcIndex*/ ctx[36], ...args);
     	}
 
     	function focus_handler() {
-    		return /*focus_handler*/ ctx[17](/*arcIndex*/ ctx[33]);
+    		return /*focus_handler*/ ctx[17](/*arcIndex*/ ctx[36]);
     	}
 
     	function click_handler(...args) {
-    		return /*click_handler*/ ctx[19](/*arcIndex*/ ctx[33], ...args);
+    		return /*click_handler*/ ctx[19](/*arcIndex*/ ctx[36], ...args);
     	}
 
     	function keydown_handler() {
-    		return /*keydown_handler*/ ctx[20](/*arcIndex*/ ctx[33]);
+    		return /*keydown_handler*/ ctx[20](/*arcIndex*/ ctx[36]);
     	}
 
     	const block = {
     		c: function create() {
     			path = svg_element("path");
-    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[33], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length));
+    			attr_dev(path, "d", path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[36], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length));
 
-    			attr_dev(path, "fill", path_fill_value = /*isActive*/ ctx[14](/*index*/ ctx[9]) && /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[33]}`
+    			attr_dev(path, "fill", path_fill_value = /*isActive*/ ctx[14](/*index*/ ctx[9]) && /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[36]}`
     			? "lightblue"
     			: "white");
 
@@ -2099,11 +2119,11 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[33], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length))) {
+    			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index*/ 4652 && path_d_value !== (path_d_value = calculateArcPath(/*cx*/ ctx[2], /*cy*/ ctx[3], /*outerRadius*/ ctx[5], /*arcIndex*/ ctx[36], /*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length))) {
     				attr_dev(path, "d", path_d_value);
     			}
 
-    			if (dirty[0] & /*index, hoveredArc*/ 1536 && path_fill_value !== (path_fill_value = /*isActive*/ ctx[14](/*index*/ ctx[9]) && /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[33]}`
+    			if (dirty[0] & /*index, hoveredArc*/ 1536 && path_fill_value !== (path_fill_value = /*isActive*/ ctx[14](/*index*/ ctx[9]) && /*hoveredArc*/ ctx[10] === `${/*index*/ ctx[9]}-${/*arcIndex*/ ctx[36]}`
     			? "lightblue"
     			: "white")) {
     				attr_dev(path, "fill", path_fill_value);
@@ -2118,7 +2138,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_each_block$2.name,
+    		id: create_each_block_1$1.name,
     		type: "each",
     		source: "(57:2) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}",
     		ctx
@@ -2127,8 +2147,8 @@ var app = (function () {
     	return block;
     }
 
-    // (150:2) {#if hoveredBirthIndex === index}
-    function create_if_block_3(ctx) {
+    // (151:2) {#if hoveredBirthIndex === index}
+    function create_if_block_5(ctx) {
     	let text_1;
     	let tspan0;
     	let t0;
@@ -2158,16 +2178,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 157, 6, 4365);
+    			add_location(tspan0, file$3, 158, 6, 4398);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 160, 6, 4467);
+    			add_location(tspan1, file$3, 161, 6, 4500);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 150, 4, 4213);
+    			add_location(text_1, file$3, 151, 4, 4246);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2208,16 +2228,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_3.name,
+    		id: create_if_block_5.name,
     		type: "if",
-    		source: "(150:2) {#if hoveredBirthIndex === index}",
+    		source: "(151:2) {#if hoveredBirthIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (207:2) {:else}
+    // (208:2) {:else}
     function create_else_block(ctx) {
     	let line;
     	let line_x__value;
@@ -2234,7 +2254,7 @@ var app = (function () {
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.55);
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "3px");
-    			add_location(line, file$3, 207, 4, 5738);
+    			add_location(line, file$3, 208, 4, 5771);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, line, anchor);
@@ -2265,15 +2285,15 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(207:2) {:else}",
+    		source: "(208:2) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (168:2) {#if $presidents[index].status === "dead"}
-    function create_if_block_1$1(ctx) {
+    // (169:2) {#if $presidents[index].status === "dead"}
+    function create_if_block_3(ctx) {
     	let circle;
     	let circle_cx_value;
     	let circle_cy_value;
@@ -2284,7 +2304,7 @@ var app = (function () {
     	let text_1_y_value;
     	let mounted;
     	let dispose;
-    	let if_block = /*hoveredDeathIndex*/ ctx[1] === /*index*/ ctx[9] && create_if_block_2(ctx);
+    	let if_block = /*hoveredDeathIndex*/ ctx[1] === /*index*/ ctx[9] && create_if_block_4(ctx);
 
     	const block = {
     		c: function create() {
@@ -2296,13 +2316,13 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "black");
-    			add_location(circle, file$3, 168, 4, 4688);
+    			add_location(circle, file$3, 169, 4, 4721);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5] + 10);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text_1, "text-anchor", "start");
     			attr_dev(text_1, "font-size", "0.9rem");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 197, 4, 5524);
+    			add_location(text_1, file$3, 198, 4, 5557);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2334,7 +2354,7 @@ var app = (function () {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
-    					if_block = create_if_block_2(ctx);
+    					if_block = create_if_block_4(ctx);
     					if_block.c();
     					if_block.m(text_1.parentNode, text_1);
     				}
@@ -2364,17 +2384,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_1$1.name,
+    		id: create_if_block_3.name,
     		type: "if",
-    		source: "(168:2) {#if $presidents[index].status === \\\"dead\\\"}",
+    		source: "(169:2) {#if $presidents[index].status === \\\"dead\\\"}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (181:4) {#if hoveredDeathIndex === index}
-    function create_if_block_2(ctx) {
+    // (182:4) {#if hoveredDeathIndex === index}
+    function create_if_block_4(ctx) {
     	let text_1;
     	let tspan0;
     	let t0;
@@ -2404,16 +2424,16 @@ var app = (function () {
     			t5 = space();
     			attr_dev(tspan0, "x", tspan0_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan0, "dy", "0");
-    			add_location(tspan0, file$3, 188, 8, 5283);
+    			add_location(tspan0, file$3, 189, 8, 5316);
     			attr_dev(tspan1, "x", tspan1_x_value = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(tspan1, "dy", "15");
-    			add_location(tspan1, file$3, 191, 8, 5394);
+    			add_location(tspan1, file$3, 192, 8, 5427);
     			attr_dev(text_1, "x", text_1_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(text_1, "y", text_1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 25);
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", "12px");
     			attr_dev(text_1, "fill", "black");
-    			add_location(text_1, file$3, 181, 6, 5117);
+    			add_location(text_1, file$3, 182, 6, 5150);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -2454,17 +2474,17 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2.name,
+    		id: create_if_block_4.name,
     		type: "if",
-    		source: "(181:4) {#if hoveredDeathIndex === index}",
+    		source: "(182:4) {#if hoveredDeathIndex === index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (267:2) {#if $presidents[index].presidencyEnd !== "Current President"}
-    function create_if_block$1(ctx) {
+    // (268:2) {#if $presidents[index].presidencyEnd !== "Current President"}
+    function create_if_block_2(ctx) {
     	let circle;
     	let circle_cx_value;
     	let circle_cy_value;
@@ -2480,7 +2500,7 @@ var app = (function () {
     			attr_dev(circle, "cy", circle_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle, "r", "4");
     			attr_dev(circle, "fill", "teal");
-    			add_location(circle, file$3, 267, 4, 7085);
+    			add_location(circle, file$3, 268, 4, 7118);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -2503,9 +2523,188 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(268:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (295:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}
+    function create_if_block$1(ctx) {
+    	let foreignObject;
+    	let div_1;
+    	let div_1_id_value;
+    	let foreignObject_x_value;
+    	let foreignObject_y_value;
+    	let foreignObject_width_value;
+    	let each_value = /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidentThings;
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			foreignObject = svg_element("foreignObject");
+    			div_1 = element("div");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			attr_dev(div_1, "id", div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote");
+    			set_style(div_1, "text-align", "center");
+    			set_style(div_1, "font-size", "0.75rem");
+    			add_location(div_1, file$3, 301, 6, 7975);
+    			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
+    			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
+    			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
+    			attr_dev(foreignObject, "height", "60");
+    			add_location(foreignObject, file$3, 295, 4, 7840);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, foreignObject, anchor);
+    			append_dev(foreignObject, div_1);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				if (each_blocks[i]) {
+    					each_blocks[i].m(div_1, null);
+    				}
+    			}
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*$presidents, $selectedCircleId, index*/ 6656) {
+    				each_value = /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidentThings;
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(div_1, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+
+    			if (dirty[0] & /*index*/ 512 && div_1_id_value !== (div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote")) {
+    				attr_dev(div_1, "id", div_1_id_value);
+    			}
+
+    			if (dirty[0] & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
+    				attr_dev(foreignObject, "x", foreignObject_x_value);
+    			}
+
+    			if (dirty[0] & /*cy, outerRadius*/ 40 && foreignObject_y_value !== (foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
+    				attr_dev(foreignObject, "y", foreignObject_y_value);
+    			}
+
+    			if (dirty[0] & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
+    				attr_dev(foreignObject, "width", foreignObject_width_value);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(foreignObject);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(267:2) {#if $presidents[index].presidencyEnd !== \\\"Current President\\\"}",
+    		source: "(295:2) {#if $presidents[$selectedCircleId] || $presidents[$selectedCircleId]?.otherPresidents.includes($presidents[index].name)}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (307:10) {#if obj[$presidents[index].name]}
+    function create_if_block_1$1(ctx) {
+    	let t_value = /*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name] + "";
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text(t_value);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty[0] & /*$presidents, $selectedCircleId, index*/ 6656 && t_value !== (t_value = /*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name] + "")) set_data_dev(t, t_value);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_if_block_1$1.name,
+    		type: "if",
+    		source: "(307:10) {#if obj[$presidents[index].name]}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (306:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}
+    function create_each_block$2(ctx) {
+    	let if_block_anchor;
+    	let if_block = /*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name] && create_if_block_1$1(ctx);
+
+    	const block = {
+    		c: function create() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m: function mount(target, anchor) {
+    			if (if_block) if_block.m(target, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (/*obj*/ ctx[31][/*$presidents*/ ctx[12][/*index*/ ctx[9]].name]) {
+    				if (if_block) {
+    					if_block.p(ctx, dirty);
+    				} else {
+    					if_block = create_if_block_1$1(ctx);
+    					if_block.c();
+    					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach_dev(if_block_anchor);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_each_block$2.name,
+    		type: "each",
+    		source: "(306:8) {#each $presidents[$selectedCircleId]?.otherPresidentThings as obj}",
     		ctx
     	});
 
@@ -2549,40 +2748,31 @@ var app = (function () {
     	let circle2;
     	let circle2_cx_value;
     	let circle2_cy_value;
-    	let rect;
-    	let rect_x_value;
-    	let rect_y_value;
-    	let rect_width_value;
-    	let foreignObject;
-    	let div_1;
-    	let t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "";
-    	let t5;
-    	let div_1_id_value;
-    	let foreignObject_x_value;
-    	let foreignObject_y_value;
-    	let foreignObject_width_value;
+    	let if_block2_anchor;
+    	let show_if = /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]] || /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidents.includes(/*$presidents*/ ctx[12][/*index*/ ctx[9]].name);
     	let g_class_value;
     	let g_opacity_value;
     	let mounted;
     	let dispose;
-    	let each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
-    	validate_each_argument(each_value);
+    	let each_value_1 = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
+    	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	for (let i = 0; i < each_value_1.length; i += 1) {
+    		each_blocks[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
     	}
 
-    	let if_block0 = /*hoveredBirthIndex*/ ctx[0] === /*index*/ ctx[9] && create_if_block_3(ctx);
+    	let if_block0 = /*hoveredBirthIndex*/ ctx[0] === /*index*/ ctx[9] && create_if_block_5(ctx);
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$presidents*/ ctx[12][/*index*/ ctx[9]].status === "dead") return create_if_block_1$1;
+    		if (/*$presidents*/ ctx[12][/*index*/ ctx[9]].status === "dead") return create_if_block_3;
     		return create_else_block;
     	}
 
     	let current_block_type = select_block_type(ctx);
     	let if_block1 = current_block_type(ctx);
-    	let if_block2 = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd !== "Current President" && create_if_block$1(ctx);
+    	let if_block2 = /*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyEnd !== "Current President" && create_if_block_2(ctx);
+    	let if_block3 = show_if && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -2609,17 +2799,15 @@ var app = (function () {
     			t4 = text(t4_value);
     			circle2 = svg_element("circle");
     			if (if_block2) if_block2.c();
-    			rect = svg_element("rect");
-    			foreignObject = svg_element("foreignObject");
-    			div_1 = element("div");
-    			t5 = text(t5_value);
+    			if_block2_anchor = empty();
+    			if (if_block3) if_block3.c();
     			attr_dev(circle0, "cx", /*cx*/ ctx[2]);
     			attr_dev(circle0, "cy", /*cy*/ ctx[3]);
     			attr_dev(circle0, "r", /*innerRadius*/ ctx[4]);
     			attr_dev(circle0, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(circle0, "stroke-width", /*strokeWidth*/ ctx[7]);
     			attr_dev(circle0, "fill", /*fill*/ ctx[8]);
-    			add_location(circle0, file$3, 103, 2, 3136);
+    			add_location(circle0, file$3, 104, 2, 3169);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[2] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[3] - /*innerRadius*/ ctx[4]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[4] * 2);
@@ -2630,37 +2818,37 @@ var app = (function () {
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
     			attr_dev(image, "class", "svelte-2dlf6z");
-    			add_location(image, file$3, 113, 2, 3273);
+    			add_location(image, file$3, 114, 2, 3306);
     			attr_dev(line, "x1", line_x__value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y1", line_y__value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "x2", line_x__value_1 = /*cx*/ ctx[2] + /*outerRadius*/ ctx[5]);
     			attr_dev(line, "y2", line_y__value_1 = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(line, "stroke", /*stroke*/ ctx[6]);
     			attr_dev(line, "stroke-width", /*strokeWidth*/ ctx[7]);
-    			add_location(line, file$3, 127, 2, 3621);
+    			add_location(line, file$3, 128, 2, 3654);
     			attr_dev(circle1, "cx", circle1_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
     			attr_dev(circle1, "cy", circle1_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle1, "r", "4");
     			attr_dev(circle1, "fill", "black");
-    			add_location(circle1, file$3, 137, 2, 3831);
+    			add_location(circle1, file$3, 138, 2, 3864);
     			attr_dev(text0, "x", /*cx*/ ctx[2]);
     			attr_dev(text0, "y", text0_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 20);
     			attr_dev(text0, "text-anchor", "middle");
     			attr_dev(text0, "font-size", "16px");
     			attr_dev(text0, "fill", "black");
-    			add_location(text0, file$3, 218, 2, 5961);
+    			add_location(text0, file$3, 219, 2, 5994);
     			attr_dev(text1, "x", /*cx*/ ctx[2]);
     			attr_dev(text1, "y", text1_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 - 5);
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "font-size", "14px");
     			attr_dev(text1, "fill", "black");
-    			add_location(text1, file$3, 229, 2, 6161);
+    			add_location(text1, file$3, 230, 2, 6194);
     			attr_dev(text2, "x", text2_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] - 10);
     			attr_dev(text2, "y", text2_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5 + 5);
     			attr_dev(text2, "text-anchor", "end");
     			attr_dev(text2, "font-size", "0.9rem");
     			attr_dev(text2, "fill", "black");
-    			add_location(text2, file$3, 240, 2, 6404);
+    			add_location(text2, file$3, 241, 2, 6437);
 
     			attr_dev(circle2, "cx", circle2_cx_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5] + (/*$presidents*/ ctx[12][/*index*/ ctx[9]].presidencyStart - /*$presidents*/ ctx[12][/*index*/ ctx[9]].birthYear) / ((/*$presidents*/ ctx[12][/*index*/ ctx[9]].deathYear === ""
     			? 2025
@@ -2669,24 +2857,7 @@ var app = (function () {
     			attr_dev(circle2, "cy", circle2_cy_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.5);
     			attr_dev(circle2, "r", "4");
     			attr_dev(circle2, "fill", "teal");
-    			add_location(circle2, file$3, 251, 2, 6624);
-    			attr_dev(rect, "x", rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
-    			attr_dev(rect, "y", rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
-    			attr_dev(rect, "width", rect_width_value = /*outerRadius*/ ctx[5] * 2);
-    			attr_dev(rect, "height", "48");
-    			attr_dev(rect, "fill", "none");
-    			attr_dev(rect, "stroke", "black");
-    			attr_dev(rect, "opacity", "0.3");
-    			add_location(rect, file$3, 283, 2, 7505);
-    			attr_dev(div_1, "id", div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote");
-    			set_style(div_1, "text-align", "center");
-    			set_style(div_1, "font-size", "0.75rem");
-    			add_location(div_1, file$3, 298, 4, 7794);
-    			attr_dev(foreignObject, "x", foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5]);
-    			attr_dev(foreignObject, "y", foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6);
-    			attr_dev(foreignObject, "width", foreignObject_width_value = /*outerRadius*/ ctx[5] * 2);
-    			attr_dev(foreignObject, "height", "60");
-    			add_location(foreignObject, file$3, 292, 2, 7671);
+    			add_location(circle2, file$3, 252, 2, 6657);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[9]);
 
     			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[11]}` === "circle-" + /*index*/ ctx[9] || /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidents.includes(/*$presidents*/ ctx[12][/*index*/ ctx[9]].name)
@@ -2724,10 +2895,8 @@ var app = (function () {
     			append_dev(text2, t4);
     			append_dev(g, circle2);
     			if (if_block2) if_block2.m(g, null);
-    			append_dev(g, rect);
-    			append_dev(g, foreignObject);
-    			append_dev(foreignObject, div_1);
-    			append_dev(div_1, t5);
+    			append_dev(g, if_block2_anchor);
+    			if (if_block3) if_block3.m(g, null);
 
     			if (!mounted) {
     				dispose = [
@@ -2744,17 +2913,17 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty[0] & /*cx, cy, outerRadius, $presidents, index, isActive, hoveredArc, $selectedCircleId*/ 24108) {
-    				each_value = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
-    				validate_each_argument(each_value);
+    				each_value_1 = Array(/*$presidents*/ ctx[12][/*index*/ ctx[9]].policies.length).fill(0);
+    				validate_each_argument(each_value_1);
     				let i;
 
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$2(ctx, each_value, i);
+    				for (i = 0; i < each_value_1.length; i += 1) {
+    					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
 
     					if (each_blocks[i]) {
     						each_blocks[i].p(child_ctx, dirty);
     					} else {
-    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i] = create_each_block_1$1(child_ctx);
     						each_blocks[i].c();
     						each_blocks[i].m(g, circle0);
     					}
@@ -2764,7 +2933,7 @@ var app = (function () {
     					each_blocks[i].d(1);
     				}
 
-    				each_blocks.length = each_value.length;
+    				each_blocks.length = each_value_1.length;
     			}
 
     			if (dirty[0] & /*cx*/ 4) {
@@ -2851,7 +3020,7 @@ var app = (function () {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
     				} else {
-    					if_block0 = create_if_block_3(ctx);
+    					if_block0 = create_if_block_5(ctx);
     					if_block0.c();
     					if_block0.m(g, if_block0_anchor);
     				}
@@ -2917,43 +3086,28 @@ var app = (function () {
     				if (if_block2) {
     					if_block2.p(ctx, dirty);
     				} else {
-    					if_block2 = create_if_block$1(ctx);
+    					if_block2 = create_if_block_2(ctx);
     					if_block2.c();
-    					if_block2.m(g, rect);
+    					if_block2.m(g, if_block2_anchor);
     				}
     			} else if (if_block2) {
     				if_block2.d(1);
     				if_block2 = null;
     			}
 
-    			if (dirty[0] & /*cx, outerRadius*/ 36 && rect_x_value !== (rect_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
-    				attr_dev(rect, "x", rect_x_value);
-    			}
+    			if (dirty[0] & /*$presidents, $selectedCircleId, index*/ 6656) show_if = /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]] || /*$presidents*/ ctx[12][/*$selectedCircleId*/ ctx[11]]?.otherPresidents.includes(/*$presidents*/ ctx[12][/*index*/ ctx[9]].name);
 
-    			if (dirty[0] & /*cy, outerRadius*/ 40 && rect_y_value !== (rect_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
-    				attr_dev(rect, "y", rect_y_value);
-    			}
-
-    			if (dirty[0] & /*outerRadius*/ 32 && rect_width_value !== (rect_width_value = /*outerRadius*/ ctx[5] * 2)) {
-    				attr_dev(rect, "width", rect_width_value);
-    			}
-
-    			if (dirty[0] & /*$presidents, index*/ 4608 && t5_value !== (t5_value = /*$presidents*/ ctx[12][/*index*/ ctx[9]].quote + "")) set_data_dev(t5, t5_value);
-
-    			if (dirty[0] & /*index*/ 512 && div_1_id_value !== (div_1_id_value = "president-" + /*index*/ ctx[9] + "-Quote")) {
-    				attr_dev(div_1, "id", div_1_id_value);
-    			}
-
-    			if (dirty[0] & /*cx, outerRadius*/ 36 && foreignObject_x_value !== (foreignObject_x_value = /*cx*/ ctx[2] - /*outerRadius*/ ctx[5])) {
-    				attr_dev(foreignObject, "x", foreignObject_x_value);
-    			}
-
-    			if (dirty[0] & /*cy, outerRadius*/ 40 && foreignObject_y_value !== (foreignObject_y_value = /*cy*/ ctx[3] + /*outerRadius*/ ctx[5] * 1.6)) {
-    				attr_dev(foreignObject, "y", foreignObject_y_value);
-    			}
-
-    			if (dirty[0] & /*outerRadius*/ 32 && foreignObject_width_value !== (foreignObject_width_value = /*outerRadius*/ ctx[5] * 2)) {
-    				attr_dev(foreignObject, "width", foreignObject_width_value);
+    			if (show_if) {
+    				if (if_block3) {
+    					if_block3.p(ctx, dirty);
+    				} else {
+    					if_block3 = create_if_block$1(ctx);
+    					if_block3.c();
+    					if_block3.m(g, null);
+    				}
+    			} else if (if_block3) {
+    				if_block3.d(1);
+    				if_block3 = null;
     			}
 
     			if (dirty[0] & /*index*/ 512 && g_class_value !== (g_class_value = "circle-" + /*index*/ ctx[9])) {
@@ -2974,6 +3128,7 @@ var app = (function () {
     			if (if_block0) if_block0.d();
     			if_block1.d();
     			if (if_block2) if_block2.d();
+    			if (if_block3) if_block3.d();
     			mounted = false;
     			run_all(dispose);
     		}
@@ -3084,13 +3239,13 @@ var app = (function () {
 
     		const div = document.getElementById(`president-${index}-Quote`);
     		div.innerHTML = $presidents[index].policies[arcIndex];
+    		console.log("here");
     	};
 
     	const mouseout_handler = () => {
     		$$invalidate(10, hoveredArc = null);
-    		const div = document.getElementById(`president-${index}-Quote`);
-    		div.innerHTML = $presidents[index].quote;
-    	};
+    	}; //const div = document.getElementById(`president-${index}-Quote`);
+    	//div.innerHTML = $presidents[index].quote;
 
     	const focus_handler = arcIndex => $$invalidate(10, hoveredArc = `${index}-${arcIndex}`);
     	const blur_handler = () => $$invalidate(10, hoveredArc = null);

@@ -33,9 +33,11 @@ export const presidents = writable([
     image: "images/GeorgeWashington.png",
     otherPresidents: ["John Adams", "Thomas Jefferson"],
     otherPresidentThings: [
-      { "john adams": "doing something" },
-      { "thomas jefferson": "doingsomething else" },
+      { "John Adams": "doing something" },
+      { "Thomas Jefferson": "doing something else" },
     ],
+
+    //otherPresidentThings: "other president things",
   },
   {
     name: "John Adams",
@@ -68,6 +70,18 @@ export const presidents = writable([
     quote:
       "I must study politics and war that my sons may have liberty to study mathematics and philosophy.",
     image: "images/JohnAdams.png",
+    otherPresidents: [
+      "George Washington",
+      "Thomas Jefferson",
+      "James Madison",
+      "James Monroe",
+    ],
+    otherPresidentThings: [
+      { "George Washington": "doing something George" },
+      { "Thomas Jefferson": "doing something else Thomas" },
+      { "James Madison": "doing something else James" },
+      { "James Monroe": "doing something else James Monroe" },
+    ],
   },
   {
     name: "Thomas Jefferson",
