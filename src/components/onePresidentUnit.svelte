@@ -1,4 +1,5 @@
 <script>
+  import OnePresidentUnitMainCircle from "./OnePresidentUnitMainCircle.svelte";
   import { presidents } from "../data/presidentsData";
   import { selectedCircleId } from "../store.js";
 
@@ -12,36 +13,6 @@
   export let index;
   export let hoveredBirthIndex = null;
   export let hoveredDeathIndex = null;
-  let hoveredArc = null;
-
-  function calculateArcPath(cx, cy, radius, arcIndex, totalArcs) {
-    const anglePerArc = (2 * Math.PI) / totalArcs;
-
-    const startAngle = -Math.PI / 2 + arcIndex * anglePerArc;
-    const endAngle = -Math.PI / 2 + (arcIndex + 1) * anglePerArc;
-
-    const x1 = cx + radius * Math.cos(startAngle);
-    const y1 = cy + radius * Math.sin(startAngle);
-    const x2 = cx + radius * Math.cos(endAngle);
-    const y2 = cy + radius * Math.sin(endAngle);
-
-    return `M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 0 1 ${x2} ${y2} Z`;
-  }
-
-  function handleImageClick(event) {
-    event.stopPropagation();
-
-    const id = event.target.dataset.index;
-    selectedCircleId.set(id);
-  }
-
-  function handleImageKeydown(event) {
-    console.log("key down on image");
-  }
-
-  function isActive(index) {
-    return index.toString() === $selectedCircleId;
-  }
 </script>
 
 <g
@@ -54,77 +25,16 @@
     ? 1
     : 0.4}
 >
-  {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
-    <!-- make arcs based on policies -->
-    <path
-      d={calculateArcPath(
-        cx,
-        cy,
-        outerRadius,
-        arcIndex,
-        $presidents[index].policies.length
-      )}
-      fill={isActive(index) && hoveredArc === `${index}-${arcIndex}`
-        ? "lightblue"
-        : "white"}
-      stroke="black"
-      stroke-width="2px"
-      on:mouseover={(event) => {
-        event.stopPropagation();
-        if (!isActive(index)) return;
-        //TO DO: how to avoid getElementById
-        hoveredArc = `${index}-${arcIndex}`;
-        const div = document.getElementById(`president-${index}-Quote`);
-        div.innerHTML = $presidents[index].policies[arcIndex];
-        console.log("here");
-      }}
-      on:mouseout={() => {
-        hoveredArc = null;
-        //const div = document.getElementById(`president-${index}-Quote`);
-        //div.innerHTML = "";
-        //div.innerHTML = $presidents[index].quote;
-      }}
-      on:focus={() => (hoveredArc = `${index}-${arcIndex}`)}
-      on:blur={() => (hoveredArc = null)}
-      on:click={(event) => {
-        event.stopPropagation();
-        if (!isActive(index)) return;
-        if (index.toString() == $selectedCircleId) {
-          //TO DO : how to avoid getElementById
-          hoveredArc = `${index}-${arcIndex}`;
-          const div = document.getElementById(`president-${index}-Quote`);
-          div.innerHTML = $presidents[index].policies[arcIndex];
-        }
-      }}
-      on:keydown={() => {
-        hoveredArc = `${index}-${arcIndex}`;
-      }}
-    />
-  {/each}
-
   <!-- president's main circle -->
-  <circle
+  <OnePresidentUnitMainCircle
     {cx}
     {cy}
-    r={innerRadius}
+    {innerRadius}
+    {outerRadius}
     {stroke}
-    stroke-width={strokeWidth}
+    {strokeWidth}
     {fill}
-  />
-
-  <!-- presidents image -->
-  <image
-    x={cx - innerRadius}
-    y={cy - innerRadius}
-    width={innerRadius * 2}
-    height={innerRadius * 2}
-    data-index={index}
-    href={$presidents[index].image}
-    clip-path="circle(50%)"
-    on:click={(event) => handleImageClick(event)}
-    on:keydown={(event) => handleImageKeydown(event)}
-    tabindex="0"
-    role="button"
+    {index}
   />
 
   <line
@@ -228,17 +138,6 @@
     {$presidents[index].name}
   </text>
 
-  <!-- presidents years in power -->
-  <!-- <text
-    x={cx}
-    y={cy + outerRadius * 1.5 - 5}
-    text-anchor="middle"
-    font-size="14px"
-    fill="black"
-  >
-    {$presidents[index].presidencyStart} - {$presidents[index].presidencyEnd}
-  </text> -->
-
   <!-- presidents birth year -->
   <text
     x={cx - outerRadius - 10}
@@ -332,7 +231,7 @@
   {/if}
 </g>
 
-<style>
+<!-- <style>
   image:focus,
   image:active {
     outline: none;
@@ -345,4 +244,4 @@
   path:focus-visible {
     outline: 2px solid black; /* focus visible for keyboard users */
   }
-</style>
+</style> -->
