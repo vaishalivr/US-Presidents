@@ -4103,7 +4103,8 @@ var app = (function () {
     				stroke: /*stroke*/ ctx[4],
     				strokeWidth: /*strokeWidth*/ ctx[5],
     				index: /*index*/ ctx[7],
-    				hoveredBirthIndex: /*hoveredBirthIndex*/ ctx[8]
+    				hoveredBirthIndex: /*hoveredBirthIndex*/ ctx[8],
+    				hoveredDeathIndex: /*hoveredDeathIndex*/ ctx[9]
     			},
     			$$inline: true
     		});
@@ -4126,11 +4127,11 @@ var app = (function () {
     			create_component(onepresidentunitname.$$.fragment);
     			attr_dev(g, "class", g_class_value = "circle-" + /*index*/ ctx[7]);
 
-    			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[9]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[9]}` === "circle-" + /*index*/ ctx[7] || /*$presidents*/ ctx[10][/*$selectedCircleId*/ ctx[9]]?.otherPresidents.includes(/*$presidents*/ ctx[10][/*index*/ ctx[7]].name)
+    			attr_dev(g, "opacity", g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[7] || /*$presidents*/ ctx[11][/*$selectedCircleId*/ ctx[10]]?.otherPresidents.includes(/*$presidents*/ ctx[11][/*index*/ ctx[7]].name)
     			? 1
     			: 0.4);
 
-    			add_location(g, file$4, 19, 0, 630);
+    			add_location(g, file$4, 19, 0, 628);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4161,6 +4162,7 @@ var app = (function () {
     			if (dirty & /*strokeWidth*/ 32) onepresidentunittimeline_changes.strokeWidth = /*strokeWidth*/ ctx[5];
     			if (dirty & /*index*/ 128) onepresidentunittimeline_changes.index = /*index*/ ctx[7];
     			if (dirty & /*hoveredBirthIndex*/ 256) onepresidentunittimeline_changes.hoveredBirthIndex = /*hoveredBirthIndex*/ ctx[8];
+    			if (dirty & /*hoveredDeathIndex*/ 512) onepresidentunittimeline_changes.hoveredDeathIndex = /*hoveredDeathIndex*/ ctx[9];
     			onepresidentunittimeline.$set(onepresidentunittimeline_changes);
     			const onepresidentunitname_changes = {};
     			if (dirty & /*cx*/ 1) onepresidentunitname_changes.cx = /*cx*/ ctx[0];
@@ -4173,7 +4175,7 @@ var app = (function () {
     				attr_dev(g, "class", g_class_value);
     			}
 
-    			if (!current || dirty & /*$selectedCircleId, index, $presidents*/ 1664 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[9]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[9]}` === "circle-" + /*index*/ ctx[7] || /*$presidents*/ ctx[10][/*$selectedCircleId*/ ctx[9]]?.otherPresidents.includes(/*$presidents*/ ctx[10][/*index*/ ctx[7]].name)
+    			if (!current || dirty & /*$selectedCircleId, index, $presidents*/ 3200 && g_opacity_value !== (g_opacity_value = `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-null" || `circle-${/*$selectedCircleId*/ ctx[10]}` === "circle-" + /*index*/ ctx[7] || /*$presidents*/ ctx[11][/*$selectedCircleId*/ ctx[10]]?.otherPresidents.includes(/*$presidents*/ ctx[11][/*index*/ ctx[7]].name)
     			? 1
     			: 0.4)) {
     				attr_dev(g, "opacity", g_opacity_value);
@@ -4215,9 +4217,9 @@ var app = (function () {
     	let $selectedCircleId;
     	let $presidents;
     	validate_store(selectedCircleId, 'selectedCircleId');
-    	component_subscribe($$self, selectedCircleId, $$value => $$invalidate(9, $selectedCircleId = $$value));
+    	component_subscribe($$self, selectedCircleId, $$value => $$invalidate(10, $selectedCircleId = $$value));
     	validate_store(presidents, 'presidents');
-    	component_subscribe($$self, presidents, $$value => $$invalidate(10, $presidents = $$value));
+    	component_subscribe($$self, presidents, $$value => $$invalidate(11, $presidents = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('OnePresidentUnit', slots, []);
     	let { cx } = $$props;
@@ -4229,6 +4231,7 @@ var app = (function () {
     	let { fill = "white" } = $$props;
     	let { index } = $$props;
     	let { hoveredBirthIndex = null } = $$props;
+    	let { hoveredDeathIndex = null } = $$props;
 
     	$$self.$$.on_mount.push(function () {
     		if (cx === undefined && !('cx' in $$props || $$self.$$.bound[$$self.$$.props['cx']])) {
@@ -4261,7 +4264,8 @@ var app = (function () {
     		'strokeWidth',
     		'fill',
     		'index',
-    		'hoveredBirthIndex'
+    		'hoveredBirthIndex',
+    		'hoveredDeathIndex'
     	];
 
     	Object.keys($$props).forEach(key => {
@@ -4278,6 +4282,7 @@ var app = (function () {
     		if ('fill' in $$props) $$invalidate(6, fill = $$props.fill);
     		if ('index' in $$props) $$invalidate(7, index = $$props.index);
     		if ('hoveredBirthIndex' in $$props) $$invalidate(8, hoveredBirthIndex = $$props.hoveredBirthIndex);
+    		if ('hoveredDeathIndex' in $$props) $$invalidate(9, hoveredDeathIndex = $$props.hoveredDeathIndex);
     	};
 
     	$$self.$capture_state = () => ({
@@ -4295,6 +4300,7 @@ var app = (function () {
     		fill,
     		index,
     		hoveredBirthIndex,
+    		hoveredDeathIndex,
     		$selectedCircleId,
     		$presidents
     	});
@@ -4309,6 +4315,7 @@ var app = (function () {
     		if ('fill' in $$props) $$invalidate(6, fill = $$props.fill);
     		if ('index' in $$props) $$invalidate(7, index = $$props.index);
     		if ('hoveredBirthIndex' in $$props) $$invalidate(8, hoveredBirthIndex = $$props.hoveredBirthIndex);
+    		if ('hoveredDeathIndex' in $$props) $$invalidate(9, hoveredDeathIndex = $$props.hoveredDeathIndex);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -4325,6 +4332,7 @@ var app = (function () {
     		fill,
     		index,
     		hoveredBirthIndex,
+    		hoveredDeathIndex,
     		$selectedCircleId,
     		$presidents
     	];
@@ -4343,7 +4351,8 @@ var app = (function () {
     			strokeWidth: 5,
     			fill: 6,
     			index: 7,
-    			hoveredBirthIndex: 8
+    			hoveredBirthIndex: 8,
+    			hoveredDeathIndex: 9
     		});
 
     		dispatch_dev("SvelteRegisterComponent", {
@@ -4425,6 +4434,14 @@ var app = (function () {
     	set hoveredBirthIndex(value) {
     		throw new Error("<OnePresidentUnit>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get hoveredDeathIndex() {
+    		throw new Error("<OnePresidentUnit>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set hoveredDeathIndex(value) {
+    		throw new Error("<OnePresidentUnit>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src/components/Svg.svelte generated by Svelte v3.59.2 */
@@ -4439,7 +4456,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (103:4) {#each positions as position, index}
+    // (102:4) {#each positions as position, index}
     function create_each_block$1(ctx) {
     	let onepresidentunit;
     	let current;
@@ -4496,7 +4513,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(103:4) {#each positions as position, index}",
+    		source: "(102:4) {#each positions as position, index}",
     		ctx
     	});
 
@@ -4537,12 +4554,12 @@ var app = (function () {
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "3px");
     			attr_dev(rect, "fill", "none");
-    			add_location(rect, file$3, 94, 4, 2340);
+    			add_location(rect, file$3, 93, 4, 2312);
     			attr_dev(svg, "width", /*$svgWidth*/ ctx[1]);
     			attr_dev(svg, "height", /*$svgHeight*/ ctx[3]);
-    			add_location(svg, file$3, 88, 2, 2219);
+    			add_location(svg, file$3, 87, 2, 2191);
     			attr_dev(div, "id", "main-svg-div");
-    			add_location(div, file$3, 87, 0, 2193);
+    			add_location(div, file$3, 86, 0, 2165);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4652,7 +4669,6 @@ var app = (function () {
     }
 
     function handlePresidentClick(index) {
-    	popupVisible.set(true);
     	console.log("hello");
     }
 
