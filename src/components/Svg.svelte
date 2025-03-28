@@ -80,7 +80,6 @@
   }
 
   function handlePresidentClick(index) {
-    popupVisible.set(true);
     console.log("hello");
   }
 </script>

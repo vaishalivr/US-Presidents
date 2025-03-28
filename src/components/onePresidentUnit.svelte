@@ -14,7 +14,7 @@
   export let fill = "white";
   export let index;
   export let hoveredBirthIndex = null;
-  //export let hoveredDeathIndex = null;
+  export let hoveredDeathIndex = null;
 </script>
 
 <g
@@ -46,6 +46,7 @@
     {strokeWidth}
     {index}
     {hoveredBirthIndex}
+    {hoveredDeathIndex}
   />
 
   <OnePresidentUnitName {cx} {cy} {outerRadius} {index} />
