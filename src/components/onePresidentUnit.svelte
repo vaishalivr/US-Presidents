@@ -1,5 +1,6 @@
 <script>
   import OnePresidentUnitMainCircle from "./OnePresidentUnitMainCircle.svelte";
+  import OnePresidentUnitName from "./OnePresidentUnitName.svelte";
   import { presidents } from "../data/presidentsData";
   import { selectedCircleId } from "../store.js";
 
@@ -128,15 +129,7 @@
   {/if}
 
   <!-- presidents name -->
-  <text
-    x={cx}
-    y={cy + outerRadius * 1.5 - 20}
-    text-anchor="middle"
-    font-size="16px"
-    fill="black"
-  >
-    {$presidents[index].name}
-  </text>
+  <OnePresidentUnitName {cx} {cy} {outerRadius} {index} />
 
   <!-- presidents birth year -->
   <text

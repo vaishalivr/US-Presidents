@@ -85,28 +85,30 @@
   }
 </script>
 
-<svg
-  width={$svgWidth}
-  height={$svgHeight}
-  on:click={handleSvgClick}
-  on:keydown={handleSvgClick}
->
-  <rect
+<div id="main-svg-div">
+  <svg
     width={$svgWidth}
     height={$svgHeight}
-    stroke="black"
-    stroke-width="3px"
-    fill="none"
-  ></rect>
+    on:click={handleSvgClick}
+    on:keydown={handleSvgClick}
+  >
+    <rect
+      width={$svgWidth}
+      height={$svgHeight}
+      stroke="black"
+      stroke-width="3px"
+      fill="none"
+    ></rect>
 
-  {#each positions as position, index}
-    <OnePresidentUnit
-      cx={position.cx}
-      cy={position.cy}
-      innerRadius={$innerRadius}
-      outerRadius={$outerRadius}
-      {index}
-      on:presidentClick={() => handlePresidentClick(index)}
-    />
-  {/each}
-</svg>
+    {#each positions as position, index}
+      <OnePresidentUnit
+        cx={position.cx}
+        cy={position.cy}
+        innerRadius={$innerRadius}
+        outerRadius={$outerRadius}
+        {index}
+        on:presidentClick={() => handlePresidentClick(index)}
+      />
+    {/each}
+  </svg>
+</div>
