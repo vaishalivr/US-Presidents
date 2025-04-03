@@ -2143,7 +2143,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (43:0) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
+    // (46:0) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}
     function create_each_block$3(ctx) {
     	let path;
     	let path_d_value;
@@ -2179,7 +2179,7 @@ var app = (function () {
     			attr_dev(path, "stroke", "black");
     			attr_dev(path, "stroke-width", "2px");
     			attr_dev(path, "class", "svelte-6b96vr");
-    			add_location(path, file$7, 43, 2, 1246);
+    			add_location(path, file$7, 46, 2, 1351);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, path, anchor);
@@ -2221,7 +2221,7 @@ var app = (function () {
     		block,
     		id: create_each_block$3.name,
     		type: "each",
-    		source: "(43:0) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}",
+    		source: "(46:0) {#each Array($presidents[index].policies.length).fill(0) as _, arcIndex}",
     		ctx
     	});
 
@@ -2264,7 +2264,7 @@ var app = (function () {
     			attr_dev(circle, "stroke", /*stroke*/ ctx[4]);
     			attr_dev(circle, "stroke-width", /*strokeWidth*/ ctx[5]);
     			attr_dev(circle, "fill", /*fill*/ ctx[6]);
-    			add_location(circle, file$7, 86, 0, 2507);
+    			add_location(circle, file$7, 88, 0, 2585);
     			attr_dev(image, "x", image_x_value = /*cx*/ ctx[0] - /*innerRadius*/ ctx[2]);
     			attr_dev(image, "y", image_y_value = /*cy*/ ctx[1] - /*innerRadius*/ ctx[2]);
     			attr_dev(image, "width", image_width_value = /*innerRadius*/ ctx[2] * 2);
@@ -2275,7 +2275,7 @@ var app = (function () {
     			attr_dev(image, "tabindex", "0");
     			attr_dev(image, "role", "button");
     			attr_dev(image, "class", "svelte-6b96vr");
-    			add_location(image, file$7, 88, 0, 2588);
+    			add_location(image, file$7, 90, 0, 2666);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2302,7 +2302,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*calculateArcPath, cx, cy, outerRadius, $presidents, index, isActive, hoveredArc, document, console, $selectedCircleId*/ 6027) {
+    			if (dirty & /*calculateArcPath, cx, cy, outerRadius, $presidents, index, isActive, hoveredArc, document, $selectedCircleId*/ 6027) {
     				each_value = Array(/*$presidents*/ ctx[10][/*index*/ ctx[7]].policies.length).fill(0);
     				validate_each_argument(each_value);
     				let i;
@@ -2433,9 +2433,16 @@ var app = (function () {
     	let hoveredArc = null;
 
     	function handleImageClick(event) {
-    		event.stopPropagation();
+    		event.stopPropagation(); // otherwise svg click is registered
     		const id = event.target.dataset.index;
-    		selectedCircleId.set(id);
+    		selectedCircleId.set(null);
+
+    		setTimeout(
+    			() => {
+    				selectedCircleId.set(id);
+    			},
+    			0
+    		);
     	}
 
     	function isActive(index) {
@@ -2500,7 +2507,6 @@ var app = (function () {
 
     		const div = document.getElementById(`president-${index}-Quote`);
     		div.innerHTML = $presidents[index].policies[arcIndex];
-    		console.log("here");
     	};
 
     	const mouseout_handler = () => {
