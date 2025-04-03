@@ -26,9 +26,12 @@
   }
 
   function handleImageClick(event) {
-    event.stopPropagation();
+    event.stopPropagation(); // otherwise svg click is registered
     const id = event.target.dataset.index;
-    selectedCircleId.set(id);
+    selectedCircleId.set(null);
+    setTimeout(() => {
+      selectedCircleId.set(id);
+    }, 0);
   }
 
   function handleImageKeydown(event) {
@@ -61,7 +64,6 @@
       hoveredArc = `${index}-${arcIndex}`;
       const div = document.getElementById(`president-${index}-Quote`);
       div.innerHTML = $presidents[index].policies[arcIndex];
-      console.log("here");
     }}
     on:mouseout={() => {
       hoveredArc = null;
