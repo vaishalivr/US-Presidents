@@ -39,6 +39,9 @@
   };
 </script>
 
+<div class="desktop-legend-intro-text">Desktop legend intro text</div>
+<div class="mobile-legend-intro-text">Mobile legend intro text</div>
+
 <div class="desktop-sticky-div">
   <StickySvgWrapper
     presidents={$presidents}
@@ -68,12 +71,35 @@
 </div>
 
 <style>
+  :root {
+    --mobile-sticky-legend-width: 2rem;
+    --desktop-sticky-legend-height: 6rem;
+  }
+
+  .desktop-legend-intro-text {
+    position: fixed;
+    z-index: 100;
+    text-align: left;
+    bottom: var(--desktop-sticky-legend-height);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .mobile-legend-intro-text {
+    position: fixed;
+    top: 0;
+    right: var(--mobile-sticky-legend-width);
+    z-index: 100;
+    display: block;
+    display: none;
+  }
+
   .desktop-sticky-div {
     position: sticky;
     bottom: 0;
     z-index: 10;
     border: 1px solid black;
-    height: 6rem;
+    height: var(--desktop-sticky-legend-height);
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -86,7 +112,7 @@
     height: 100vh;
     border: 1px solid black;
     z-index: 10;
-    width: 2rem;
+    width: var(--mobile-sticky-legend-width);
     display: none;
   }
 
@@ -96,6 +122,14 @@
     }
 
     .mobile-sticky-div {
+      display: block;
+    }
+
+    .desktop-legend-intro-text {
+      display: none;
+    }
+
+    .mobile-legend-intro-text {
       display: block;
     }
   }
