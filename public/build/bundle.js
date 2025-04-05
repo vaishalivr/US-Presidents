@@ -5429,9 +5429,13 @@ var app = (function () {
 
     function create_fragment$1(ctx) {
     	let div0;
-    	let stickysvgwrapper0;
-    	let t;
+    	let t1;
     	let div1;
+    	let t3;
+    	let div2;
+    	let stickysvgwrapper0;
+    	let t4;
+    	let div3;
     	let stickysvgwrapper1;
     	let current;
 
@@ -5468,24 +5472,38 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			create_component(stickysvgwrapper0.$$.fragment);
-    			t = space();
+    			div0.textContent = "Desktop legend intro text";
+    			t1 = space();
     			div1 = element("div");
+    			div1.textContent = "Mobile legend intro text";
+    			t3 = space();
+    			div2 = element("div");
+    			create_component(stickysvgwrapper0.$$.fragment);
+    			t4 = space();
+    			div3 = element("div");
     			create_component(stickysvgwrapper1.$$.fragment);
-    			attr_dev(div0, "class", "desktop-sticky-div svelte-176c2nc");
+    			attr_dev(div0, "class", "desktop-legend-intro-text svelte-1wi9dpb");
     			add_location(div0, file$1, 41, 0, 1058);
-    			attr_dev(div1, "class", "mobile-sticky-div svelte-176c2nc");
-    			add_location(div1, file$1, 55, 0, 1370);
+    			attr_dev(div1, "class", "mobile-legend-intro-text svelte-1wi9dpb");
+    			add_location(div1, file$1, 42, 0, 1129);
+    			attr_dev(div2, "class", "desktop-sticky-div svelte-1wi9dpb");
+    			add_location(div2, file$1, 44, 0, 1199);
+    			attr_dev(div3, "class", "mobile-sticky-div svelte-1wi9dpb");
+    			add_location(div3, file$1, 58, 0, 1511);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
-    			mount_component(stickysvgwrapper0, div0, null);
-    			insert_dev(target, t, anchor);
+    			insert_dev(target, t1, anchor);
     			insert_dev(target, div1, anchor);
-    			mount_component(stickysvgwrapper1, div1, null);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, div2, anchor);
+    			mount_component(stickysvgwrapper0, div2, null);
+    			insert_dev(target, t4, anchor);
+    			insert_dev(target, div3, anchor);
+    			mount_component(stickysvgwrapper1, div3, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -5513,9 +5531,13 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
-    			destroy_component(stickysvgwrapper0);
-    			if (detaching) detach_dev(t);
+    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(div2);
+    			destroy_component(stickysvgwrapper0);
+    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(div3);
     			destroy_component(stickysvgwrapper1);
     		}
     	};
