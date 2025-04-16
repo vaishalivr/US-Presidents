@@ -23,6 +23,9 @@
     window.addEventListener("resize", updateDimensions);
   });
 
+  const handleCircleHover = () => {
+    console.log("here");
+  };
   const handleCircleClick = (event) => {
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
@@ -52,6 +55,7 @@
     concentricRadius={desktopConcentricRadius}
     isMobile={false}
     {getInitials}
+    {handleCircleHover}
     {handleCircleClick}
   />
 </div>
@@ -66,6 +70,7 @@
     concentricRadius={mobileConcentricRadius}
     isMobile={true}
     {getInitials}
+    {handleCircleHover}
     {handleCircleClick}
   />
 </div>
