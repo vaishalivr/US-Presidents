@@ -4869,12 +4869,12 @@ var app = (function () {
     			circle = svg_element("circle");
 
     			attr_dev(circle, "cx", circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(circle, "cy", circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*concentricRadius*/ ctx[5]) + /*concentricRadius*/ ctx[5]
-    			: 18);
+    			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(circle, "r", /*concentricRadius*/ ctx[5]);
     			attr_dev(circle, "fill", "white");
@@ -4887,7 +4887,7 @@ var app = (function () {
 
     			attr_dev(circle, "class", `circle-${/*index*/ ctx[13]}`);
     			attr_dev(circle, "data-index", /*index*/ ctx[13]);
-    			add_location(circle, file$2, 59, 8, 1477);
+    			add_location(circle, file$2, 59, 8, 1592);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -4915,14 +4915,14 @@ var app = (function () {
     			ctx = new_ctx;
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cx_value !== (circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
-    			if (dirty & /*isMobile, totalDots, svgSize, concentricRadius*/ 108 && circle_cy_value !== (circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*concentricRadius*/ ctx[5]) + /*concentricRadius*/ ctx[5]
-    			: 18)) {
+    			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cy_value !== (circle_cy_value = /*isMobile*/ ctx[6]
+    			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
 
@@ -4981,26 +4981,26 @@ var app = (function () {
     			if (if_block) if_block.c();
 
     			attr_dev(text_1, "x", text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(text_1, "y", text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
-    			: 18);
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(text_1, "text-anchor", "middle");
-    			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "6px" : "9px");
+    			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "9px" : "10px");
     			attr_dev(text_1, "fill", "black");
     			attr_dev(text_1, "dy", text_1_dy_value = /*isMobile*/ ctx[6] ? undefined : "4");
     			add_location(text_1, file$2, 24, 4, 472);
 
     			attr_dev(circle, "cx", circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(circle, "cy", circle_cy_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18);
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(circle, "r", /*radius*/ ctx[4]);
     			attr_dev(circle, "fill", "white");
@@ -5013,8 +5013,8 @@ var app = (function () {
 
     			attr_dev(circle, "class", `circle-${/*index*/ ctx[13]}`);
     			attr_dev(circle, "data-index", /*index*/ ctx[13]);
-    			add_location(circle, file$2, 40, 6, 882);
-    			add_location(g, file$2, 39, 4, 872);
+    			add_location(circle, file$2, 40, 6, 940);
+    			add_location(g, file$2, 39, 4, 930);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -5047,18 +5047,18 @@ var app = (function () {
     			if (dirty & /*getInitials, presidents*/ 129 && t_value !== (t_value = /*getInitials*/ ctx[7](/*president*/ ctx[11].name) + "")) set_data_dev(t, t_value);
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_x_value !== (text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_y_value !== (text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
-    			: 18)) {
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
 
-    			if (dirty & /*isMobile*/ 64 && text_1_font_size_value !== (text_1_font_size_value = /*isMobile*/ ctx[6] ? "6px" : "9px")) {
+    			if (dirty & /*isMobile*/ 64 && text_1_font_size_value !== (text_1_font_size_value = /*isMobile*/ ctx[6] ? "9px" : "10px")) {
     				attr_dev(text_1, "font-size", text_1_font_size_value);
     			}
 
@@ -5067,14 +5067,14 @@ var app = (function () {
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cx_value !== (circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10
+    			? 10 + (/*index*/ ctx[13] % 2 !== 0 ? 26 : 6)
     			: /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cy_value !== (circle_cy_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[13] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18)) {
+    			: 18 + (/*index*/ ctx[13] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
 
@@ -5482,14 +5482,14 @@ var app = (function () {
     			t4 = space();
     			div3 = element("div");
     			create_component(stickysvgwrapper1.$$.fragment);
-    			attr_dev(div0, "class", "desktop-legend-intro-text svelte-1wi9dpb");
-    			add_location(div0, file$1, 41, 0, 1058);
-    			attr_dev(div1, "class", "mobile-legend-intro-text svelte-1wi9dpb");
-    			add_location(div1, file$1, 42, 0, 1129);
-    			attr_dev(div2, "class", "desktop-sticky-div svelte-1wi9dpb");
-    			add_location(div2, file$1, 44, 0, 1199);
-    			attr_dev(div3, "class", "mobile-sticky-div svelte-1wi9dpb");
-    			add_location(div3, file$1, 58, 0, 1511);
+    			attr_dev(div0, "class", "desktop-legend-intro-text svelte-1wtp109");
+    			add_location(div0, file$1, 41, 0, 1060);
+    			attr_dev(div1, "class", "mobile-legend-intro-text svelte-1wtp109");
+    			add_location(div1, file$1, 42, 0, 1131);
+    			attr_dev(div2, "class", "desktop-sticky-div svelte-1wtp109");
+    			add_location(div2, file$1, 44, 0, 1201);
+    			attr_dev(div3, "class", "mobile-sticky-div svelte-1wtp109");
+    			add_location(div3, file$1, 58, 0, 1513);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5553,10 +5553,10 @@ var app = (function () {
     	return block;
     }
 
-    const desktopRadius = 8;
-    const desktopConcentricRadius = 10;
-    const mobileRadius = 5;
-    const mobileConcentricRadius = 8;
+    const desktopRadius = 10;
+    const desktopConcentricRadius = 15;
+    const mobileRadius = 8;
+    const mobileConcentricRadius = 12;
 
     function instance$1($$self, $$props, $$invalidate) {
     	let $presidents;

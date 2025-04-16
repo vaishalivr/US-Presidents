@@ -8,10 +8,10 @@
   let svgWidth = 0;
   let svgHeight = 0;
 
-  const desktopRadius = 8;
-  const desktopConcentricRadius = 10;
-  const mobileRadius = 5;
-  const mobileConcentricRadius = 8;
+  const desktopRadius = 10;
+  const desktopConcentricRadius = 15;
+  const mobileRadius = 8;
+  const mobileConcentricRadius = 12;
 
   const updateDimensions = () => {
     svgWidth = window.innerWidth;
@@ -72,7 +72,7 @@
 
 <style>
   :root {
-    --mobile-sticky-legend-width: 2rem;
+    --mobile-sticky-legend-width: 4rem;
     --desktop-sticky-legend-height: 6rem;
   }
 

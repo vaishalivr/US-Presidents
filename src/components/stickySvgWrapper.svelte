@@ -24,13 +24,13 @@
   {#each presidents as president, index}
     <text
       x={isMobile
-        ? 10
+        ? 10 + (index % 2 !== 0 ? 26 : 6)
         : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
       y={isMobile
         ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius + 4
-        : 18}
+        : 18 + (index % 2 !== 0 ? 6 : 0)}
       text-anchor="middle"
-      font-size={isMobile ? "6px" : "9px"}
+      font-size={isMobile ? "9px" : "10px"}
       fill="black"
       dy={isMobile ? undefined : "4"}
     >
@@ -40,11 +40,11 @@
     <g>
       <circle
         cx={isMobile
-          ? 10
+          ? 10 + (index % 2 !== 0 ? 26 : 6)
           : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
         cy={isMobile
           ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
-          : 18}
+          : 18 + (index % 2 !== 0 ? 6 : 0)}
         r={radius}
         fill="white"
         opacity="0.3"
@@ -59,12 +59,11 @@
       {#if president["terms"] === 2}
         <circle
           cx={isMobile
-            ? 10
+            ? 10 + (index % 2 !== 0 ? 26 : 6)
             : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
           cy={isMobile
-            ? (index / (totalDots - 1)) * (svgSize - 2 * concentricRadius) +
-              concentricRadius
-            : 18}
+            ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
+            : 18 + (index % 2 !== 0 ? 6 : 0)}
           r={concentricRadius}
           fill="white"
           opacity="0.3"
