@@ -883,6 +883,7 @@ var app = (function () {
         children: "None",
         occupationBeforePresidency: "Lawyer and Military Leader",
         quote: "One man with courage makes a majority.",
+        image: "images/AndrewJackson.png",
       },
       {
         name: "Martin Van Buren",
@@ -911,6 +912,7 @@ var app = (function () {
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "It is easier to do a job right than to explain why you didn’t.",
+        image: "images/MartinVanBuren.png",
       },
       {
         name: "William Henry Harrison",
@@ -938,6 +940,7 @@ var app = (function () {
         quote:
           "The liberties of a people depend on their own constant attention to its preservation.",
         notes: "Died only after 32 days in office.",
+        image: "images/WilliamHenryHarrison.png",
       },
       {
         name: "John Tyler",
@@ -970,6 +973,7 @@ var app = (function () {
         quote:
           "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
         note: "John Tyler, often called “His Accidency”, had a presidency marked by clashes with his own party, the Whigs, and a focus on expansionist policies. ",
+        image: "images/JohnTyler.png",
       },
       {
         name: "James K. Polk",
@@ -1001,6 +1005,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "No president who performs his duties faithfully and conscientiously can have any leisure.",
+        image: "images/JamesKPolk.png",
       },
       {
         name: "Zachary Taylor",
@@ -1030,6 +1035,7 @@ var app = (function () {
         occupationBeforePresidency: "Military Officer",
         quote:
           "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
+        image: "images/ZacharyTaylor.png",
       },
       {
         name: "Millard Fillmore",
@@ -1059,6 +1065,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "The nourishment of a nation depends on the health of its democracy.",
+        image: "images/MillardFillmore.png",
       },
       {
         name: "Franklin Pierce",
@@ -1088,6 +1095,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer and Politician",
         quote:
           "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
+        image: "images/FranklinPierce.png",
       },
       {
         name: "James Buchanan",
@@ -1116,6 +1124,7 @@ var app = (function () {
         children: "None",
         occupationBeforePresidency: "Diplomat and Lawyer",
         quote: "The ballot box is the surest arbiter of disputes among free men.",
+        image: "images/JamesBuchanan.png",
       },
       {
         name: "Abraham Lincoln",
@@ -1147,6 +1156,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "Government of the people, by the people, for the people, shall not perish from the Earth.",
+        image: "images/AbrahamLincoln.png",
       },
       {
         name: "Andrew Johnson",
@@ -1177,6 +1187,7 @@ var app = (function () {
         children: "5",
         occupationBeforePresidency: "Tailor and Politician",
         quote: "Honest conviction is my courage; the Constitution is my guide.",
+        image: "images/AndrewJohnson.png",
       },
       {
         name: "Ulysses S. Grant",
@@ -1210,6 +1221,7 @@ var app = (function () {
         children: "4",
         occupationBeforePresidency: "Military Leader",
         quote: "The friend in my adversity I shall always cherish most.",
+        image: "images/UlyssesGrant.png",
       },
       {
         name: "Rutherford B. Hayes",
@@ -1238,6 +1250,7 @@ var app = (function () {
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "He serves his party best who serves the country best.",
+        image: "images/RutherfordHayes.png",
       },
       {
         name: "James A. Garfield",
@@ -1266,6 +1279,7 @@ var app = (function () {
         children: "7",
         occupationBeforePresidency: "Military Leader and Politician",
         quote: "Ideas control the world.",
+        image: "images/JamesGarfield.png",
       },
       {
         name: "Chester A. Arthur",
@@ -1295,6 +1309,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "Men may die, but the fabric of our free institutions remains unshaken.",
+        image: "images/ChesterArthur.png",
       },
       {
         name: "Grover Cleveland",
@@ -1333,6 +1348,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer and Politician",
         quote:
           "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
+        image: "images/GroverCleveland.png",
       },
       {
         name: "Benjamin Harrison",
@@ -1361,6 +1377,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "Great lives never go out; they go on.",
+        image: "images/BenjaminHarrison.png",
       },
       {
         name: "William McKinley",
@@ -1394,6 +1411,7 @@ var app = (function () {
         occupationBeforePresidency: "Military Officer and Politician",
         quote:
           "The mission of the United States is one of benevolent assimilation.",
+        image: "images/WilliamMcKinley.png",
       },
       {
         name: "Theodore Roosevelt",
@@ -1428,6 +1446,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Military Leader and Politician",
         quote: "Do what you can, with what you have, where you are.",
+        image: "images/TheodoreRoosevelt.png",
       },
       {
         name: "William Howard Taft",
@@ -1460,6 +1479,7 @@ var app = (function () {
         children: "3",
         occupationBeforePresidency: "Judge and Politician",
         quote: "Presidents come and go, but the Supreme Court goes on forever.",
+        image: "images/WilliamHowardTaft.png",
       },
       {
         name: "Woodrow Wilson",
@@ -1498,6 +1518,7 @@ var app = (function () {
         children: "3",
         occupationBeforePresidency: "Politician and Academic",
         quote: "The history of liberty is a history of resistance.",
+        image: "images/WoodrowWilson.png",
       },
       {
         name: "Warren G. Harding",
@@ -1528,6 +1549,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Newspaper Publisher",
         quote: "America’s present need is not heroics but healing.",
+        image: "images/WarrenHarding.png",
       },
       {
         name: "Calvin Coolidge",
@@ -1558,6 +1580,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "The business of America is business.",
+        image: "images/CalvinCoolidge.png",
       },
       {
         name: "Herbert Hoover",
@@ -1588,6 +1611,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Engineer and Politician",
         quote: "Blessed are the young, for they shall inherit the national debt.",
+        image: "images/HerbertHoover.png",
       },
       {
         name: "Franklin D. Roosevelt",
@@ -1626,6 +1650,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "The only thing we have to fear is fear itself.",
+        image: "images/FranklinRoosevelt.png",
       },
       {
         name: "Harry S. Truman",
@@ -1659,6 +1684,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Politician and Farmer",
         quote: "The buck stops here.",
+        image: "images/HarryTruman.png",
       },
       {
         name: "Dwight D. Eisenhower",
@@ -1694,6 +1720,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Military Leader",
         quote: "Plans are worthless, but planning is everything.",
+        image: "images/DwightEisenhower.png",
       },
       {
         name: "John F. Kennedy",
@@ -1727,6 +1754,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Author",
         quote:
           "Ask not what your country can do for you—ask what you can do for your country.",
+        image: "images/JohnFKennedy.png",
       },
       {
         name: "Lyndon B. Johnson",
@@ -1762,6 +1790,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Teacher",
         quote:
           "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
+        image: "images/LyndonBJohnson.png",
       },
       {
         name: "Richard Nixon",
@@ -1797,6 +1826,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "The greatest honor history can bestow is the title of peacemaker.",
+        image: "images/RichardNixon.png",
       },
       {
         name: "Gerald Ford",
@@ -1830,6 +1860,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Lawyer",
         quote:
           "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
+        image: "images/GeraldFord.png",
       },
       {
         name: "Jimmy Carter",
@@ -1902,6 +1933,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Actor and Politician",
         quote: "Freedom is never more than one generation away from extinction.",
+        image: "images/RonaldReagan.png",
       },
       {
         name: "George H. W. Bush",
@@ -1936,6 +1968,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Politician and Businessman",
         quote: "We are not the sum of our possessions.",
+        image: "images/GeorgeHWBush.png",
       },
       {
         name: "Bill Clinton",
@@ -1973,6 +2006,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Lawyer",
         quote:
           "There is nothing wrong with America that cannot be cured by what is right with America.",
+        image: "images/BillClinton.png",
       },
       {
         name: "George W. Bush",
@@ -2009,6 +2043,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Governor",
         quote: "We will not tire, we will not falter, and we will not fail.",
+        image: "images/GeorgeWBush.png",
       },
       {
         name: "Barack Obama",
@@ -2046,6 +2081,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "Yes we can.",
+        image: "images/BarackObama.png",
       },
       {
         name: "Donald Trump",
