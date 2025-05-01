@@ -883,6 +883,7 @@ var app = (function () {
         children: "None",
         occupationBeforePresidency: "Lawyer and Military Leader",
         quote: "One man with courage makes a majority.",
+        image: "images/AndrewJackson.png",
       },
       {
         name: "Martin Van Buren",
@@ -911,6 +912,7 @@ var app = (function () {
         children: "5",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "It is easier to do a job right than to explain why you didn’t.",
+        image: "images/MartinVanBuren.png",
       },
       {
         name: "William Henry Harrison",
@@ -938,6 +940,7 @@ var app = (function () {
         quote:
           "The liberties of a people depend on their own constant attention to its preservation.",
         notes: "Died only after 32 days in office.",
+        image: "images/WilliamHenryHarrison.png",
       },
       {
         name: "John Tyler",
@@ -970,6 +973,7 @@ var app = (function () {
         quote:
           "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
         note: "John Tyler, often called “His Accidency”, had a presidency marked by clashes with his own party, the Whigs, and a focus on expansionist policies. ",
+        image: "images/JohnTyler.png",
       },
       {
         name: "James K. Polk",
@@ -1001,6 +1005,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "No president who performs his duties faithfully and conscientiously can have any leisure.",
+        image: "images/JamesKPolk.png",
       },
       {
         name: "Zachary Taylor",
@@ -1030,6 +1035,7 @@ var app = (function () {
         occupationBeforePresidency: "Military Officer",
         quote:
           "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
+        image: "images/ZacharyTaylor.png",
       },
       {
         name: "Millard Fillmore",
@@ -1059,6 +1065,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "The nourishment of a nation depends on the health of its democracy.",
+        image: "images/MillardFillmore.png",
       },
       {
         name: "Franklin Pierce",
@@ -1088,6 +1095,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer and Politician",
         quote:
           "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
+        image: "images/FranklinPierce.png",
       },
       {
         name: "James Buchanan",
@@ -1116,6 +1124,7 @@ var app = (function () {
         children: "None",
         occupationBeforePresidency: "Diplomat and Lawyer",
         quote: "The ballot box is the surest arbiter of disputes among free men.",
+        image: "images/JamesBuchanan.png",
       },
       {
         name: "Abraham Lincoln",
@@ -1147,6 +1156,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "Government of the people, by the people, for the people, shall not perish from the Earth.",
+        image: "images/AbrahamLincoln.png",
       },
       {
         name: "Andrew Johnson",
@@ -1177,6 +1187,7 @@ var app = (function () {
         children: "5",
         occupationBeforePresidency: "Tailor and Politician",
         quote: "Honest conviction is my courage; the Constitution is my guide.",
+        image: "images/AndrewJohnson.png",
       },
       {
         name: "Ulysses S. Grant",
@@ -1210,6 +1221,7 @@ var app = (function () {
         children: "4",
         occupationBeforePresidency: "Military Leader",
         quote: "The friend in my adversity I shall always cherish most.",
+        image: "images/UlyssesGrant.png",
       },
       {
         name: "Rutherford B. Hayes",
@@ -1238,6 +1250,7 @@ var app = (function () {
         children: "8",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "He serves his party best who serves the country best.",
+        image: "images/RutherfordHayes.png",
       },
       {
         name: "James A. Garfield",
@@ -1266,6 +1279,7 @@ var app = (function () {
         children: "7",
         occupationBeforePresidency: "Military Leader and Politician",
         quote: "Ideas control the world.",
+        image: "images/JamesGarfield.png",
       },
       {
         name: "Chester A. Arthur",
@@ -1295,6 +1309,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer",
         quote:
           "Men may die, but the fabric of our free institutions remains unshaken.",
+        image: "images/ChesterArthur.png",
       },
       {
         name: "Grover Cleveland",
@@ -1333,6 +1348,7 @@ var app = (function () {
         occupationBeforePresidency: "Lawyer and Politician",
         quote:
           "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
+        image: "images/GroverCleveland.png",
       },
       {
         name: "Benjamin Harrison",
@@ -1361,6 +1377,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "Great lives never go out; they go on.",
+        image: "images/BenjaminHarrison.png",
       },
       {
         name: "William McKinley",
@@ -1394,6 +1411,7 @@ var app = (function () {
         occupationBeforePresidency: "Military Officer and Politician",
         quote:
           "The mission of the United States is one of benevolent assimilation.",
+        image: "images/WilliamMcKinley.png",
       },
       {
         name: "Theodore Roosevelt",
@@ -1428,6 +1446,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Military Leader and Politician",
         quote: "Do what you can, with what you have, where you are.",
+        image: "images/TheodoreRoosevelt.png",
       },
       {
         name: "William Howard Taft",
@@ -1460,6 +1479,7 @@ var app = (function () {
         children: "3",
         occupationBeforePresidency: "Judge and Politician",
         quote: "Presidents come and go, but the Supreme Court goes on forever.",
+        image: "images/WilliamHowardTaft.png",
       },
       {
         name: "Woodrow Wilson",
@@ -1498,6 +1518,7 @@ var app = (function () {
         children: "3",
         occupationBeforePresidency: "Politician and Academic",
         quote: "The history of liberty is a history of resistance.",
+        image: "images/WoodrowWilson.png",
       },
       {
         name: "Warren G. Harding",
@@ -1528,6 +1549,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Newspaper Publisher",
         quote: "America’s present need is not heroics but healing.",
+        image: "images/WarrenHarding.png",
       },
       {
         name: "Calvin Coolidge",
@@ -1558,6 +1580,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Lawyer and Politician",
         quote: "The business of America is business.",
+        image: "images/CalvinCoolidge.png",
       },
       {
         name: "Herbert Hoover",
@@ -1588,6 +1611,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Engineer and Politician",
         quote: "Blessed are the young, for they shall inherit the national debt.",
+        image: "images/HerbertHoover.png",
       },
       {
         name: "Franklin D. Roosevelt",
@@ -1626,6 +1650,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "The only thing we have to fear is fear itself.",
+        image: "images/FranklinRoosevelt.png",
       },
       {
         name: "Harry S. Truman",
@@ -1659,6 +1684,7 @@ var app = (function () {
         children: "1",
         occupationBeforePresidency: "Politician and Farmer",
         quote: "The buck stops here.",
+        image: "images/HarryTruman.png",
       },
       {
         name: "Dwight D. Eisenhower",
@@ -1694,6 +1720,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Military Leader",
         quote: "Plans are worthless, but planning is everything.",
+        image: "images/DwightEisenhower.png",
       },
       {
         name: "John F. Kennedy",
@@ -1727,6 +1754,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Author",
         quote:
           "Ask not what your country can do for you—ask what you can do for your country.",
+        image: "images/JohnFKennedy.png",
       },
       {
         name: "Lyndon B. Johnson",
@@ -1762,6 +1790,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Teacher",
         quote:
           "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
+        image: "images/LyndonBJohnson.png",
       },
       {
         name: "Richard Nixon",
@@ -1797,6 +1826,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "The greatest honor history can bestow is the title of peacemaker.",
+        image: "images/RichardNixon.png",
       },
       {
         name: "Gerald Ford",
@@ -1830,6 +1860,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Lawyer",
         quote:
           "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
+        image: "images/GeraldFord.png",
       },
       {
         name: "Jimmy Carter",
@@ -1902,6 +1933,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Actor and Politician",
         quote: "Freedom is never more than one generation away from extinction.",
+        image: "images/RonaldReagan.png",
       },
       {
         name: "George H. W. Bush",
@@ -1936,6 +1968,7 @@ var app = (function () {
         children: "6",
         occupationBeforePresidency: "Politician and Businessman",
         quote: "We are not the sum of our possessions.",
+        image: "images/GeorgeHWBush.png",
       },
       {
         name: "Bill Clinton",
@@ -1973,6 +2006,7 @@ var app = (function () {
         occupationBeforePresidency: "Politician and Lawyer",
         quote:
           "There is nothing wrong with America that cannot be cured by what is right with America.",
+        image: "images/BillClinton.png",
       },
       {
         name: "George W. Bush",
@@ -2009,6 +2043,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Governor",
         quote: "We will not tire, we will not falter, and we will not fail.",
+        image: "images/GeorgeWBush.png",
       },
       {
         name: "Barack Obama",
@@ -2046,6 +2081,7 @@ var app = (function () {
         children: "2",
         occupationBeforePresidency: "Politician and Lawyer",
         quote: "Yes we can.",
+        image: "images/BarackObama.png",
       },
       {
         name: "Donald Trump",
@@ -4850,12 +4886,12 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
-    	child_ctx[15] = i;
+    	child_ctx[14] = list[i];
+    	child_ctx[16] = i;
     	return child_ctx;
     }
 
-    // (69:6) {#if president["terms"] === 2}
+    // (66:6) {#if president["terms"] === 2}
     function create_if_block(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -4869,26 +4905,26 @@ var app = (function () {
     			circle = svg_element("circle");
 
     			attr_dev(circle, "cx", circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(circle, "cy", circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0));
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(circle, "r", /*concentricRadius*/ ctx[5]);
     			attr_dev(circle, "fill", "white");
     			attr_dev(circle, "opacity", "0.3");
     			attr_dev(circle, "stroke", "black");
 
-    			attr_dev(circle, "stroke-width", circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[15]
+    			attr_dev(circle, "stroke-width", circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[16]
     			? "3"
     			: "1");
 
-    			attr_dev(circle, "class", `circle-${/*index*/ ctx[15]}`);
-    			attr_dev(circle, "data-index", /*index*/ ctx[15]);
+    			attr_dev(circle, "class", `circle-${/*index*/ ctx[16]}`);
+    			attr_dev(circle, "data-index", /*index*/ ctx[16]);
     			attr_dev(circle, "pointer-events", "all");
-    			add_location(circle, file$2, 69, 8, 1912);
+    			add_location(circle, file$2, 66, 8, 1827);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -4928,7 +4964,7 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(circle, "keydown", /*keydown_handler_1*/ ctx[11], false, false, false, false)
+    					listen_dev(circle, "keydown", /*keydown_handler_1*/ ctx[13], false, false, false, false)
     				];
 
     				mounted = true;
@@ -4938,14 +4974,14 @@ var app = (function () {
     			ctx = new_ctx;
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cx_value !== (circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cy_value !== (circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0))) {
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
 
@@ -4953,7 +4989,7 @@ var app = (function () {
     				attr_dev(circle, "r", /*concentricRadius*/ ctx[5]);
     			}
 
-    			if (dirty & /*selectedCircleId*/ 2 && circle_stroke_width_value !== (circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[15]
+    			if (dirty & /*selectedCircleId*/ 2 && circle_stroke_width_value !== (circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[16]
     			? "3"
     			: "1")) {
     				attr_dev(circle, "stroke-width", circle_stroke_width_value);
@@ -4970,18 +5006,18 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(69:6) {#if president[\\\"terms\\\"] === 2}",
+    		source: "(66:6) {#if president[\\\"terms\\\"] === 2}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (31:2) {#each presidents as president, index}
+    // (28:2) {#each presidents as president, index}
     function create_each_block(ctx) {
     	let g;
     	let text_1;
-    	let t_value = /*getInitials*/ ctx[7](/*president*/ ctx[13].name) + "";
+    	let t_value = /*getInitials*/ ctx[7](/*president*/ ctx[14].name) + "";
     	let t;
     	let text_1_x_value;
     	let text_1_y_value;
@@ -4998,7 +5034,7 @@ var app = (function () {
     	let line_y__value_1;
     	let mounted;
     	let dispose;
-    	let if_block = /*president*/ ctx[13]["terms"] === 2 && create_if_block(ctx);
+    	let if_block = /*president*/ ctx[14]["terms"] === 2 && create_if_block(ctx);
 
     	const block = {
     		c: function create() {
@@ -5010,61 +5046,61 @@ var app = (function () {
     			line = svg_element("line");
 
     			attr_dev(text_1, "x", text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(text_1, "y", text_1_y_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0));
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(text_1, "text-anchor", "middle");
     			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "9px" : "10px");
     			attr_dev(text_1, "fill", "black");
     			attr_dev(text_1, "dy", text_1_dy_value = /*isMobile*/ ctx[6] ? undefined : "4");
-    			add_location(text_1, file$2, 32, 6, 667);
+    			add_location(text_1, file$2, 29, 6, 582);
 
     			attr_dev(circle, "cx", circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(circle, "cy", circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0));
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(circle, "r", /*radius*/ ctx[4]);
     			attr_dev(circle, "fill", "white");
     			attr_dev(circle, "opacity", "0.3");
     			attr_dev(circle, "stroke", "black");
 
-    			attr_dev(circle, "stroke-width", circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[15]
+    			attr_dev(circle, "stroke-width", circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[16]
     			? "3"
     			: "1");
 
-    			attr_dev(circle, "class", `circle-${/*index*/ ctx[15]}`);
-    			attr_dev(circle, "data-index", /*index*/ ctx[15]);
+    			attr_dev(circle, "class", `circle-${/*index*/ ctx[16]}`);
+    			attr_dev(circle, "data-index", /*index*/ ctx[16]);
     			attr_dev(circle, "pointer-events", "all");
-    			add_location(circle, file$2, 47, 6, 1153);
+    			add_location(circle, file$2, 44, 6, 1068);
 
     			attr_dev(line, "x1", line_x__value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(line, "y1", line_y__value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0));
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0));
 
     			attr_dev(line, "x2", line_x__value_1 = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6) - 20
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6) - /*mobileHorizontalLine*/ ctx[10]
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]);
 
     			attr_dev(line, "y2", line_y__value_1 = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0) + 30);
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0) + /*desktopHOrizontalLine*/ ctx[11]);
 
     			attr_dev(line, "stroke", "black");
     			attr_dev(line, "stroke-width", "1");
-    			add_location(line, file$2, 91, 6, 2692);
-    			add_location(g, file$2, 31, 4, 657);
+    			add_location(line, file$2, 88, 6, 2607);
+    			add_location(g, file$2, 28, 4, 572);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -5109,7 +5145,7 @@ var app = (function () {
     						false,
     						false
     					),
-    					listen_dev(circle, "keydown", /*keydown_handler*/ ctx[10], false, false, false, false)
+    					listen_dev(circle, "keydown", /*keydown_handler*/ ctx[12], false, false, false, false)
     				];
 
     				mounted = true;
@@ -5117,17 +5153,17 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*getInitials, presidents*/ 129 && t_value !== (t_value = /*getInitials*/ ctx[7](/*president*/ ctx[13].name) + "")) set_data_dev(t, t_value);
+    			if (dirty & /*getInitials, presidents*/ 129 && t_value !== (t_value = /*getInitials*/ ctx[7](/*president*/ ctx[14].name) + "")) set_data_dev(t, t_value);
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_x_value !== (text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_y_value !== (text_1_y_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0))) {
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 4
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
 
@@ -5140,14 +5176,14 @@ var app = (function () {
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cx_value !== (circle_cx_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(circle, "cx", circle_cx_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && circle_cy_value !== (circle_cy_value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0))) {
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(circle, "cy", circle_cy_value);
     			}
 
@@ -5155,13 +5191,13 @@ var app = (function () {
     				attr_dev(circle, "r", /*radius*/ ctx[4]);
     			}
 
-    			if (dirty & /*selectedCircleId*/ 2 && circle_stroke_width_value !== (circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[15]
+    			if (dirty & /*selectedCircleId*/ 2 && circle_stroke_width_value !== (circle_stroke_width_value = /*selectedCircleId*/ ctx[1] == /*index*/ ctx[16]
     			? "3"
     			: "1")) {
     				attr_dev(circle, "stroke-width", circle_stroke_width_value);
     			}
 
-    			if (/*president*/ ctx[13]["terms"] === 2) {
+    			if (/*president*/ ctx[14]["terms"] === 2) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
     				} else {
@@ -5175,26 +5211,26 @@ var app = (function () {
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && line_x__value !== (line_x__value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6)
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6)
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(line, "x1", line_x__value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && line_y__value !== (line_y__value = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0))) {
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0))) {
     				attr_dev(line, "y1", line_y__value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && line_x__value_1 !== (line_x__value_1 = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[15] % 2 !== 0 ? 26 : 6) - 20
-    			: /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
+    			? 10 + (/*index*/ ctx[16] % 2 !== 0 ? 26 : 6) - /*mobileHorizontalLine*/ ctx[10]
+    			: /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4])) {
     				attr_dev(line, "x2", line_x__value_1);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && line_y__value_1 !== (line_y__value_1 = /*isMobile*/ ctx[6]
-    			? /*index*/ ctx[15] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[15] % 2 !== 0 ? 6 : 0) + 30)) {
+    			? /*index*/ ctx[16] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
+    			: 18 + (/*index*/ ctx[16] % 2 !== 0 ? 6 : 0) + /*desktopHOrizontalLine*/ ctx[11])) {
     				attr_dev(line, "y2", line_y__value_1);
     			}
     		},
@@ -5210,7 +5246,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(31:2) {#each presidents as president, index}",
+    		source: "(28:2) {#each presidents as president, index}",
     		ctx
     	});
 
@@ -5244,10 +5280,10 @@ var app = (function () {
     			attr_dev(rect, "fill", "white");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "2");
-    			add_location(rect, file$2, 20, 2, 488);
+    			add_location(rect, file$2, 17, 2, 403);
     			attr_dev(svg, "width", "100%");
     			attr_dev(svg, "height", "100%");
-    			add_location(svg, file$2, 19, 0, 453);
+    			add_location(svg, file$2, 16, 0, 368);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5263,7 +5299,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*isMobile, totalDots, svgSize, radius, concentricRadius, selectedCircleId, handleCircleHover, handleCircleClick, presidents, undefined, getInitials*/ 1023) {
+    			if (dirty & /*isMobile, totalDots, svgSize, radius, mobileHorizontalLine, desktopHOrizontalLine, concentricRadius, selectedCircleId, handleCircleHover, handleCircleClick, presidents, undefined, getInitials*/ 4095) {
     				each_value = /*presidents*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -5319,12 +5355,8 @@ var app = (function () {
     	let { getInitials } = $$props;
     	let { handleCircleHover } = $$props;
     	let { handleCircleClick } = $$props;
-
-    	function getCircleX(i) {
-    		return isMobile
-    		? 10 + (i % 2 !== 0 ? 26 : 6)
-    		: i / (totalDots - 1) * (svgSize - 2 * radius) + radius;
-    	}
+    	let mobileHorizontalLine = 20;
+    	let desktopHOrizontalLine = 30;
 
     	$$self.$$.on_mount.push(function () {
     		if (selectedCircleId === undefined && !('selectedCircleId' in $$props || $$self.$$.bound[$$self.$$.props['selectedCircleId']])) {
@@ -5404,7 +5436,8 @@ var app = (function () {
     		getInitials,
     		handleCircleHover,
     		handleCircleClick,
-    		getCircleX
+    		mobileHorizontalLine,
+    		desktopHOrizontalLine
     	});
 
     	$$self.$inject_state = $$props => {
@@ -5418,6 +5451,8 @@ var app = (function () {
     		if ('getInitials' in $$props) $$invalidate(7, getInitials = $$props.getInitials);
     		if ('handleCircleHover' in $$props) $$invalidate(8, handleCircleHover = $$props.handleCircleHover);
     		if ('handleCircleClick' in $$props) $$invalidate(9, handleCircleClick = $$props.handleCircleClick);
+    		if ('mobileHorizontalLine' in $$props) $$invalidate(10, mobileHorizontalLine = $$props.mobileHorizontalLine);
+    		if ('desktopHOrizontalLine' in $$props) $$invalidate(11, desktopHOrizontalLine = $$props.desktopHOrizontalLine);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -5435,6 +5470,8 @@ var app = (function () {
     		getInitials,
     		handleCircleHover,
     		handleCircleClick,
+    		mobileHorizontalLine,
+    		desktopHOrizontalLine,
     		keydown_handler,
     		keydown_handler_1
     	];
