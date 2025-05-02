@@ -4498,7 +4498,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (102:4) {#each positions as position, index}
+    // (130:6) {#each positions as position, index}
     function create_each_block$1(ctx) {
     	let onepresidentunit;
     	let current;
@@ -4555,7 +4555,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(102:4) {#each positions as position, index}",
+    		source: "(130:6) {#each positions as position, index}",
     		ctx
     	});
 
@@ -4563,7 +4563,15 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	let div;
+    	let div2;
+    	let h1;
+    	let t1;
+    	let h4;
+    	let t3;
+    	let div0;
+    	let t4;
+    	let t5;
+    	let div1;
     	let svg;
     	let rect;
     	let current;
@@ -4583,7 +4591,17 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div2 = element("div");
+    			h1 = element("h1");
+    			h1.textContent = "A Journey Through the U.S. Presidency";
+    			t1 = space();
+    			h4 = element("h4");
+    			h4.textContent = "Vaishali Verma";
+    			t3 = space();
+    			div0 = element("div");
+    			t4 = text("This interactive timeline traces the arc of American leadership — from the\n    birth of the republic to the present day. Each circle represents a\n    president, positioned by time and shaped by history. Explore how each leader\n    shaped the nation through their key policies, personal journeys, and pivotal\n    moments. Hover or click to dive into their stories, view their\n    accomplishments, and reflect on how the presidency has evolved through wars,\n    reforms, and revolutions of thought. Whether you're revisiting the founding\n    fathers or examining modern leadership, this visualization invites you to\n    connect with the people behind the office — and the legacy they leave\n    behind.");
+    			t5 = space();
+    			div1 = element("div");
     			svg = svg_element("svg");
     			rect = svg_element("rect");
 
@@ -4591,24 +4609,46 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
+    			add_location(h1, file$3, 87, 2, 2195);
+    			add_location(h4, file$3, 88, 2, 2244);
+    			set_style(div0, "width", /*$svgWidth*/ ctx[1] + "px");
+    			set_style(div0, "margin", "0 auto");
+    			set_style(div0, "line-height", "1.6");
+    			set_style(div0, "text-align", "justify");
+    			set_style(div0, "font-size", "1.1em");
+    			set_style(div0, "font-weight", "400");
+    			add_location(div0, file$3, 89, 2, 2270);
     			attr_dev(rect, "width", /*$svgWidth*/ ctx[1]);
     			attr_dev(rect, "height", /*$svgHeight*/ ctx[3]);
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "3px");
     			attr_dev(rect, "fill", "none");
-    			add_location(rect, file$3, 93, 4, 2312);
+    			add_location(rect, file$3, 122, 6, 3543);
     			attr_dev(svg, "width", /*$svgWidth*/ ctx[1]);
     			attr_dev(svg, "height", /*$svgHeight*/ ctx[3]);
-    			add_location(svg, file$3, 87, 2, 2191);
-    			attr_dev(div, "id", "main-svg-div");
-    			add_location(div, file$3, 86, 0, 2165);
+    			attr_dev(svg, "tabindex", "0");
+    			attr_dev(svg, "role", "button");
+    			attr_dev(svg, "aria-label", "Presidential timeline");
+    			add_location(svg, file$3, 104, 4, 3145);
+    			attr_dev(div1, "id", "main-svg-div");
+    			add_location(div1, file$3, 103, 2, 3117);
+    			attr_dev(div2, "id", "introduction-div");
+    			add_location(div2, file$3, 86, 0, 2165);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, svg);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, h1);
+    			append_dev(div2, t1);
+    			append_dev(div2, h4);
+    			append_dev(div2, t3);
+    			append_dev(div2, div0);
+    			append_dev(div0, t4);
+    			append_dev(div2, t5);
+    			append_dev(div2, div1);
+    			append_dev(div1, svg);
     			append_dev(svg, rect);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -4629,6 +4669,10 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
+    			if (!current || dirty & /*$svgWidth*/ 2) {
+    				set_style(div0, "width", /*$svgWidth*/ ctx[1] + "px");
+    			}
+
     			if (!current || dirty & /*$svgWidth*/ 2) {
     				attr_dev(rect, "width", /*$svgWidth*/ ctx[1]);
     			}
@@ -4692,7 +4736,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks, detaching);
     			mounted = false;
     			run_all(dispose);

@@ -84,30 +84,59 @@
   }
 </script>
 
-<div id="main-svg-div">
-  <svg
-    width={$svgWidth}
-    height={$svgHeight}
-    on:click={handleSvgClick}
-    on:keydown={handleSvgClick}
+<div id="introduction-div">
+  <h1>A Journey Through the U.S. Presidency</h1>
+  <h4>Vaishali Verma</h4>
+  <div
+    style="width: {$svgWidth}px; margin: 0 auto; line-height: 1.6; text-align: justify; font-size: 1.1em; font-weight:400"
   >
-    <rect
+    This interactive timeline traces the arc of American leadership — from the
+    birth of the republic to the present day. Each circle represents a
+    president, positioned by time and shaped by history. Explore how each leader
+    shaped the nation through their key policies, personal journeys, and pivotal
+    moments. Hover or click to dive into their stories, view their
+    accomplishments, and reflect on how the presidency has evolved through wars,
+    reforms, and revolutions of thought. Whether you're revisiting the founding
+    fathers or examining modern leadership, this visualization invites you to
+    connect with the people behind the office — and the legacy they leave
+    behind.
+  </div>
+  <div id="main-svg-div">
+    <svg
       width={$svgWidth}
       height={$svgHeight}
-      stroke="black"
-      stroke-width="3px"
-      fill="none"
-    ></rect>
-
-    {#each positions as position, index}
-      <OnePresidentUnit
-        cx={position.cx}
-        cy={position.cy}
-        innerRadius={$innerRadius}
-        outerRadius={$outerRadius}
-        {index}
-        on:presidentClick={() => handlePresidentClick(index)}
+      tabindex="0"
+      role="button"
+      aria-label="Presidential timeline"
+      on:click={handleSvgClick}
+      on:keydown={handleSvgClick}
+    >
+      <!-- <text
+      x={$svgWidth / 2}
+      y="60"
+      text-anchor="middle"
+      font-size="60"
+      fill="black"
+    >
+      All Presidents of the United States
+    </text> -->
+      <rect
+        width={$svgWidth}
+        height={$svgHeight}
+        stroke="black"
+        stroke-width="3px"
+        fill="none"
       />
-    {/each}
-  </svg>
+      {#each positions as position, index}
+        <OnePresidentUnit
+          cx={position.cx}
+          cy={position.cy}
+          innerRadius={$innerRadius}
+          outerRadius={$outerRadius}
+          {index}
+          on:presidentClick={() => handlePresidentClick(index)}
+        />
+      {/each}
+    </svg>
+  </div>
 </div>
