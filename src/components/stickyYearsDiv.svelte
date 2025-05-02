@@ -2,11 +2,13 @@
   import StickySvgWrapper from "./StickySvgWrapper.svelte";
   import { presidents } from "../data/presidentsData";
   import { onMount } from "svelte";
-  import { selectedCircleId } from "../store.js";
+  import { selectedCircleId, hoveredIndex } from "../store.js";
 
   let totalDots = 47;
   let svgWidth = 0;
   let svgHeight = 0;
+  //let hoveredIndex = null;
+  //export let hoveredIndex;
 
   const desktopRadius = 10;
   const desktopConcentricRadius = 15;
@@ -23,12 +25,15 @@
     window.addEventListener("resize", updateDimensions);
   });
 
-  const handleCircleHover = () => {
-    console.log("here");
+  const handleCircleHover = (event) => {
+    hoveredIndex.set(+event.target.dataset.index);
+    console.log($hoveredIndex);
   };
+
   const handleCircleClick = (event) => {
     const id = event.target.dataset.index;
     selectedCircleId.set(id);
+    console.log(selectedCircleId);
   };
 
   const getInitials = (name) => {
@@ -42,8 +47,12 @@
   };
 </script>
 
-<div class="desktop-legend-intro-text">Desktop legend intro text</div>
-<div class="mobile-legend-intro-text">Mobile legend intro text</div>
+<div class="desktop-legend-intro-text">
+  Hover to see name and Click to see President
+</div>
+<div class="mobile-legend-intro-text">
+  Hover to see name and Click to see President
+</div>
 
 <div class="desktop-sticky-div">
   <StickySvgWrapper

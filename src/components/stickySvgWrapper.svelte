@@ -1,4 +1,5 @@
 <script>
+  import { hoveredIndex } from "../store.js";
   export let presidents = [];
   export let selectedCircleId;
   export let svgSize;
@@ -9,9 +10,12 @@
   export let getInitials;
   export let handleCircleHover;
   export let handleCircleClick;
+  //export let hoveredIndex;
 
   let mobileHorizontalLine = 20;
   let desktopHOrizontalLine = 30;
+
+  $: console.log($hoveredIndex);
 </script>
 
 <svg width="100%" height="100%">
@@ -86,22 +90,38 @@
         />
       {/if}
 
-      <line
-        x1={isMobile
-          ? 10 + (index % 2 !== 0 ? 26 : 6)
-          : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
-        y1={isMobile
-          ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
-          : 18 + (index % 2 !== 0 ? 6 : 0)}
-        x2={isMobile
-          ? 10 + (index % 2 !== 0 ? 26 : 6) - mobileHorizontalLine
-          : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
-        y2={isMobile
-          ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
-          : 18 + (index % 2 !== 0 ? 6 : 0) + desktopHOrizontalLine}
-        stroke="black"
-        stroke-width="1"
-      />
+      {#if $hoveredIndex == index}
+        <text
+          x={isMobile
+            ? 10 + (index % 2 !== 0 ? 26 : 6) + 5
+            : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius + 5}
+          y={isMobile
+            ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
+            : 18 + (index % 2 !== 0 ? 6 : 0) - 10}
+          fill="black"
+          font-size="10"
+        >
+          {president.name}
+        </text>
+
+        <line
+          x1={isMobile
+            ? 10 + (index % 2 !== 0 ? 26 : 6)
+            : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
+          y1={isMobile
+            ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
+            : 18 + (index % 2 !== 0 ? 6 : 0)}
+          x2={isMobile
+            ? 10 + (index % 2 !== 0 ? 26 : 6) - mobileHorizontalLine
+            : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius}
+          y2={isMobile
+            ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
+            : 18 + (index % 2 !== 0 ? 6 : 0) + desktopHOrizontalLine}
+          stroke="black"
+          stroke-width="1"
+          aria-hidden="true"
+        />
+      {/if}
     </g>
   {/each}
 </svg>

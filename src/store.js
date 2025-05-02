@@ -10,3 +10,4 @@ export const circleSpacing = writable(100);
 export const rowSpacing = writable(200);
 export const titleSpace = writable(300);
 export const selectedCircleId = writable(null);
+export const hoveredIndex = writable(null);
