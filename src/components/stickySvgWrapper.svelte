@@ -18,7 +18,7 @@
   $: console.log($hoveredIndex);
 </script>
 
-<svg width="100%" height="100%">
+<svg width="100%" height="100%" style="overflow: visible">
   <rect
     x="0"
     y="0"
@@ -27,6 +27,7 @@
     fill="white"
     stroke="black"
     stroke-width="2"
+    class="svg-rect"
   />
 
   {#each presidents as president, index}
@@ -93,15 +94,24 @@
       {#if $hoveredIndex == index}
         <text
           x={isMobile
-            ? 10 + (index % 2 !== 0 ? 26 : 6) + 5
-            : (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius + 5}
+            ? 10 + (index % 2 !== 0 ? 26 : 6) - 5
+            : (index / (totalDots - 1)) * (svgSize - 2 * radius) +
+              radius +
+              (index < presidents.length / 2 ? 5 : -5)}
           y={isMobile
             ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
-            : 18 + (index % 2 !== 0 ? 6 : 0) - 10}
+            : 18 + (index % 2 !== 0 ? 6 : 0) + 24}
           fill="black"
-          font-size="10"
+          font-size={isMobile ? "12" : "18"}
+          opacity="0.6"
+          text-anchor={isMobile
+            ? "end"
+            : index < presidents.length / 2
+              ? "start"
+              : "end"}
+          z-index="1"
         >
-          {president.name}
+          {president.name.toUpperCase()}
         </text>
 
         <line
@@ -118,10 +128,17 @@
             ? (index / (totalDots - 1)) * (svgSize - 2 * radius) + radius
             : 18 + (index % 2 !== 0 ? 6 : 0) + desktopHOrizontalLine}
           stroke="black"
-          stroke-width="1"
+          opacity="0.3"
+          stroke-width="3"
           aria-hidden="true"
         />
       {/if}
     </g>
   {/each}
 </svg>
+
+<style>
+  .svg-rect {
+    overflow: visible;
+  }
+</style>
