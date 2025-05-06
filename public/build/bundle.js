@@ -4499,7 +4499,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (130:6) {#each positions as position, index}
+    // (144:6) {#each positions as position, index}
     function create_each_block$1(ctx) {
     	let onepresidentunit;
     	let current;
@@ -4556,7 +4556,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(130:6) {#each positions as position, index}",
+    		source: "(144:6) {#each positions as position, index}",
     		ctx
     	});
 
@@ -4570,11 +4570,14 @@ var app = (function () {
     	let h4;
     	let t3;
     	let div0;
-    	let t4;
+    	let p;
     	let t5;
     	let div1;
     	let svg;
     	let rect;
+    	let text_1;
+    	let t6;
+    	let image;
     	let current;
     	let mounted;
     	let dispose;
@@ -4600,41 +4603,60 @@ var app = (function () {
     			h4.textContent = "Vaishali Verma";
     			t3 = space();
     			div0 = element("div");
-    			t4 = text("This interactive timeline traces the arc of American leadership — from the\n    birth of the republic to the present day. Each circle represents a\n    president, positioned by time and shaped by history. Explore how each leader\n    shaped the nation through their key policies, personal journeys, and pivotal\n    moments. Hover or click to dive into their stories, view their\n    accomplishments, and reflect on how the presidency has evolved through wars,\n    reforms, and revolutions of thought. Whether you're revisiting the founding\n    fathers or examining modern leadership, this visualization invites you to\n    connect with the people behind the office — and the legacy they leave\n    behind.");
+    			p = element("p");
+    			p.textContent = "This interactive timeline traces the arc of American leadership — from the\n      birth of the republic to the present day. Each circle represents a\n      president, positioned by time and shaped by history. Explore how each\n      leader shaped the nation through their key policies, personal journeys,\n      and pivotal moments. Hover or click to dive into their stories, view their\n      accomplishments, and reflect on how the presidency has evolved through\n      wars, reforms, and revolutions of thought. Whether you're revisiting the\n      founding fathers or examining modern leadership, this visualization\n      invites you to connect with the people behind the office — and the legacy\n      they leave behind.";
     			t5 = space();
     			div1 = element("div");
     			svg = svg_element("svg");
     			rect = svg_element("rect");
+    			text_1 = svg_element("text");
+    			t6 = text("How To Read This Timeline\n      ");
+    			image = svg_element("image");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			add_location(h1, file$3, 87, 2, 2195);
-    			add_location(h4, file$3, 88, 2, 2244);
+    			add_location(h1, file$3, 88, 2, 2275);
+    			add_location(h4, file$3, 89, 2, 2324);
+    			add_location(p, file$3, 93, 4, 2486);
     			set_style(div0, "width", /*$svgWidth*/ ctx[1] + "px");
     			set_style(div0, "margin", "0 auto");
     			set_style(div0, "line-height", "1.6");
     			set_style(div0, "text-align", "justify");
     			set_style(div0, "font-size", "1.1em");
     			set_style(div0, "font-weight", "400");
-    			add_location(div0, file$3, 89, 2, 2270);
+    			add_location(div0, file$3, 90, 2, 2350);
     			attr_dev(rect, "width", /*$svgWidth*/ ctx[1]);
     			attr_dev(rect, "height", /*$svgHeight*/ ctx[3]);
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "3px");
     			attr_dev(rect, "fill", "none");
-    			add_location(rect, file$3, 122, 6, 3543);
+    			add_location(rect, file$3, 116, 6, 3475);
+    			attr_dev(text_1, "x", "50%");
+    			attr_dev(text_1, "y", "10");
+    			attr_dev(text_1, "text-anchor", "middle");
+    			attr_dev(text_1, "font-size", "1.2em");
+    			attr_dev(text_1, "fill", "black");
+    			attr_dev(text_1, "dy", "0.35em");
+    			add_location(text_1, file$3, 123, 6, 3620);
+    			attr_dev(image, "href", "/images/howToRead.svg");
+    			attr_dev(image, "x", "50%");
+    			attr_dev(image, "y", "30");
+    			attr_dev(image, "width", "400");
+    			attr_dev(image, "height", "400");
+    			attr_dev(image, "transform", "translate(-200, 0)");
+    			add_location(image, file$3, 134, 6, 3816);
     			attr_dev(svg, "width", /*$svgWidth*/ ctx[1]);
     			attr_dev(svg, "height", /*$svgHeight*/ ctx[3]);
     			attr_dev(svg, "tabindex", "0");
     			attr_dev(svg, "role", "button");
     			attr_dev(svg, "aria-label", "Presidential timeline");
-    			add_location(svg, file$3, 104, 4, 3145);
+    			add_location(svg, file$3, 107, 4, 3262);
     			attr_dev(div1, "id", "main-svg-div");
-    			add_location(div1, file$3, 103, 2, 3117);
+    			add_location(div1, file$3, 106, 2, 3234);
     			attr_dev(div2, "id", "introduction-div");
-    			add_location(div2, file$3, 86, 0, 2165);
+    			add_location(div2, file$3, 87, 0, 2245);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4646,11 +4668,14 @@ var app = (function () {
     			append_dev(div2, h4);
     			append_dev(div2, t3);
     			append_dev(div2, div0);
-    			append_dev(div0, t4);
+    			append_dev(div0, p);
     			append_dev(div2, t5);
     			append_dev(div2, div1);
     			append_dev(div1, svg);
     			append_dev(svg, rect);
+    			append_dev(svg, text_1);
+    			append_dev(text_1, t6);
+    			append_dev(svg, image);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				if (each_blocks[i]) {
@@ -4854,6 +4879,7 @@ var app = (function () {
     		presidents,
     		onMount,
     		get: get_store_value,
+    		OnePresidentUnitMainCircle,
     		positions,
     		updateSvgWidth,
     		updateSvgHeight,
