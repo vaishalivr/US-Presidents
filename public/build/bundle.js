@@ -47,6 +47,9 @@ var app = (function () {
     function component_subscribe(component, store, callback) {
         component.$$.on_destroy.push(subscribe(store, callback));
     }
+    function null_to_empty(value) {
+        return value == null ? '' : value;
+    }
 
     const globals = (typeof window !== 'undefined'
         ? window
@@ -4963,7 +4966,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (70:6) {#if president["terms"] === 2}
+    // (71:6) {#if president["terms"] === 2}
     function create_if_block_1(ctx) {
     	let circle;
     	let circle_cx_value;
@@ -4993,10 +4996,10 @@ var app = (function () {
     			? "3"
     			: "1");
 
-    			attr_dev(circle, "class", `circle-${/*index*/ ctx[17]}`);
+    			attr_dev(circle, "class", "" + (null_to_empty(`circle-${/*index*/ ctx[17]}`) + " svelte-11as5w5"));
     			attr_dev(circle, "data-index", /*index*/ ctx[17]);
     			attr_dev(circle, "pointer-events", "all");
-    			add_location(circle, file$2, 70, 8, 1936);
+    			add_location(circle, file$2, 71, 8, 1983);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, circle, anchor);
@@ -5078,20 +5081,22 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(70:6) {#if president[\\\"terms\\\"] === 2}",
+    		source: "(71:6) {#if president[\\\"terms\\\"] === 2}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (93:6) {#if $hoveredIndex == index}
+    // (94:6) {#if $hoveredIndex == index}
     function create_if_block(ctx) {
     	let text_1;
-    	let t_value = /*president*/ ctx[15].name + "";
+    	let t_value = /*president*/ ctx[15].name.toUpperCase() + "";
     	let t;
     	let text_1_x_value;
     	let text_1_y_value;
+    	let text_1_font_size_value;
+    	let text_1_text_anchor_value;
     	let line;
     	let line_x__value;
     	let line_y__value;
@@ -5105,16 +5110,27 @@ var app = (function () {
     			line = svg_element("line");
 
     			attr_dev(text_1, "x", text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6) + 5
-    			: /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 5);
+    			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6) - 5
+    			: /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + (/*index*/ ctx[17] < /*presidents*/ ctx[0].length / 2
+    				? 5
+    				: -5));
 
     			attr_dev(text_1, "y", text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) - 10);
+    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 30);
 
     			attr_dev(text_1, "fill", "black");
-    			attr_dev(text_1, "font-size", "10");
-    			add_location(text_1, file$2, 93, 8, 2753);
+    			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "12" : "18");
+    			attr_dev(text_1, "opacity", "0.6");
+
+    			attr_dev(text_1, "text-anchor", text_1_text_anchor_value = /*isMobile*/ ctx[6]
+    			? "end"
+    			: /*index*/ ctx[17] < /*presidents*/ ctx[0].length / 2
+    				? "start"
+    				: "end");
+
+    			attr_dev(text_1, "z-index", "1");
+    			add_location(text_1, file$2, 107, 8, 3233);
 
     			attr_dev(line, "x1", line_x__value = /*isMobile*/ ctx[6]
     			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6)
@@ -5133,9 +5149,10 @@ var app = (function () {
     			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + /*desktopHOrizontalLine*/ ctx[12]);
 
     			attr_dev(line, "stroke", "black");
-    			attr_dev(line, "stroke-width", "1");
+    			attr_dev(line, "opacity", "0.3");
+    			attr_dev(line, "stroke-width", "3");
     			attr_dev(line, "aria-hidden", "true");
-    			add_location(line, file$2, 106, 8, 3167);
+    			add_location(line, file$2, 129, 8, 3937);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -5143,18 +5160,32 @@ var app = (function () {
     			insert_dev(target, line, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*presidents*/ 1 && t_value !== (t_value = /*president*/ ctx[15].name + "")) set_data_dev(t, t_value);
+    			if (dirty & /*presidents*/ 1 && t_value !== (t_value = /*president*/ ctx[15].name.toUpperCase() + "")) set_data_dev(t, t_value);
 
-    			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_x_value !== (text_1_x_value = /*isMobile*/ ctx[6]
-    			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6) + 5
-    			: /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + 5)) {
+    			if (dirty & /*isMobile, totalDots, svgSize, radius, presidents*/ 93 && text_1_x_value !== (text_1_x_value = /*isMobile*/ ctx[6]
+    			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6) - 5
+    			: /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4] + (/*index*/ ctx[17] < /*presidents*/ ctx[0].length / 2
+    				? 5
+    				: -5))) {
     				attr_dev(text_1, "x", text_1_x_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_y_value !== (text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) - 10)) {
+    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 30)) {
     				attr_dev(text_1, "y", text_1_y_value);
+    			}
+
+    			if (dirty & /*isMobile*/ 64 && text_1_font_size_value !== (text_1_font_size_value = /*isMobile*/ ctx[6] ? "12" : "18")) {
+    				attr_dev(text_1, "font-size", text_1_font_size_value);
+    			}
+
+    			if (dirty & /*isMobile, presidents*/ 65 && text_1_text_anchor_value !== (text_1_text_anchor_value = /*isMobile*/ ctx[6]
+    			? "end"
+    			: /*index*/ ctx[17] < /*presidents*/ ctx[0].length / 2
+    				? "start"
+    				: "end")) {
+    				attr_dev(text_1, "text-anchor", text_1_text_anchor_value);
     			}
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && line_x__value !== (line_x__value = /*isMobile*/ ctx[6]
@@ -5191,14 +5222,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(93:6) {#if $hoveredIndex == index}",
+    		source: "(94:6) {#if $hoveredIndex == index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (32:2) {#each presidents as president, index}
+    // (33:2) {#each presidents as president, index}
     function create_each_block(ctx) {
     	let g;
     	let text_1;
@@ -5240,7 +5271,7 @@ var app = (function () {
     			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "9px" : "10px");
     			attr_dev(text_1, "fill", "black");
     			attr_dev(text_1, "dy", text_1_dy_value = /*isMobile*/ ctx[6] ? undefined : "4");
-    			add_location(text_1, file$2, 33, 6, 691);
+    			add_location(text_1, file$2, 34, 6, 738);
 
     			attr_dev(circle, "cx", circle_cx_value = /*isMobile*/ ctx[6]
     			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6)
@@ -5259,11 +5290,11 @@ var app = (function () {
     			? "3"
     			: "1");
 
-    			attr_dev(circle, "class", `circle-${/*index*/ ctx[17]}`);
+    			attr_dev(circle, "class", "" + (null_to_empty(`circle-${/*index*/ ctx[17]}`) + " svelte-11as5w5"));
     			attr_dev(circle, "data-index", /*index*/ ctx[17]);
     			attr_dev(circle, "pointer-events", "all");
-    			add_location(circle, file$2, 48, 6, 1177);
-    			add_location(g, file$2, 32, 4, 681);
+    			add_location(circle, file$2, 49, 6, 1224);
+    			add_location(g, file$2, 33, 4, 728);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -5400,7 +5431,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(32:2) {#each presidents as president, index}",
+    		source: "(33:2) {#each presidents as president, index}",
     		ctx
     	});
 
@@ -5434,9 +5465,11 @@ var app = (function () {
     			attr_dev(rect, "fill", "white");
     			attr_dev(rect, "stroke", "black");
     			attr_dev(rect, "stroke-width", "2");
-    			add_location(rect, file$2, 21, 2, 512);
+    			attr_dev(rect, "class", "svg-rect svelte-11as5w5");
+    			add_location(rect, file$2, 21, 2, 538);
     			attr_dev(svg, "width", "100%");
     			attr_dev(svg, "height", "100%");
+    			set_style(svg, "overflow", "visible");
     			add_location(svg, file$2, 20, 0, 477);
     		},
     		l: function claim(nodes) {
@@ -5804,10 +5837,10 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			div0.textContent = "Hover to see name and Click to see President";
+    			div0.textContent = "Hover to see name, click to see President";
     			t1 = space();
     			div1 = element("div");
-    			div1.textContent = "Hover to see name and Click to see President";
+    			div1.textContent = "Hover to see name, click to see President";
     			t3 = space();
     			div2 = element("div");
     			create_component(stickysvgwrapper0.$$.fragment);
@@ -5817,11 +5850,11 @@ var app = (function () {
     			attr_dev(div0, "class", "desktop-legend-intro-text svelte-1wtp109");
     			add_location(div0, file$1, 49, 0, 1297);
     			attr_dev(div1, "class", "mobile-legend-intro-text svelte-1wtp109");
-    			add_location(div1, file$1, 52, 0, 1391);
+    			add_location(div1, file$1, 52, 0, 1388);
     			attr_dev(div2, "class", "desktop-sticky-div svelte-1wtp109");
-    			add_location(div2, file$1, 56, 0, 1485);
+    			add_location(div2, file$1, 56, 0, 1479);
     			attr_dev(div3, "class", "mobile-sticky-div svelte-1wtp109");
-    			add_location(div3, file$1, 71, 0, 1821);
+    			add_location(div3, file$1, 71, 0, 1815);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

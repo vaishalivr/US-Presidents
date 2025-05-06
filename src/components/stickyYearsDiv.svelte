@@ -48,10 +48,10 @@
 </script>
 
 <div class="desktop-legend-intro-text">
-  Hover to see name and Click to see President
+  Hover to see name, click to see President
 </div>
 <div class="mobile-legend-intro-text">
-  Hover to see name and Click to see President
+  Hover to see name, click to see President
 </div>
 
 <div class="desktop-sticky-div">
