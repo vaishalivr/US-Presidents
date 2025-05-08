@@ -238,6 +238,50 @@ export const presidents = writable([
     quote:
       "The means of defense against foreign danger have always been the instruments of tyranny at home.",
     image: "images/JamesMadison.png",
+    otherPresidents: [
+      "Thomas Jefferson",
+      "James Monroe",
+      "John Quincy Adams",
+      "Andrew Jackson",
+      "Martin Van Buren",
+      "William Henry Harrison",
+      "John Tyler",
+      "James K. Polk",
+    ],
+    otherPresidentThings: [
+      {
+        "Thomas Jefferson":
+          "Retired to Monticello after his presidency (1809), remained politically engaged in correspondence, founded the University of Virginia (chartered in 1819).",
+      },
+      {
+        "James Monroe":
+          "Secretary of State (1811–1817) and Secretary of War during War of 1812; key figure in foreign affairs and military strategy; succeeded Madison as president.",
+      },
+      {
+        "John Quincy Adams":
+          "Served as U.S. Minister to Russia (1809–1814), negotiated Treaty of Ghent (1814) ending the War of 1812.",
+      },
+      {
+        "Andrew Jackson":
+          "Major General in Tennessee militia; achieved national fame for victories in War of 1812, especially Battle of New Orleans (1815).",
+      },
+      {
+        "Martin Van Buren":
+          "Practiced law in New York; elected to New York State Senate (1812); gained influence in state politics.",
+      },
+      {
+        "William Henry Harrison":
+          "Army officer during War of 1812; commanded U.S. forces in Northwest, including victory at Battle of the Thames (1813).",
+      },
+      {
+        "John Tyler":
+          "Elected to U.S. House of Representatives (1816); previously served in Virginia House of Delegates and as a lawyer.",
+      },
+      {
+        "James K. Polk":
+          "Teenager during Madison’s presidency; enrolled at University of North Carolina (1816), preparing for public life.",
+      },
+    ],
   },
   {
     name: "James Monroe",
@@ -268,6 +312,51 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Soldier",
     quote: "National honor is the national property of the highest value.",
     image: "images/JamesMonroe.png",
+    otherPresidents: [
+      "Thomas Jefferson",
+      "James Madison",
+      "John Quincy Adams",
+      "Andrew Jackson",
+      "Martin Van Buren",
+      "William Henry Harrison",
+      "John Tyler",
+      "James K. Polk",
+      "William Henry Harrison",
+    ],
+    otherPresidentThings: [
+      {
+        "Thomas Jefferson":
+          "In retirement at Monticello; continued prolific correspondence, helped found the University of Virginia (opened in 1825), remained a mentor to younger statesmen.",
+      },
+      {
+        "James Madison":
+          "Retired to Montpelier after presidency; served as Rector of the University of Virginia; advised Monroe privately on constitutional issues.",
+      },
+      {
+        "John Quincy Adams":
+          "Secretary of State (1817–1825); negotiated Adams–Onís Treaty (1819) acquiring Florida; key architect of the Monroe Doctrine.",
+      },
+      {
+        "Andrew Jackson":
+          "Led campaigns in First Seminole War (1817–1818); Military Governor of Florida (1821); returned to Tennessee politics after military service.",
+      },
+      {
+        "Martin Van Buren":
+          "New York State Senator (1816–1820), Attorney General of New York (1815–1819), and U.S. Senator from New York (1821–1828); rising national Democratic-Republican figure.",
+      },
+      {
+        "John Tyler":
+          "Served in the U.S. House of Representatives (1816–1821); returned to Virginia House of Delegates (1823).",
+      },
+      {
+        "James K. Polk":
+          "Attended the University of North Carolina (graduated 1818); studied law and entered legal practice (admitted to bar 1820).",
+      },
+      {
+        "William Henry Harrison":
+          "Served as U.S. Congressman from Ohio (1816–1819); ran unsuccessfully for Ohio governor (1820); continued political involvement in the Northwest.",
+      },
+    ],
   },
   {
     name: "John Quincy Adams",
@@ -298,6 +387,51 @@ export const presidents = writable([
     quote:
       "If your actions inspire others to dream more, learn more, do more, and become more, you are a leader.",
     image: "images/JohnQuincyAdams.png",
+    otherPresidents: [
+      "Thomas Jefferson",
+      "James Madison",
+      "James Monroe",
+      "Andrew Jackson",
+      "Martin Van Buren",
+      "William Henry Harrison",
+      "John Tyler",
+      "James K. Polk",
+      "William Henry Harrison",
+    ],
+    otherPresidentThings: [
+      {
+        "Thomas Jefferson":
+          "In retirement at Monticello; remained a public intellectual and oversaw the final years of the University of Virginia; died in 1826 on the 50th anniversary of the Declaration of Independence.",
+      },
+      {
+        "James Madison":
+          "Retired at Montpelier; served on the board of the University of Virginia and remained active in correspondence on political theory; died in 1836.",
+      },
+      {
+        "James Monroe":
+          "Lived in relative obscurity in Virginia following his presidency; faced financial difficulties; died in 1831.",
+      },
+      {
+        "Andrew Jackson":
+          "Ran against Adams in the highly contested 1824 election (lost via House decision); campaigned heavily and won the 1828 election, defeating Adams.",
+      },
+      {
+        "Martin Van Buren":
+          "Served as U.S. Senator from New York; strong organizer of the Democratic Party; opposed many Adams policies and helped Jackson's 1828 campaign.",
+      },
+      {
+        "John Tyler":
+          "Served in the Virginia House of Delegates; later became Governor of Virginia in 1825 and was elected U.S. Senator in 1827.",
+      },
+      {
+        "James K. Polk":
+          "Practicing law in Tennessee; served in the Tennessee House of Representatives (elected in 1823); began aligning with Jacksonian Democrats.",
+      },
+      {
+        "William Henry Harrison":
+          "Largely retired from public service during these years; focused on his farm in Ohio but remained a respected figure; served in the Ohio State Senate starting in 1825.",
+      },
+    ],
   },
   {
     name: "Andrew Jackson",
@@ -330,6 +464,35 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Military Leader",
     quote: "One man with courage makes a majority.",
     image: "images/AndrewJackson.png",
+    otherPresidents: [
+      "John Quincy Adams",
+      "Martin Van Buren",
+      "John Tyler",
+      "James K. Polk",
+      "William Henry Harrison",
+    ],
+    otherPresidentThings: [
+      {
+        "John Quincy Adams":
+          "Returned to public service as a U.S. Representative from Massachusetts (1831–1848); became a strong opponent of slavery and critic of Jackson’s policies, especially on internal improvements and the gag rule.",
+      },
+      {
+        "Martin Van Buren":
+          "Served as Jackson’s Secretary of State (1829–1831), then Vice President (1833–1837); became Jackson’s trusted advisor and handpicked successor.",
+      },
+      {
+        "John Tyler":
+          "Served as U.S. Senator from Virginia (until 1836); opposed many Jacksonian policies, including the national bank veto; began aligning with the Whig Party.",
+      },
+      {
+        "James K. Polk":
+          "Served in the U.S. House of Representatives (1825–1839); became a strong Jackson ally and chaired the Ways and Means Committee; Speaker of the House in 1835.",
+      },
+      {
+        "William Henry Harrison":
+          "Re-emerged in politics as a Whig presidential candidate in 1836 (unsuccessfully); campaigned on military record and opposition to Jacksonian policies.",
+      },
+    ],
   },
   {
     name: "Martin Van Buren",
@@ -359,6 +522,35 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Politician",
     quote: "It is easier to do a job right than to explain why you didn’t.",
     image: "images/MartinVanBuren.png",
+    otherPresidents: [
+      "Andrew Jackson",
+      "John Quincy Adams",
+      "John Tyler",
+      "James K. Polk",
+      "William Henry Harrison",
+    ],
+    otherPresidentThings: [
+      {
+        "Andrew Jackson":
+          "Retired to his plantation, The Hermitage, after leaving the presidency in 1837; remained politically active as an advisor and supporter of Van Buren’s administration.",
+      },
+      {
+        "John Quincy Adams":
+          "Continued serving in the U.S. House of Representatives; increasingly vocal against slavery and critical of Van Buren’s handling of abolitionist petitions (especially the gag rule).",
+      },
+      {
+        "John Tyler":
+          "Served as U.S. Senator from Virginia until 1836; after resigning, remained politically active as a Whig critic of Van Buren’s policies.",
+      },
+      {
+        "James K. Polk":
+          "Continued serving in the U.S. House of Representatives until 1839; strong supporter of Jacksonian Democrats and aligned with Van Buren on several policies.",
+      },
+      {
+        "William Henry Harrison":
+          "Ran as a Whig presidential candidate in 1836 (lost), but remained active; successfully ran against Van Buren in the 1840 election.",
+      },
+    ],
   },
   {
     name: "William Henry Harrison",
@@ -387,6 +579,35 @@ export const presidents = writable([
       "The liberties of a people depend on their own constant attention to its preservation.",
     notes: "Died only after 32 days in office.",
     image: "images/WilliamHenryHarrison.png",
+    otherPresidents: [
+      "Martin Van Buren",
+      "Anrew Jackson",
+      "John Quincy Adams",
+      "John Tyler",
+      "James K. Polk",
+    ],
+    otherPresidentThings: [
+      {
+        "Martin Van Buren":
+          "Returned to private life after losing the 1840 election; remained politically active and began preparing for a potential comeback in 1844.",
+      },
+      {
+        "Andrew Jackson":
+          "In retirement at The Hermitage; maintained correspondence with political allies, including Van Buren; expressed concern about the rise of the Whig Party.",
+      },
+      {
+        "John Quincy Adams":
+          "Still serving in the U.S. House of Representatives; continued his anti-slavery advocacy and opposition to Southern influence in national politics.",
+      },
+      {
+        "John Tyler":
+          "Vice President under Harrison; became President after Harrison’s death on April 4, 1841 — the first time a vice president assumed the presidency due to death in office.",
+      },
+      {
+        "James K. Polk":
+          "Recently completed his term as Speaker of the House (1835–1839); served as Governor of Tennessee (1839–1841); preparing for national Democratic leadership.",
+      },
+    ],
   },
   {
     name: "John Tyler",
@@ -420,6 +641,40 @@ export const presidents = writable([
       "Wealth can only be accumulated by the earnings of industry and the savings of frugality.",
     note: "John Tyler, often called “His Accidency”, had a presidency marked by clashes with his own party, the Whigs, and a focus on expansionist policies. ",
     image: "images/JohnTyler.png",
+    otherPresidents: [
+      "William Henry Harrison",
+      "Martin Van Buren",
+      "Andrew Jackson",
+      "John Quincy Adams",
+      "James K. Polk",
+      "Zachary Taylor",
+    ],
+    otherPresidentThings: [
+      {
+        "William Henry Harrison":
+          "Deceased — died in office on April 4, 1841, just one month into his presidency. Tyler succeeded him as president.",
+      },
+      {
+        "Martin Van Buren":
+          "Largely retired from public life after his 1840 defeat; declined to actively campaign in 1844 but was later nominated by the Free Soil Party in 1848.",
+      },
+      {
+        "Andrew Jackson":
+          "In declining health but continued to advise Democratic leaders from The Hermitage; remained critical of Whig policies and Tyler’s break with the party.",
+      },
+      {
+        "John Quincy Adams":
+          "Served actively in the U.S. House of Representatives; continued to oppose slavery and the annexation of Texas, a major initiative of Tyler's presidency.",
+      },
+      {
+        "James K. Polk":
+          "Regained political influence in Tennessee after a gubernatorial loss; positioned himself as a dark horse candidate for the 1844 Democratic nomination, which he eventually won.",
+      },
+      {
+        "Zachary Taylor":
+          "Serving as a military commander on the southwestern frontier; began gaining national attention for leadership in conflicts near the Texas-Mexico border.",
+      },
+    ],
   },
   {
     name: "James K. Polk",
@@ -452,6 +707,49 @@ export const presidents = writable([
     quote:
       "No president who performs his duties faithfully and conscientiously can have any leisure.",
     image: "images/JamesKPolk.png",
+    otherPresidents: [
+      "Martin Van Buren",
+      "John Tyler",
+      "Zachary Taylor",
+      "Millard Fillmore",
+      "Franklin Pierce",
+      "James Buchanan",
+      "Abraham Lincoln",
+    ],
+    otherPresidentThings: [
+      {
+        "Martin Van Buren":
+          "Remained active in Democratic politics; sought the 1844 nomination but lost to Polk; later distanced himself from Polk’s expansionist policies and opposed the annexation of Texas.",
+      },
+      {
+        "John Tyler":
+          "Retired from public life after leaving office in 1845; supported the annexation of Texas, which Polk completed early in his term.",
+      },
+      {
+        "John Quincy Adams":
+          "Served in the U.S. House of Representatives until his death in 1848; opposed the Mexican-American War and slavery expansion; collapsed on the House floor and died shortly after.",
+      },
+      {
+        "Zachary Taylor":
+          "Gained national fame as a general in the Mexican-American War (1846–1848); his victories made him a popular hero and future Whig presidential candidate.",
+      },
+      {
+        "Millard Fillmore":
+          "Served in the U.S. House of Representatives (1833–1835, 1837–1843); though not holding national office during Polk’s term, he was active in New York politics and later became Taylor’s running mate in 1848.",
+      },
+      {
+        "Franklin Pierce":
+          "Served in the U.S. Senate until 1842; supported the Mexican-American War and remained active in Democratic Party politics; declined an offer to serve in Polk’s cabinet.",
+      },
+      {
+        "James Buchanan":
+          "Served as U.S. Secretary of State under Polk (1845–1849); played a major role in foreign policy including relations with Britain and negotiations over Oregon.",
+      },
+      {
+        "Abraham Lincoln":
+          "Elected to the U.S. House of Representatives in 1846; served one term (1847–1849); was a vocal Whig critic of the Mexican-American War and President Polk’s justifications for it.",
+      },
+    ],
   },
   {
     name: "Zachary Taylor",
@@ -482,6 +780,45 @@ export const presidents = writable([
     quote:
       "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
     image: "images/ZacharyTaylor.png",
+    otherPresidents: [
+      "James K. Polk",
+      "Martin Van Buren",
+      "John Tyler",
+      "Millard Fillmore",
+      "Franklin Pierce",
+      "James Buchanan",
+      "Abraham Lincoln",
+    ],
+    otherPresidentThings: [
+      {
+        "James K. Polk":
+          "Died just three months after leaving office in 1849; spent his final days in retirement in Nashville, Tennessee, following a physically exhausting presidency.",
+      },
+      {
+        "Martin Van Buren":
+          "Retired from national politics after his 1848 Free Soil Party presidential run; remained a respected elder statesman, though largely removed from public affairs.",
+      },
+      {
+        "John Tyler":
+          "In retirement at his Virginia plantation, Sherwood Forest; remained politically engaged and would later support secessionist causes in the 1850s.",
+      },
+      {
+        "Millard Fillmore":
+          "Vice President under Taylor; became President upon Taylor’s death in July 1850.",
+      },
+      {
+        "Franklin Pierce":
+          "Served as U.S. Attorney for New Hampshire; maintained low national political profile during this period but stayed active in Democratic Party affairs.",
+      },
+      {
+        "James Buchanan":
+          "Returned to private legal practice in Pennsylvania after serving as Secretary of State; preparing for a political comeback that would lead to his 1856 presidential run.",
+      },
+      {
+        "Abraham Lincoln":
+          "Returned to Illinois law practice after serving one term in the U.S. House (1847–1849); largely disengaged from national politics during Taylor's presidency.",
+      },
+    ],
   },
   {
     name: "Millard Fillmore",
@@ -512,6 +849,40 @@ export const presidents = writable([
     quote:
       "The nourishment of a nation depends on the health of its democracy.",
     image: "images/MillardFillmore.png",
+    otherPresidents: [
+      "Zachary Taylor",
+      "Martin Van Buren",
+      "John Tyler",
+      "Franklin Pierce",
+      "James Buchanan",
+      "Abraham Lincoln",
+    ],
+    otherPresidentThings: [
+      {
+        "Zachary Taylor":
+          "Deceased — died in office on July 9, 1850, after only 16 months as president. Fillmore succeeded him and completed the remainder of the term.",
+      },
+      {
+        "Martin Van Buren":
+          "In retirement in Kinderhook, New York; largely withdrawn from public life after his 1848 Free Soil Party run; occasionally corresponded with political figures.",
+      },
+      {
+        "John Tyler":
+          "Retired in Virginia but remained politically engaged; increasingly aligned with pro-slavery and Southern interests; voiced support for states' rights.",
+      },
+      {
+        "Franklin Pierce":
+          "Regained national attention as a potential Democratic presidential candidate; had returned to private life but was building party alliances behind the scenes.",
+      },
+      {
+        "James Buchanan":
+          "Active in Democratic Party politics; was a top contender for the 1852 Democratic nomination but lost to Pierce; continued promoting national unity and compromise on slavery.",
+      },
+      {
+        "Abraham Lincoln":
+          "Practicing law in Illinois; remained politically quiet during Fillmore's term, having stepped away from national office after his House term ended in 1849.",
+      },
+    ],
   },
   {
     name: "Franklin Pierce",
@@ -542,6 +913,44 @@ export const presidents = writable([
     quote:
       "The storm of frenzy and faction must inevitably dash itself in vain against the unshaken rock of the Constitution.",
     image: "images/FranklinPierce.png",
+    otherPresidents: [
+      "Millard Fillmore",
+      "John Tyler",
+      "James Buchanan",
+      "Abraham Lincoln",
+      "James K. Polk",
+      "Zachary Taylor",
+      "Martin Van Buren",
+    ],
+    otherPresidentThings: [
+      {
+        "Millard Fillmore":
+          "Returned to private life in New York after completing Taylor’s term; remained politically active, later ran as the Know-Nothing (American Party) candidate in the 1856 presidential election.",
+      },
+      {
+        "John Tyler":
+          "Continued his retirement in Virginia; became increasingly aligned with Southern secessionist sentiment; would eventually support the Confederacy.",
+      },
+      {
+        "James Buchanan":
+          "Served as U.S. Minister to the United Kingdom (1853–1856), where he helped negotiate the controversial Ostend Manifesto advocating for the acquisition of Cuba.",
+      },
+      {
+        "Abraham Lincoln":
+          "Practiced law in Illinois; re-entered the political scene by speaking out against the Kansas-Nebraska Act (1854), which Pierce had signed, helping to galvanize anti-slavery Whigs and form the Republican Party.",
+      },
+      {
+        "James K. Polk":
+          "Deceased — died in 1849 shortly after leaving office.",
+      },
+      {
+        "Zachary Taylor": "Deceased — died in office in 1850.",
+      },
+      {
+        "Martin Van Buren":
+          "In retirement, remained a respected elder statesman; publicly opposed the Kansas-Nebraska Act, viewing it as destabilizing to the Union.",
+      },
+    ],
   },
   {
     name: "James Buchanan",
@@ -571,6 +980,44 @@ export const presidents = writable([
     occupationBeforePresidency: "Diplomat and Lawyer",
     quote: "The ballot box is the surest arbiter of disputes among free men.",
     image: "images/JamesBuchanan.png",
+    otherPresidents: [
+      "Franklin Pierce",
+      "Millard Fillmore",
+      "John Tyler",
+      "Abraham Lincoln",
+      "Zachary Taylor",
+      "James K. Polk",
+      "Martin Van Buren",
+    ],
+    otherPresidentThings: [
+      {
+        "Franklin Pierce":
+          "Retired from public life but continued to support Southern Democrats; opposed abolitionism and supported Buchanan’s pro-Southern policies like the enforcement of the Dred Scott decision.",
+      },
+      {
+        "Millard Fillmore":
+          "In retirement in Buffalo, New York; occasionally voiced moderate Unionist views but did not hold public office; remained critical of sectional extremism from both North and South.",
+      },
+      {
+        "John Tyler":
+          "Still retired in Virginia; continued to support states' rights and slavery; increasingly sympathetic to secessionist views as national tensions worsened.",
+      },
+      {
+        "Abraham Lincoln":
+          "Re-entered politics through debates with Stephen A. Douglas in 1858 (Lincoln-Douglas Debates); gained national prominence as a leading Republican voice against the expansion of slavery.",
+      },
+      {
+        "Zachary Taylor": "Deceased — died in office in 1850.",
+      },
+      {
+        "James K. Polk":
+          "Deceased — died in 1849 shortly after his presidency ended.",
+      },
+      {
+        "Martin Van Buren":
+          "Deceased — died in 1862, but during Buchanan’s term, he remained retired and opposed to slavery expansion, including the Dred Scott decision.",
+      },
+    ],
   },
   {
     name: "Abraham Lincoln",
@@ -603,6 +1050,48 @@ export const presidents = writable([
     quote:
       "Government of the people, by the people, for the people, shall not perish from the Earth.",
     image: "images/AbrahamLincoln.png",
+    otherPresidents: [
+      "James Buchanan",
+      "Franklin Pierce",
+      "Millard Fillmore",
+      "John Tyler",
+      "James K. Polk",
+      "Zachary Taylor",
+      "Martin Van Buren",
+      "Andrew Johnson",
+    ],
+    otherPresidentThings: [
+      {
+        "James Buchanan":
+          "Retired from public life after leaving office in 1861; defended his administration’s inaction as secession unfolded; criticized Lincoln’s war policies but avoided public office or major influence.",
+      },
+      {
+        "Franklin Pierce":
+          "Lived in retirement in New Hampshire; privately expressed sympathy for the South and criticized Lincoln’s suspension of civil liberties; his pro-Southern views damaged his reputation.",
+      },
+      {
+        "Millard Fillmore":
+          "Also in retirement; supported the Union but opposed many of Lincoln’s wartime policies; advocated for a moderate peace but had limited public influence.",
+      },
+      {
+        "John Tyler":
+          "Joined the Confederate cause in 1861 and was elected to the Confederate House of Representatives; died in 1862 while serving the Confederacy.",
+      },
+      {
+        "James K. Polk": "Deceased — died in 1849.",
+      },
+      {
+        "Zachary Taylor": "Deceased — died in 1850.",
+      },
+      {
+        "Martin Van Buren":
+          "Deceased — died in July 1862, during Lincoln’s first term; had opposed slavery expansion and disapproved of the Civil War’s escalation.",
+      },
+      {
+        "Andrew Johnson":
+          "Served as U.S. Senator from Tennessee; remained loyal to the Union despite being from a Southern state; appointed military governor of Tennessee in 1862; chosen as Lincoln’s running mate in 1864.",
+      },
+    ],
   },
   {
     name: "Andrew Johnson",
@@ -634,6 +1123,49 @@ export const presidents = writable([
     occupationBeforePresidency: "Tailor and Politician",
     quote: "Honest conviction is my courage; the Constitution is my guide.",
     image: "images/AndrewJohnson.png",
+    otherPresidents: [
+      "Abraham Lincoln",
+      "James Buchanan",
+      "Franklin Pierce",
+      "Millard Fillmore",
+      "John Tyler",
+      "Martin Van Buren",
+      "Ulysses S. Grant",
+      "Rutherford B. Hayes",
+    ],
+    otherPresidentThings: [
+      {
+        "Abraham Lincoln":
+          "Deceased — assassinated on April 14, 1865, just days after the end of the Civil War. Johnson, as vice president, succeeded him the following day.",
+      },
+      {
+        "James Buchanan":
+          "In retirement in Pennsylvania until his death in 1868; publicly defended his own record but largely avoided commenting on Johnson's policies or the Reconstruction struggle.",
+      },
+      {
+        "Franklin Pierce":
+          "Deceased — died in 1869, the same year Johnson left office; had remained a critic of Republican policies, including Lincoln and later Johnson’s approaches to Reconstruction.",
+      },
+      {
+        "Millard Fillmore":
+          "Lived quietly in retirement; supported the Union during the Civil War but had minimal influence during Reconstruction; avoided direct comment on Johnson’s impeachment crisis.",
+      },
+      {
+        "John Tyler":
+          "Deceased — died in 1862 after joining the Confederate Congress.",
+      },
+      {
+        "Martin Van Buren": "Deceased — died in 1862 during the Civil War.",
+      },
+      {
+        "Ulysses S. Grant":
+          "Commanding General of the U.S. Army; oversaw military enforcement of Reconstruction policies; increasingly at odds with Johnson’s leniency toward the South; elected president in 1868.",
+      },
+      {
+        "Rutherford B. Hayes":
+          "Served as a Union general during the Civil War; elected to U.S. House of Representatives in 1865; began establishing a reputation as a moderate Republican.",
+      },
+    ],
   },
   {
     name: "Ulysses S. Grant",
@@ -668,6 +1200,50 @@ export const presidents = writable([
     occupationBeforePresidency: "Military Leader",
     quote: "The friend in my adversity I shall always cherish most.",
     image: "images/UlyssesGrant.png",
+    otherPresidents: [
+      "Andrew Johnson",
+      "Abraham Lincoln",
+      "James Buchanan",
+      "Franklin Pierce",
+      "Millard Fillmore",
+      "Rutherford B. Hayes",
+      "James A. Garfield",
+      "Chester A. Arthur",
+    ],
+    otherPresidentThings: [
+      {
+        "Andrew Johnson":
+          "Returned to Tennessee after leaving office; remained a vocal critic of Republican Reconstruction policies and Grant’s administration; briefly re-entered politics as a U.S. Senator from Tennessee in 1875 before dying in 1875.",
+      },
+      {
+        "Abraham Lincoln":
+          "Deceased — assassinated in 1865 shortly after the Civil War’s end.",
+      },
+      {
+        "James Buchanan":
+          "Deceased — died in 1868, a year before Grant took office.",
+      },
+      {
+        "Franklin Pierce":
+          "Deceased — died in 1869, the year Grant became president.",
+      },
+      {
+        "Millard Fillmore":
+          "Lived in quiet retirement in Buffalo, New York; had little public role and avoided involvement in postwar politics; died in 1874 during Grant’s second term.",
+      },
+      {
+        "Rutherford B. Hayes":
+          "Served as Governor of Ohio (1868–1872, 1876–1877); became a rising star in the Republican Party and was nominated and elected as Grant’s successor in 1876.",
+      },
+      {
+        "James A. Garfield":
+          "Served in the U.S. House of Representatives throughout Grant’s presidency; gained influence as a leading Republican legislator, especially on financial and civil service issues.",
+      },
+      {
+        "Chester A. Arthur":
+          "Practiced law and held minor political appointments in New York; became politically active in Republican machine politics, notably aligned with Senator Roscoe Conkling during the Grant era.",
+      },
+    ],
   },
   {
     name: "Rutherford B. Hayes",
@@ -697,6 +1273,48 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Politician",
     quote: "He serves his party best who serves the country best.",
     image: "images/RutherfordHayes.png",
+    otherPresidents: [
+      "Ulysses S. Grant",
+      "Andrew Johnson",
+      "Abraham Lincoln",
+      "Millard Fillmore",
+      "James A. Garfield",
+      "Chester A. Arthur",
+      "Benjamin Harrison",
+      "Grover Cleveland",
+    ],
+    otherPresidentThings: [
+      {
+        "Ulysses S. Grant":
+          "Retired from the presidency in 1877; traveled extensively abroad on a world tour; remained a respected national figure and contemplated a political comeback in 1880 but was not re-nominated.",
+      },
+      {
+        "Andrew Johnson":
+          "Deceased — died in 1875 after briefly returning to the U.S. Senate.",
+      },
+      {
+        "Abraham Lincoln": "Deceased — assassinated in 1865.",
+      },
+      {
+        "Millard Fillmore": "Deceased — died in 1874.",
+      },
+      {
+        "James A. Garfield":
+          "Served in the U.S. House of Representatives; prominent Republican legislator known for his oratory and leadership on fiscal matters; elected president in 1880, succeeding Hayes.",
+      },
+      {
+        "Chester A. Arthur":
+          "Held the post of Collector of the Port of New York until removed by Hayes in 1878 as part of civil service reform; became a symbol of party patronage politics.",
+      },
+      {
+        "Benjamin Harrison":
+          "Practiced law in Indiana and served as a political leader within the state Republican Party; gained national attention during this period but did not yet hold high federal office.",
+      },
+      {
+        "Grover Cleveland":
+          "Practicing law in Buffalo, New York; served as Assistant District Attorney of Erie County and began building a reputation for integrity in local politics.",
+      },
+    ],
   },
   {
     name: "James A. Garfield",
@@ -726,6 +1344,47 @@ export const presidents = writable([
     occupationBeforePresidency: "Military Leader and Politician",
     quote: "Ideas control the world.",
     image: "images/JamesGarfield.png",
+    otherPresidents: [
+      "Rutherford B. Hayes",
+      "Ulysses S. Grant",
+      "Chester A. Arthur",
+      "Benjamin Harrison",
+      "Grover Cleveland",
+      "Abraham Lincoln",
+      "Andrew Johnson",
+      "Millard Fillmore",
+    ],
+    otherPresidentThings: [
+      {
+        "Rutherford B. Hayes":
+          "In retirement after leaving office in March 1881; focused on promoting education and civil service reform from his home in Ohio; supported Garfield’s reform-minded agenda.",
+      },
+      {
+        "Ulysses S. Grant":
+          "Returned from his world tour in 1879; published his memoirs and was battling cancer; remained a revered Civil War hero until his death in 1885.",
+      },
+      {
+        "Chester A. Arthur":
+          "Vice President under Garfield; largely sidelined during Garfield’s short presidency but became president after Garfield’s death in September 1881.",
+      },
+      {
+        "Benjamin Harrison":
+          "Gaining influence in Indiana Republican politics; served as U.S. Senator (1881–1887); focused on veterans' affairs and civil service issues during Garfield’s presidency.",
+      },
+      {
+        "Grover Cleveland":
+          "Elected Mayor of Buffalo, New York in 1881; gaining attention for fighting corruption and political patronage at the local level.",
+      },
+      {
+        "Abraham Lincoln": "Deceased — assassinated in 1865.",
+      },
+      {
+        "Andrew Johnson": "Deceased — died in 1875.",
+      },
+      {
+        "Millard Fillmore": "Deceased — died in 1874.",
+      },
+    ],
   },
   {
     name: "Chester A. Arthur",
@@ -756,6 +1415,47 @@ export const presidents = writable([
     quote:
       "Men may die, but the fabric of our free institutions remains unshaken.",
     image: "images/ChesterArthur.png",
+    otherPresidents: [
+      "James A. Garfield",
+      "Rutherford B. Hayes",
+      "Ulysses S. Grant",
+      "Benjamin Harrison",
+      "Grover Cleveland",
+      "Abraham Lincoln",
+      "Andrew Johnson",
+      "Millard Fillmore",
+    ],
+    otherPresidentThings: [
+      {
+        "James A. Garfield":
+          "Deceased — died on September 19, 1881, after being shot earlier that summer. Arthur succeeded him as president.",
+      },
+      {
+        "Rutherford B. Hayes":
+          "In retirement in Ohio; continued advocating for civil service reform and praised Arthur for signing the Pendleton Civil Service Reform Act in 1883.",
+      },
+      {
+        "Ulysses S. Grant":
+          "Battling terminal illness; focused on writing his memoirs to provide financial support for his family; died in 1885 shortly after Arthur’s term ended.",
+      },
+      {
+        "Benjamin Harrison":
+          "Served as U.S. Senator from Indiana (1881–1887); active voice on veterans’ pensions, tariffs, and civil rights; gaining national profile for future presidential bid.",
+      },
+      {
+        "Grover Cleveland":
+          "Served as Mayor of Buffalo (1882) and was elected Governor of New York (1883); gained national recognition for anti-corruption efforts and fiscal conservatism.",
+      },
+      {
+        "Abraham Lincoln": "Deceased — assassinated in 1865.",
+      },
+      {
+        "Andrew Johnson": "Deceased — died in 1875.",
+      },
+      {
+        "Millard Fillmore": "Deceased — died in 1874.",
+      },
+    ],
   },
   {
     name: "Grover Cleveland",
@@ -795,6 +1495,44 @@ export const presidents = writable([
     quote:
       "A government for the people must depend for its success on the intelligence, the morality, the justice, and the interest of the people themselves.",
     image: "images/GroverCleveland.png",
+    otherPresidents: [
+      "Chester A. Arthur",
+      "James A. Garfield",
+      "Rutherford B. Hayes",
+      "Ulysses S. Grant",
+      "Benjamin Harrison",
+      "William McKinley",
+      "Theodore Roosevelt",
+    ],
+    otherPresidentThings: [
+      {
+        "Chester A. Arthur":
+          "In poor health and retired from public life after leaving office in 1885; died in 1886, just a year into Cleveland’s presidency.",
+      },
+      {
+        "James A. Garfield": "Deceased — assassinated in 1881.",
+      },
+      {
+        "Rutherford B. Hayes":
+          "In retirement in Ohio; advocated for education and civil service reform; supported temperance and moral reform movements until his death in 1893.",
+      },
+      {
+        "Ulysses S. Grant":
+          "Deceased — died in July 1885, just months after Cleveland took office; widely honored for his military and presidential legacy.",
+      },
+      {
+        "Benjamin Harrison":
+          "Returned to Indiana after serving in the U.S. Senate; campaigned for Republican candidates and was nominated for president in 1888 to run against Cleveland.",
+      },
+      {
+        "William McKinley":
+          "Served as a U.S. Congressman from Ohio; rising star in Republican Party; known for advocacy of protective tariffs and opposition to Cleveland’s tariff reduction efforts.",
+      },
+      {
+        "Theodore Roosevelt":
+          "Elected to the New York State Assembly; gained a reputation as a reformer and outspoken young Republican; later appointed to the U.S. Civil Service Commission in 1889.",
+      },
+    ],
   },
   {
     name: "Benjamin Harrison",
@@ -824,6 +1562,38 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Politician",
     quote: "Great lives never go out; they go on.",
     image: "images/BenjaminHarrison.png",
+    otherPresidents: [
+      "Grover Cleveland",
+      "Chester A. Arthur",
+      "James A. Garfield",
+      "Rutherford B. Hayes",
+      "William McKinley",
+      "Theodore Roosevelt",
+    ],
+    otherPresidentThings: [
+      {
+        "Grover Cleveland":
+          "In private life after losing the 1888 election; lived in New York City and remained publicly silent but politically observant; prepared for a potential comeback and was re-nominated by Democrats in 1892.",
+      },
+      {
+        "Chester A. Arthur": "Deceased — died in 1886.",
+      },
+      {
+        "James A. Garfield": "Deceased — assassinated in 1881.",
+      },
+      {
+        "Rutherford B. Hayes":
+          "Lived in retirement in Ohio; continued promoting civil service reform and educational initiatives; died in 1893, shortly after Harrison’s term ended.",
+      },
+      {
+        "William McKinley":
+          "Served in the U.S. House of Representatives until 1891; then elected Governor of Ohio in 1891; emerged as a leading voice for protective tariffs and Republican policy.",
+      },
+      {
+        "Theodore Roosevelt":
+          "Appointed to the U.S. Civil Service Commission by Harrison in 1889; became nationally known for advocating civil service reform and fighting political corruption.",
+      },
+    ],
   },
   {
     name: "William McKinley",
@@ -850,7 +1620,6 @@ export const presidents = writable([
       "Civil Service Expansion : Continued merit-based reforms to reduce political corruption in government appointments.",
       "Industrial Growth Support : Backed policies favoring business expansion, technological advancements, and economic prosperity.",
     ],
-
     party: "Republican",
     spouse: "Ida Saxton McKinley",
     children: "2",
@@ -858,6 +1627,35 @@ export const presidents = writable([
     quote:
       "The mission of the United States is one of benevolent assimilation.",
     image: "images/WilliamMcKinley.png",
+    otherPresidents: [
+      "Grover Cleveland",
+      "Benjamin Harrison",
+      "Theodore Roosevelt",
+      "William Howard Taft",
+      "Woodrow Wilson",
+    ],
+    otherPresidentThings: [
+      {
+        "Grover Cleveland":
+          "In retirement after completing his second term in 1897; lived quietly in Princeton, New Jersey, and occasionally wrote or commented on national issues; died in 1908.",
+      },
+      {
+        "Benjamin Harrison":
+          "Lived in retirement in Indianapolis; practiced law and wrote about constitutional law and governance; died in 1901, the same year McKinley was assassinated.",
+      },
+      {
+        "Theodore Roosevelt":
+          "Served as Assistant Secretary of the Navy; led the Rough Riders during the Spanish-American War (1898); elected Governor of New York (1899); became McKinley’s vice president in 1901.",
+      },
+      {
+        "William Howard Taft":
+          "Appointed by McKinley as the first civilian Governor-General of the Philippines in 1901; previously served as a federal judge and was rising in national Republican ranks.",
+      },
+      {
+        "Woodrow Wilson":
+          "Academic and professor of political science at Princeton University; began gaining recognition as a political thinker and reform advocate.",
+      },
+    ],
   },
   {
     name: "Theodore Roosevelt",
@@ -893,6 +1691,50 @@ export const presidents = writable([
     occupationBeforePresidency: "Military Leader and Politician",
     quote: "Do what you can, with what you have, where you are.",
     image: "images/TheodoreRoosevelt.png",
+    otherPresidents: [
+      "William McKinley",
+      "Grover Cleveland",
+      "Benjamin Harrison",
+      "William Howard Taft",
+      "Woodrow Wilson",
+      "Warren G. Harding",
+      "Calvin Coolidge",
+      "Herbert Hoover",
+    ],
+    otherPresidentThings: [
+      {
+        "William McKinley":
+          "Deceased — assassinated in September 1901, which led to Roosevelt’s unexpected succession to the presidency.",
+      },
+      {
+        "Grover Cleveland":
+          "In retirement in Princeton, New Jersey; occasionally commented on political events but was largely removed from active politics; died in 1908 during Roosevelt’s second term.",
+      },
+      {
+        "Benjamin Harrison":
+          "Deceased — died in 1901, the year Roosevelt took office.",
+      },
+      {
+        "William Howard Taft":
+          "Appointed Secretary of War by Roosevelt (1904); became Roosevelt’s close advisor and was handpicked as his successor; worked on reforms and oversaw U.S. interests in the Philippines and Panama Canal construction.",
+      },
+      {
+        "Woodrow Wilson":
+          "President of Princeton University (1902–1910); emerged as a national reform voice in education and governance; began aligning with progressive ideals.",
+      },
+      {
+        "Warren G. Harding":
+          "Served in the Ohio State Senate starting in 1899 and became Lieutenant Governor of Ohio in 1904; rising figure in Ohio Republican politics.",
+      },
+      {
+        "Calvin Coolidge":
+          "Studied law and began practicing in Massachusetts; became active in local and state Republican circles, holding early municipal offices.",
+      },
+      {
+        "Herbert Hoover":
+          "Successful international mining engineer and businessman; gained recognition for humanitarian efforts during the Boxer Rebellion and other global events.",
+      },
+    ],
   },
   {
     name: "William Howard Taft",
@@ -926,6 +1768,35 @@ export const presidents = writable([
     occupationBeforePresidency: "Judge and Politician",
     quote: "Presidents come and go, but the Supreme Court goes on forever.",
     image: "images/WilliamHowardTaft.png",
+    otherPresidents: [
+      "Theodore Roosevelt",
+      "Woodrow Wilson",
+      "Warren G. Harding",
+      "Calvin Coolidge",
+      "Herbert Hoover",
+    ],
+    otherPresidentThings: [
+      {
+        "Theodore Roosevelt":
+          "Initially supported Taft as his successor but soon became disillusioned with his more conservative policies; broke from Taft and ran against him in the 1912 presidential election under the Progressive (Bull Moose) Party.",
+      },
+      {
+        "Woodrow Wilson":
+          "Governor of New Jersey (1911–1913); gained national prominence for progressive reforms and anti-corruption efforts; won the 1912 Democratic nomination and defeated both Taft and Roosevelt in the general election.",
+      },
+      {
+        "Warren G. Harding":
+          "Served as Lieutenant Governor of Ohio (1904–1906); after a short break from politics, he was elected to the U.S. Senate in 1914, gaining national influence.",
+      },
+      {
+        "Calvin Coolidge":
+          "Rising in Massachusetts state politics; served in the state legislature and began building a reputation for honest, quiet leadership.",
+      },
+      {
+        "Herbert Hoover":
+          "Gaining global recognition as a successful mining engineer and humanitarian; led relief efforts during various international crises and began advising government bodies.",
+      },
+    ],
   },
   {
     name: "Woodrow Wilson",
@@ -965,6 +1836,34 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Academic",
     quote: "The history of liberty is a history of resistance.",
     image: "images/WoodrowWilson.png",
+    otherPresidents: [
+      "William Howard Taft",
+      "Warren G. Harding",
+      "Calvin Coolidge",
+      "Herbert Hoover",
+    ],
+    otherPresidentThings: [
+      {
+        "William Howard Taft":
+          "After leaving the presidency in 1913, he returned to academia and legal work; became a vocal supporter of U.S. entry into World War I and was later appointed Chief Justice of the U.S. Supreme Court in 1921.",
+      },
+      {
+        "Theodore Roosevelt":
+          "Remained a dominant political figure and vocal critic of Wilson's policies, particularly on neutrality in WWI; advocated for military preparedness and ran unsuccessfully for president again in 1916; died in 1919.",
+      },
+      {
+        "Warren G. Harding":
+          "Elected to the U.S. Senate in 1914; supported conservative policies and neutrality in WWI but later backed U.S. involvement; became the Republican nominee for president in 1920.",
+      },
+      {
+        "Calvin Coolidge":
+          "Served as President of the Massachusetts State Senate and later Lieutenant Governor; gained national recognition for his response to the 1919 Boston Police Strike.",
+      },
+      {
+        "Herbert Hoover":
+          "Rose to international prominence for leading humanitarian relief efforts during and after World War I; served as head of the U.S. Food Administration under Wilson.",
+      },
+    ],
   },
   {
     name: "Warren G. Harding",
@@ -996,6 +1895,30 @@ export const presidents = writable([
     occupationBeforePresidency: "Newspaper Publisher",
     quote: "America’s present need is not heroics but healing.",
     image: "images/WarrenHarding.png",
+    otherPresidents: [
+      "Woodrow Wilson",
+      "Calvin Coolidge",
+      "Herbert Hoover",
+      "William Howard Taft",
+    ],
+    otherPresidentThings: [
+      {
+        "Woodrow Wilson":
+          "In retirement after leaving office in 1921; in poor health following a stroke; lived in Washington, D.C., and remained largely out of the public eye until his death in 1924.",
+      },
+      {
+        "William Howard Taft":
+          "Appointed Chief Justice of the U.S. Supreme Court by Harding in 1921; became the only person to serve as both president and chief justice; focused on court modernization and administration.",
+      },
+      {
+        "Calvin Coolidge":
+          "Served as Harding’s vice president; largely quiet during Harding’s term, but became president upon Harding’s death in August 1923.",
+      },
+      {
+        "Herbert Hoover":
+          "Appointed Secretary of Commerce under Harding; played a major role in standardizing regulations, promoting economic modernization, and coordinating relief efforts during disasters.",
+      },
+    ],
   },
   {
     name: "Calvin Coolidge",
@@ -1027,6 +1950,40 @@ export const presidents = writable([
     occupationBeforePresidency: "Lawyer and Politician",
     quote: "The business of America is business.",
     image: "images/CalvinCoolidge.png",
+    otherPresidents: [
+      "Warren G. Harding",
+      "Woodrow Wilson",
+      "William Howard Taft",
+      "Herbert Hoover",
+      "Franklin D. Roosevelt",
+      "Harry S. Truman",
+    ],
+    otherPresidentThings: [
+      {
+        "Warren G. Harding":
+          "Deceased — died in office in August 1923; Coolidge, his vice president, succeeded him as president.",
+      },
+      {
+        "Woodrow Wilson":
+          "Deceased — died in 1924; spent his final years in frail health following a major stroke, largely out of public life after 1921.",
+      },
+      {
+        "William Howard Taft":
+          "Continued serving as Chief Justice of the U.S. Supreme Court; focused on administrative reform and preserving judicial independence until his death in 1930.",
+      },
+      {
+        "Herbert Hoover":
+          "Served as Secretary of Commerce under both Harding and Coolidge; promoted economic modernization and standardization; gained national prominence and was nominated for president in 1928.",
+      },
+      {
+        "Franklin D. Roosevelt":
+          "Served as Vice Presidential candidate on the losing Democratic ticket in 1920; resumed work as a private citizen and began rebuilding his political career while battling polio.",
+      },
+      {
+        "Harry S. Truman":
+          "Operated a men's clothing store in Missouri during most of Coolidge’s presidency; became active in local Democratic politics and was elected as a judge in 1922.",
+      },
+    ],
   },
   {
     name: "Herbert Hoover",
@@ -1058,6 +2015,40 @@ export const presidents = writable([
     occupationBeforePresidency: "Engineer and Politician",
     quote: "Blessed are the young, for they shall inherit the national debt.",
     image: "images/HerbertHoover.png",
+    otherPresidents: [
+      "Calvin Coolidge",
+      "Warren G. Harding",
+      "Woodrow Wilson",
+      "William Howard Taft",
+      "Franklin D. Roosevelt",
+      "Harry S. Truman",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Calvin Coolidge":
+          "Retired from politics after leaving office in 1929; remained publicly silent on Hoover's presidency but privately expressed concerns about the economy and Hoover’s leadership style.",
+      },
+      {
+        "Warren G. Harding": "Deceased — died in office in 1923.",
+      },
+      {
+        "Woodrow Wilson":
+          "Deceased — died in 1924 after several years in retirement and poor health.",
+      },
+      {
+        "William Howard Taft":
+          "Continued to serve as Chief Justice of the U.S. Supreme Court until his death in 1930; did not publicly comment on Hoover’s presidency but remained a respected national figure.",
+      },
+      {
+        "Franklin D. Roosevelt":
+          "Served as Governor of New York (1929–1932); implemented state-level relief programs during the early years of the Great Depression; emerged as Hoover's main challenger and won the 1932 presidential election.",
+      },
+      {
+        "Harry S. Truman":
+          "Served as a judge in Missouri; involved in local Democratic politics and gaining influence but had not yet reached national prominence.",
+      },
+    ],
   },
   {
     name: "Franklin D. Roosevelt",
@@ -1097,6 +2088,46 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Lawyer",
     quote: "The only thing we have to fear is fear itself.",
     image: "images/FranklinRoosevelt.png",
+    otherPresidents: [
+      "Herbert Hoover",
+      "Calvin Coolidge",
+      "William Howard Taft",
+      "Harry S. Truman",
+      "Dwight D. Eisenhower",
+      "Lyndon B. Johnson",
+      "John F. Kennedy",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Herbert Hoover":
+          "After losing to Roosevelt in 1932, Hoover became a vocal critic of the New Deal; remained active in Republican politics and wrote extensively on government and economics.",
+      },
+      {
+        "Calvin Coolidge":
+          "Deceased — died in 1933, shortly before Roosevelt took office.",
+      },
+      {
+        "William Howard Taft":
+          "Deceased — died in 1930; had served as Chief Justice of the Supreme Court until shortly before his death.",
+      },
+      {
+        "Harry S. Truman":
+          "Served as U.S. Senator from Missouri (elected 1934); supported many New Deal programs and gained national recognition for his work investigating wartime spending.",
+      },
+      {
+        "Dwight D. Eisenhower":
+          "Rose through military ranks during WWII; served as Supreme Allied Commander in Europe and oversaw D-Day operations; became a national hero by the end of Roosevelt’s presidency.",
+      },
+      {
+        "Lyndon B. Johnson":
+          "Elected to U.S. House of Representatives in 1937; ardent supporter of New Deal programs; built political clout through his connection to Roosevelt and ability to deliver on federal programs in Texas.",
+      },
+      {
+        "John F. Kennedy":
+          "Teenager during most of Roosevelt’s presidency; studied at Harvard and briefly worked as a journalist; served in the Navy during WWII late in Roosevelt’s final term.",
+      },
+    ],
   },
   {
     name: "Harry S. Truman",
@@ -1131,6 +2162,46 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Farmer",
     quote: "The buck stops here.",
     image: "images/HarryTruman.png",
+    otherPresidents: [
+      "Franklin D. Roosevelt",
+      "Herbert Hoover",
+      "Dwight D. Eisenhower",
+      "John F. Kennedy",
+      "Lyndon B. Johnson",
+      "Richard Nixon",
+      "Gerald Ford",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Franklin D. Roosevelt":
+          "Deceased — died in April 1945, shortly after beginning his fourth term; Truman succeeded him during the final months of WWII.",
+      },
+      {
+        "Herbert Hoover":
+          "Outspoken critic of New Deal policies but supported Truman's postwar European relief efforts; worked with Truman on reorganization of the executive branch and humanitarian relief.",
+      },
+      {
+        "Dwight D. Eisenhower":
+          "Served as Army Chief of Staff and later NATO Supreme Commander in Europe; maintained nonpartisan stance but became increasingly viewed as a presidential contender by both parties.",
+      },
+      {
+        "John F. Kennedy":
+          "Served in the U.S. Navy during World War II; elected to the U.S. House of Representatives from Massachusetts in 1946 during Truman’s presidency.",
+      },
+      {
+        "Lyndon B. Johnson":
+          "Elected to the U.S. House of Representatives; strongly supported Truman’s Fair Deal and anti-communist foreign policy; elected to U.S. Senate in 1948.",
+      },
+      {
+        "Richard Nixon":
+          "Elected to the U.S. House of Representatives in 1946; gained national attention for his role in the House Un-American Activities Committee, particularly in the Alger Hiss case.",
+      },
+      {
+        "Gerald Ford":
+          "Served in the U.S. Navy during World War II; returned to Michigan and became active in Republican politics, though had not yet entered Congress during Truman’s presidency.",
+      },
+    ],
   },
   {
     name: "Dwight D. Eisenhower",
@@ -1167,6 +2238,46 @@ export const presidents = writable([
     occupationBeforePresidency: "Military Leader",
     quote: "Plans are worthless, but planning is everything.",
     image: "images/DwightEisenhower.png",
+    otherPresidents: [
+      "Harry S. Truman",
+      "Herbert Hoover",
+      "John F. Kennedy",
+      "Lyndon B. Johnson",
+      "Richard Nixon",
+      "Gerald Ford",
+      "Jimmy Carter",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Harry S. Truman":
+          "In retirement after leaving office in 1953; wrote memoirs and established the Truman Library; occasionally commented on Eisenhower’s policies, particularly on civil rights and foreign affairs.",
+      },
+      {
+        "Herbert Hoover":
+          "In retirement but continued public service; worked on government reorganization and advised presidents on administrative reform; praised Eisenhower’s managerial style.",
+      },
+      {
+        "John F. Kennedy":
+          "Served in the U.S. Senate; became a prominent Democratic voice on foreign policy and civil rights; published *Profiles in Courage* in 1956 and began preparing for a presidential run.",
+      },
+      {
+        "Lyndon B. Johnson":
+          "Served as Senate Majority Leader; key Democratic power broker who collaborated with and challenged Eisenhower on domestic and foreign policy.",
+      },
+      {
+        "Richard Nixon":
+          "Served as Vice President under Eisenhower for both terms; represented the U.S. abroad and presided over Cabinet and National Security Council meetings; gained prominence as Eisenhower’s political heir.",
+      },
+      {
+        "Gerald Ford":
+          "Elected to the U.S. House of Representatives in 1948; served as a Republican leader in Congress during Eisenhower’s presidency and built a reputation for integrity and competence.",
+      },
+      {
+        "Jimmy Carter":
+          "Graduated from the U.S. Naval Academy and served as a naval officer; returned to Georgia in the mid-1950s to run his family’s peanut business; not yet involved in national politics.",
+      },
+    ],
   },
   {
     name: "John F. Kennedy",
@@ -1201,6 +2312,46 @@ export const presidents = writable([
     quote:
       "Ask not what your country can do for you—ask what you can do for your country.",
     image: "images/JohnFKennedy.png",
+    otherPresidents: [
+      "Dwight D. Eisenhower",
+      "Harry S. Truman",
+      "Lyndon B. Johnson",
+      "Richard Nixon",
+      "Gerald Ford",
+      "Jimmy Carter",
+      "Ronald Reagan",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Dwight D. Eisenhower":
+          "In retirement at his Gettysburg farm; served as an elder statesman, occasionally advising Kennedy on military and foreign affairs; supported a strong anti-communist stance.",
+      },
+      {
+        "Harry S. Truman":
+          "In retirement in Missouri; publicly supported Kennedy’s 1960 campaign and continued to speak on party unity and civil rights during Kennedy’s term.",
+      },
+      {
+        "Lyndon B. Johnson":
+          "Served as Vice President under Kennedy; chaired several commissions and was active in space policy and civil rights, though often sidelined from Kennedy’s inner circle.",
+      },
+      {
+        "Richard Nixon":
+          "Returned to private life in California after narrowly losing the 1960 election; remained active in Republican politics and prepared for a political comeback.",
+      },
+      {
+        "Gerald Ford":
+          "Continued serving in the U.S. House of Representatives; an emerging Republican voice on defense and fiscal policy during Kennedy’s presidency.",
+      },
+      {
+        "Jimmy Carter":
+          "Served in the Georgia State Senate; began aligning himself with moderate Democratic reformers; built his reputation as a detail-oriented, pragmatic politician.",
+      },
+      {
+        "Ronald Reagan":
+          "Still an actor and public spokesman for General Electric; gave his famous “A Time for Choosing” speech in 1964 shortly after Kennedy’s assassination, marking his entry into politics.",
+      },
+    ],
   },
   {
     name: "Lyndon B. Johnson",
@@ -1237,6 +2388,51 @@ export const presidents = writable([
     quote:
       "Yesterday is not ours to recover, but tomorrow is ours to win or lose.",
     image: "images/LyndonBJohnson.png",
+    otherPresidents: [
+      "John F. Kennedy",
+      "Dwight D. Eisenhower",
+      "Harry S. Truman",
+      "Richard Nixon",
+      "Gerald Ford",
+      "Jimmy Carter",
+      "Ronald Reagan",
+      "George H. W. Bush",
+    ],
+
+    otherPresidentThings: [
+      {
+        "John F. Kennedy":
+          "Deceased — assassinated in November 1963; Johnson assumed the presidency and pursued many of Kennedy’s legislative goals, including civil rights reform.",
+      },
+      {
+        "Dwight D. Eisenhower":
+          "In retirement; continued to offer public commentary on national issues and supported Johnson’s foreign policy in Vietnam; died in 1969.",
+      },
+      {
+        "Harry S. Truman":
+          "In retirement in Missouri; increasingly reclusive due to health issues; died in 1972, shortly after Johnson’s presidency ended.",
+      },
+      {
+        "Richard Nixon":
+          "Returned to national politics; campaigned for Republican candidates in the 1966 midterms and positioned himself for the 1968 presidential race, which he won.",
+      },
+      {
+        "Gerald Ford":
+          "Served as House Minority Leader; frequently challenged Johnson’s Great Society spending but supported aspects of civil rights and foreign policy.",
+      },
+      {
+        "Jimmy Carter":
+          "Elected Governor of Georgia in 1966; began building a reputation as a reform-minded moderate within the Democratic Party.",
+      },
+      {
+        "Ronald Reagan":
+          "Elected Governor of California in 1966; quickly became a national conservative figure and frequent critic of Johnson’s domestic and Vietnam policies.",
+      },
+      {
+        "George H. W. Bush":
+          "Ran unsuccessfully for U.S. Senate in Texas in 1964; elected to the U.S. House of Representatives in 1966 and became an emerging voice in the Republican Party.",
+      },
+    ],
   },
   {
     name: "Richard Nixon",
@@ -1273,6 +2469,51 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Lawyer",
     quote: "The greatest honor history can bestow is the title of peacemaker.",
     image: "images/RichardNixon.png",
+    otherPresidents: [
+      "John F. Kennedy",
+      "Dwight D. Eisenhower",
+      "Harry S. Truman",
+      "Richard Nixon",
+      "Gerald Ford",
+      "Jimmy Carter",
+      "Ronald Reagan",
+      "George H. W. Bush",
+    ],
+
+    otherPresidentThings: [
+      {
+        "John F. Kennedy":
+          "Deceased — assassinated in November 1963; Johnson assumed the presidency and pursued many of Kennedy’s legislative goals, including civil rights reform.",
+      },
+      {
+        "Dwight D. Eisenhower":
+          "In retirement; continued to offer public commentary on national issues and supported Johnson’s foreign policy in Vietnam; died in 1969.",
+      },
+      {
+        "Harry S. Truman":
+          "In retirement in Missouri; increasingly reclusive due to health issues; died in 1972, shortly after Johnson’s presidency ended.",
+      },
+      {
+        "Richard Nixon":
+          "Returned to national politics; campaigned for Republican candidates in the 1966 midterms and positioned himself for the 1968 presidential race, which he won.",
+      },
+      {
+        "Gerald Ford":
+          "Served as House Minority Leader; frequently challenged Johnson’s Great Society spending but supported aspects of civil rights and foreign policy.",
+      },
+      {
+        "Jimmy Carter":
+          "Elected Governor of Georgia in 1966; began building a reputation as a reform-minded moderate within the Democratic Party.",
+      },
+      {
+        "Ronald Reagan":
+          "Elected Governor of California in 1966; quickly became a national conservative figure and frequent critic of Johnson’s domestic and Vietnam policies.",
+      },
+      {
+        "George H. W. Bush":
+          "Ran unsuccessfully for U.S. Senate in Texas in 1964; elected to the U.S. House of Representatives in 1966 and became an emerging voice in the Republican Party.",
+      },
+    ],
   },
   {
     name: "Gerald Ford",
@@ -1307,6 +2548,41 @@ export const presidents = writable([
     quote:
       "A government big enough to give you everything you want is a government big enough to take from you everything you have.",
     image: "images/GeraldFord.png",
+    otherPresidents: [
+      "Richard Nixon",
+      "Jimmy Carter",
+      "Ronald Reagan",
+      "George H. W. Bush",
+      "Joe Biden",
+      "Lyndon B. Johnson",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Richard Nixon":
+          "Resigned in August 1974 amid the Watergate scandal; lived in seclusion in California and later wrote memoirs; rarely commented publicly during Ford’s presidency.",
+      },
+      {
+        "Jimmy Carter":
+          "Began his campaign for the Democratic nomination shortly after Ford took office; ran as a Washington outsider and defeated Ford in the 1976 election.",
+      },
+      {
+        "Ronald Reagan":
+          "Finished his second term as Governor of California in 1975; challenged Ford for the Republican nomination in 1976, nearly winning it and cementing his national profile.",
+      },
+      {
+        "George H. W. Bush":
+          "Served as U.S. envoy to China and later as Director of the CIA (appointed by Ford in 1976); continued rising in national Republican politics.",
+      },
+      {
+        "Joe Biden":
+          "Served as a freshman U.S. Senator from Delaware; focused on judiciary and foreign relations issues; known for his moderate Democratic stance.",
+      },
+      {
+        "Lyndon B. Johnson":
+          "Deceased — died in January 1973, prior to Ford becoming president.",
+      },
+    ],
   },
   {
     name: "Jimmy Carter",
@@ -1342,6 +2618,36 @@ export const presidents = writable([
     quote:
       "We must adjust to changing times and still hold to unchanging principles.",
     image: "images/JimmyCarter.png",
+    otherPresidents: [
+      "Gerald Ford",
+      "Richard Nixon",
+      "Ronald Reagan",
+      "George H. W. Bush",
+      "Joe Biden",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Gerald Ford":
+          "In retirement after losing the 1976 election; maintained a moderate Republican voice and occasionally commented on Carter’s foreign and domestic policies.",
+      },
+      {
+        "Richard Nixon":
+          "Continued to rebuild his public image post-Watergate; traveled abroad and met with foreign leaders; wrote extensively on foreign policy.",
+      },
+      {
+        "Ronald Reagan":
+          "Prepared for a second presidential run; became the leading conservative voice in the Republican Party and formally announced his candidacy in 1979.",
+      },
+      {
+        "George H. W. Bush":
+          "Served as Director of the CIA until 1977; remained active in Republican politics and began campaigning for the 1980 presidential nomination.",
+      },
+      {
+        "Joe Biden":
+          "Serving in the U.S. Senate; worked on key judiciary and foreign relations issues; gained attention as a young, articulate Democratic voice.",
+      },
+    ],
   },
   {
     name: "Ronald Reagan",
@@ -1380,6 +2686,36 @@ export const presidents = writable([
     occupationBeforePresidency: "Actor and Politician",
     quote: "Freedom is never more than one generation away from extinction.",
     image: "images/RonaldReagan.png",
+    otherPresidents: [
+      "Gerald Ford",
+      "Richard Nixon",
+      "Ronald Reagan",
+      "George H. W. Bush",
+      "Joe Biden",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Gerald Ford":
+          "In retirement after losing the 1976 election; maintained a moderate Republican voice and occasionally commented on Carter’s foreign and domestic policies.",
+      },
+      {
+        "Richard Nixon":
+          "Continued to rebuild his public image post-Watergate; traveled abroad and met with foreign leaders; wrote extensively on foreign policy.",
+      },
+      {
+        "Ronald Reagan":
+          "Prepared for a second presidential run; became the leading conservative voice in the Republican Party and formally announced his candidacy in 1979.",
+      },
+      {
+        "George H. W. Bush":
+          "Served as Director of the CIA until 1977; remained active in Republican politics and began campaigning for the 1980 presidential nomination.",
+      },
+      {
+        "Joe Biden":
+          "Serving in the U.S. Senate; worked on key judiciary and foreign relations issues; gained attention as a young, articulate Democratic voice.",
+      },
+    ],
   },
   {
     name: "George H. W. Bush",
@@ -1415,6 +2751,46 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Businessman",
     quote: "We are not the sum of our possessions.",
     image: "images/GeorgeHWBush.png",
+    otherPresidents: [
+      "Ronald Reagan",
+      "Jimmy Carter",
+      "Gerald Ford",
+      "Richard Nixon",
+      "Joe Biden",
+      "Bill Clinton",
+      "George W. Bush",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Ronald Reagan":
+          "In retirement after completing his two terms; largely stayed out of politics but remained an influential figure within the Republican Party; diagnosed with Alzheimer’s shortly after Bush’s term ended.",
+      },
+      {
+        "Jimmy Carter":
+          "Continued humanitarian work through the Carter Center; frequently voiced opinions on foreign policy, human rights, and criticized aspects of Bush’s Gulf War strategy.",
+      },
+      {
+        "Gerald Ford":
+          "Remained an elder statesman; offered private political advice and supported Bush’s 1988 campaign; gave occasional speeches on governance and bipartisanship.",
+      },
+      {
+        "Richard Nixon":
+          "Continued writing and advising on foreign policy; praised Bush’s diplomatic handling of the end of the Cold War and the Gulf War.",
+      },
+      {
+        "Joe Biden":
+          "Served in the U.S. Senate; played a major role in foreign policy and judicial matters; supported some aspects of Bush’s foreign policy but was a Democratic critic on domestic issues.",
+      },
+      {
+        "Bill Clinton":
+          "Governor of Arkansas; gained national attention as a rising Democratic star; launched a successful presidential campaign in 1992, defeating Bush.",
+      },
+      {
+        "George W. Bush":
+          "Involved in business and served as managing partner of the Texas Rangers baseball team; began preparing for a political career, eventually running for Governor of Texas in 1994.",
+      },
+    ],
   },
   {
     name: "Bill Clinton",
@@ -1453,6 +2829,46 @@ export const presidents = writable([
     quote:
       "There is nothing wrong with America that cannot be cured by what is right with America.",
     image: "images/BillClinton.png",
+    otherPresidents: [
+      "George H. W. Bush",
+      "Ronald Reagan",
+      "Jimmy Carter",
+      "Richard Nixon",
+      "Joe Biden",
+      "George W. Bush",
+      "Barack Obama",
+    ],
+
+    otherPresidentThings: [
+      {
+        "George H. W. Bush":
+          "In retirement after losing the 1992 election; largely stayed out of the political spotlight, though he supported Republican candidates and focused on humanitarian work.",
+      },
+      {
+        "Ronald Reagan":
+          "Publicly announced his Alzheimer’s diagnosis in 1994 and withdrew from public life; remained a symbolic figure within the Republican Party.",
+      },
+      {
+        "Jimmy Carter":
+          "Continued active global humanitarian work and election monitoring through the Carter Center; occasionally critiqued U.S. foreign policy and offered support on health and housing issues.",
+      },
+      {
+        "Richard Nixon":
+          "Deceased — died in 1994; remained active in foreign policy commentary until his passing, and had praised Clinton for diplomatic outreach to Russia.",
+      },
+      {
+        "Joe Biden":
+          "Served in the U.S. Senate; continued shaping foreign relations and judiciary policy; supported Clinton’s crime bill and elements of his domestic agenda.",
+      },
+      {
+        "George W. Bush":
+          "Elected Governor of Texas in 1994; gained national attention for bipartisan leadership and education reform; built momentum for his 2000 presidential run.",
+      },
+      {
+        "Barack Obama":
+          "Worked as a community organizer, lawyer, and professor; elected to the Illinois State Senate in 1996, beginning his rise in Democratic politics.",
+      },
+    ],
   },
   {
     name: "George W. Bush",
@@ -1490,6 +2906,41 @@ export const presidents = writable([
     occupationBeforePresidency: "Governor",
     quote: "We will not tire, we will not falter, and we will not fail.",
     image: "images/GeorgeWBush.png",
+    otherPresidents: [
+      "Bill Clinton",
+      "George H. W. Bush",
+      "Jimmy Carter",
+      "Joe Biden",
+      "Barack Obama",
+      "Donald Trump",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Bill Clinton":
+          "Active globally through the Clinton Foundation; partnered with George H. W. Bush on disaster relief efforts; occasionally clashed with Bush administration over policy but maintained bipartisan cooperation on humanitarian efforts.",
+      },
+      {
+        "George H. W. Bush":
+          "In retirement; frequently partnered with Clinton on philanthropic causes; supported his son’s presidency while largely staying out of policy discussions.",
+      },
+      {
+        "Jimmy Carter":
+          "Continued humanitarian and diplomatic work through the Carter Center; publicly criticized aspects of Bush’s foreign policy, particularly the Iraq War.",
+      },
+      {
+        "Joe Biden":
+          "Served as a senior U.S. Senator; chaired the Senate Foreign Relations Committee; supported the Afghanistan War but became increasingly critical of the Iraq War.",
+      },
+      {
+        "Barack Obama":
+          "Served in the Illinois State Senate until 2004; elected to the U.S. Senate in 2004; gained national attention with his DNC speech and launched his presidential campaign in 2007.",
+      },
+      {
+        "Donald Trump":
+          "Known primarily as a businessman and television personality; frequently commented on politics and national issues, but had not yet entered public office during Bush’s presidency.",
+      },
+    ],
   },
   {
     name: "Barack Obama",
@@ -1528,6 +2979,41 @@ export const presidents = writable([
     occupationBeforePresidency: "Politician and Lawyer",
     quote: "Yes we can.",
     image: "images/BarackObama.png",
+    otherPresidents: [
+      "George W. Bush",
+      "Bill Clinton",
+      "George H. W. Bush",
+      "Jimmy Carter",
+      "Joe Biden",
+      "Donald Trump",
+    ],
+
+    otherPresidentThings: [
+      {
+        "George W. Bush":
+          "Retired from politics after leaving office in 2009; focused on painting and philanthropy; avoided criticizing Obama publicly and emphasized unity.",
+      },
+      {
+        "Bill Clinton":
+          "Remained highly active in global philanthropy via the Clinton Foundation; supported Hillary Clinton’s 2008 and 2016 presidential campaigns; collaborated with the Obama administration on health and global initiatives.",
+      },
+      {
+        "George H. W. Bush":
+          "In full retirement; partnered with Bill Clinton on humanitarian efforts; praised Obama's leadership after several national tragedies; died in 2018.",
+      },
+      {
+        "Jimmy Carter":
+          "Continued global peace and health initiatives; at times publicly disagreed with Obama’s drone policy and surveillance programs, but generally supported his presidency.",
+      },
+      {
+        "Joe Biden":
+          "Served as Obama’s Vice President; key figure in foreign policy, economic recovery, and legislative negotiations; awarded the Presidential Medal of Freedom in 2017.",
+      },
+      {
+        "Donald Trump":
+          "Criticized Obama frequently in media and on Twitter; rose as a prominent “birther” figure; launched his 2016 presidential campaign and won, succeeding Obama in 2017.",
+      },
+    ],
   },
   {
     name: "Donald Trump",
@@ -1556,6 +3042,36 @@ export const presidents = writable([
     children: "5",
     occupationBeforePresidency: "Businessman and TV Personality",
     quote: "The more you dream, the farther you get.",
+    otherPresidents: [
+      "Barack Obama",
+      "George W. Bush",
+      "Bill Clinton",
+      "Jimmy Carter",
+      "Joe Biden",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Barack Obama":
+          "Remained largely silent during the early Trump years, but later became more vocal in defending democratic norms and endorsing Democratic candidates; campaigned actively for Joe Biden in 2020.",
+      },
+      {
+        "George W. Bush":
+          "Largely stayed out of politics; spoke out against political division and extremism; emphasized national unity and democratic values in contrast to Trump’s tone.",
+      },
+      {
+        "Bill Clinton":
+          "Continued to lead the Clinton Foundation and support Democratic causes; backed Hillary Clinton’s 2016 campaign and later Joe Biden’s 2020 run; offered limited public commentary during Trump’s term.",
+      },
+      {
+        "Jimmy Carter":
+          "Remained focused on humanitarian work through the Carter Center; voiced concerns about democratic backsliding and voter suppression during Trump’s presidency.",
+      },
+      {
+        "Joe Biden":
+          "Announced his candidacy in 2019; campaigned as a unifying alternative to Trump; elected in 2020 and succeeded Trump in January 2021.",
+      },
+    ],
   },
   {
     name: "Joe Biden",
@@ -1591,6 +3107,36 @@ export const presidents = writable([
     children: "4",
     occupationBeforePresidency: "Politician and Lawyer",
     quote: "Our best days still lie ahead.",
+    otherPresidents: [
+      "Donald Trump",
+      "Barack Obama",
+      "George W. Bush",
+      "Bill Clinton",
+      "Jimmy Carter",
+    ],
+
+    otherPresidentThings: [
+      {
+        "Donald Trump":
+          "Left office in January 2021 after refusing to concede the 2020 election; remained a dominant force in the Republican Party; impeached a second time following the January 6 Capitol attack; launched a 2024 presidential campaign.",
+      },
+      {
+        "Barack Obama":
+          "Maintained a strong public presence through speeches, writing, and the Obama Foundation; supported Biden’s agenda and campaigned with Democrats in key elections.",
+      },
+      {
+        "George W. Bush":
+          "Continued his focus on painting and veteran causes; offered limited but pointed criticism of political extremism and threats to democracy.",
+      },
+      {
+        "Bill Clinton":
+          "Largely retired from public life; remained involved in global initiatives via the Clinton Foundation and occasionally appeared at political events.",
+      },
+      {
+        "Jimmy Carter":
+          "Entered hospice care in 2023 after years of humanitarian work; widely honored for his lifelong service; holds the record as the longest-living U.S. president.",
+      },
+    ],
   },
   {
     name: "Donald Trump",
