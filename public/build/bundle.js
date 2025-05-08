@@ -5117,7 +5117,7 @@ var app = (function () {
 
     			attr_dev(text_1, "y", text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 30);
+    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 24);
 
     			attr_dev(text_1, "fill", "black");
     			attr_dev(text_1, "font-size", text_1_font_size_value = /*isMobile*/ ctx[6] ? "12" : "18");
@@ -5130,7 +5130,7 @@ var app = (function () {
     				: "end");
 
     			attr_dev(text_1, "z-index", "1");
-    			add_location(text_1, file$2, 107, 8, 3233);
+    			add_location(text_1, file$2, 94, 8, 2800);
 
     			attr_dev(line, "x1", line_x__value = /*isMobile*/ ctx[6]
     			? 10 + (/*index*/ ctx[17] % 2 !== 0 ? 26 : 6)
@@ -5152,7 +5152,7 @@ var app = (function () {
     			attr_dev(line, "opacity", "0.3");
     			attr_dev(line, "stroke-width", "3");
     			attr_dev(line, "aria-hidden", "true");
-    			add_location(line, file$2, 129, 8, 3937);
+    			add_location(line, file$2, 116, 8, 3504);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, text_1, anchor);
@@ -5172,7 +5172,7 @@ var app = (function () {
 
     			if (dirty & /*isMobile, totalDots, svgSize, radius*/ 92 && text_1_y_value !== (text_1_y_value = /*isMobile*/ ctx[6]
     			? /*index*/ ctx[17] / (/*totalDots*/ ctx[3] - 1) * (/*svgSize*/ ctx[2] - 2 * /*radius*/ ctx[4]) + /*radius*/ ctx[4]
-    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 30)) {
+    			: 18 + (/*index*/ ctx[17] % 2 !== 0 ? 6 : 0) + 24)) {
     				attr_dev(text_1, "y", text_1_y_value);
     			}
 
